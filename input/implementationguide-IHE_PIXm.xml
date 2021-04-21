@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+	<id value="ihe.pixm.fhir" />
+	<text>
+		<status value="additional" />
+		<div xmlns="http://www.w3.org/1999/xhtml">
+      ImplementationGuide for IHE IT Infrastructure Technical Framework Supplement - Patient Identity Cross-Reference for Mobile.
+      This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/PIXm">Patient Identity Cross-Refernece for Mobile (PIXm)</a>
+		</div>
+	</text>
+	<url value="http://profiles.ihe.net/fhir/ihe.pixm.fhir/ImplementationGuide/ihe.pixm.fhir" />
+	<version value="0.1.0" />
+	<name value="IHE_PIXm" />
+	<status value="draft" />
+	<experimental value="false" />
+	<date value="2019-07-05" />
+	<publisher value="Integrating the Healthcare Enterprise (IHE)" />
+	<contact>
+		<name value="IHE" />
+		<telecom>
+			<system value="url" />
+			<value value="http://ihe.net" />
+		</telecom>
+	</contact>
+	<description value="Implementation Guide for IHE Patient Identity Cross-Reference for Mobile (PIXm). See  https://wiki.ihe.net/index.php/PIXm" />
+	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+	<packageId value="ihe.pixm.fhir" />
+	<fhirVersion value="4.0.1" />
+<!--
+	<manifest>
+		<rendering value="https://wiki.ihe.net/index.php/PIXm" />
+
+		<resource>
+			<reference>
+				<reference value="http://profiles.ihe.net/fhir/OperationDefinition/IHE_PIXm_pix" />
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="http://profiles.ihe.net/fhir/CapabilityStatement/IHE_PIXm_Manager" />
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="http://profiles.ihe.net/fhir/CapabilityStatement/IHE_PIXm_Consumer" />
+			</reference>
+		</resource>
+	</manifest>
+-->
+   <definition>
+		<resource>
+			<reference>
+				<reference value="OperationDefinition/IHE_PIXm_pix"/>
+			</reference>
+			<name value="PIXm cross reference operation"/>
+			<description value="Operation defined to enable query to get a set of cross-referenced identifiers and Patient resources"/>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Parameters/1234567890"/>
+			</reference>
+			<name value="dheeraj-example"/>
+			<description value="An example of a use of the PIXm operation"/>
+			<exampleBoolean value="true"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Parameters/46138430-266b-423b-b64b-afdea6deed2a"/>
+			</reference>
+			<name value="pixm-response-error-example"/>
+			<description value="An example a PIXm operation response with an error"/>
+			<exampleBoolean value="true"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Parameters/3.38.4.2.2.1-2"/>
+			</reference>
+			<name value="pixm-response-83-example"/>
+			<description value="An example a response to the PIXm operation with results"/>
+			<exampleBoolean value="true"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Parameters/46138430-266b-423b-b64b-afdea6deed2b"/>
+			</reference>
+			<name value="pixm-response-example"/>
+			<description value="An example response of a use of the PIXm operation"/>
+			<exampleBoolean value="true"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/patient-example"/>
+			</reference>
+			<name value="Patient/patient-example"/>
+			<description value="An example Patient to make examples complete"/>
+			<exampleBoolean value="true"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/patient-example2"/>
+			</reference>
+			<name value="Patient/patient-example2"/>
+			<description value="An example Patient to make examples complete"/>
+			<exampleBoolean value="true"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/patient-example-dheeraj"/>
+			</reference>
+			<name value="Patient/patient-example-dheeraj"/>
+			<description value="An example Patient to make dheeraj-example complete"/>
+			<exampleBoolean value="true"/>
+		</resource>
+   
+    <page>
+      <!-- The root will always be toc.html - the template will force it if you don't do it -->
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <nameUrl value="index.html"/>
+        <title value="PIXm Home Page"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="1_overview.html"/>
+        <title value="Overview"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="2_actors_and_transactions.html"/>
+        <title value="Actors and Transactions"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="3_security_considerations.html"/>
+        <title value="Security Considerations"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="4_grouping.html"/>
+        <title value="Grouping"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="5_testplan.html"/>
+        <title value="Test Plan"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="a_issues.html"/>
+        <title value="Open Issues"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="ITI-83.html"/>
+        <title value="Transaction ITI-83"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <!-- copyright year is a mandatory parameter -->
+    <parameter>
+      <code value="copyrightyear"/>
+      <value value="2019+"/>
+    </parameter>
+    <!-- releaselabel should be the ballot status for HL7-published IGs. -->
+    <parameter>
+      <code value="releaselabel"/>
+      <value value="CI Build"/>
+    </parameter>
+		<parameter>
+			<code value="autoload-resources" />
+			<value value="true" />
+		</parameter>
+  </definition>
+</ImplementationGuide>

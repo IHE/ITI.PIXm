@@ -1,0 +1,11 @@
+@startuml
+hide footbox
+participant "Patient Identifier Cross-reference Consumer" as Consumer
+participant "Patient Identifier Cross-reference Manager" as Manager
+"Consumer" -> "Manager" : 1. query for cross-reference to an identity
+activate "Consumer"
+activate "Manager"
+"Manager" --> "Consumer" : 2. cross-referenced identities
+deactivate "Consumer"
+deactivate "Manager"
+@enduml

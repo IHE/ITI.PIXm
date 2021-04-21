@@ -1,0 +1,38 @@
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">PIXm Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Overview<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="1_overview.html">Overview</a>
+      </li>
+      <li>
+        <a href="2_actors_and_transactions.html">Actors and Transactions</a>
+      </li>
+      <li>
+        <a href="3_security_considerations.html">Security Considerations</a>
+      </li>
+      <li>
+        <a href="4_grouping.html">Cross Profile Considerations</a>
+      </li>
+	  <li>
+		<a href="5_testplan.html">Test Plan</a>
+	  </li>
+	  <li>
+		<a href="a_issues.html">Open Issues</a>
+	  </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transactions<b class="caret"></b></a>
+	<ul class="dropdown-menu">
+      <li>
+        <a href="ITI-83.html">Patient Identity cross-Reference Query [ITI-83]</a>
+      </li>
+	</ul>
+  </li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+</ul>      

@@ -1,0 +1,9 @@
+@startuml
+
+agent "Patient Identifier Cross-reference Consumer" as Consumer
+
+agent "Patient Identifier Cross-reference Manager" as Manager
+usecase (query for cross-reference to an identity) as (ITI-83)
+Consumer --> (ITI-83)
+Manager --> (ITI-83)
+@enduml

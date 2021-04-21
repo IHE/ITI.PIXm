@@ -1,0 +1,12 @@
+{
+  "resourceType": "Patient",
+  "id": "patient-example2",
+  "meta": {
+    "security": [
+      {
+        "code": "HTEST",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+      }
+    ]
+  }
+}

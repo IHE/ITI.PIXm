@@ -1,0 +1,25 @@
+{
+  "name": "IHE.ITI.PIXm",
+  "version": "0.1.0",
+  "canonical": "http://ihe.net/fhir/ITI.PIXm",
+  "url": "http://ihe.net/fhir/ITI.PIXm",
+  "title": "PIXm Implementation Guide",
+  "description": "An example of how IHE Profile can be used to create an IG",
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1"
+  },
+  "keywords": [
+    "PIXm",
+    "Patient Identity",
+    "Cross-Reference"
+  ],
+  "language": "en",
+  "author": "IHE",
+  "maintainers": [
+    {
+      "name": "John Moehrke",
+      "email": "john.moehrke@gmail.com"
+    }
+  ],
+  "license": "CC0-4.0"
+}
