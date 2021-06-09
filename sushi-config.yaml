@@ -10,7 +10,7 @@
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: IHE.ITI.PIXm
-canonical: http://ihe.net/fhir/ITI.PIXm
+canonical: http://profiles.ihe.net/ITI/PIXm
 version: 0.1.0
 name: PIXmImplementationGuide
 title: PIXm Implementation Guide

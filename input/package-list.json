@@ -1,7 +1,7 @@
 {
  "package-id" : "ihe.pixm.fhir",
  "title" : "IHE PIXm Profile", 
- "canonical" : "http://profiles.ihe.net/fhir/ihe.pixm.fhir/ImplementationGuide/ihe.pixm.fhir", 
+ "canonical" : "http://profiles.ihe.net/ITI/PIXm/ImplementationGuide/ihe.pixm.fhir", 
  "introduction" : "Implementation Guide for IHE PIXm Profile.",
  "list" : [{
   "version" : "current",
@@ -13,7 +13,7 @@
   "version" : "0.1.0",  
   "date" : "2019-12-31", 
   "desc" : "Initial workgroup review",   
-  "path" : "http://profiles.ihe.net/fhir/ihe.pixm.fhir/201912/index.html",   
+  "path" : "http://profiles.ihe.net/ITI/PIXm/201912/index.html",   
   "status" : "ballot",   
   "sequence" : "Internal Review"
  }]

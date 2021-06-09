@@ -8,7 +8,7 @@
       <h2> Mobile Patient Identifier Cross-Reference Query</h2> 
       <p> OPERATION: Find patient matches using IHE PIXm Profile</p> 
       <p> The official URL for this operation definition is: </p> 
-      <pre> http://profiles.ihe.net/fhir/ihe.pixm.fhir/OperationDefinition/IHE_PIXm_pix</pre> 
+      <pre> http://profiles.ihe.net/ITI/PIXm/OperationDefinition/IHE_PIXm_pix</pre> 
       <div> 
         <p> A Master Patient Index (
           <a href="http://en.wikipedia.org/wiki/Enterprise_master_patient_index">MPI</a>  ) is a service used to manage patient identification in a context where multiple patient
@@ -134,7 +134,7 @@
     <valueCode value="trial-use"/> 
   </extension> 
   <id value="IHE_PIXm_pix"/>
-  <url value="http://profiles.ihe.net/fhir/ihe.pixm.fhir/OperationDefinition/IHE_PIXm_pix"/> 
+  <url value="http://profiles.ihe.net/ITI/PIXm/OperationDefinition/IHE_PIXm_pix"/> 
   <version value="2.0.0"/>
   <name value="IHE_PIXm_pix" />  
   <title value="Find patient matches using IHE-PIXm Profile"/> 
