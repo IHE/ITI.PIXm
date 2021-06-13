@@ -1,0 +1,5 @@
+@startuml
+agent "Patient Identifier Cross-reference Manager" as Manager
+agent "Patient Identifier Cross-reference Consumer" as Consumer
+Consumer -- Manager : "Mobile Patient Identifier Cross-reference Query [ITI-83] ↓"
+@enduml
