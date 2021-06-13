@@ -1,10 +1,10 @@
 {
   "name": "IHE.ITI.PIXm",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "canonical": "http://ihe.net/fhir/ITI.PIXm",
   "url": "http://ihe.net/fhir/ITI.PIXm",
   "title": "PIXm Implementation Guide",
-  "description": "An example of how IHE Profile can be used to create an IG",
+  "description": "Implementation guide for Patient Identifier Cross-referencing with RESTful transactions and FHIR resources",
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1"
   },
@@ -19,6 +19,14 @@
     {
       "name": "John Moehrke",
       "email": "john.moehrke@gmail.com"
+    },
+    {
+      "name": "Oliver Egger",
+      "email": "oliver.egger@ahdis.ch"
+    },
+    {
+      "name": "Martin Smock",
+      "email": "martin_smock@me.com"
     }
   ],
   "license": "CC0-4.0"
