@@ -78,13 +78,13 @@ The Patient Identifier Cross-reference Manager manages patient identity data fro
 The transactions in this profile are summarized in the sections below.
 
 #### Patient Identity cross-Reference Feed ITI-???
-TBD
+TODO
 
 #### Patient Identity cross-Reference Update ITI-???
-TBD
+TODO
 
 #### Patient Identity cross-Reference Delete ITI-???
-TBD
+TODO
 
 #### Patient Identity cross-Reference Query ITI-83
 
