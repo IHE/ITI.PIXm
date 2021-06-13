@@ -262,4 +262,3 @@ The audit message shall comply with the requirements in ITI TF-2a:
   - ParticipantObjectQuery = Requested URL including query parameters
   - ParticipantObjectDetail = HTTP Request Headers contained in the
     query (e.g., Accept header)
-

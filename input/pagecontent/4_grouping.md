@@ -1,5 +1,5 @@
 
-## 41.3 PIXm Required Actor Groupings 
+## 41.3 PIXm Required Actor Groupings
 
 Table 41.3-1: PIXm - Required Actor Groupings
 
@@ -42,4 +42,3 @@ identifiers is enabled using other IHE profiles, e.g.:
 Grouping of the PIXm Manager with these other actors is not required if
 the implementation is able to obtain patient identity and
 cross-reference information in another manner.
-
