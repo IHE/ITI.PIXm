@@ -68,10 +68,17 @@ The Document Source is the producer and publisher of documents and metadata.
 
 The Document Consumer queries for document metadata meeting certain criteria and may retrieve selected documents.
 
-
-
 ### Transaction Descriptions
 The transactions in this profile are summarized in the sections below.
+
+#### Patient Identity cross-Reference Feed ITI-???
+TODO
+
+#### Patient Identity cross-Reference Update ITI-???
+TODO
+
+#### Patient Identity cross-Reference Delete ITI-???
+TODO
 
 #### Patient Identity cross-Reference Query ITI-83
 

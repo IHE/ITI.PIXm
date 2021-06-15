@@ -6,7 +6,7 @@
 		The IHE Profile text is Normative, this conformance resource is Informative. 
 	</div></text> 
 	<id value="IHE_PIXm_Manager" />
- 	<url value="http://profiles.ihe.net/fhir/ihe.pixm.fhir/CapabilityStatement/IHE_PIXm_Manager" />  
+ 	<url value="http://profiles.ihe.net/ITI/PIXm/CapabilityStatement/IHE_PIXm_Manager" />  
  	<name value="IHE_PIXm_Manager" />  
  	<title value="IHE ITI Patient Identity Cross-Reference for Mobile (PIXm) - Manager (server)" />  
 	<status value="draft" />
@@ -38,7 +38,7 @@
 			<type value="Patient" />
 			<operation>
 		  	  <name value="$ihe-pix"/>
-			  <definition value="http://profiles.ihe.net/fhir/ihe.pixm.fhir/OperationDefinition/IHE_PIXm_pix"/>
+			  <definition value="http://profiles.ihe.net/ITI/PIXm/OperationDefinition/IHE_PIXm_pix"/>
 			</operation>
 		</resource>  
 	</rest>

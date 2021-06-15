@@ -8,7 +8,7 @@
       This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/PIXm">Patient Identity Cross-Refernece for Mobile (PIXm)</a>
 		</div>
 	</text>
-	<url value="http://profiles.ihe.net/fhir/ihe.pixm.fhir/ImplementationGuide/ihe.pixm.fhir" />
+	<url value="http://profiles.ihe.net/ITI/PIXm/ImplementationGuide/ihe.pixm.fhir" />
 	<version value="0.1.0" />
 	<name value="IHE_PIXm" />
 	<status value="draft" />

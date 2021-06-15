@@ -2,7 +2,7 @@
 	<id value="3.38.4.2.2.1-2" />
     <!-- could later have a StructureDefinition profile that is equal to the OperationDefinition that could be identified here for validation
     <meta>
-        <profile value="http://profiles.ihe.net/fhir/ihe.pixm.fhir/OperationDefinition/IHE_PIXm_pix" />
+        <profile value="http://profiles.ihe.net/ITI/PIXm/OperationDefinition/IHE_PIXm_pix" />
     </meta>	
 	-->
 	<parameter>
