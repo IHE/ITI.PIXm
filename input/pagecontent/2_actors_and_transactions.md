@@ -78,16 +78,21 @@ The Patient Identifier Cross-reference Manager manages patient identity data fro
 The transactions in this profile are summarized in the sections below.
 
 #### Patient Identity cross-Reference Create ITI-???
-TODO
+This transaction is used by Patient Identifier Cross-reference Source actors to create a new patient resource with the patient identity data at the Patient Identifier Cross-reference Manager.  
+
+For details see [transaction description](ITI-???.html).
 
 #### Patient Identity cross-Reference Update ITI-???
-TODO
+This transaction is used by Patient Identifier Cross-reference Source actors to update the patient identity data previously created at the Patient Identifier Cross-reference Manager.
+
+For details see [transaction description](ITI-???.html).
 
 #### Patient Identity cross-Reference Delete ITI-???
-TODO
+This transaction is used by Patient Identifier Cross-reference Source actors to delete the patient identity data previously created at the Patient Identifier Cross-reference Manager.
+
+For details see [transaction description](ITI-???.html).
 
 #### Patient Identity cross-Reference Query ITI-83
+This operation is used by Patient Identifier Cross-reference Consumer actors to query for patient identity cross-references managed by the Patient Identifier Cross-reference Manager.
 
-This operation is used to query for Patient Identity cross-References.
-
-For more details see the detailed [transaction description](ITI-83.html)
+For details see [transaction description](ITI-83.html)

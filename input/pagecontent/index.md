@@ -1,5 +1,5 @@
 
-# Patient Identifier Cross-reference for Mobile Profile (PIXm)
+## Patient Identifier Cross-reference for Mobile Profile (PIXm)
 
 The ***Patient Identifier Cross-reference for* Mobile** ***Integration Profile*** provides RESTful transactions for mobile and lightweight browser-based applications to create, update and delete Patient Ressources in a Patient Identifier Cross-reference Manager and to query the Patient Identifier Cross-reference Manager for a list of patient’s cross-domain
 identifiers assigned to the same patient person by the Patient Identifier Cross-reference Manager.
@@ -36,5 +36,4 @@ You can also download:
 * the definition resources in [json](definitions.json.zip), [xml](definitions.xml.zip), or [ttl](definitions.ttl.zip) format, or
 * the example resources in [json](examples.json.zip), [xml](examples.xml.zip) or [ttl](examples.ttl.zip) format.
 
-The source code for this Implementation Guide can be found on
-[https://github/JohnMoehrke/ITI.PIXm](https://github.com/JohnMoehrke/ITI.PIXm).
+The source code for this Implementation Guide can be found on [Github](https://github.com/IHE/ITI.PIXm).
