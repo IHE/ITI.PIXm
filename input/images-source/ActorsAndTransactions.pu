@@ -5,7 +5,7 @@ agent "Patient Identifier Cross-reference Consumer" as Consumer
 agent "Patient Identifier Cross-reference Manager" as Manager
 
 
-Source --- Manager: "Mobile Patient Identifier Cross-reference Feed [ITI-???] ↓\n Mobile Patient Identifier Cross-reference Update [ITI-???] ↓\n Mobile Patient Identifier Cross-reference Delete [ITI-???]↓"
+Source --- Manager: "Mobile Patient Identifier Cross-reference Create [ITI-???] ↓\n Mobile Patient Identifier Cross-reference Update [ITI-???] ↓\n Mobile Patient Identifier Cross-reference Delete [ITI-???]↓"
 Consumer -- Manager : "Mobile Patient Identifier Cross-reference Query [ITI-83] ↓"
 
 @enduml
