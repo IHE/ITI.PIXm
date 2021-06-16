@@ -21,12 +21,12 @@ Table 41.1-1: PIXm Profile - Actors and Transactions
 
 | Actors| Transactions| Initiator or Responder | Optionality | Reference |
 | ----- | ----------- | ---------------------- | ----------- | --------- |
-| Patient Identifier Cross-reference Source | Mobile Patient Identifier Cross-Reference Feed \[ITI-???\] | Initiator | R | ITI TF-2c: 3.83 |
+| Patient Identifier Cross-reference Source | Mobile Patient Identifier Cross-Reference Create \[ITI-???\] | Initiator | R | ITI TF-2c: 3.83 |
 | | Mobile Patient Identifier Cross-Reference Update \[ITI-???\] | Initiator | R | ITI TF-2c: 3.83 |
 | | Mobile Patient Identifier Cross-Reference Delete \[ITI-???\] | Initiator | R | ITI TF-2c: 3.83 |
 | Patient Identifier Cross-reference Consumer | Mobile Patient Identifier Cross-Reference Query \[ITI-83\] | Initiator     | R | ITI TF-2c: 3.83 |
 | Patient Identifier Cross-reference Manager  | Mobile Patient Identifier Cross-Reference Query \[ITI-83\] | Responder     | R | ITI TF-2c: 3.83 |
-| | Mobile Patient Identifier Cross-Reference Feed \[ITI-???\] | Responder | R | ITI TF-2c: 3.83 |
+| | Mobile Patient Identifier Cross-Reference Create \[ITI-???\] | Responder | R | ITI TF-2c: 3.83 |
 | | Mobile Patient Identifier Cross-Reference Update \[ITI-???\] | Responder | R | ITI TF-2c: 3.83 |
 | | Mobile Patient Identifier Cross-Reference Delete \[ITI-???\] | Responder | R | ITI TF-2c: 3.83 |
 {: .grid }
@@ -77,7 +77,7 @@ The Patient Identifier Cross-reference Manager manages patient identity data fro
 ### Transaction Descriptions
 The transactions in this profile are summarized in the sections below.
 
-#### Patient Identity cross-Reference Feed ITI-???
+#### Patient Identity cross-Reference Create ITI-???
 TODO
 
 #### Patient Identity cross-Reference Update ITI-???
