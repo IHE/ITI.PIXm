@@ -7,7 +7,7 @@
   - [Patient Identifier Cross-Reference Manager](2_actors_and_transactions.html)
 
 * Transactions
-
+  - [Patient Identity Cross-Reference Structure Definition [ITI-???]](ITI-???.html)
   - [Patient Identity Cross-Reference Create [ITI-???]](ITI-???.html)
   - [Patient Identity Cross-Reference Update [ITI-???]](ITI-???.html)
   - [Patient Identity Cross-Reference Delete [ITI-???]](ITI-???.html)
@@ -15,18 +15,16 @@
 
 ## PIXm Overview
 
-The ***Patient Identifier Cross-reference for Mobile Profile (PIXm)*** is
-intended to be used by lightweight applications and mobile devices
-present in a broad range of healthcare enterprises (hospital, a clinic,
+The ***Patient Identifier Cross-reference for Mobile Profile (PIXm)*** is intended to be used by lightweight applications and mobile devices present in a broad range of healthcare enterprises (hospital, a clinic,
 a physician office, etc.).
 
-It provides RESTful interfaces for Patient Identifier Cross-Reference Source actors to feed, update and delete patient identity data as FHIR patient resources managed by the Patient Identifier Cross-Reference Manager actor and a cross-reference query of patient identifiers from multiple Patient Identifier Domains assigned to the same patient person by the Patient Identifier Cross-Reference Manager.
+It provides RESTful interfaces for Patient Identifier Cross-Reference Source actors to feed, update and delete patient identity data as FHIR patient resources managed by the Patient Identifier Cross-Reference Manager actor, a cross-reference query of patient identifiers from multiple Patient Identifier Domains assigned to the same patient person by the Patient Identifier Cross-Reference Manager and a transaction to retrieve the FHIR structure definition of the patient resource.
 
 ### Concepts
 
 This profile uses RESTful transaction and FHIR patient resources for the Create, Update and Delete transactions perfomed by the Patient Identifier Cross-Reference Source and Manager actors.  
 
-This profile assumes that the Patient Identifier Cross-Reference Manager performs linkin and unlinking based on the Create, Update and Delete transcations based on the patient identity data provided by the Patient Identifier Cross-Reference Source actors from the different domains.
+This profile assumes that the Patient Identifier Cross-Reference Manager performs linking and unlinking based on the Create, Update and Delete transcations based on the patient identity data provided by the Patient Identifier Cross-Reference Source actors from the different domains.
 
 This profile does neither specify the rules and algorithm applied by the Patient Identifier Cross-Reference Manager actor to link or unlink the patient identity data from different domains, nor the point in time the Patient Identifier Cross-Reference Manager actually links the data. Patient Identifier Cross-Reference Manager may link the patient identity data from the different domains on time of the Create, Update or Delete transactions, but also may provide other triggers (e.g., manual linking or unlinking in case when the rules and algorithms go wrong).
 

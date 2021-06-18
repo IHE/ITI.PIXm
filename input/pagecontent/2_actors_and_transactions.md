@@ -12,39 +12,32 @@ Profile and the relevant transactions between them.
 
 **Figure: 41.1-1: PIXm Actor Diagram**
 
-Table 41.1-1 lists the transactions for each actor directly involved in
-the PIXm Profile. To claim compliance with this profile, an actor shall
-support all required transactions (labeled “R”) and may support the
-optional transactions (labeled “O”).
+Table 41.1-1 lists the transactions for each actor directly involved in the PIXm Profile. To claim compliance with this profile, an actor shall support all required transactions (labeled “R”) and may support the optional transactions (labeled “O”).
 
 Table 41.1-1: PIXm Profile - Actors and Transactions
 
 | Actors| Transactions| Initiator or Responder | Optionality | Reference |
 | ----- | ----------- | ---------------------- | ----------- | --------- |
-| Patient Identifier Cross-reference Source | Mobile Patient Identifier Cross-Reference Create \[ITI-???\] | Initiator | R | ITI TF-2c: 3.83 |
+| Patient Identifier Cross-reference Source | Mobile Patient Identifier Cross-Reference Structure Definition \[ITI-???\] | Initiator | R | ITI TF-2c: 3.83 |
+| | Mobile Patient Identifier Cross-Reference Create \[ITI-???\] | Initiator | R | ITI TF-2c: 3.83 |
 | | Mobile Patient Identifier Cross-Reference Update \[ITI-???\] | Initiator | R | ITI TF-2c: 3.83 |
 | | Mobile Patient Identifier Cross-Reference Delete \[ITI-???\] | Initiator | R | ITI TF-2c: 3.83 |
 | Patient Identifier Cross-reference Consumer | Mobile Patient Identifier Cross-Reference Query \[ITI-83\] | Initiator     | R | ITI TF-2c: 3.83 |
-| Patient Identifier Cross-reference Manager  | Mobile Patient Identifier Cross-Reference Query \[ITI-83\] | Responder     | R | ITI TF-2c: 3.83 |
+| Patient Identifier Cross-reference Manager  | Mobile Patient Identifier Cross-Reference Structure Definition \[ITI-???\] | Responder     | R | ITI TF-2c: 3.83 |
+| | Mobile Patient Identifier Cross-Reference Query \[ITI-83\] | Responder     | R | ITI TF-2c: 3.83 |
 | | Mobile Patient Identifier Cross-Reference Create \[ITI-???\] | Responder | R | ITI TF-2c: 3.83 |
 | | Mobile Patient Identifier Cross-Reference Update \[ITI-???\] | Responder | R | ITI TF-2c: 3.83 |
 | | Mobile Patient Identifier Cross-Reference Delete \[ITI-???\] | Responder | R | ITI TF-2c: 3.83 |
 {: .grid }
 
-The transaction defined in this profile corresponds to the query
-transactions used in the PIX and PIXV3 Profiles (ITI TF-1: 5 and 23) and
-provides similar functionality.
+The Create, Update and Query transactions defined in this profile correspond to the transactions used in the PIX and PIXV3 Profiles (ITI TF-1: 5 and 23) and provides similar functionality.
 
-Note that the Patient Master Identity Registry (PMIR) Profile contains
-the Mobile Patient Identity Feed \[ITI-93\] transaction which is
-equivalent to the Patient Identity Feed (\[ITI-8\] or \[ITI-44\]) or the
-PIX Update Notification (\[ITI-10\] and \[ITI-46\]) transactions in the
-PIX and PIXV3 Profiles.
+Note that the Patient Master Identity Registry (PMIR) Profile contains the Mobile Patient Identity Feed \[ITI-93\] transaction which is equivalent to the Patient Identity Feed (\[ITI-8\] or \[ITI-44\]) or the
+PIX Update Notification (\[ITI-10\] and \[ITI-46\]) transactions in the PIX and PIXV3 Profiles.
 
 ### Actor Descriptions and Actor Profile Requirements
 
-There are no requirements beyond those in Volume 2 for the \[ITI-83\]
-transaction.
+There are no requirements beyond those in Volume 2 for the \[ITI-83\] transaction.
 
 ## PIXm Actor Options
 
@@ -76,6 +69,11 @@ The Patient Identifier Cross-reference Manager manages patient identity data fro
 
 ### Transaction Descriptions
 The transactions in this profile are summarized in the sections below.
+
+#### Patient Identity cross-Reference Structure Definition ITI-???
+This transaction is used by Patient Identifier Cross-reference Source actors to retrieve the FHIR structure definition of the patient resources as required by the Patient Identifier Cross-reference Manager.
+
+For details see [transaction description](ITI-???.html).
 
 #### Patient Identity cross-Reference Create ITI-???
 This transaction is used by Patient Identifier Cross-reference Source actors to create a new patient resource with the patient identity data at the Patient Identifier Cross-reference Manager.  
