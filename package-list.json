@@ -1,11 +1,9 @@
 {
-
   "package-id": "IHE.ITI.PIXm",
   "title": "PIXm Implementation Guide",
   "canonical": "http://profiles.ihe.net/ITI/PIXm",
   "introduction": "PIXm in Implementation Guide format with examples",
-  "list": [
-    {
+  "list": [{
       "version": "current",
       "desc": "Continuous Integration Build (latest in version control)",
       "path": "http://profiles.ihe.net/ITI/PIXm",

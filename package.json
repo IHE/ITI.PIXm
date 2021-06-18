@@ -15,11 +15,15 @@
   ],
   "language": "en",
   "author": "IHE",
-  "maintainers": [
-    {
-      "name": "John Moehrke",
-      "email": "john.moehrke@gmail.com"
-    }
-  ],
+  "maintainers": [{
+    "name": "John Moehrke",
+    "email": "john.moehrke@gmail.com"
+  }, {
+    "name": "Oliver Egger",
+    "email": "oliver.egger@ahdis.ch"
+  }, {
+    "name": "Martin Smock",
+    "email": "martin_smock@me.com"
+  }],
   "license": "CC0-4.0"
 }

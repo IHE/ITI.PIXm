@@ -1,4 +1,3 @@
-## 41.5 Security Considerations
+## Security Considerations
 
-See ITI TF-2X: Appendix Z.8 “Mobile Security Considerations”
-
+See [ITI TF-2: Appendix Z.8 “Mobile Security Considerations”](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations)
