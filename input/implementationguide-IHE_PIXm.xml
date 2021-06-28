@@ -163,6 +163,19 @@
         <title value="Open Issues"/>
         <generation value="markdown"/>
       </page>
+<<<<<<< HEAD
+=======
+      <page>
+        <nameUrl value="ITI-83.html"/>
+        <title value="Transaction ITI-83"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="ITI-X-PIXmFeed.html"/>
+        <title value="Transaction ITI-X-PIXmFeed"/>
+        <generation value="markdown"/>
+      </page>
+>>>>>>> pixmfeed with coditional update
     </page>
     <!-- copyright year is a mandatory parameter -->
     <parameter>
