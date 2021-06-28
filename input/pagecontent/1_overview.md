@@ -1,5 +1,5 @@
 
-## PIXm Actors, Transactions, and Content Modules
+### PIXm Actors, Transactions, and Content Modules
 
 * Actors
   - [Patient Identifier Cross-Reference Source](2_actors_and_transactions.html)
@@ -13,14 +13,14 @@
   - [Patient Identity Cross-Reference Delete [ITI-???]](ITI-???.html)
   - [Patient Identity Cross-Reference Query [ITI-83]](ITI-83.html)
 
-## PIXm Overview
+### PIXm Overview
 
 The ***Patient Identifier Cross-reference for Mobile Profile (PIXm)*** is intended to be used by lightweight applications and mobile devices present in a broad range of healthcare enterprises (hospital, a clinic,
 a physician office, etc.).
 
 It provides RESTful interfaces for Patient Identifier Cross-Reference Source actors to feed, update and delete patient identity data as FHIR patient resources managed by the Patient Identifier Cross-Reference Manager actor, a cross-reference query of patient identifiers from multiple Patient Identifier Domains assigned to the same patient person by the Patient Identifier Cross-Reference Manager and a transaction to retrieve the FHIR structure definition of the patient resource.
 
-### Concepts
+#### Concepts
 
 This profile uses RESTful transaction and FHIR patient resources for the Create, Update and Delete transactions perfomed by the Patient Identifier Cross-Reference Source and Manager actors.  
 
@@ -32,9 +32,9 @@ This profile does not address issues related to building 'golden records' or ver
 
 The actors of this profile may be grouped with corresponding actors of the **PIX** or **PIXV3** profiles and may act as a facade for the **PIX** or **PIXV3** Patient Identifier Cross-Reference Manager to provide RESTful interfaces with FHIR patient resources for patient identity cross referencing.     
 
-### Use Cases
+#### Use Cases
 
-#### Retrieving documents from other domains
+##### Retrieving documents from other domains
 
 A patient is in an ambulance on his way to the hospital after an
 accident. The mobile Care system in the ambulance wants to get allergy
@@ -60,7 +60,7 @@ the allergy information from the hospital allergy system using the allergy syste
 
 In this scenario, the hospital’s main ADT system (acting as a Patient Identity Source) would perform a Patient Identifier Cross-reference Create [ITI-???] transaction (using the patient’s MRN as the identifier) to the Patient Identifier Cross-reference Manager.
 
-#### Providing documents for other domains
+##### Providing documents for other domains
 
 After finishing the medical treatment the healthcare professional of the ambulance want's
 to provide reports for other domains (e.g., the allergy system). Having registered the patient

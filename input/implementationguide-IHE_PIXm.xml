@@ -112,7 +112,7 @@
 			<description value="An example Patient to make dheeraj-example complete"/>
 			<exampleBoolean value="true"/>
 		</resource>
-   
+
     <page>
       <!-- The root will always be toc.html - the template will force it if you don't do it -->
       <nameUrl value="toc.html"/>
@@ -120,7 +120,7 @@
       <generation value="html"/>
       <page>
         <nameUrl value="index.html"/>
-        <title value="PIXm Home Page"/>
+        <title value="PIXm Home"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -140,9 +140,14 @@
       </page>
       <page>
         <nameUrl value="4_grouping.html"/>
-        <title value="Grouping"/>
+        <title value="Required Actor Groupings"/>
         <generation value="markdown"/>
       </page>
+						<page>
+								<nameUrl value="4_cross-profile.html"/>
+								<title value="Cross Profile Considerations"/>
+								<generation value="markdown"/>
+						</page>
       <page>
         <nameUrl value="5_testplan.html"/>
         <title value="Test Plan"/>

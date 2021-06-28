@@ -39,7 +39,7 @@ PIX Update Notification (\[ITI-10\] and \[ITI-46\]) transactions in the PIX and 
 
 There are no requirements beyond those in Volume 2 for the \[ITI-83\] transaction.
 
-## PIXm Actor Options
+### PIXm Actor Options
 
 Options that may be selected for each actor in this profile, if any, are
 listed in the Table 41.2-1. Dependencies between options when applicable
@@ -54,43 +54,43 @@ Table 41.2-1: PIXm Actors and Options
 | Patient Identifier Cross-reference Manager  | No options defined | \--       |
 {: .grid }
 
-### Actors
+#### Actors
 The actors in this profile are described in more detail in the sections below.
 
-#### Patient Identifier Cross-reference Source
+##### Patient Identifier Cross-reference Source
 The Patient Identifier Cross-reference Source is the producer and publisher of patient identity data.
 
-#### Patient Identifier Cross-reference Consumer
+##### Patient Identifier Cross-reference Consumer
 The Patient Identifier Cross-reference Consumer queries the patient ID lists from the Patient Identifier Cross-reference Manager.
 
-##### Patient Identifier Cross-reference Manager
+###### Patient Identifier Cross-reference Manager
 The Patient Identifier Cross-reference Manager manages patient identity data from different domains and links patient identity data from different domains assigned to the same patient person.  
 
 
-### Transaction Descriptions
+#### Transaction Descriptions
 The transactions in this profile are summarized in the sections below.
 
-#### Patient Identity cross-Reference Structure Definition ITI-???
+##### Patient Identity cross-Reference Structure Definition ITI-???
 This transaction is used by Patient Identifier Cross-reference Source actors to retrieve the FHIR structure definition of the patient resources as required by the Patient Identifier Cross-reference Manager.
 
 For details see [transaction description](ITI-???.html).
 
-#### Patient Identity cross-Reference Create ITI-???
+##### Patient Identity cross-Reference Create ITI-???
 This transaction is used by Patient Identifier Cross-reference Source actors to create a new patient resource with the patient identity data at the Patient Identifier Cross-reference Manager.  
 
 For details see [transaction description](ITI-???.html).
 
-#### Patient Identity cross-Reference Update ITI-???
+##### Patient Identity cross-Reference Update ITI-???
 This transaction is used by Patient Identifier Cross-reference Source actors to update the patient identity data previously created at the Patient Identifier Cross-reference Manager.
 
 For details see [transaction description](ITI-???.html).
 
-#### Patient Identity cross-Reference Delete ITI-???
+##### Patient Identity cross-Reference Delete ITI-???
 This transaction is used by Patient Identifier Cross-reference Source actors to delete the patient identity data previously created at the Patient Identifier Cross-reference Manager.
 
 For details see [transaction description](ITI-???.html).
 
-#### Patient Identity cross-Reference Query ITI-83
+##### Patient Identity cross-Reference Query ITI-83
 This operation is used by Patient Identifier Cross-reference Consumer actors to query for patient identity cross-references managed by the Patient Identifier Cross-reference Manager.
 
 For details see [transaction description](ITI-83.html)

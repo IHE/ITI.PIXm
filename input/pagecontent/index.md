@@ -1,5 +1,5 @@
 
-## Patient Identifier Cross-reference for Mobile Profile (PIXm)
+<!-- ## Patient Identifier Cross-reference for Mobile Profile (PIXm) -->
 
 The ***Patient Identifier Cross-reference for* Mobile** ***Integration Profile*** provides RESTful transactions for mobile and lightweight browser-based applications to create, update and delete Patient Ressources in a Patient Identifier Cross-reference Manager and to query the Patient Identifier Cross-reference Manager for a list of patient’s cross-domain
 identifiers assigned to the same patient person by the Patient Identifier Cross-reference Manager.
