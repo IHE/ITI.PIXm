@@ -1,0 +1,21 @@
+{
+    "resourceType": "Patient",
+    "id": "Patient-MooreRalph-Red",
+    "identifier": [
+        {
+            "system": "urn:oid:1.3.6.1.4.1.21367.13.20.1000",
+            "value": "IHERED-993"
+        }
+    ],
+    "active": true,
+    "name": [
+        {
+            "family": "MOORE",
+            "given": [
+                "RALPH"
+            ]
+        }
+    ],
+    "gender": "male",
+    "birthDate": "1951-07-06"
+}
