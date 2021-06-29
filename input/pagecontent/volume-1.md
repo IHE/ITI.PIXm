@@ -27,13 +27,13 @@ Table 41.1-1: PIXm Profile - Actors and Transactions
 
 | Actors| Transactions| Initiator or Responder | Optionality | Reference |
 | ----- | ----------- | ---------------------- | ----------- | --------- |
-| Patient Identifier Cross-reference Source | Mobile Patient Identity Feed \[ITI-104\] | Initiator | R |  |
-| | Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105]| Initiator | O | \-- |
-| Patient Identifier Cross-reference Consumer | Mobile Patient Identifier Cross-Reference Query \[ITI-83\] | Initiator     | R | \--  |
-| | Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105]| Initiator| O | \--  |
-| Patient Identifier Cross-reference Manager  | Mobile Patient Identifier Cross-Reference Query [ITI-83] | Responder     | R | \--  |
-| | Mobile Patient Identity Feed [ITI-104] | Responder | R | \--  |
-| | Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105] | Responder | R | \--  |
+| Patient Identifier Cross-reference Source | Mobile Patient Identity Feed \[ITI-104\] | Initiator | R | [ITI TF-2: 3.104](ITI-104.html) |
+| | Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105]| Initiator | O | [ITI TF-2: 3.105](ITI-105.html) |
+| Patient Identifier Cross-reference Consumer | Mobile Patient Identifier Cross-Reference Query [ITI-83] | Initiator | R | [ITI TF-2: 3.83](ITI-83.html) |
+| | Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105]| Initiator| O | [ITI TF-2: 3.105](ITI-105.html) |
+| Patient Identifier Cross-reference Manager  | Mobile Patient Identifier Cross-Reference Query [ITI-83] | Responder | R | [ITI TF-2: 3.83](ITI-83.html) |
+| | Mobile Patient Identity Feed [ITI-104] | Responder | R | [ITI TF-2: 3.104](ITI-104.html) |
+| | Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105] | Responder | R | [ITI TF-2: 3.105](ITI-105.html) |
 {: .grid }
 
 The Create, Update and Query transactions defined in this profile correspond to the transactions used in the PIX and PIXV3 Profiles (ITI TF-1: 5 and 23) and provides similar functionality.
@@ -151,29 +151,22 @@ See [ITI TF-2: Appendix Z.8 “Mobile Security Considerations”](https://profil
 
 #### 41.6.1 Proxy Model
 
-The Patient Identifier Cross-reference Manager from PIXm can be grouped
-with either PIX or PIXV3 Patient Identifier Cross-reference Consumer to
-proxy the Mobile Patient Identifier Cross-reference Query \[ITI-83\] to
-the more traditional PIX Query \[ITI-9\] and PIXV3 Query \[ITI-45\]
-transactions, thus acting as a proxy to the Patient Identifier
-Cross-reference Manager that wants to enable RESTful query to its data.
+The Patient Identifier Cross-reference Manager from PIXm can be grouped with either PIX or PIXV3 Patient Identifier Cross-
+reference Consumer to proxy the Mobile Patient Identifier Cross-reference Query \[ITI-83\] to the more traditional PIX
+Query \[ITI-9\] and PIXV3 Query \[ITI-45\] transactions, thus acting as a proxy to the Patient Identifier Cross-reference
+Manager that wants to enable RESTful query to its data.
 
 #### 41.6.2 Manager Grouping
 
-The PIXm Profile does not define a Patient Identity Feed transaction to
-the Patient Identifier Cross-reference Manager, but obtaining patient
-identifiers is enabled using other IHE profiles, e.g.:
+The PIXm Profile does not define a Patient Identity Feed transaction to the Patient Identifier Cross-reference Manager, but obtaining patient identifiers is enabled using other IHE profiles, e.g.:
 
-  - The Patient Identifier Cross-reference Manager from PIXm can be
-    grouped with a Patient Identity Consumer from the Patient Master
-    Identity Registry (PMIR) Profile in order to receive the Mobile
-    Patient Identity Feed \[ITI-93\] transaction.
+  - The Patient Identifier Cross-reference Manager from PIXm can be grouped with a Patient Identity Consumer from the
+  Patient Master Identity Registry (PMIR) Profile in order to receive the Mobile Patient Identity Feed \[ITI-93\]
+  transaction.
 
-  - The Patient Identifier Cross-reference Manager from PIXm can be
-    grouped with either Patient Identifier Cross-reference Manager from
-    PIX or PIXV3 to enable the traditional IHE mechanism to obtain
-    patient demographics for cross-referencing via Patient Identity Feed
-    transactions \[ITI-8\] and/or \[ITI-44\].
+  - The Patient Identifier Cross-reference Manager from PIXm can be grouped with either Patient Identifier Cross-reference
+  Manager from PIX or PIXV3 to enable the traditional IHE mechanism to obtain patient demographics for cross-referencing
+  via Patient Identity Feed transactions \[ITI-8\] and/or \[ITI-44\].
 
 Grouping of the PIXm Manager with these other actors is not required if
 the implementation is able to obtain patient identity and
