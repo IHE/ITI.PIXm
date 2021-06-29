@@ -25,10 +25,10 @@ This guide is organized into four main sections:
    7. [Test Plan](5_testplan.html)
 
 2. Volume II: Transaction Detail
-   1. [PIXm Create [ITI-901]](ITI-901.html)
-   2. [PIXm Update [ITI-902]](ITI-902.html)
-   3. [PIXm Delete [ITI-902]](ITI-903.html)
-   4. [Patient Identifier Cross-Reference Query [ITI-83]](ITI-83.html)
+   1. [Patient Identifier Cross-Reference Query [ITI-83]](ITI-83.html)
+   2. [Mobile Patient Identity Feed [ITI-104]](ITI-104.html)
+   3. [Patient Identity cross-Reference Structure Definition [ITI-105]](ITI-105.html)
+
 
 Click on any of the links above, head on over the [table of contents](toc.html), or
 if you are looking for a specific artifact, check out the [index](artifacts.html).

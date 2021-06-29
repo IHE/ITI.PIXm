@@ -10,10 +10,8 @@
 
 * Transactions
   - [Patient Identity Cross-Reference Query [ITI-83]](ITI-83.html)
-  - [Patient Identity Cross-Reference Structure Definition [ITI-901]](ITI-901.html)
-  - [Patient Identity Cross-Reference Create [ITI-902]](ITI-902.html)
-  - [Patient Identity Cross-Reference Update [ITI-903]](ITI-903.html)
-  - [Patient Identity Cross-Reference Delete [ITI-904]](ITI-904.html)
+  - [Mobile Patient Identity Feed [ITI-104]](ITI-104.html)
+  - [Patient Identity cross-Reference Structure Definition [ITI-105]](ITI-105.html)
 
 Figure below shows the actors directly involved in the PIXm Profile and the relevant transactions between them.
 
@@ -29,16 +27,13 @@ Table 41.1-1: PIXm Profile - Actors and Transactions
 
 | Actors| Transactions| Initiator or Responder | Optionality | Reference |
 | ----- | ----------- | ---------------------- | ----------- | --------- |
-| Patient Identifier Cross-reference Source | Mobile Patient Identifier Cross-Reference Structure Definition \[ITI-???\] | Initiator | R | ITI TF-2c: 3.83 |
-| | Mobile Patient Identifier Cross-Reference Create \[ITI-???\] | Initiator | R | ITI TF-2c: 3.83 |
-| | Mobile Patient Identifier Cross-Reference Update \[ITI-???\] | Initiator | R | ITI TF-2c: 3.83 |
-| | Mobile Patient Identifier Cross-Reference Delete \[ITI-???\] | Initiator | R | ITI TF-2c: 3.83 |
-| Patient Identifier Cross-reference Consumer | Mobile Patient Identifier Cross-Reference Query \[ITI-83\] | Initiator     | R | ITI TF-2c: 3.83 |
-| Patient Identifier Cross-reference Manager  | Mobile Patient Identifier Cross-Reference Structure Definition \[ITI-???\] | Responder     | R | ITI TF-2c: 3.83 |
-| | Mobile Patient Identifier Cross-Reference Query \[ITI-83\] | Responder     | R | ITI TF-2c: 3.83 |
-| | Mobile Patient Identifier Cross-Reference Create \[ITI-???\] | Responder | R | ITI TF-2c: 3.83 |
-| | Mobile Patient Identifier Cross-Reference Update \[ITI-???\] | Responder | R | ITI TF-2c: 3.83 |
-| | Mobile Patient Identifier Cross-Reference Delete \[ITI-???\] | Responder | R | ITI TF-2c: 3.83 |
+| Patient Identifier Cross-reference Source | Mobile Patient Identity Feed \[ITI-104\] | Initiator | R |  |
+| | Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105]| Initiator | O | \-- |
+| Patient Identifier Cross-reference Consumer | Mobile Patient Identifier Cross-Reference Query \[ITI-83\] | Initiator     | R | \--  |
+| | Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105]| Initiator| O | \--  |
+| Patient Identifier Cross-reference Manager  | Mobile Patient Identifier Cross-Reference Query [ITI-83] | Responder     | R | \--  |
+| | Mobile Patient Identity Feed [ITI-104] | Responder | R | \--  |
+| | Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105] | Responder | R | \--  |
 {: .grid }
 
 The Create, Update and Query transactions defined in this profile correspond to the transactions used in the PIX and PIXV3 Profiles (ITI TF-1: 5 and 23) and provides similar functionality.
@@ -110,29 +105,26 @@ The actors of this profile may be grouped with corresponding actors of the **PIX
 
 ###### 41.4.2.1.1 Use Case Description
 
-A patient is in an ambulance on his way to the hospital after an
-accident. The mobile Care system in the ambulance wants to get allergy
-information (e.g., using the MHD Profile) for the patient. The mobile
-Care system uses the patient’s driver’s license number ‘E-123’ as their
-local patient ID. Before requesting the allergy information from the hospital,
-it must translate the known patient identity (driver’s license) to the
-patient’s identity known by the hospital (MRN).
+A patient is in an ambulance on his way to the hospital after an accident. The mobile Care system in the ambulance wants to
+get allergy information (e.g., using the MHD Profile) for the patient. The mobile Care system uses the patient’s driver’s
+license number ‘E-123’ as their local patient ID. Before requesting the allergy information from the hospital,
+it must translate the known patient identity (driver’s license) to the patient’s identity known by the hospital (MRN).
 
-To achieve this correlation, the mobile Care system first registers the patient
-identity data including the local ID (driver’s license number ‘E-123’) using the
-Patient Identifier Cross-reference Create [ITI-???] transaction. The mobile Care system
-then issues a Mobile Patient Identifier Cross-reference Query [ITI-83] to the Patient
-Identifier Cross-reference Manager to retrieve the list of patient ID aliases from the
-Patient Identifier Cross-reference Manager assigned to the same patient person.
+To achieve this correlation, the mobile Care system first registers the patient identity data including the local ID
+(driver’s license number ‘E-123’) using the Mobile Patient Identity Feed [ITI-104] transaction. The mobile Care system
+then issues a Mobile Patient Identifier Cross-reference Query [ITI-83] to the Patient Identifier Cross-reference Manager to
+retrieve the list of patient ID aliases from the Patient Identifier Cross-reference Manager assigned to the same patient
+person.
 
-Having linked this patient with a patient known by medical record number = ‘007’ in the
-‘ADT Domain’, the Patient Identifier Cross-reference Manager returns this list of patient
-identifier from different domains which have been assigned to the same patient person
-by the Patient Identifier Cross-reference Manager. The mobile Care system can now request
-the allergy information from the hospital allergy system using the allergy system’s own patient ID
-(MRN-007) including the domain identifier/assigning authority of the ‘ADT Domain’.
+Having linked this patient with a patient known by medical record number = ‘007’ in the ‘ADT Domain’, the Patient
+Identifier Cross-reference Manager returns this list of patient identifier from different domains which have been assigned
+to the same patient person by the Patient Identifier Cross-reference Manager. The mobile Care system can now request the
+allergy information from the hospital allergy system using the allergy system’s own patient ID (MRN-007) including the
+domain identifier/assigning authority of the ‘ADT Domain’.
 
-In this scenario, the hospital’s main ADT system (acting as a Patient Identity Source) would perform a Patient Identifier Cross-reference Create [ITI-???] transaction (using the patient’s MRN as the identifier) to the Patient Identifier Cross-reference Manager.
+In this scenario, the hospital’s main ADT system (acting as a Patient Identity Source) would perform a Mobile Patient
+Identity Feed [ITI-104] transaction (using the patient’s MRN as the identifier) to the Patient Identifier Cross-reference
+Manager.
 
 ###### 41.4.2.1.2 Process Flow
 TODO
@@ -146,9 +138,7 @@ to provide reports for other domains (e.g., the allergy system). Having register
 identity data including the local patient ID (‘E-123’) the mobile Care systems can provide documents
 and register them with the mobile Care system local ID (‘E-123’).
 
-Healthcare systems of other domains may retrieve the documents by using a Patient Identifier
-Cross-reference Create [ITI-???] of their local patient identity data and rerieving the list of
-patient ID's from the other domains as explained in section above.
+Healthcare systems of other domains may retrieve the documents by using a Mobile Patient Identity Feed [ITI-104] of their local patient identity data and rerieving the list of patient ID's from the other domains as explained in section above.
 
 ###### 41.4.2.2.2 Process Flow
 TODO

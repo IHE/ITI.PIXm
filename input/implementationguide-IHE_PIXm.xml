@@ -128,26 +128,6 @@
         <title value="PIXm Profile"/>
         <generation value="markdown"/>
       </page>
-						<page>
-								<nameUrl value="ITI-901.html"/>
-								<title value="Patient Identity cross-Reference Structure Definition [ITI-901]"/>
-								<generation value="markdown"/>
-						</page>
-						<page>
-								<nameUrl value="ITI-902.html"/>
-								<title value="Patient Identity cross-Reference Create [ITI-902]"/>
-								<generation value="markdown"/>
-						</page>
-						<page>
-								<nameUrl value="ITI-903.html"/>
-								<title value="Patient Identity cross-Reference Update [ITI-903]"/>
-								<generation value="markdown"/>
-						</page>
-						<page>
-								<nameUrl value="ITI-904.html"/>
-								<title value="Patient Identity cross-Reference Delete [ITI-904]"/>
-								<generation value="markdown"/>
-						</page>
       <page>
         <nameUrl value="5_testplan.html"/>
         <title value="Test Plan"/>
@@ -160,14 +140,20 @@
       </page>
       <page>
         <nameUrl value="ITI-83.html"/>
-        <title value="Transaction ITI-83"/>
+        <title value="Patient Identifier Cross-Reference Query [ITI-83]"/>
         <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="ITI-104.html"/>
-        <title value="Transaction ITI-104"/>
+        <title value="3.104 Mobile Patient Identity Feed [ITI-104]"/>
         <generation value="markdown"/>
       </page>
+						<page>
+								<nameUrl value="ITI-105.html"/>
+								<title value="3.105 Patient Identity cross-Reference Structure Definition [ITI-105]"/>
+								<generation value="markdown"/>
+						</page>
+
     </page>
     <!-- copyright year is a mandatory parameter -->
     <parameter>
