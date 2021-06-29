@@ -129,11 +129,6 @@
         <generation value="markdown"/>
       </page>
 						<page>
-								<nameUrl value="ITI-83.html"/>
-								<title value="Mobile Patient Identifier Cross-reference Query [ITI-83]"/>
-								<generation value="markdown"/>
-						</page>
-						<page>
 								<nameUrl value="ITI-901.html"/>
 								<title value="Patient Identity cross-Reference Structure Definition [ITI-901]"/>
 								<generation value="markdown"/>
@@ -163,8 +158,6 @@
         <title value="Open Issues"/>
         <generation value="markdown"/>
       </page>
-<<<<<<< HEAD
-=======
       <page>
         <nameUrl value="ITI-83.html"/>
         <title value="Transaction ITI-83"/>
@@ -175,7 +168,6 @@
         <title value="Transaction ITI-104"/>
         <generation value="markdown"/>
       </page>
->>>>>>> pixmfeed with coditional update
     </page>
     <!-- copyright year is a mandatory parameter -->
     <parameter>
