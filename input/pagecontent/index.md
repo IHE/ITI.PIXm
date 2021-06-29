@@ -15,16 +15,19 @@ This profile does not assume the Patient Identifier Cross-reference Manager to h
 ### Organization of This Guide
 This guide is organized into four main sections:
 
-1. Volume I: [Overview](1_overview.html)
-   1. [Actors and Transactions](2_actors_and_transactions.html)
-   2. [Security Considerations](3_security_considerations.html)
-   3. [Cross Profile Considerations](4_grouping.html)
-   4. [Test Plan](5_testplan.html)
+1. Volume I: [Overview](volume-1.html)
+   1. [PIXm Actors, Transactions, and Content Modules](volume-1.html)
+   2. [PIXm Actor Options](volume-1.html)
+   3. [Required Actor Groupings](volume-1.html)
+   4. [PIXm Overview](volume-1.html)
+   5. [PIXm Security Considerations](volume-1.html)
+   6. [PIXm Cross Profile Considerations](volume-1.html)
+   7. [Test Plan](5_testplan.html)
 
 2. Volume II: Transaction Detail
-   1. [PIXm Feed [ITI-???]](ITI-???.html)
-   2. [PIXm Update [ITI-???]](ITI-???.html)
-   3. [PIXm Delete [ITI-???]](ITI-???.html)
+   1. [PIXm Create [ITI-901]](ITI-901.html)
+   2. [PIXm Update [ITI-902]](ITI-902.html)
+   3. [PIXm Delete [ITI-902]](ITI-903.html)
    4. [Patient Identifier Cross-Reference Query [ITI-83]](ITI-83.html)
 
 Click on any of the links above, head on over the [table of contents](toc.html), or

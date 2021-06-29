@@ -124,28 +124,33 @@
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="1_overview.html"/>
-        <title value="Overview"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="2_actors_and_transactions.html"/>
-        <title value="Actors and Transactions"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="3_security_considerations.html"/>
-        <title value="Security Considerations"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="4_grouping.html"/>
-        <title value="Required Actor Groupings"/>
+        <nameUrl value="volume-1.html"/>
+        <title value="PIXm Profile"/>
         <generation value="markdown"/>
       </page>
 						<page>
-								<nameUrl value="4_cross-profile.html"/>
-								<title value="Cross Profile Considerations"/>
+								<nameUrl value="ITI-83.html"/>
+								<title value="Mobile Patient Identifier Cross-reference Query [ITI-83]"/>
+								<generation value="markdown"/>
+						</page>
+						<page>
+								<nameUrl value="ITI-901.html"/>
+								<title value="Patient Identity cross-Reference Structure Definition [ITI-901]"/>
+								<generation value="markdown"/>
+						</page>
+						<page>
+								<nameUrl value="ITI-902.html"/>
+								<title value="Patient Identity cross-Reference Create [ITI-902]"/>
+								<generation value="markdown"/>
+						</page>
+						<page>
+								<nameUrl value="ITI-903.html"/>
+								<title value="Patient Identity cross-Reference Update [ITI-903]"/>
+								<generation value="markdown"/>
+						</page>
+						<page>
+								<nameUrl value="ITI-904.html"/>
+								<title value="Patient Identity cross-Reference Delete [ITI-904]"/>
 								<generation value="markdown"/>
 						</page>
       <page>
@@ -156,11 +161,6 @@
       <page>
         <nameUrl value="a_issues.html"/>
         <title value="Open Issues"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="ITI-83.html"/>
-        <title value="Transaction ITI-83"/>
         <generation value="markdown"/>
       </page>
     </page>

@@ -1,7 +1,3 @@
-This section corresponds to transaction [ITI-83] of the IHE Technical Framework. Transaction [ITI-83] is used by the Patient Identifier Cross-reference Consumer and Patient Identifier Cross-reference Manager Actors. This transaction is used to locate and return metadata for previously stored document submissions.
-
-## 3.83 Mobile Patient Identifier Cross-reference Query \[ITI-83\]
-
 This section corresponds to transaction \[ITI-83\] of the IHE IT
 Infrastructure Technical Framework.
 
@@ -32,10 +28,9 @@ Table 3.83.2-1: Actor Roles
 
 ### 3.83.3 Referenced Standards
 
-* HL7 FHIR : HL7<sup>®</sup> FHIR<sup>®</sup> standard <http://hl7.org/fhir/index.html> 
+* HL7 FHIR : HL7<sup>®</sup> FHIR<sup>®</sup> standard <http://hl7.org/fhir/index.html>
 
 ### 3.83.4 Messages
-
 
 ![Figure: 3.83.4-1: Interaction Diagram](transaction-83-seq.svg "Figure: 3.83.4-1: Interaction Diagram")
 
@@ -90,7 +85,6 @@ Table 3.83.4.1.2-1: $ihe-pix Message HTTP query Parameters
 | \_format             | \[0..1\]    | token       | The requested format of the response from the mime-type value set. See ITI TF-2x: Appendix Z.6                                                                                                                 |
 {: .grid }
 
-
 ###### 3.83.4.1.2.1 Source Patient Identifier Parameter
 
 The required HTTP query parameter `sourceIdentifier` is a token that
@@ -127,7 +121,7 @@ The targetSystem parameter uses this format:
 Examples:
 
 > targetSystem=urn:oid:1.3.6.1.4.1.21367.2010.1.2.100
-> 
+>
 > targetSystem=http://fhir.mydomain.com
 
 ##### 3.83.4.1.3 Expected Actions
@@ -243,7 +237,7 @@ Identity Domain is not recognized in an issue having:
 
 ### 3.83.5 Security Considerations
 
-See the general Security Consideration in ITI TF-1: 38.5
+See [ITI TF-2: Appendix Z.8 “Mobile Security Considerations”](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations).
 
 #### 3.83.5.1 Security Audit Considerations
 
@@ -262,4 +256,3 @@ The audit message shall comply with the requirements in ITI TF-2a:
   - ParticipantObjectQuery = Requested URL including query parameters
   - ParticipantObjectDetail = HTTP Request Headers contained in the
     query (e.g., Accept header)
-
