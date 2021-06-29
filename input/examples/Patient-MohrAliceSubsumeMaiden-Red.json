@@ -1,0 +1,32 @@
+{
+  "resourceType": "Patient",
+  "id": "Patient-MohrAliceSubsumeMaiden-Red",
+  "identifier": [
+    {
+      "system": "urn:oid:1.3.6.1.4.1.21367.13.20.1000",
+      "value": "IHERED-994"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "family": "MOHR",
+      "given": [
+        "ALICE"
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1958-01-30",
+  "link": [
+    {
+      "other": {
+        "identifier" : {
+          "system": "urn:oid:1.3.6.1.4.1.21367.13.20.1000",
+          "value": "IHERED-m94"
+        }
+      },  
+      "type" : "replaces"
+    }
+  ]
+}

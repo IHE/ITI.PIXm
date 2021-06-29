@@ -129,11 +129,6 @@
         <generation value="markdown"/>
       </page>
 						<page>
-								<nameUrl value="ITI-83.html"/>
-								<title value="Mobile Patient Identifier Cross-reference Query [ITI-83]"/>
-								<generation value="markdown"/>
-						</page>
-						<page>
 								<nameUrl value="ITI-901.html"/>
 								<title value="Patient Identity cross-Reference Structure Definition [ITI-901]"/>
 								<generation value="markdown"/>
@@ -163,11 +158,21 @@
         <title value="Open Issues"/>
         <generation value="markdown"/>
       </page>
+      <page>
+        <nameUrl value="ITI-83.html"/>
+        <title value="Transaction ITI-83"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="ITI-104.html"/>
+        <title value="Transaction ITI-104"/>
+        <generation value="markdown"/>
+      </page>
     </page>
     <!-- copyright year is a mandatory parameter -->
     <parameter>
       <code value="copyrightyear"/>
-      <value value="2019+"/>
+      <value value="2021+"/>
     </parameter>
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>

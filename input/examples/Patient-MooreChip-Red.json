@@ -1,0 +1,21 @@
+{
+    "resourceType": "Patient",
+    "id": "Patient-MooreChip-Red",
+    "identifier": [
+        {
+            "system": "urn:oid:1.3.6.1.4.1.21367.13.20.1000",
+            "value": "IHERED-992"
+        }
+    ],
+    "active": true,
+    "name": [
+        {
+            "family": "MOORE",
+            "given": [
+                "CHIP"
+            ]
+        }
+    ],
+    "gender": "male",
+    "birthDate": "1938-02-23"
+}
