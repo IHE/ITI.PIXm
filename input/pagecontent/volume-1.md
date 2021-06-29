@@ -4,9 +4,9 @@
 #### 41.1.1 Actor Descriptions and Actor Profile Requirements
 
 * Actors
-  - [Patient Identifier Cross-Reference Source](volume-1.html)
-  - [Patient Identifier Cross-Reference Consumer](volume-1.html)
-  - [Patient Identifier Cross-Reference Manager](volume-1.html)
+  - [Patient Identifier Cross-Reference Source](volume-1.html#41111-patient-identifier-cross-reference-source)
+  - [Patient Identifier Cross-Reference Consumer](volume-1.html#41112-patient-identifier-cross-reference-consumer)
+  - [Patient Identifier Cross-Reference Manager](volume-1.html#41113-patient-identifier-cross-reference-manager)
 
 * Transactions
   - [Patient Identity Cross-Reference Query [ITI-83]](ITI-83.html)
