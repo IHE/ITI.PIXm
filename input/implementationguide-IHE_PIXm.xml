@@ -171,8 +171,8 @@
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="ITI-X-PIXmFeed.html"/>
-        <title value="Transaction ITI-X-PIXmFeed"/>
+        <nameUrl value="ITI-104.html"/>
+        <title value="Transaction ITI-104"/>
         <generation value="markdown"/>
       </page>
 >>>>>>> pixmfeed with coditional update
@@ -180,7 +180,7 @@
     <!-- copyright year is a mandatory parameter -->
     <parameter>
       <code value="copyrightyear"/>
-      <value value="2019+"/>
+      <value value="2021+"/>
     </parameter>
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>
