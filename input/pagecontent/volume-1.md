@@ -36,10 +36,7 @@ Table 41.1-1: PIXm Profile - Actors and Transactions
 | | Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105] | Responder | R | [ITI TF-2: 3.105](ITI-105.html) |
 {: .grid }
 
-The Create, Update and Query transactions defined in this profile correspond to the transactions used in the PIX and PIXV3 Profiles (ITI TF-1: 5 and 23) and provides similar functionality.
-
-Note that the Patient Master Identity Registry (PMIR) Profile contains the Mobile Patient Identity Feed \[ITI-93\] transaction which is equivalent to the Patient Identity Feed (\[ITI-8\] or \[ITI-44\]) or the
-PIX Update Notification (\[ITI-10\] and \[ITI-46\]) transactions in the PIX and PIXV3 Profiles.
+The Mobile Patient Identity Feed (Create, Update and Delete) and Mobile Patient Identifier Cross-Reference Query transactions defined in this profile correspond to the transactions used in the PIX and PIXV3 Profiles (ITI TF-1: 5 and 23) and provides similar functionality.
 
 ##### 41.1.1.1 Patient Identifier Cross-reference Source
 The Patient Identifier Cross-reference Source is the producer and publisher of patient identity data.
@@ -168,6 +165,4 @@ The PIXm Profile does not define a Patient Identity Feed transaction to the Pati
   Manager from PIX or PIXV3 to enable the traditional IHE mechanism to obtain patient demographics for cross-referencing
   via Patient Identity Feed transactions \[ITI-8\] and/or \[ITI-44\].
 
-Grouping of the PIXm Manager with these other actors is not required if
-the implementation is able to obtain patient identity and
-cross-reference information in another manner.
+Grouping of the PIXm Manager with these other actors is not required if the implementation is able to obtain patient identity and cross-reference information in another manner.
