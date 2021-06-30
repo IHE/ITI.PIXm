@@ -36,7 +36,7 @@ Table 41.1-1: PIXm Profile - Actors and Transactions
 | | Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105] | Responder | R | [ITI TF-2: 3.105](ITI-105.html) |
 {: .grid }
 
-The Mobile Patient Identity Feed (Create, Update and Delete) and Mobile Patient Identifier Cross-Reference Query transactions defined in this profile correspond to the transactions used in the PIX and PIXV3 Profiles (ITI TF-1: 5 and 23) and provides similar functionality.
+The Mobile Patient Identity Feed [ITI-104] and the Mobile Patient Identifier Cross-Reference Query [ITI-83] transactions defined in this profile correspond to the transactions used in the PIX and PIXV3 Profiles (ITI TF-1: 5 and 23) and provide similar functionality.
 
 ##### 41.1.1.1 Patient Identifier Cross-reference Source
 The Patient Identifier Cross-reference Source is the producer and publisher of patient identity data.
@@ -86,15 +86,15 @@ It provides RESTful interfaces for Patient Identifier Cross-Reference Source act
 
 #### 41.4.1 Concepts
 
-This profile uses RESTful transaction and FHIR patient resources for the Create, Update and Delete transactions perfomed by the Patient Identifier Cross-Reference Source and Manager actors.  
+This profile uses RESTful transaction and FHIR patient resources for the Mobile Patient Identity Feed [ITI-104] and Mobile Patient Identifier Cross-Reference Query [ITI-83] transactions perfomed by the Patient Identifier Cross-Reference Source and Manager actors and a Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105] transaction to share the structure definition of the FHIR patient resource.   
 
-This profile assumes that the Patient Identifier Cross-Reference Manager performs linking and unlinking based on the Create, Update and Delete transcations based on the patient identity data provided by the Patient Identifier Cross-Reference Source actors from the different domains.
+This profile assumes that the Patient Identifier Cross-Reference Manager performs linking and unlinking based on the patient identity data provided in the Mobile Patient Identity Feed [ITI-104] transcations from diffrent patient domains.
 
-This profile does neither specify the rules and algorithm applied by the Patient Identifier Cross-Reference Manager actor to link or unlink the patient identity data from different domains, nor the point in time the Patient Identifier Cross-Reference Manager actually links the data. Patient Identifier Cross-Reference Manager may link the patient identity data from the different domains on time of the Create, Update or Delete transactions, but also may provide other triggers (e.g., manual linking or unlinking in case when the rules and algorithms go wrong).
+This profile does neither specify the rules and algorithm applied by the Patient Identifier Cross-Reference Manager actor to link or unlink the patient identity data from different domains, nor the point in time the Patient Identifier Cross-Reference Manager actually links the data. Patient Identifier Cross-Reference Manager may link the patient identity data from the different domains on time of the Mobile Patient Identity Feed [ITI-104] transactions, but also may provide other triggers (e.g., manual linking or unlinking in case when the rules and algorithms go wrong).
 
-This profile does not address issues related to building 'golden records' or verified patient identity data. Patient Identifier Cross-Reference Manager may add business functionality to support 'golden records' or verified patient identity data and register them with the Patient Identifier Cross-Reference Manager patient domain/assigning authority.
+This profile does not address issues related to building 'golden records' or verified patient identity data. Patient Identifier Cross-Reference Managers may add business functionality to support 'golden records' or verified patient identity data and register them with the Patient Identifier Cross-Reference Manager patient domain/assigning authority.
 
-The actors of this profile may be grouped with corresponding actors of the **PIX** or **PIXV3** profiles and may act as a facade for the **PIX** or **PIXV3** Patient Identifier Cross-Reference Manager to provide RESTful interfaces with FHIR patient resources for patient identity cross referencing.     
+The actors of this profile may be grouped with corresponding actors of the **PIX** or **PIXV3** profiles and may act as a facade for a **PIX** or **PIXV3** Patient Identifier Cross-Reference Manager to provide RESTful interfaces with FHIR patient resources for patient identity cross referencing.     
 
 #### 41.4.2 Use Cases
 
@@ -130,15 +130,29 @@ TODO
 
 ###### 41.4.2.2.1 Use Case Description
 
-After finishing the medical treatment the healthcare professional of the ambulance want's
-to provide reports for other domains (e.g., the allergy system). Having registered the patient
-identity data including the local patient ID (‘E-123’) the mobile Care systems can provide documents
-and register them with the mobile Care system local ID (‘E-123’).
+After finishing the medical treatment the healthcare professional of the ambulance want's to provide reports for other domains (e.g., the allergy system). Having registered the patient identity data including the local patient ID (‘E-123’) the mobile Care systems can provide documents and register them with the mobile Care system local ID (‘E-123’).
 
 Healthcare systems of other domains may retrieve the documents by using a Mobile Patient Identity Feed [ITI-104] of their local patient identity data and rerieving the list of patient ID's from the other domains as explained in section above.
 
 ###### 41.4.2.2.2 Process Flow
 TODO
+
+##### 41.4.2.3 Updating Patient identity data
+
+###### 41.4.2.3.1 Use Case Description
+TODO
+
+###### 41.4.2.3.2 Process Flow
+Intentionally left blanc
+
+##### 41.4.2.4 Resolve duplicates
+
+###### 41.4.2.4.1 Use Case Description
+TODO
+
+###### 41.4.2.4.2 Process Flow
+Intentionally left blanc
+
 
 ### 41.5 PIXm Security Considerations
 
@@ -146,23 +160,7 @@ See [ITI TF-2: Appendix Z.8 “Mobile Security Considerations”](https://profil
 
 ### 41.6 PIXm Cross Profile Considerations
 
-#### 41.6.1 Proxy Model
-
 The Patient Identifier Cross-reference Manager from PIXm can be grouped with either PIX or PIXV3 Patient Identifier Cross-
 reference Consumer to proxy the Mobile Patient Identifier Cross-reference Query \[ITI-83\] to the more traditional PIX
 Query \[ITI-9\] and PIXV3 Query \[ITI-45\] transactions, thus acting as a proxy to the Patient Identifier Cross-reference
 Manager that wants to enable RESTful query to its data.
-
-#### 41.6.2 Manager Grouping
-
-The PIXm Profile does not define a Patient Identity Feed transaction to the Patient Identifier Cross-reference Manager, but obtaining patient identifiers is enabled using other IHE profiles, e.g.:
-
-  - The Patient Identifier Cross-reference Manager from PIXm can be grouped with a Patient Identity Consumer from the
-  Patient Master Identity Registry (PMIR) Profile in order to receive the Mobile Patient Identity Feed \[ITI-93\]
-  transaction.
-
-  - The Patient Identifier Cross-reference Manager from PIXm can be grouped with either Patient Identifier Cross-reference
-  Manager from PIX or PIXV3 to enable the traditional IHE mechanism to obtain patient demographics for cross-referencing
-  via Patient Identity Feed transactions \[ITI-8\] and/or \[ITI-44\].
-
-Grouping of the PIXm Manager with these other actors is not required if the implementation is able to obtain patient identity and cross-reference information in another manner.
