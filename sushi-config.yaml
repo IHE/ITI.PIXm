@@ -95,3 +95,20 @@ pages:
     title: "Test Plan"
   a_issues.md:
     title: "Issues"
+
+menu:
+  PIXm Home: index.html
+  Volume 1: 
+    Introduction: volume-1.html
+    "Actors and Transactions, and Content Module": volume-1.html#x1-pixm-actors-transactions-and-content-modules
+    "Actor Options": volume-1.html#412-pixm-actor-options
+    "Actor Required Grouping": volume-1.html#413-pixm-required-actor-groupings
+    "Overview": volume-1.html#414-pixm-overview
+    "Security Considerations": volume-1.html#415-pixm-security-considerations
+    "Cross Profile Considerations": volume-1.html#416-pixm-cross-profile-considerations
+  Volume 2:
+    "Patient Identity cross-Reference Query [ITI-83]": ITI-83.html
+    "Mobile Patient Identifier Cross-Reference Feed [ITI-104]": ITI-104.html
+    "Mobile Patient Identifier Structure Definition [ITI-105]": ITI-105.html
+  Test Plan: 5_testplan.html
+  Artifact Index: artifacts.html
