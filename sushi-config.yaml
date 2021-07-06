@@ -79,3 +79,19 @@ resources:
     name: Patient Mohr Alice Subsume Maiden (Red)
     description: Patient Mohr Alice subsume maiden in IHE Red Domain
     exampleBoolean: true
+
+pages:
+  index.md:
+    title: "PIXm Home"
+  volume-1.md:
+    title: "Volume 1"
+  ITI-83.md:
+    title: "Patient Identity Cross-Reference Query  [ITI-83]"
+  ITI-104.md:
+    title: "Mobile Patient Identity Cross-Reference Feed [ITI-104]"
+  ITI-105.md:
+    title: "Patient Identity cross-Reference Structure Definition [ITI-105]"
+  5_testplan.md:
+    title: "Test Plan"
+  a_issues.md:
+    title: "Issues"
