@@ -86,9 +86,9 @@ It provides RESTful interfaces for Patient Identifier Cross-Reference Source act
 
 #### 41.4.1 Concepts
 
-This profile uses RESTful transaction and FHIR patient resources for the Mobile Patient Identity Feed [ITI-104] and Mobile Patient Identifier Cross-Reference Query [ITI-83] transactions perfomed by the Patient Identifier Cross-Reference Source and Manager actors and a Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105] transaction to share the structure definition of the FHIR patient resource.   
+This profile uses RESTful transaction and FHIR patient resources for the Mobile Patient Identity Feed [ITI-104] and Mobile Patient Identifier Cross-Reference Query [ITI-83] transactions performed by the Patient Identifier Cross-Reference Source and Manager actors and a Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105] transaction to share the structure definition of the FHIR patient resource.   
 
-This profile assumes that the Patient Identifier Cross-Reference Manager performs linking and unlinking based on the patient identity data provided in the Mobile Patient Identity Feed [ITI-104] transcations from diffrent patient domains.
+This profile assumes that the Patient Identifier Cross-Reference Manager performs linking and unlinking based on the patient identity data provided in the Mobile Patient Identity Feed [ITI-104] transactions from different patient domains.
 
 This profile does neither specify the rules and algorithm applied by the Patient Identifier Cross-Reference Manager actor to link or unlink the patient identity data from different domains, nor the point in time the Patient Identifier Cross-Reference Manager actually links the data. Patient Identifier Cross-Reference Manager may link the patient identity data from the different domains on time of the Mobile Patient Identity Feed [ITI-104] transactions, but also may provide other triggers (e.g., manual linking or unlinking in case when the rules and algorithms go wrong).
 
@@ -132,7 +132,7 @@ Intentionally left blanc.
 
 After finishing the medical treatment the healthcare professional of the ambulance want's to provide reports for other domains (e.g., the allergy system). Having registered the patient identity data including the local patient ID (‘E-123’) the mobile Care systems can provide documents and register them with the mobile Care system local ID (‘E-123’).
 
-Healthcare systems of other domains may retrieve the documents by using a Mobile Patient Identity Feed [ITI-104] of their local patient identity data and rerieving the list of patient ID's from the other domains as explained in section above.
+Healthcare systems of other domains may retrieve the documents by using a Mobile Patient Identity Feed [ITI-104] of their local patient identity data and retrieving the list of patient ID's from the other domains as explained in section above.
 
 ###### 41.4.2.2.2 Process Flow
 Intentionally left blanc.
