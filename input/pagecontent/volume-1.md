@@ -124,7 +124,7 @@ Identity Feed [ITI-104] transaction (using the patient’s MRN as the identifier
 Manager.
 
 ###### 41.4.2.1.2 Process Flow
-TODO
+Intentionally left blanc.
 
 ##### 41.4.2.2 Providing documents for other domains
 
@@ -135,24 +135,24 @@ After finishing the medical treatment the healthcare professional of the ambulan
 Healthcare systems of other domains may retrieve the documents by using a Mobile Patient Identity Feed [ITI-104] of their local patient identity data and rerieving the list of patient ID's from the other domains as explained in section above.
 
 ###### 41.4.2.2.2 Process Flow
-TODO
+Intentionally left blanc.
 
 ##### 41.4.2.3 Updating Patient identity data
 
 ###### 41.4.2.3.1 Use Case Description
-TODO
+
+The patient administration of the hospital detects that identity data of the patient person have changed (e.g., name change after marriage, address change). To inform the Patient Identifier Cross-Reference Manager the same patient person the patient administration systems performs a Mobile Patient Identity Feed [ITI-104] transaction conveying the local ID and the updated identity data. This enables the Patient Identifier Cross-Reference Manager to match future patient identity records from other domains which also use the updated identity data of the patient person.    
 
 ###### 41.4.2.3.2 Process Flow
-Intentionally left blanc
+Intentionally left blanc.
 
 ##### 41.4.2.4 Resolve duplicates
 
 ###### 41.4.2.4.1 Use Case Description
-TODO
+The patient administration of the hospital detects that the patient person has been registered twice with slightly different identity data (e.g., typo in name). To inform the Patient Identifier Cross-Reference Manager that both records represent the same patient person the patient administration systems performs a Mobile Patient Identity Feed [ITI-104] transaction conveying the local ID's and identity data of the two records.  
 
 ###### 41.4.2.4.2 Process Flow
-Intentionally left blanc
-
+Intentionally left blanc.
 
 ### 41.5 PIXm Security Considerations
 
