@@ -1,5 +1,5 @@
 
-### X.1 PIXm Actors, Transactions, and Content Modules
+### 41.1 PIXm Actors, Transactions, and Content Modules
 
 #### 41.1.1 Actor Descriptions and Actor Profile Requirements
 
