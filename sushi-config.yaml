@@ -79,6 +79,26 @@ resources:
     name: Patient Mohr Alice Subsume Maiden (Red)
     description: Patient Mohr Alice subsume maiden in IHE Red Domain
     exampleBoolean: true
+  Parameters/pixm-request-mohralice-red-all:
+    name: PIXm Query with source identifier
+    description: PIXm Query for Patient with source identifier in IHE RED domain for Mohr Alice
+    exampleBoolean: true
+  Parameters/pixm-response-mohralice-red-all:
+    name: PIXm Query Response for source identifier
+    description: PIXm Query Response for Patient with source identifier in IHE RED domain for Mohr Alice
+    exampleBoolean: true
+  Parameters/pixm-request-mohralice-red-to-blue:
+    name: PIXm Query with source identifier and target system
+    description: PIXm Query for Patient with source identifier in IHE RED domain and query for BLUE domain for Mohr Alice
+    exampleBoolean: true
+  Parameters/pixm-response-mohralice-red-to-blue:
+    name: PIXm Query Response for source identifier and target system specified
+    description: PIXm Query Response for Patient with source identifier in IHE RED domain and query for BLUE domain for Mohr Alice
+    exampleBoolean: true
+  Parameters/pixm-response-error-not-found:
+    name: PIXm Query Response error message
+    description: Error source identifier not found
+    exampleBoolean: true
 
 pages:
   index.md:
@@ -108,7 +128,7 @@ menu:
     "Cross Profile Considerations": volume-1.html#416-pixm-cross-profile-considerations
   Volume 2:
     "Patient Identity cross-Reference Query [ITI-83]": ITI-83.html
-    "Mobile Patient Identifier Cross-Reference Feed [ITI-104]": ITI-104.html
-    "Mobile Patient Identifier Structure Definition [ITI-105]": ITI-105.html
+    "Mobile Patient identifier Cross-Reference Feed [ITI-104]": ITI-104.html
+    "Mobile Patient identifier Structure Definition [ITI-105]": ITI-105.html
   Test Plan: 5_testplan.html
   Artifact Index: artifacts.html
