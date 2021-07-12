@@ -146,12 +146,7 @@ After finishing the medical treatment the healthcare professional of the ambulan
 domains (e.g., the allergy system). Having registered the patient identity data including the local patient ID (‘E-123’)
 the mobile Care systems can provide documents and register them with the mobile Care system local ID (‘E-123’).
 
-<<<<<<< HEAD
-Healthcare systems of other domains may retrieve the documents by using a Mobile Patient Identity Feed [ITI-104] of their
-local patient identity data and retrieving the list of patient ID's from the other domains as explained in section above.
-=======
 Healthcare systems of other domains may retrieve the documents by using a Mobile Patient Identifier Cross-Reference Feed [ITI-104] of their local patient identity data and retrieving the list of patient ID's from the other domains as explained in section above.
->>>>>>> rename ITI-104
 
 ###### 41.4.2.2.2 Process Flow
 Intentionally left blanc.
@@ -187,5 +182,4 @@ security-considerations)
 
 ### 41.6 PIXm Cross Profile Considerations
 
-The Patient Identifier Cross-reference Manager from PIXm can be grouped with either PIX or PIXV3 Patient Identifier Cross-
-reference Consumer an Source to proxy the Mobile Patient Identifier Cross-reference Query [ITI-83] and Mobile Patient Identity Feed [ITI-104] transactions to the more traditional PIX and PIXV3 Query and Feed transactions, thus acting as a proxy to the Patient Identifier Cross-reference Manager that wants to enable RESTful transacions.
+The Patient Identifier Cross-reference Manager from PIXm can be grouped with either PIX or PIXV3 Patient Identifier Cross-reference Consumer an Source to proxy the Mobile Patient Identifier Cross-reference Query [ITI-83] and Mobile Patient Identity Feed [ITI-104] transactions to the more traditional PIX and PIXV3 Query and Feed transactions, thus acting as a proxy to the Patient Identifier Cross-reference Manager that wants to enable RESTful transacions.
