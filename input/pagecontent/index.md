@@ -26,7 +26,7 @@ This guide is organized into four main sections:
 
 2. Volume II: Transaction Detail
    1. [Patient Identifier Cross-Reference Query [ITI-83]](ITI-83.html)
-   2. [Mobile Patient Identity Feed [ITI-104]](ITI-104.html)
+   2. [Mobile Patient Identifier Cross-Reference Feed [ITI-104]](ITI-104.html)
    3. [Patient Identity cross-Reference Structure Definition [ITI-105]](ITI-105.html)
 
 
