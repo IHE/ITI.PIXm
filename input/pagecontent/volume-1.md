@@ -131,8 +131,7 @@ to the same patient person by the Patient Identifier Cross-reference Manager. Th
 allergy information from the hospital allergy system using the allergy system’s own patient ID (MRN-007) including the
 domain identifier/assigning authority of the ‘ADT Domain’.
 
-In this scenario, the hospital’s main ADT system (acting as a Patient Identity Source) would perform a Mobile Patient
-Identity Feed [ITI-104] transaction (using the patient’s MRN as the identifier) to the Patient Identifier Cross-reference
+In this scenario, the hospital’s main ADT system (acting as a Patient Identity Source) would perform a Mobile Patient Identifier Cross-Reference Feed [ITI-104] transaction (using the patient’s MRN as the identifier) to the Patient Identifier Cross-reference
 Manager.
 
 ###### 41.4.2.1.2 Process Flow
@@ -146,7 +145,9 @@ After finishing the medical treatment the healthcare professional of the ambulan
 domains (e.g., the allergy system). Having registered the patient identity data including the local patient ID (‘E-123’)
 the mobile Care systems can provide documents and register them with the mobile Care system local ID (‘E-123’).
 
-Healthcare systems of other domains may retrieve the documents by using a Mobile Patient Identifier Cross-Reference Feed [ITI-104] of their local patient identity data and retrieving the list of patient ID's from the other domains as explained in section above.
+Healthcare systems of other domains may retrieve the documents by using a Mobile Patient Identifier Cross-Reference Feed
+[ITI-104] of their local patient identity data and retrieving the list of patient ID's from the other domains as explained
+in section above.
 
 ###### 41.4.2.2.2 Process Flow
 Intentionally left blanc.
@@ -157,9 +158,9 @@ Intentionally left blanc.
 
 The patient administration of the hospital detects that identity data of the patient person have changed (e.g., name change
 after marriage, address change). To inform the Patient Identifier Cross-Reference Manager the same patient person the
-patient administration systems performs a Mobile Patient Identity Feed [ITI-104] transaction conveying the local ID and the
-updated identity data. This enables the Patient Identifier Cross-Reference Manager to match future patient identity records
-from other domains which also use the updated identity data of the patient person.    
+patient administration systems performs a Mobile Patient Identifier Cross-Reference Feed [ITI-104] transaction conveying
+the local ID and the updated identity data. This enables the Patient Identifier Cross-Reference Manager to match future
+patient identity records from other domains which also use the updated identity data of the patient person.    
 
 ###### 41.4.2.3.2 Process Flow
 Intentionally left blanc.
@@ -169,8 +170,8 @@ Intentionally left blanc.
 ###### 41.4.2.4.1 Use Case Description
 The patient administration of the hospital detects that the patient person has been registered twice with slightly
 different identity data (e.g., typo in name). To inform the Patient Identifier Cross-Reference Manager that both records
-represent the same patient person the patient administration systems performs a Mobile Patient Identity Feed [ITI-
-104] transaction conveying the local ID's and identity data of the two records.  
+represent the same patient person the patient administration systems performs a Mobile Patient Identifier Cross-Reference
+Feed[ITI-104] transaction conveying the local ID's and identity data of the two records.  
 
 ###### 41.4.2.4.2 Process Flow
 Intentionally left blanc.
@@ -182,4 +183,7 @@ security-considerations)
 
 ### 41.6 PIXm Cross Profile Considerations
 
-The Patient Identifier Cross-reference Manager from PIXm can be grouped with either PIX or PIXV3 Patient Identifier Cross-reference Consumer an Source to proxy the Mobile Patient Identifier Cross-reference Query [ITI-83] and Mobile Patient Identity Feed [ITI-104] transactions to the more traditional PIX and PIXV3 Query and Feed transactions, thus acting as a proxy to the Patient Identifier Cross-reference Manager that wants to enable RESTful transacions.
+The Patient Identifier Cross-reference Manager from PIXm can be grouped with either PIX or PIXV3 Patient Identifier Cross-
+reference Consumer an Source to proxy the Mobile Patient Identifier Cross-reference Query [ITI-83] and Mobile Patient
+Identifier Cross-Reference Feed [ITI-104] transactions to the more traditional PIX and PIXV3 Query and Feed transactions,
+thus acting as a proxy to the Patient Identifier Cross-reference Manager that wants to enable RESTful transacions.

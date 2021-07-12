@@ -29,5 +29,3 @@
 #### 3.Y.6.1 Security Audit Considerations
 
 ##### 3.Y.6.1.1 $actor Specific Security Considerations
-
- 
