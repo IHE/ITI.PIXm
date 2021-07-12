@@ -1,5 +1,0 @@
-Name                     Type      File
-1234567890               Instance  instances.fsh
-patient-example          Instance  instances.fsh
-patient-example-dheeraj  Instance  instances.fsh
-patient-example2         Instance  instances.fsh

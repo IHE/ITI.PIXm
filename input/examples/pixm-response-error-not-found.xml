@@ -1,6 +1,6 @@
 <!-- is this example valid -->
 <Parameters xmlns="http://hl7.org/fhir">
-    <id value="46138430-266b-423b-b64b-afdea6deed2a" />
+    <id value="pixm-response-error-not-found" />
     <parameter>
         <name value="error" />
         <resource>

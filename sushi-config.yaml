@@ -12,55 +12,123 @@
 id: IHE.ITI.PIXm
 canonical: http://profiles.ihe.net/ITI/PIXm
 version: 0.1.0
-name: PIXmImplementationGuide
+fhirVersion: 4.0.1
+name: IHE_PIXm
 title: PIXm Implementation Guide
 status: active
-publisher: IHE
+publisher:
+  name: Integrating the Healthcare Enterprise (IHE)
+  url: http://ihe.net
+  email: secretary@ihe.net
 contact:
   - name: John Moehrke
     telecom:
       - system: email
         value: john.moehrke@gmail.com
 description: An example of how IHE Profile can be used to create an IG
-license: CC0-4.0
-fhirVersion: 4.0.1
-parameters:
-  show-inherited-invariants: false
+license: CC-BY-SA-4.0
+jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
 copyrightYear: 2021+
-releaseLabel: CI Build
+releaseLabel: ci-build
 
-# ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
-# │  To use a provided ig-data/ig.ini file, delete the "template" property below.                  │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-template: fhir.base.template#current
+parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+  path-resource:
+    - input/resources
+    - fsh-generated/resources
+    - input/examples
+  path-pages:
+    - input/pagecontent
+    - fsh-generated/includes
+  active-tables: 'false'
+  apply-contact: 'true'
+  apply-jurisdiction: 'true'
+  apply-publisher: 'true'
+  apply-version: 'true'
+  show-inherited-invariants: 'false'
+  usage-stats-opt-out: 'true'
+  autoload-resources: 'true'
+  shownav: 'true'
 
-# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
-# │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+  # additional examples that need descriptions
+resources:
+  Patient/Patient-MohrAlissa-Red:
+    name: Patient Alissa Mohr (Red)
+    description: Patient Mohr Alisa in IHE Red Domain
+    exampleBoolean: true
+  Patient/Patient-MohrAlice:
+    name: Patient Alice Mohr
+    description: Patient Mohr Alice with all IHE Domain identifiers
+    exampleBoolean: true
+  Patient/Patient-MohrAlice-Red:
+    name: Patient Alice Mohr (Red)
+    description: Patient Mohr Alice in IHE Red Domain
+    exampleBoolean: true
+  Patient/Patient-MohrAlice-Green:
+    name: Patient Alice Mohr (Green)
+    description: Patient Mohr Alice in IHE Green Domain
+    exampleBoolean: true
+  Patient/Patient-MohrAlice-Blue:
+    name: Patient Alice Mohr (Blue)
+    description: Patient Mohr Alice in IHE Blue Domain
+    exampleBoolean: true
+  Patient/Patient-MaidenAlice-Red:
+    name: Patient Maiden Alice (Red)
+    description: Patient Maiden Alice in IHE Red Domain
+    exampleBoolean: true
+  Patient/Patient-MohrAliceSubsumeMaiden-Red:
+    name: Patient Mohr Alice Subsume Maiden (Red)
+    description: Patient Mohr Alice subsume maiden in IHE Red Domain
+    exampleBoolean: true
+  Parameters/pixm-request-mohralice-red-all:
+    name: PIXm Query with source identifier
+    description: PIXm Query for Patient with source identifier in IHE RED domain for Mohr Alice
+    exampleBoolean: true
+  Parameters/pixm-response-mohralice-red-all:
+    name: PIXm Query Response for source identifier
+    description: PIXm Query Response for Patient with source identifier in IHE RED domain for Mohr Alice
+    exampleBoolean: true
+  Parameters/pixm-request-mohralice-red-to-blue:
+    name: PIXm Query with source identifier and target system
+    description: PIXm Query for Patient with source identifier in IHE RED domain and query for BLUE domain for Mohr Alice
+    exampleBoolean: true
+  Parameters/pixm-response-mohralice-red-to-blue:
+    name: PIXm Query Response for source identifier and target system specified
+    description: PIXm Query Response for Patient with source identifier in IHE RED domain and query for BLUE domain for Mohr Alice
+    exampleBoolean: true
+  Parameters/pixm-response-error-not-found:
+    name: PIXm Query Response error message
+    description: Error source identifier not found
+    exampleBoolean: true
+
+pages:
+  index.md:
+    title: "PIXm Home"
+  volume-1.md:
+    title: "Volume 1"
+  ITI-83.md:
+    title: "Patient Identity Cross-Reference Query [ITI-83]"
+  ITI-104.md:
+    title: "Mobile Patient Identifier Cross-Reference Feed [ITI-104]"
+  ITI-105.md:
+    title: "Patient Identity cross-Reference Structure Definition [ITI-105]"
+  5_testplan.md:
+    title: "Test Plan"
+  a_issues.md:
+    title: "Issues"
+
 menu:
-  IG Home: index.html
-  Table of Contents: toc.html
+  PIXm Home: index.html
+  Volume 1: 
+    Introduction: volume-1.html
+    "Actors and Transactions, and Content Module": volume-1.html#411-pixm-actors-transactions-and-content-modules
+    "Actor Options": volume-1.html#412-pixm-actor-options
+    "Actor Required Grouping": volume-1.html#413-pixm-required-actor-groupings
+    "Overview": volume-1.html#414-pixm-overview
+    "Security Considerations": volume-1.html#415-pixm-security-considerations
+    "Cross Profile Considerations": volume-1.html#416-pixm-cross-profile-considerations
+  Volume 2:
+    "Patient Identity cross-Reference Query [ITI-83]": ITI-83.html
+    "Mobile Patient identifier Cross-Reference Feed [ITI-104]": ITI-104.html
+    "Mobile Patient identifier Structure Definition [ITI-105]": ITI-105.html
+  Test Plan: 5_testplan.html
   Artifact Index: artifacts.html
-  Support:
-    FHIR Spec: new-tab http://hl7.org/fhir/R4/index.html
-
-# ╭────────────────────────────────────────────index.md────────────────────────────────────────────╮
-# │  To use a provided ig-data/input/[pagecontent | pages]/index.[md | xml], delete the            │
-# │  "indexPageContent" property below.                                                            │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-indexPageContent: An example of how IHE Profile can be used to create an IG
-
-# ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
-# │  To use a provided ig-data/package-list.json file, delete the "history" property below.        │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-history:
-  current: http://build.fhir.org/ig/example/example-ig
-  0.0.1:
-    fhirversion: 4.0.1
-    date: 2099-01-01
-    desc: Initial STU ballot (Mmm yyyy Ballot)
-    path: http://example.org/fhir/STU1
-    status: ballot
-    sequence: STU 1
-    current: true
-FSHOnly: true

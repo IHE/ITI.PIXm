@@ -8,6 +8,8 @@ activate "PatientIdentifierCrossReferenceManager"
 "PatientIdentifierCrossReferenceManager" --> "PatientIdentitySource" : Patient added or revised
 "PatientIdentitySource" -> "PatientIdentifierCrossReferenceManager" : Resolve Patient duplicates
 "PatientIdentifierCrossReferenceManager" --> "PatientIdentitySource" : Patient duplicates resolved
+"PatientIdentitySource" -> "PatientIdentifierCrossReferenceManager" : Remove Patient
+"PatientIdentifierCrossReferenceManager" --> "PatientIdentitySource" : Patient removed
 deactivate "PatientIdentitySource"
 deactivate "PatientIdentifierCrossReferenceManager"
 @enduml

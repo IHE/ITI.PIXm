@@ -1,0 +1,11 @@
+@startuml
+hide footbox
+participant "Patient Identity Source" as PatientIdentitySource
+participant "Patient Identifier Cross-reference Manager" as PatientIdentifierCrossReferenceManager
+activate "PatientIdentitySource"
+activate "PatientIdentifierCrossReferenceManager"
+"PatientIdentitySource" -> "PatientIdentifierCrossReferenceManager" : Get Corresponding Identifiers
+"PatientIdentifierCrossReferenceManager" --> "PatientIdentitySource" : Response
+deactivate "PatientIdentitySource"
+deactivate "PatientIdentifierCrossReferenceManager"
+@enduml

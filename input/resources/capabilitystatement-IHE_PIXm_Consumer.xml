@@ -20,10 +20,10 @@
 			<value value="http://ihe.net"/> 
 		</telecom> 
 	</contact> 
-   <description value="CapabilityStatement for Consumer Actor in the IHE IT Infrastructure Technical Framework Supplement IHE PIXm. See http://wiki.ihe.net/index.php/PIXm. The IHE Profile text is Normative, this conformance resource is Informative." />  
- 	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" /> 
+	<description value="CapabilityStatement for Consumer Actor in the IHE IT Infrastructure Technical Framework Supplement IHE PIXm." />  
+	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" /> 
 	<kind value="requirements" />
-	<fhirVersion value="4.0.0" />
+	<fhirVersion value="4.0.1" />
 	<format value="application/fhir+xml" />
 	<format value="application/fhir+json" />
 
