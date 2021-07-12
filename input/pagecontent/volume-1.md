@@ -11,7 +11,6 @@
 * Transactions
   - [Patient Identity Cross-Reference Query [ITI-83]](ITI-83.html)
   - [Mobile Patient Identifier Cross-Reference Feed [ITI-104]](ITI-104.html)
-  - [Patient Identity cross-Reference Structure Definition [ITI-105]](ITI-105.html)
 
 Figure below shows the actors directly involved in the PIXm Profile and the relevant transactions between them.
 
@@ -30,12 +29,9 @@ Table 41.1-1: PIXm Profile - Actors and Transactions
 | Actors| Transactions| Initiator or Responder | Optionality | Reference |
 | ----- | ----------- | ---------------------- | ----------- | --------- |
 | Patient Identifier Cross-reference Source | Mobile Patient Identifier Cross-Reference Feed \[ITI-104\] | Initiator | R | [ITI TF-2: 3.104](ITI-104.html) |
-| | Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105]| Initiator | O | [ITI TF-2: 3.105](ITI-105.html) |
 | Patient Identifier Cross-reference Consumer | Mobile Patient Identifier Cross-Reference Query [ITI-83] | Initiator | R | [ITI TF-2: 3.83](ITI-83.html) |
-| | Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105]| Initiator| O | [ITI TF-2: 3.105](ITI-105.html) |
 | Patient Identifier Cross-reference Manager  | Mobile Patient Identifier Cross-Reference Query [ITI-83] | Responder | R | [ITI TF-2: 3.83](ITI-83.html) |
 | | Mobile Patient Identifier Cross-Reference Feed [ITI-104] | Responder | R | [ITI TF-2: 3.104](ITI-104.html) |
-| | Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105] | Responder | R | [ITI TF-2: 3.105](ITI-105.html) |
 {: .grid }
 
 The Mobile Patient Identifier Cross-Reference Feed [ITI-104] and the Mobile Patient Identifier Cross-Reference Query [ITI-83] transactions defined in this profile correspond to the transactions used in the PIX and PIXV3 Profiles (ITI TF-1: 5 and 23) and provide similar functionality.
@@ -90,11 +86,11 @@ a physician office, etc.).
 It provides RESTful interfaces for Patient Identifier Cross-Reference Source actors to feed, update and delete patient
 identity data as FHIR patient resources managed by the Patient Identifier Cross-Reference Manager actor, a cross-reference
 query of patient identifiers from multiple Patient Identifier Domains assigned to the same patient person by the Patient
-Identifier Cross-Reference Manager and a transaction to retrieve the FHIR structure definition of the patient resource.
+Identifier Cross-Reference Manager.
 
 #### 41.4.1 Concepts
 
-This profile uses RESTful transaction and FHIR patient resources for the Mobile Patient Identifier Cross-Reference Feed [ITI-104] and Mobile Patient Identifier Cross-Reference Query [ITI-83] transactions performed by the Patient Identifier Cross-Reference Source and Manager actors and a Mobile Patient Identifier Cross-Reference Structure Definition [ITI-105] transaction to share the structure definition of the FHIR patient resource.   
+This profile uses RESTful transaction and FHIR patient resources for the Mobile Patient Identifier Cross-Reference Feed [ITI-104] and Mobile Patient Identifier Cross-Reference Query [ITI-83] transactions performed by the Patient Identifier Cross-Reference Source and Manager actors.   
 
 This profile assumes that the Patient Identifier Cross-Reference Manager performs linking and unlinking based on the patient identity data provided in the Mobile Patient Identifier Cross-Reference Feed [ITI-104] transactions from different patient domains.
 
@@ -120,10 +116,10 @@ license number ‘E-123’ as their local patient ID. Before requesting the alle
 it must translate the known patient identity (driver’s license) to the patient’s identity known by the hospital (MRN).
 
 To achieve this correlation, the mobile Care system first registers the patient identity data including the local ID
-(driver’s license number ‘E-123’) using the Mobile Patient Identifier Cross-Reference Feed [ITI-104] transaction. The mobile Care system
-then issues a Mobile Patient Identifier Cross-reference Query [ITI-83] to the Patient Identifier Cross-reference Manager to
-retrieve the list of patient ID aliases from the Patient Identifier Cross-reference Manager assigned to the same patient
-person.
+(driver’s license number ‘E-123’) using the Mobile Patient Identifier Cross-Reference Feed [ITI-104] transaction. The
+mobile Care system then issues a Mobile Patient Identifier Cross-reference Query [ITI-83] to the Patient Identifier Cross-
+reference Manager to retrieve the list of patient ID aliases from the Patient Identifier Cross-reference Manager assigned
+to the same patient person.
 
 Having linked this patient with a patient known by medical record number = ‘007’ in the ‘ADT Domain’, the Patient
 Identifier Cross-reference Manager returns this list of patient identifier from different domains which have been assigned
