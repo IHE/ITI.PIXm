@@ -166,7 +166,7 @@ query shall not be included in the returned Response.
 
 | Parameter        | Card.     | Data Type          | Description                                                                                         |
 | ---------------- | --------- | ------------------ | --------------------------------------------------------------------------------------------------- |
-| targetIdentifier | \[0..\*\] | Identifier         | The identifier found. Shall include the assigning authority as specified in ITI TF-2x: Appendix E.3 |
+| targetIdentifier | \[0..\*\] | Identifier         | The identifier found. Shall include the assigning authority as specified in [ITI TF-2x: Appendix E.3](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16) |
 | targetId         | \[0..\*\] | Reference(Patient) | The URL of the Patient Resource                                                                     |
 {: .grid }
 
