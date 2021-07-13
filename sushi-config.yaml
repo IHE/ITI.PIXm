@@ -109,8 +109,6 @@ pages:
     title: "Patient Identity Cross-Reference Query [ITI-83]"
   ITI-104.md:
     title: "Mobile Patient Identifier Cross-Reference Feed [ITI-104]"
-  ITI-105.md:
-    title: "Patient Identity cross-Reference Structure Definition [ITI-105]"
   5_testplan.md:
     title: "Test Plan"
   a_issues.md:
@@ -129,6 +127,5 @@ menu:
   Volume 2:
     "Patient Identity cross-Reference Query [ITI-83]": ITI-83.html
     "Mobile Patient identifier Cross-Reference Feed [ITI-104]": ITI-104.html
-    "Mobile Patient identifier Structure Definition [ITI-105]": ITI-105.html
   Test Plan: 5_testplan.html
   Artifact Index: artifacts.html
