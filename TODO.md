@@ -6,10 +6,11 @@
 - Volume 2 ITI-83  
   - Added Parameter StructureDefinitions for $pixm operation
   - Added Security Audit Considerations with AuditEvent profile / resource
+  - Added IHE Connectathon Sample for ITI-83
 - Volume 2 ITI-104
    - New Mobile Patient Identifier Cross-Reference Feed [ITI-104] Transaction
    - Added the Delete Patient operation, optional to allow grouping or acting as facade with PIX V2, V3
-- IHE Connectathon samples for ITI-83 and ITI-104
+   - Added IHE Connectathon samples ITI-104
 
 ## Open Issues
 - ITI-83 references E.3 which is in [pdf](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16), see also [github issue](https://github.com/IHE/publications/issues/110)
@@ -23,7 +24,7 @@
 
 ## TODO
 - highlight in Volume 1 the capability statement behaviour that the elements for patient matching can be indicated/constrained by the Patient Identifier Cross-reference Manager
-- add IHE Connectathon Sample for ITI-83
 - Volume 1 sections needs to be prefixed with 1:
 - ITI-104 Security Audit Considerations needs to be defined
-- make an open_issues.hml
+- make an open_issues.hml and import open points from iti-83
+- make an example for a constrained PIXm Patient profile 

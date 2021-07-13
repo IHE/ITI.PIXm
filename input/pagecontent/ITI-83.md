@@ -96,11 +96,11 @@ See [ITI TF-2x: Appendix Z.2.2](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.htm
 
 The Patient Identifier Cross-reference Consumer shall provide exactly one (1) instance of this parameter in the query.
 
-For example, a query searching for all patient Identifiers, for a patient with identifier NA5404 assigned by authority
-“1.3.6.1.4.1.21367.2010.1.2.300\&ISO” would be represented as:
+For example, a query searching for all patient Identifiers, for a patient with identifier IHERED-994 assigned by authority
+“1.3.6.1.4.1.21367.13.20.1000” would be represented as:
 
 ```
-sourceIdentifier=urn:oid:1.3.6.1.4.1.21367.2010.1.2.300|NA5404
+sourceIdentifier=urn:oid:1.3.6.1.4.1.21367.13.20.1000|IHERED-994
 ```
 
 ###### 2:3.83.4.1.2.2 Requesting Patient Identity Domains to be Returned
@@ -121,7 +121,7 @@ targetSystem=<patient ID Assigning Authority domain>
 Examples:
 
 ```
-targetSystem=urn:oid:1.3.6.1.4.1.21367.2010.1.2.100
+targetSystem=urn:oid:1.3.6.1.4.1.21367.13.20.3000
 targetSystem=http://fhir.mydomain.com
 ```
 
@@ -170,42 +170,32 @@ query shall not be included in the returned Response.
 | targetId         | \[0..\*\] | Reference(Patient) | The URL of the Patient Resource                                                                     |
 {: .grid }
 
+[example](Parameters-pixm-response-mohralice-red-all.html):
 ```xml
 <Parameters xmlns="http://hl7.org/fhir">
     <parameter>
         <name value="targetIdentifier"/>
         <valueIdentifier>
             <use value="official" />
-            <system value="urn:oid:2.16.840.1.113883.16.4.3.2.5" />
-            <value value="123" />
+            <system value="urn:oid:urn:oid:1.3.6.1.4.1.21367.13.20.3000" />
+            <value value="IHEBLUE-994" />
         </valueIdentifier>
     </parameter>
     <parameter>
         <name value="targetIdentifier"/>
         <valueIdentifier>
             <use value="official" />
-            <system value="urn:oid:1.16.7435.2.315381.13.4.1.2.3" />
-            <value value="474" />
+            <system value="urn:oid:urn:oid:urn:oid:1.3.6.1.4.1.21367.13.20.2000" />
+            <value value="IHEGREEN-994" />
         </valueIdentifier>
     </parameter>
     <parameter>
         <name value="targetId"/>
-        <valueReference value="http://xyz-server/xxx/Patient/7536642"></valueReference>
-    </parameter>
-    <parameter>
-        <name value="targetIdentifier"/>
-        <valueIdentifier>
-            <use value="official"/>
-            <system value="http://www.acmehosp.com/patients"/>
-            <value value="44552"/>
-            <period>
-                <start value="2003-05-03"/>
-            </period>
-        </valueIdentifier>
+        <valueReference value="Patient/Patient-MohrAlice-Blue"></valueReference>
     </parameter>
     <parameter>
         <name value="targetId"/>
-        <valueReference value="http://pas-server/xxx/Patient/443556"></valueReference>
+        <valueReference value="Patient/Patient-MohrAlice-Green"></valueReference>
     </parameter>
 </Parameters>
 ```
