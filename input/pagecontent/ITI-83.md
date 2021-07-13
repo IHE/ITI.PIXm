@@ -274,16 +274,12 @@ See [ITI TF-2: Appendix Z.8 “Mobile Security Considerations”](https://profil
 
 The Security audit criteria are similar to those for the [PIX Query
 [ITI-9]](https://profiles.ihe.net/ITI/TF/Volume2/ITI-9.html) as this transaction discloses the same type of patient
-information. The Mobile Patient Identifier Cross-reference Query is a
-Query Information event as defined in [ITI TF-2: Table 3.20.4.1.1.1-1](https://profiles.ihe.net/ITI/TF/Volume2/ITI-20.html).
-The audit message shall comply with the requirements in [ITI TF-2:
-3.9.5.1](https://profiles.ihe.net/ITI/TF/Volume2/ITI-9.html), with the following differences:
+information. 
 
-- EventTypeCode = EV(“ITI-83”, “IHE Transactions”, “Mobile Patient
-    Identifier Cross-reference Query”)
-- Query Parameters (AuditMessage/ParticipantObjectIdentification)
-  - ParticipantObjectIdTypeCode = EV(“ITI-83”, “IHE Transactions”,
-    “Mobile Patient Identifier Cross-reference Query”)
-  - ParticipantObjectQuery = Requested URL including query parameters
-  - ParticipantObjectDetail = HTTP Request Headers contained in the
-    query (e.g., Accept header)
+##### 2:3.83.5.1.1 Patient Identifier Cross-reference Consumer Audit
+
+The Patient Identifier Cross-reference Consumer when grouped with ATNA Secure Node or Secure Application actor shall be able to record a [PIXm Query Consumer Audit Event Log](StructureDefinition-IHE.PIXm.Query.Audit.Consumer.html). [Audit Example for a PIXm Query transaction from consumer perspective](AuditEvent-ex-auditPixmQuery-consumer.html).
+
+##### 2:3.83.5.1.2 Patient Identifier Cross-reference Manager Audit
+
+The Patient Identifier Cross-reference Manager when grouped with ATNA Secure Node or Secure Application actor shall be able to record a [PIXm Query Manager Audit Event Log](/StructureDefinition-IHE.PIXm.Query.Audit.Manager.html). [Audit Example for a  PIXm Query transaction from manager perspective](AuditEvent-ex-auditPixmQuery-manager.html).

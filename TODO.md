@@ -1,18 +1,29 @@
-Present at telco
+# Summary 
+
+## changes from [PIXm, December 5, 2019](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf):
 - IG menu equivalent to IHE MHD IG
-- Updated [ITI-103] to same format as IHE MHD transactions
-- Naming conflict [ITI-93] and [ITI-104] : Mobile Patient Identity Feed [ITI-93] -> Mobile Patient Identifier Cross-Reference Feed [ITI-104]
-- Draft for [ITI-104], added the Delete Patient operation -> Optional because of PIX V2, V3 grouping
-- Added Paratmer StructureDefinitions for $pixm operation
-- IHE Connectathon samples for ITI-104 and ITI-83
+- Volume 1 Update Use Cases and introduce PIXm Feed
+- Volume 2 ITI-83  
+  - Added Parameter StructureDefinitions for $pixm operation
+  - Added Security Audit Considerations with AuditEvent profile / resource
+- Volume 2 ITI-104
+   - New Mobile Patient Identifier Cross-Reference Feed [ITI-104] Transaction
+   - Added the Delete Patient operation, optional to allow grouping or acting as facade with PIX V2, V3
+- IHE Connectathon samples for ITI-83 and ITI-104
 
-To be discussed:
+## Open Issues
+- ITI-83 references E.3 which is in [pdf](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16), see also [github issue](https://github.com/IHE/publications/issues/110)
 
-[ ] Profile for which elements are necessary to do a patent identity feed -> [ITI-105] ? Do we 
-need that as a seperate transaction? proposed text is to put it in the capability statement as a supportedProfile (it could be also queried from the FHIR server: StructureDefinition?base=http://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Patient)
+## List of questions to ask for the public review:
+- For the [ITI-104] Mobile Patient Identifier Cross-Reference Feed is is proposed to use a RESTFul approach, e.g. to use Conditional Create / Update / Delete with the patient domain identifier. 
+  Alternative approaches discussed were:
+   1. Requiring the client to use id instead of identifiers for update/delete in a RESTFul transaction. Client could use $pixm operation to get the id based on the domain identifier. 
+   2. Use a transaction Bundle for allowing multiple updates
+   3. Use a Message as PMIR is doing it with a MessageHeader in the [ITI-93](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf#page=26) transaction
 
-[ ] ITI TF-2x: Appendix E.3 is referenced by [ITI-83] but there is no E.3 listed: https://profiles.ihe.net/ITI/TF/Volume2/ch-E.html ?
-
-[ ] 2:3.83.5.1 Security Audit Considerations -> should this not be defined on a FHIR AuditEvent resource ?
-
-[ ] ITI-104 Security Audit Considerations needs to be added
+## TODO
+- highlight in Volume 1 the capability statement behaviour that the elements for patient matching can be indicated/constrained by the Patient Identifier Cross-reference Manager
+- add IHE Connectathon Sample for ITI-83
+- Volume 1 sections needs to be prefixed with 1:
+- ITI-104 Security Audit Considerations needs to be defined
+- make an open_issues.hml
