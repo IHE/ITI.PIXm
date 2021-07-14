@@ -11,6 +11,13 @@ Description:      "StructureDefinition for Patient resource constraints in the I
 * address 0..* MS
 * managingOrganization 0..1 MS
 
+Profile:          PIXmPatientBirthDateRequired
+Parent:           PIXmPatient
+Id:               IHE.PIXm.Patient.BirthDateRequired
+Title:            "PIXm Patient Profile example for additional Manager constraints"
+Description:      "Example StructureDefinition for additional Patient resource constraints (requiring birthDate) by the Patient Identifier Cross-reference Manager."
+* birthDate 1..1 MS
+
 Profile: PIXmQueryParametersIn
 Parent: Parameters
 Id: IHE.PIXm.Query.Parameters.In
