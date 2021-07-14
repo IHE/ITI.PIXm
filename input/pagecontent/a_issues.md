@@ -1,6 +1,6 @@
 <div markdown="1" class="stu-note">
 
-### Significant from [PIXm, December 5, 2019](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf):
+### Significant changes from [PIXm, December 5, 2019](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf):
 - FHIR Implementation Guide instead of [pdf](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf), [work item](https://github.com/IHE/IT-Infrastructure/issues/149)
 - Volume 1 Update Use Cases and introduced new Mobile Patient Identifier Cross-reference Feed according to [work item](https://github.com/IHE/IT-Infrastructure/issues/147)
 - Volume 2 ITI-83  
@@ -28,13 +28,11 @@
 
 #### Open Issues and Questions
 
-**PIXm\_007**
+***PIXm\_007***
 
-Mobile Patient Identifier Cross-reference Query response \<assigner\>
-resource will be required, for cases where the Assigning authority is
-not an OID or UUID or URI
+*Mobile Patient Identifier Cross-reference Query response &lt;assigner&gt; resource will be required, for cases where the Assigning authority is not an OID or UUID or URI*
 
-Do we want to use Assigner as an alternative field?
+*Do we want to use Assigner as an alternative field?*
 
 ***PIXm\_010***
 
@@ -43,14 +41,12 @@ correct, did we document it properly?*
 
 ***PIXm\_014***
 
-*Should IHE have just used the $match operator defined in the*
-HL7<sup>®</sup> FHIR<sup>®</sup> standard*? It seems to be very similar
+*Should IHE have just used the [$match operation](http://hl7.org/fhir/R4/patient-operation-match.html) defined in the HL7<sup>®</sup> FHIR<sup>®</sup> standard*? It seems to be very similar
 function. BUT $match uses Patient resources and not just
 identifiers/Reference. That is to say that PIXm operation will expose
 identifiers but not other demographics about the patient, whereas $match
 exposes the full content of the Patient resource on query and on
-returned result. --*
-<http://hl7.org/fhir/R4/patient-operation-match.html>
+returned result. 
 
 *Thus should $match be an alternative, or another transaction, or
 ignored by IHE?*

@@ -11,10 +11,10 @@ Description:      "StructureDefinition for Patient resource constraints in the I
 * address 0..* MS
 * managingOrganization 0..1 MS
 
-Profile: PIXmParametersIn
+Profile: PIXmQueryParametersIn
 Parent: Parameters
-Id: IHE.PIXm.Parameters.In
-Title: "IHE PIXm Parameters In"
+Id: IHE.PIXm.Query.Parameters.In
+Title: "IHE PIXm Query Parameters In"
 Description: "StructureDefinition for Input Parameters for $pixm operation"
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"
@@ -34,10 +34,10 @@ Description: "StructureDefinition for Input Parameters for $pixm operation"
 * parameter[targetSystem].valueUri 0..
 * parameter[targetSystem].valueUri only uri
 
-Profile: PIXmParametersOut
+Profile: PIXmQueryParametersOut
 Parent: Parameters
-Id: IHE.PIXm.Parameters.Out
-Title: "IHE PIXm Parameters Out"
+Id: IHE.PIXm.Query.Parameters.Out
+Title: "IHE PIXm Query Parameters Out"
 Description: "StructureDefinition for Ouput Parameters for $pixm operation"
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"

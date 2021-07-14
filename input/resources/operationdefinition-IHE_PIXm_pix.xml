@@ -33,9 +33,9 @@
   <type value="true"/>
   <instance value="false"/>
   <inputProfile
-                value="http://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Parameters.In"/>
+                value="http://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Query.Parameters.In"/>
   <outputProfile
-                 value="http://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Parameters.Out"/>
+                 value="http://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Query.Parameters.Out"/>
   <parameter>
     <name value="sourceIdentifier"/>
     <use value="in"/>
