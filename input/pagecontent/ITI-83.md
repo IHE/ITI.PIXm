@@ -170,7 +170,7 @@ query shall not be included in the returned Response.
 | targetId         | \[0..\*\] | Reference(Patient) | The URL of the Patient Resource                                                                     |
 {: .grid }
 
-[example](Parameters-pixm-response-mohralice-red-all.html):
+[example response](Parameters-pixm-response-mohralice-red-all.html) for [query](Parameters-pixm-request-mohralice-red-all.html):
 ```xml
 <Parameters xmlns="http://hl7.org/fhir">
     <parameter>
@@ -272,4 +272,4 @@ The Patient Identifier Cross-reference Consumer when grouped with ATNA Secure No
 
 ##### 2:3.83.5.1.2 Patient Identifier Cross-reference Manager Audit
 
-The Patient Identifier Cross-reference Manager when grouped with ATNA Secure Node or Secure Application actor shall be able to record a [PIXm Query Manager Audit Event Log](/StructureDefinition-IHE.PIXm.Query.Audit.Manager.html). [Audit Example for a  PIXm Query transaction from manager perspective](AuditEvent-ex-auditPixmQuery-manager.html).
+The Patient Identifier Cross-reference Manager when grouped with ATNA Secure Node or Secure Application actor shall be able to record a [PIXm Query Manager Audit Event Log](/StructureDefinition-IHE.PIXm.Query.Audit.Manager.html). [Audit Example for a PIXm Query transaction from manager perspective](AuditEvent-ex-auditPixmQuery-manager.html).

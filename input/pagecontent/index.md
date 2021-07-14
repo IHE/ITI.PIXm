@@ -25,8 +25,8 @@ This guide is organized into four main sections:
    7. [Test Plan](5_testplan.html)
 
 2. Volume II: Transaction Detail
-   1. [Patient Identifier Cross-Reference Query [ITI-83]](ITI-83.html)
-   2. [Mobile Patient Identifier Cross-Reference Feed [ITI-104]](ITI-104.html)
+   1. [Patient Identifier Cross-reference Query [ITI-83]](ITI-83.html)
+   2. [Mobile Patient Identifier Cross-reference Feed [ITI-104]](ITI-104.html)
 
 
 Click on any of the links above, head on over the [table of contents](toc.html), or

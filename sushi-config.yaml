@@ -57,7 +57,7 @@ resources:
     exampleBoolean: true
   Patient/Patient-MohrAlice:
     name: Patient Alice Mohr
-    description: Patient Mohr Alice with all IHE Domain identifiers
+    description: 'Patient Mohr Alice with all IHE Domain identifiers, note: this is just a consolidated identifier example will all identifiers from all the IHE domains equivalent to a golden patient, however a golden patient is not the scope of PIXm, see the IHE PMIR profile' 
     exampleBoolean: true
   Patient/Patient-MohrAlice-Red:
     name: Patient Alice Mohr (Red)
@@ -106,9 +106,9 @@ pages:
   volume-1.md:
     title: "Volume 1"
   ITI-83.md:
-    title: "Patient Identity Cross-Reference Query [ITI-83]"
+    title: "Patient Identity Cross-reference Query [ITI-83]"
   ITI-104.md:
-    title: "Mobile Patient Identifier Cross-Reference Feed [ITI-104]"
+    title: "Mobile Patient Identifier Cross-reference Feed [ITI-104]"
   5_testplan.md:
     title: "Test Plan"
   a_issues.md:
@@ -125,7 +125,7 @@ menu:
     "Security Considerations": volume-1.html#415-pixm-security-considerations
     "Cross Profile Considerations": volume-1.html#416-pixm-cross-profile-considerations
   Volume 2:
-    "Patient Identity cross-Reference Query [ITI-83]": ITI-83.html
-    "Mobile Patient identifier Cross-Reference Feed [ITI-104]": ITI-104.html
+    "Patient Identity Cross-reference Query [ITI-83]": ITI-83.html
+    "Mobile Patient Identifier Cross-reference Feed [ITI-104]": ITI-104.html
   Test Plan: 5_testplan.html
   Artifact Index: artifacts.html

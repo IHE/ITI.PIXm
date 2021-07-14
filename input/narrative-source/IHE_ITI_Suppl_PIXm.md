@@ -415,8 +415,8 @@ Table 41.1-1: PIXm Profile - Actors and Transactions
 |                                             |                                                            |                        |             |                 |
 | ------------------------------------------- | ---------------------------------------------------------- | ---------------------- | ----------- | --------------- |
 | Actors                                      | Transactions                                               | Initiator or Responder | Optionality | Reference       |
-| Patient Identifier Cross-reference Consumer | Mobile Patient Identifier Cross-Reference Query \[ITI-83\] | Initiator              | R           | ITI TF-2c: 3.83 |
-| Patient Identifier Cross-reference Manager  | Mobile Patient Identifier Cross-Reference Query \[ITI-83\] | Responder              | R           | ITI TF-2c: 3.83 |
+| Patient Identifier Cross-reference Consumer | Mobile Patient Identifier Cross-reference Query \[ITI-83\] | Initiator              | R           | ITI TF-2c: 3.83 |
+| Patient Identifier Cross-reference Manager  | Mobile Patient Identifier Cross-reference Query \[ITI-83\] | Responder              | R           | ITI TF-2c: 3.83 |
 
 The transaction defined in this profile corresponds to the query
 transactions used in the PIX and PIXV3 Profiles (ITI TF-1: 5 and 23) and

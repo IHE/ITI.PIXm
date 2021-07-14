@@ -2,7 +2,7 @@
 entity Source--><rect fill="#FEFECE" filter="url(#fw00twurvcqkq)" height="36.4883" style="stroke: #A80036; stroke-width: 1.5;" width="300" x="6" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="280" x="16" y="31.5352">Patient Identifier Cross-reference Source</text><!--MD5=[4d65782647d64e21a92b473b2db819be]
 entity Consumer--><rect fill="#FEFECE" filter="url(#fw00twurvcqkq)" height="36.4883" style="stroke: #A80036; stroke-width: 1.5;" width="324" x="553" y="105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="304" x="563" y="128.5352">Patient Identifier Cross-reference Consumer</text><!--MD5=[327d8b0cc9017ef0d2f4054fa6547e20]
 entity Manager--><rect fill="#FEFECE" filter="url(#fw00twurvcqkq)" height="36.4883" style="stroke: #A80036; stroke-width: 1.5;" width="313" x="278.5" y="218"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="293" x="288.5" y="241.5352">Patient Identifier Cross-reference Manager</text><!--MD5=[ad6f6a9b40effe9942c26add8714ed4b]
-link Source to Manager--><path d="M153.52,44.22 C151.02,68.61 150.28,113.31 173,141 C206.49,181.81 259.11,204.91 308.44,217.98 " fill="none" id="Source-Manager" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="360" x="174" y="128.0684">Mobile Patient Identifier Cross-Reference Feed [ITI-104]↓</text><!--MD5=[c8ecdc2f4907a9f6a9bf26f0e8ab97f2]
+link Source to Manager--><path d="M153.52,44.22 C151.02,68.61 150.28,113.31 173,141 C206.49,181.81 259.11,204.91 308.44,217.98 " fill="none" id="Source-Manager" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="360" x="174" y="128.0684">Mobile Patient Identifier Cross-reference Feed [ITI-104]↓</text><!--MD5=[c8ecdc2f4907a9f6a9bf26f0e8ab97f2]
 link Consumer to Manager--><path d="M671.86,141.1 C619.25,161.96 530.82,197.01 478.19,217.88 " fill="none" id="Consumer-Manager" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="357" x="593" y="184.5684">Mobile Patient Identifier Cross-reference Query [ITI-83]↓</text><!--MD5=[f1d166bc8fdeaa11f212b61cd53a1aa4]
 @startuml
 
@@ -11,7 +11,7 @@ agent "Patient Identifier Cross-reference Consumer" as Consumer
 agent "Patient Identifier Cross-reference Manager" as Manager
 
 
-Source - - - Manager: "Mobile Patient Identifier Cross-Reference Feed [ITI-104]↓"
+Source - - - Manager: "Mobile Patient Identifier Cross-reference Feed [ITI-104]↓"
 Consumer - - Manager : "Mobile Patient Identifier Cross-reference Query [ITI-83]↓"
 
 @enduml
