@@ -10,7 +10,14 @@ This profile provides lightweight alternative to the transactions defined in the
 
 This profile does not assume the Patient Identifier Cross-reference Manager to have the ability to act as a full-fledged HL7<sup>®</sup> FHIR<sup>®</sup> server, other than for the profiled transaction. PIXm can be used to provide a RESTful interface to a PIX or PIXV3 Patient Identifier Cross-reference Manager without providing other FHIR services.
 
-[Open and Closed Issues](a_issues.html)
+<div markdown="1" class="stu-note">
+
+| [Significant Changes, Open, and Closed Issues](a_issues.html) |
+{: .grid}
+
+**[Search this IG](https://www.google.com/search?q=site%3Ahttps%3A%2F%2Fprofiles.ihe.net%2FITI%2FPIXm&rlz=1C1GCEU_enUS815US815&sxsrf=ALeKk02egtK8A20vWkRrPApvkcoQjnIiDA%3A1620864970799&ei=ym-cYPmMMMq6tQa8vre4CA&oq=site%3Ahttps%3A%2F%2Fprofiles.ihe.net%2FITI%2FPIXm&gs_lcp=Cgdnd3Mtd2l6EANQ7CZYmDBg9TdoAXAAeACAAWaIAcIDkgEDNS4xmAEAoAEBqgEHZ3dzLXdpesABAQ&sclient=gws-wiz&ved=0ahUKEwj5mcDGsMXwAhVKXc0KHTzfDYcQ4dUDCA4&uact=5)**
+
+</div>
 
 ### Organization of This Guide
 This guide is organized into four main sections:

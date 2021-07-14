@@ -1,4 +1,31 @@
-### Issues
+<div markdown="1" class="stu-note">
+
+### Significant from [PIXm, December 5, 2019](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf):
+- FHIR Implementation Guide instead of [pdf](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf), [work item](https://github.com/IHE/IT-Infrastructure/issues/149)
+- Volume 1 Update Use Cases and introduced new Mobile Patient Identifier Cross-reference Feed according to [work item](https://github.com/IHE/IT-Infrastructure/issues/147)
+- Volume 2 ITI-83  
+  - Added Parameter StructureDefinitions for $pixm operation
+  - Added Security Audit Considerations with AuditEvent profile / resource
+  - Added IHE Connectathon Samples for ITI-83
+- Volume 2 ITI-104
+   - New Mobile Patient Identifier Cross-reference Feed [ITI-104] Transaction
+   - Profile for specifying Patient elements used by Patient Identifier Cross-reference Manager to correlate identifiers
+   - Added the Delete Patient operation, optional to allow grouping or acting as facade with PIX V2, V3
+   - Added IHE Connectathon samples ITI-104
+   - Added Security Audit Considerations with AuditEvent profile / resource
+
+### Discussion Points F2F July 2021
+- ITI-83 references E.3 which is in [pdf](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16), see also [github issue](https://github.com/IHE/publications/issues/110)
+- ITI-104: If the Patient Identifier Cross-reference Manager creates a "shadow copy" should this id be returned in pixm queries -> Propose yes and close this a discussion point and not list it since it is documented and illustrated with the query response 
+- ITI-105: Should a Patient Identifier Cross-reference Manage populate meta.source if it creates a "shadow copy"? -> Propose no: Leave it up to the implementer
+
+#### List of questions to ask for the public review
+- For the [ITI-104] Mobile Patient Identifier Cross-reference Feed it is proposed to use a RESTFul approach, e.g. to use Conditional Create / Update / Delete with the patient domain identifier. Please provide feedback during Public Comment if this approach is fine or indicate an alternative:
+  Alternative approaches discussed were:
+   1. Requiring the client to use id instead of identifiers for update/delete in a RESTFul transaction. Client could use $pixm operation to get the id based on the domain identifier. 
+   2. Use a transaction Bundle for allowing multiple updates
+   3. Use a Message as PMIR is doing it with a MessageHeader in the [ITI-93](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf#page=26) transaction
+
 #### Open Issues and Questions
 
 **PIXm\_007**
@@ -52,3 +79,6 @@ proposed this would be returning part of the Patient resource content.*
 Seems they both should handle similar conditions similarly. The return
 codes were reviewed in PIXm, and found to be appropriate for PIXm as
 originally documented.
+
+
+</div>
