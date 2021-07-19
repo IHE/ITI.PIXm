@@ -76,7 +76,8 @@ ITI-83 references E.3 which is in [pdf](https://www.ihe.net/uploadedFiles/Docume
 
 
 ***PIXm 018***
-PIXm does not yet support for the Patient Update Notification, we anticipate that it will be in a future revision.
+PIXm does not yet define a FHIR equivalent for the transactions  PIX Update Notification [ITI-10] and PIXV3 Update Notification [ITI-46], 
+we anticipate that it will be added in a future revision.
 
 #### Closed Issues
 
