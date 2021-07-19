@@ -15,6 +15,8 @@
    - Added Security Audit Considerations with AuditEvent profile / resource
 
 ### Discussion Points F2F July 2021
+- Added for the 104 transaction the examples directly in the text with the relevant part, (use ... for the non-relevant part)
+
 - ITI-104: If the Patient Identifier Cross-reference Manager creates a "shadow copy" should this id be returned in pixm queries -> Propose yes and close this a discussion point and not list it since it is documented and illustrated with the query response 
 - ITI-105: Should a Patient Identifier Cross-reference Manage populate meta.source if it creates a "shadow copy"? -> Propose no: Leave it up to the implementer
 
