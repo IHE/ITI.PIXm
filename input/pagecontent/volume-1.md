@@ -14,17 +14,17 @@
 
 Figure below shows the actors directly involved in the PIXm Profile and the relevant transactions between them.
 
-![Figure: 41.1-1: PIXm Actor Diagram](ActorsAndTransactions.svg "Figure: 41.1-1: PIXm Actor Diagram")
+![Figure: 1:41.1-1: PIXm Actor Diagram](ActorsAndTransactions.svg "Figure: 1:41.1-1: PIXm Actor Diagram")
 
 <div style="clear: left"/>
 
-**Figure: 41.1-1: PIXm Actor Diagram**
+**Figure: 1:41.1-1: PIXm Actor Diagram**
 
-Table 41.1-1 lists the transactions for each actor directly involved in the PIXm Profile. To claim compliance with this
+Table 1:41.1-1 lists the transactions for each actor directly involved in the PIXm Profile. To claim compliance with this
 profile, an actor shall support all required transactions (labeled “R”) and may support the optional transactions (labeled
 “O”).
 
-Table 41.1-1: PIXm Profile - Actors and Transactions
+Table 1:41.1-1: PIXm Profile - Actors and Transactions
 
 | Actors| Transactions| Initiator or Responder | Optionality | Reference |
 | ----- | ----------- | ---------------------- | ----------- | --------- |
@@ -50,10 +50,10 @@ identity data from different domains assigned to the same patient person.
 ### 1:41.2 PIXm Actor Options
 
 Options that may be selected for each actor in this profile, if any, are
-listed in the Table 41.2-1. Dependencies between options when applicable
+listed in the Table 1:41.2-1. Dependencies between options when applicable
 are specified in notes.
 
-Table 41.2-1: PIXm Actors and Options
+Table 1.41.2-1: PIXm Actors and Options
 
 | Actor                                       | Option Name        | Reference |
 | ------------------------------------------- | ------------------ | --------- |
@@ -68,7 +68,7 @@ Intentionally left blanc.
 
 ### 1:41.3 PIXm Required Actor Groupings
 
-Table 41.3-1: PIXm - Required Actor Groupings
+Table 1:41.3-1: PIXm - Required Actor Groupings
 
 | PIXm Actor                                  | Actor to be grouped with | Reference | Content Bindings Reference
 | ------------------------------------------- | ------------------------ | --------- | --------------------------
