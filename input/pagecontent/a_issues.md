@@ -15,7 +15,6 @@
    - Added Security Audit Considerations with AuditEvent profile / resource
 
 ### Discussion Points F2F July 2021
-- ITI-83 references E.3 which is in [pdf](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16), see also [github issue](https://github.com/IHE/publications/issues/110)
 - ITI-104: If the Patient Identifier Cross-reference Manager creates a "shadow copy" should this id be returned in pixm queries -> Propose yes and close this a discussion point and not list it since it is documented and illustrated with the query response 
 - ITI-105: Should a Patient Identifier Cross-reference Manage populate meta.source if it creates a "shadow copy"? -> Propose no: Leave it up to the implementer
 
@@ -68,6 +67,14 @@ and could more appropriately be handled with PDQm, or a secondary query
 of the Patient. Concern is that PIXm security model covers identifiers
 (reference to Patient is an identifier in FHIR), but by expanding as
 proposed this would be returning part of the Patient resource content.*
+
+
+***PIXm 017***
+ITI-83 references E.3 which is in [pdf](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16), see also [github issue](https://github.com/IHE/publications/issues/110).
+
+
+***PIXm 018***
+PIXm does not yet support for the Patient Update Notification, we anticipate that it will be in a future revision.
 
 #### Closed Issues
 

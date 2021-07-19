@@ -23,12 +23,12 @@ This profile does not assume the Patient Identifier Cross-reference Manager to h
 This guide is organized into four main sections:
 
 1. Volume I: [Overview](volume-1.html)
-   1. [PIXm Actors, Transactions, and Content Modules](volume-1.html#411-pixm-actors-transactions-and-content-modules)
-   2. [PIXm Actor Options](volume-1.html#412-pixm-actor-options)
-   3. [PIXm Required Actor Groupings](volume-1.html#413-pixm-required-actor-groupings)
-   4. [PIXm Overview](volume-1.html#414-pixm-overview)
-   5. [PIXm Security Considerations](volume-1.html#415-pixm-security-considerations)
-   6. [PIXm Cross Profile Considerations](volume-1.html#416-pixm-cross-profile-considerations)
+   1. [PIXm Actors, Transactions, and Content Modules](volume-1.html#1411-pixm-actors-transactions-and-content-modules)
+   2. [PIXm Actor Options](volume-1.html#1412-pixm-actor-options)
+   3. [PIXm Required Actor Groupings](volume-1.html#1413-pixm-required-actor-groupings)
+   4. [PIXm Overview](volume-1.html#1414-pixm-overview)
+   5. [PIXm Security Considerations](volume-1.html#1415-pixm-security-considerations)
+   6. [PIXm Cross Profile Considerations](volume-1.html#1416-pixm-cross-profile-considerations)
    7. [Test Plan](5_testplan.html)
 
 2. Volume II: Transaction Detail

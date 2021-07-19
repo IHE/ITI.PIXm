@@ -4,13 +4,13 @@
 #### 1:41.1.1 Actor Descriptions and Actor Profile Requirements
 
 * Actors
-  - [Patient Identifier Cross-reference Source](volume-1.html#41111-patient-identifier-cross-reference-source)
-  - [Patient Identifier Cross-reference Consumer](volume-1.html#41112-patient-identifier-cross-reference-consumer)
-  - [Patient Identifier Cross-reference Manager](volume-1.html#41113-patient-identifier-cross-reference-manager)
+  - [Patient Identifier Cross-reference Source](volume-1.html#141111-patient-identifier-cross-reference-source)
+  - [Patient Identifier Cross-reference Consumer](volume-1.html#141112-patient-identifier-cross-reference-consumer)
+  - [Patient Identifier Cross-reference Manager](volume-1.html#141113-patient-identifier-cross-reference-manager)
 
 * Transactions
-  - [Patient Identity Cross-eference Query [ITI-83]](ITI-83.html)
-  - [Mobile Patient Identifier Cross-4eference Feed [ITI-104]](ITI-104.html)
+  - [Patient Identity Cross-reference Query [ITI-83]](ITI-83.html)
+  - [Mobile Patient Identifier Cross-reference Feed [ITI-104]](ITI-104.html)
 
 Figure below shows the actors directly involved in the PIXm Profile and the relevant transactions between them.
 

@@ -177,7 +177,7 @@ query shall not be included in the returned Response.
         <name value="targetIdentifier"/>
         <valueIdentifier>
             <use value="official" />
-            <system value="urn:oid:urn:oid:1.3.6.1.4.1.21367.13.20.3000" />
+            <system value="urn:oid:1.3.6.1.4.1.21367.13.20.3000" />
             <value value="IHEBLUE-994" />
         </valueIdentifier>
     </parameter>
@@ -185,7 +185,7 @@ query shall not be included in the returned Response.
         <name value="targetIdentifier"/>
         <valueIdentifier>
             <use value="official" />
-            <system value="urn:oid:urn:oid:urn:oid:1.3.6.1.4.1.21367.13.20.2000" />
+            <system value="urn:oid:1.3.6.1.4.1.21367.13.20.2000" />
             <value value="IHEGREEN-994" />
         </valueIdentifier>
     </parameter>
