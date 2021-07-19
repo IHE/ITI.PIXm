@@ -8,6 +8,8 @@ The ***Patient Identifier Cross-reference for* Mobile** ***Integration Profile**
 
 This profile provides lightweight alternative to the transactions defined in the **PIX** and **PIXV3** profiles, using HTTP RESTful transactions.
 
+The requirements on Patient Identifier Domain and a Patient Identifier Cross-reference Domain as defined for the [PIX profile](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) apply also for this profile.
+
 This profile does not assume the Patient Identifier Cross-reference Manager to have the ability to act as a full-fledged HL7<sup>®</sup> FHIR<sup>®</sup> server, other than for the profiled transaction. PIXm can be used to provide a RESTful interface to a PIX or PIXV3 Patient Identifier Cross-reference Manager without providing other FHIR services.
 
 <div markdown="1" class="stu-note">
