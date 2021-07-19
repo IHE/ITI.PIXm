@@ -17,7 +17,8 @@
 ### Discussion Points F2F July 2021
 - Added for the 104 transaction the examples directly in the text with the relevant part, (use ... for the non-relevant part)
 - Tried to clarify for a given Patient Identifier Domain there SHALL be one and only one Patient Identity Source Actor, but a given Patient Identity Source may serve more than one Patient Identifier Domain. 
-  Added Reference to PIX Patient Identifier Domain and added it for the other transactions
+  [Added Reference to PIX Patient Identifier Domain and added it for the other transactions](https://github.com/IHE/ITI.PIXm/commit/52a13195c45710d660158a38742b2cebae8b6f99)
+- When grouped with ATNA expectation that the Patient Identifier Cross-reference Manager checks that the Patient Idendity Source is using the right identifier domain added to Security Configurations in 104.
 
 
 - ITI-104: If the Patient Identifier Cross-reference Manager creates a "shadow copy" should this id be returned in pixm queries -> Propose yes and close this a discussion point and not list it since it is documented and illustrated with the query response 
