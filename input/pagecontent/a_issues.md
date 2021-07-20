@@ -3,6 +3,7 @@
 ### Significant changes from [PIXm, December 5, 2019](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf):
 - FHIR Implementation Guide instead of [pdf](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf), [work item](https://github.com/IHE/IT-Infrastructure/issues/149)
 - Volume 1 Update Use Cases and introduced new Mobile Patient Identifier Cross-reference Feed according to [work item](https://github.com/IHE/IT-Infrastructure/issues/147)
+  - Added Security Considerations 
 - Volume 2 ITI-83  
   - Added Parameter StructureDefinitions for $pixm operation
   - Added Security Audit Considerations with AuditEvent profile / resource
@@ -14,24 +15,13 @@
    - Added IHE Connectathon samples ITI-104
    - Added Security Audit Considerations with AuditEvent profile / resource
 
-### Discussion Points F2F July 2021
-- Added for the [ITI-104](ITI-104.html) transaction the examples directly in the text with the relevant part (used ... for the non-relevant part)
-- Tried to clarify for a given Patient Identifier Domain there SHALL be one and only one Patient Identity Source Actor, but a given Patient Identity Source may serve more than one Patient Identifier Domain, added reference to Patient Identifier Domain concepts in overview and volume 1 and note in 104 security considerations.
-- When grouped with ATNA expectation that the Patient Identifier Cross-reference Manager checks that the Patient Idendity Source is using the right identifier domain added to Security Configurations in [104](ITI-104.html).
-- Added high level explanation (see example in SVC) explaining the diagram with jumps to the different sections [ITI-104 interaction diagram](ITI-104.html#231044-messages) 
-- Suggest to close 
-  - ***PIXm\_010***: cannot be done directly via FHIR RESTFul API or another operation as is documented properly
-  - ***PIXm\_014***: $match could add value to PDQm, but not for PIXm
-- PIXm query targetId discussion (create an open issue if we cannot resolve it?)
-   - ITI-104: If the Patient Identifier Cross-reference Manager creates a "shadow copy" should this id be returned in pixm queries? [see example](http://build.fhir.org/ig/IHE/ITI.PIXm/branches/master/Parameters-pixm-response-mohralice-red-all.json.html) 
-   - ITI-105: Should a Patient Identifier Cross-reference Manage populate meta.source if it creates a "shadow copy"? -> Propose no: Leave it up to the implementer
-
 #### List of questions to ask for the public review
 - For the [ITI-104] Mobile Patient Identifier Cross-reference Feed it is proposed to use a RESTFul approach, e.g. to use Conditional Create / Update / Delete with the patient domain identifier. Please provide feedback during Public Comment if this approach is fine or indicate an alternative:
   Alternative approaches discussed were:
    1. Requiring the client to use id instead of identifiers for update/delete in a RESTFul transaction. Client could use $pixm operation to get the id based on the domain identifier. 
    2. Use a transaction Bundle for allowing multiple updates
    3. Use a Message as PMIR is doing it with a MessageHeader in the [ITI-93](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf#page=26) transaction
+- Feedback to the open issue ***PIXm 020*** which targetId's to return from a Patient Identifier Cross-reference Manager
 
 #### Open Issues and Questions
 
@@ -40,23 +30,6 @@
 *Mobile Patient Identifier Cross-reference Query response &lt;assigner&gt; resource will be required, for cases where the Assigning authority is not an OID or UUID or URI*
 
 *Do we want to use Assigner as an alternative field?*
-
-***PIXm\_010***
-
-*Is using FHIR operations the right approach for this profile? If it is
-correct, did we document it properly?*
-
-***PIXm\_014***
-
-*Should IHE have just used the [$match operation](http://hl7.org/fhir/R4/patient-operation-match.html) defined in the HL7<sup>®</sup> FHIR<sup>®</sup> standard*? It seems to be very similar
-function. BUT $match uses Patient resources and not just
-identifiers/Reference. That is to say that PIXm operation will expose
-identifiers but not other demographics about the patient, whereas $match
-exposes the full content of the Patient resource on query and on
-returned result. 
-
-*Thus should $match be an alternative, or another transaction, or
-ignored by IHE?*
 
 ***PIXm\_015***
 
@@ -77,24 +50,38 @@ of the Patient. Concern is that PIXm security model covers identifiers
 proposed this would be returning part of the Patient resource content.*
 
 
-***PIXm 017***
-ITI-83 references E.3 which is in [pdf](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16), see also [github issue](https://github.com/IHE/publications/issues/110).
+***PIXm 017***  
+*ITI-83 references E.3 which is in [pdf](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16), see also [github issue](https://github.com/IHE/publications/issues/110).*
 
 
-***PIXm 018***
-PIXm does not yet define a FHIR equivalent for the transactions  PIX Update Notification [ITI-10] and PIXV3 Update Notification [ITI-46], 
-we anticipate that it will be added in a future revision.
+***PIXm 018***  
+*PIXm does not yet define a FHIR equivalent for the transactions  PIX Update Notification [ITI-10] and PIXV3 Update Notification [ITI-46], 
+we anticipate that it will be added in a future revision.*
 
-***PIXm 019***
-PIXm allows for the parameters in the operation to be a string URL. The IG builder, when creating the narrative, presumes that these are clickable links. yet in one example we have put in a URN OID. This is recorded as an [issue against the IG builder](https://github.com/HL7/fhir-ig-publisher/issues/296)
+***PIXm 019***  
+*PIXm allows for the parameters in the operation to be a string URL. The IG builder, when creating the narrative, presumes that these are clickable links. yet in one example we have put in a URN OID. This is recorded as an [issue against the IG builder](https://github.com/HL7/fhir-ig-publisher/issues/296)*
 
+***PIXm 020***  
+*If a Patient Identifier Cross-reference Manager creates a "shadow copy" of the feeded patients it may return the created
+id's on the Patient Identifier Cross-reference Manager, e.g see [example](http://build.fhir.org/ig/IHE/ITI.PIXm/branches/master/Parameters-pixm-response-mohralice-red-all.json.html) 
+where the Patient Identifier Cross-reference Manager created three id's for the three patients out ouf the three different Patient Identity Domains ('Patient/Patient-MohrAlice-Red',Patient/Patient-MohrAlice-Green',Patient/Patient-MohrAlice-Blue') and returns now two targetId's in addition to the two identifiers (red id/identifier is excluded because the sourceIdentifier in Identity Domain Red is already provided in the query).* 
+
+*In addition a Patient Identifier Cross-reference Manager could create a 'golden patient' where all information
+is consolidated by the Patient Identifier Cross-reference Manager rules and return also this targetId [example](http://build.fhir.org/ig/IHE/ITI.PIXm/branches/master/Patient-Patient-MohrAlice.html). Could this id also be added in a $pixm Query as a targetId ('Patient/Patient-MohrAlice')? Note: A golden patient is not the scope of PIXm, see the [IHE ITI PMIR](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf) profile.* 
+
+*There is continuing discussion in iti-tech if a "shadow copy" can be returned as a targetId, and if yes, if it should be marked by the Patient Identifier Cross-reference Manager in meta.source for these shadow copies or not.*
 
 #### Closed Issues
 
-**CP-ITI-1118** - asks if the return behavior is well aligned with PDQm.
+***CP-ITI-1118*** - asks if the return behavior is well aligned with PDQm.
 Seems they both should handle similar conditions similarly. The return
 codes were reviewed in PIXm, and found to be appropriate for PIXm as
 originally documented.
 
+***PIXm\_010*** 
+The $pixm operation is considered the right approach for this profile.
+
+***PIXm\_014*** 
+The $pixm operation cannot be replaced with the $match operation, the $match operation is however considered as a proposal for a new version in PDQm.
 
 </div>

@@ -8,8 +8,6 @@ The ***Patient Identifier Cross-reference for* Mobile** ***Integration Profile**
 
 This profile provides lightweight alternative to the transactions defined in the **PIX** and **PIXV3** profiles, using HTTP RESTful transactions.
 
-The requirements on Patient Identifier Domain and a Patient Identifier Cross-reference Domain as defined for the [PIX profile](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) apply also for this profile.
-
 This profile does not assume the Patient Identifier Cross-reference Manager to have the ability to act as a full-fledged HL7<sup>®</sup> FHIR<sup>®</sup> server, other than for the profiled transaction. PIXm can be used to provide a RESTful interface to a PIX or PIXV3 Patient Identifier Cross-reference Manager without providing other FHIR services.
 
 <div markdown="1" class="stu-note">
@@ -33,7 +31,7 @@ This guide is organized into four main sections:
    6. [41.6 PIXm Cross Profile Considerations](volume-1.html#1416-pixm-cross-profile-considerations)
    7. [Test Plan](5_testplan.html)
 
-2. Volume 3: Transaction Detail
+2. Volume 2: Transaction Detail
    1. [3.83 Patient Identifier Cross-reference Query [ITI-83]](ITI-83.html)
    2. [3.104 Mobile Patient Identifier Cross-reference Feed [ITI-104]](ITI-104.html)
 
@@ -43,7 +41,7 @@ if you are looking for a specific artifact, check out the [index](artifacts.html
 
 #### Must Support`
 
-MHD uses `Must Support` in StructureDefinitions with the definition found in [Appendix Z](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.10-profiling-conventions-for-constraints-on-fhir). This is equivalent to IHE use of **R2**.
+PIXm uses `Must Support` in StructureDefinitions with the definition found in [Appendix Z](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.10-profiling-conventions-for-constraints-on-fhir). This is equivalent to IHE use of **R2**.
 
 #### Download 
 
