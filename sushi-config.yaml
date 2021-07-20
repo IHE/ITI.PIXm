@@ -14,7 +14,7 @@ canonical: http://profiles.ihe.net/ITI/PIXm
 version: 0.1.0
 fhirVersion: 4.0.1
 name: IHE_PIXm
-title: PIXm Implementation Guide
+title: Patient Identity Cross-Reference for mobile (PIXm)
 status: active
 publisher:
   name: Integrating the Healthcare Enterprise (IHE)
@@ -25,10 +25,11 @@ contact:
     telecom:
       - system: email
         value: john.moehrke@gmail.com
-description: An example of how IHE Profile can be used to create an IG
+description: ImplementationGuide for IHE IT Infrastructure Technical Framework Supplement Patient Identity Cross-Reference for mobile (PIXm) Rev. 0.1.0 public-comment
 license: CC-BY-SA-4.0
 jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
-copyrightYear: 2021+
+copyright: IHE http://www.ihe.net/Governance/#Intellectual_Property
+copyrightYear: 2020+
 releaseLabel: ci-build
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
@@ -48,6 +49,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   usage-stats-opt-out: 'true'
   autoload-resources: 'true'
   shownav: 'true'
+  special-url: 
+    - urn:oid:1.3.6.1.4.1.21367.13.20.3000
 
   # additional examples that need descriptions
 resources:

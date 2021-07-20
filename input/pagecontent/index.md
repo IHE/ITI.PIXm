@@ -17,29 +17,35 @@ This profile does not assume the Patient Identifier Cross-reference Manager to h
 | [Significant Changes, Open, and Closed Issues](a_issues.html) |
 {: .grid}
 
-**[Search this IG](https://www.google.com/search?q=site%3Ahttps%3A%2F%2Fprofiles.ihe.net%2FITI%2FPIXm&rlz=1C1GCEU_enUS815US815&sxsrf=ALeKk02egtK8A20vWkRrPApvkcoQjnIiDA%3A1620864970799&ei=ym-cYPmMMMq6tQa8vre4CA&oq=site%3Ahttps%3A%2F%2Fprofiles.ihe.net%2FITI%2FPIXm&gs_lcp=Cgdnd3Mtd2l6EANQ7CZYmDBg9TdoAXAAeACAAWaIAcIDkgEDNS4xmAEAoAEBqgEHZ3dzLXdpesABAQ&sclient=gws-wiz&ved=0ahUKEwj5mcDGsMXwAhVKXc0KHTzfDYcQ4dUDCA4&uact=5)**
+**[Search this IG](https://www.google.com/search?q=site%3Ahttps%3A%2F%2Fprofiles.ihe.net%2FITI%2FPIXm)**
 
 </div>
 
 ### Organization of This Guide
 This guide is organized into four main sections:
 
-1. Volume I: [Overview](volume-1.html)
-   1. [PIXm Actors, Transactions, and Content Modules](volume-1.html#1411-pixm-actors-transactions-and-content-modules)
-   2. [PIXm Actor Options](volume-1.html#1412-pixm-actor-options)
-   3. [PIXm Required Actor Groupings](volume-1.html#1413-pixm-required-actor-groupings)
-   4. [PIXm Overview](volume-1.html#1414-pixm-overview)
-   5. [PIXm Security Considerations](volume-1.html#1415-pixm-security-considerations)
-   6. [PIXm Cross Profile Considerations](volume-1.html#1416-pixm-cross-profile-considerations)
+1. Volume 1: Use-Case analysis
+   1. [41.1 PIXm Actors, Transactions, and Content Modules](volume-1.html#1411-pixm-actors-transactions-and-content-modules)
+   2. [41.2 PIXm Actor Options](volume-1.html#1412-pixm-actor-options)
+   3. [41.3 PIXm Required Actor Groupings](volume-1.html#1413-pixm-required-actor-groupings)
+   4. [41.4 PIXm Overview](volume-1.html#1414-pixm-overview)
+   5. [41.5 PIXm Security Considerations](volume-1.html#1415-pixm-security-considerations)
+   6. [41.6 PIXm Cross Profile Considerations](volume-1.html#1416-pixm-cross-profile-considerations)
    7. [Test Plan](5_testplan.html)
 
-2. Volume II: Transaction Detail
-   1. [Patient Identifier Cross-reference Query [ITI-83]](ITI-83.html)
-   2. [Mobile Patient Identifier Cross-reference Feed [ITI-104]](ITI-104.html)
+2. Volume 3: Transaction Detail
+   1. [3.83 Patient Identifier Cross-reference Query [ITI-83]](ITI-83.html)
+   2. [3.104 Mobile Patient Identifier Cross-reference Feed [ITI-104]](ITI-104.html)
 
 
 Click on any of the links above, head on over the [table of contents](toc.html), or
 if you are looking for a specific artifact, check out the [index](artifacts.html).
+
+#### Must Support`
+
+MHD uses `Must Support` in StructureDefinitions with the definition found in [Appendix Z](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.10-profiling-conventions-for-constraints-on-fhir). This is equivalent to IHE use of **R2**.
+
+#### Download 
 
 You can also download:
 

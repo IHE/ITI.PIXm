@@ -3,7 +3,8 @@
     "id": "Patient-MohrAlice",
     "meta" : {
         "profile" : [
-          "http://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Patient"
+      "http://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Patient.BirthDateRequired",
+	  "http://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Patient"
         ]
     },
     "identifier": [
