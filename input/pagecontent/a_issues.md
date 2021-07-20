@@ -83,6 +83,10 @@ ITI-83 references E.3 which is in [pdf](https://www.ihe.net/uploadedFiles/Docume
 PIXm does not yet define a FHIR equivalent for the transactions  PIX Update Notification [ITI-10] and PIXV3 Update Notification [ITI-46], 
 we anticipate that it will be added in a future revision.
 
+***PIXm 019***
+PIXm allows for the parameters in the operation to be a string URL. The IG builder, when creating the narrative, presumes that these are clickable links. yet in one example we have put in a URN OID. This is recorded as an [issue against the IG builder](https://github.com/HL7/ig-template-base/issues/171)
+
+
 #### Closed Issues
 
 **CP-ITI-1118** - asks if the return behavior is well aligned with PDQm.
