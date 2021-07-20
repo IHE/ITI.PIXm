@@ -179,6 +179,12 @@ Intentionally left blanc.
 See [ITI TF-2: Appendix Z.8 “Mobile Security Considerations”](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-
 security-considerations)
 
+Actors in PIXm may be grouped with an Audit Trail and Node Authentication (ATNA) Profile - Secure Node or ATNA Secure Application Actor. 
+This grouping will assure that only highly trusted systems can communicate and that all changes are recorded in the audit log.
+
+Actors in PIXm may be grouped with a Internet User Authorization (IUA) Authorization Client or Resource Server as appropriate. 
+This grouping will enable service side access control and more detailed audit logging.
+
 ### 1:41.6 PIXm Cross Profile Considerations
 
 The Patient Identifier Cross-reference Manager from PIXm can be grouped with either PIX or PIXV3 Patient Identifier Cross-
