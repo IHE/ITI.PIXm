@@ -15,14 +15,16 @@
    - Added Security Audit Considerations with AuditEvent profile / resource
 
 ### Discussion Points F2F July 2021
-- Added for the 104 transaction the examples directly in the text with the relevant part, (use ... for the non-relevant part)
-- Tried to clarify for a given Patient Identifier Domain there SHALL be one and only one Patient Identity Source Actor, but a given Patient Identity Source may serve more than one Patient Identifier Domain. 
-  [Added Reference to PIX Patient Identifier Domain and added it for the other transactions](https://github.com/IHE/ITI.PIXm/commit/52a13195c45710d660158a38742b2cebae8b6f99)
-- When grouped with ATNA expectation that the Patient Identifier Cross-reference Manager checks that the Patient Idendity Source is using the right identifier domain added to Security Configurations in 104.
-
-
-- ITI-104: If the Patient Identifier Cross-reference Manager creates a "shadow copy" should this id be returned in pixm queries -> Propose yes and close this a discussion point and not list it since it is documented and illustrated with the query response 
-- ITI-105: Should a Patient Identifier Cross-reference Manage populate meta.source if it creates a "shadow copy"? -> Propose no: Leave it up to the implementer
+- Added for the [ITI-104](ITI-104.html) transaction the examples directly in the text with the relevant part (used ... for the non-relevant part)
+- Tried to clarify for a given Patient Identifier Domain there SHALL be one and only one Patient Identity Source Actor, but a given Patient Identity Source may serve more than one Patient Identifier Domain, added reference to Patient Identifier Domain concepts in overview and volume 1 and note in 104 security considerations.
+- When grouped with ATNA expectation that the Patient Identifier Cross-reference Manager checks that the Patient Idendity Source is using the right identifier domain added to Security Configurations in [104](ITI-104.html).
+- Added high level explanation (see example in SVC) explaining the diagram with jumps to the different sections [ITI-104 interaction diagram](ITI-104.html#231044-messages) 
+- Suggest to close 
+  - ***PIXm\_010***: cannot be done directly via FHIR RESTFul API or another operation as is documented properly
+  - ***PIXm\_014***: $match could add value to PDQm, but not for PIXm
+- PIXm query targetId discussion (create an open issue if we cannot resolve it?)
+   - ITI-104: If the Patient Identifier Cross-reference Manager creates a "shadow copy" should this id be returned in pixm queries? [see example](http://build.fhir.org/ig/IHE/ITI.PIXm/branches/master/Parameters-pixm-response-mohralice-red-all.json.html) 
+   - ITI-105: Should a Patient Identifier Cross-reference Manage populate meta.source if it creates a "shadow copy"? -> Propose no: Leave it up to the implementer
 
 #### List of questions to ask for the public review
 - For the [ITI-104] Mobile Patient Identifier Cross-reference Feed it is proposed to use a RESTFul approach, e.g. to use Conditional Create / Update / Delete with the patient domain identifier. Please provide feedback during Public Comment if this approach is fine or indicate an alternative:
