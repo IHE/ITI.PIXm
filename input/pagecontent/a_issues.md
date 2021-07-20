@@ -84,7 +84,7 @@ PIXm does not yet define a FHIR equivalent for the transactions  PIX Update Noti
 we anticipate that it will be added in a future revision.
 
 ***PIXm 019***
-PIXm allows for the parameters in the operation to be a string URL. The IG builder, when creating the narrative, presumes that these are clickable links. yet in one example we have put in a URN OID. This is recorded as an [issue against the IG builder](https://github.com/HL7/ig-template-base/issues/171)
+PIXm allows for the parameters in the operation to be a string URL. The IG builder, when creating the narrative, presumes that these are clickable links. yet in one example we have put in a URN OID. This is recorded as an [issue against the IG builder](https://github.com/HL7/fhir-ig-publisher/issues/296)
 
 
 #### Closed Issues
