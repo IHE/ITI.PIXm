@@ -258,7 +258,7 @@ Identity Domain is not recognized in an `issue` having:
 
 ### 2:3.83.5 Security Considerations
 
-See [ITI TF-2: Appendix Z.8 “Mobile Security Considerations”](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations).
+See [ITI TF-2: Appendix Z.8 “Mobile Security Considerations”](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations), which includes guidance on the use of [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) and [IUA](https://profiles.ihe.net/ITI/TF/Volume1/ch-34.html) to protect the communication, access control, and audit logging.
 
 #### 2:3.83.5.1 Security Audit Considerations
 
