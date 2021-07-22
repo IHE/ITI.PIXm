@@ -44,7 +44,7 @@ Unit testing this context entails testing a SUT with a simulator or validator to
 * User Manual:  https://gazelle.ihe.net/gazelle-documentation/Patient-Manager/user.html
 * Tool support: https://gazelle.ihe.net/jira/projects/PAM
 * Actors (options) tested:  
-  * PIX Consumer, PIX Manager for ITI-83 test definitions:
+  * PIX Consumer, PIX Manager for ITI-83:
     * PIX Consumer test definition: PM_PIX_Query-Patient_Identity_Consumer https://gazelle.ihe.net/content/pmpixquery-patientidentityconsumer
     * PIX Manager test definition: PM_PIX_Query-PIX_Manager https://gazelle.ihe.net/content/pmpixquery-pixmanager
   * (future) PIX Source, PIX Manager for ITI-104
