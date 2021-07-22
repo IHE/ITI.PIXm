@@ -192,6 +192,6 @@ This grouping will enable more fine grain service side access control and more d
 ### 1:41.6 PIXm Cross Profile Considerations
 
 The Patient Identifier Cross-reference Manager from PIXm can be grouped with either PIX or PIXV3 Patient Identifier Cross-
-reference Consumer an Source to proxy the Mobile Patient Identifier Cross-reference Query [ITI-83] and Mobile Patient
+reference Consumer and Source to proxy the Mobile Patient Identifier Cross-reference Query [ITI-83] and Mobile Patient
 Identifier Cross-reference Feed [ITI-104] transactions to the more traditional PIX and PIXV3 Query and Feed transactions,
 thus acting as a proxy to the Patient Identifier Cross-reference Manager that wants to enable RESTful transactions.
