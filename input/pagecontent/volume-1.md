@@ -26,26 +26,70 @@ profile, an actor shall support all required transactions (labeled “R”) and 
 
 Table 1:41.1-1: PIXm Profile - Actors and Transactions
 
-| Actors| Transactions| Initiator or Responder | Optionality | Reference |
-| ----- | ----------- | ---------------------- | ----------- | --------- |
-| Patient Identifier Cross-reference Source | Mobile Patient Identifier Cross-reference Feed \[ITI-104\] | Initiator | R | [ITI TF-2: 3.104](ITI-104.html) |
-| Patient Identifier Cross-reference Consumer | Mobile Patient Identifier Cross-reference Query [ITI-83] | Initiator | R | [ITI TF-2: 3.83](ITI-83.html) |
-| Patient Identifier Cross-reference Manager  | Mobile Patient Identifier Cross-reference Query [ITI-83] | Responder | R | [ITI TF-2: 3.83](ITI-83.html) |
-| | Mobile Patient Identifier Cross-reference Feed [ITI-104] | Responder | R | [ITI TF-2: 3.104](ITI-104.html) |
-{: .grid }
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Actors</th>
+      <th>Transactions</th>
+      <th>Initiator or Responder</th>
+      <th>Optionality</th>
+      <th>Reference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Patient Identifier Cross-reference Source</td>
+      <td>Mobile Patient Identifier Cross-reference Feed [ITI-104]</td>
+      <td>Initiator</td>
+      <td>R</td>
+      <td><a href="ITI-104.html">ITI TF-2: 3.104</a></td>
+    </tr>
+    <tr>
+      <td>Patient Identifier Cross-reference Consumer</td>
+      <td>Mobile Patient Identifier Cross-reference Query [ITI-83]</td>
+      <td>Initiator</td>
+      <td>R</td>
+      <td><a href="ITI-83.html">ITI TF-2: 3.83</a></td>
+    </tr>
+    <tr>
+      <td rowspan='2'>Patient Identifier Cross-reference Manager</td>
+      <td>Mobile Patient Identifier Cross-reference Query [ITI-83]</td>
+      <td>Responder</td>
+      <td>R</td>
+      <td><a href="ITI-83.html">ITI TF-2: 3.83</a></td>
+    </tr>
+    <tr>
+      <td>Mobile Patient Identifier Cross-reference Feed [ITI-104]</td>
+      <td>Responder</td>
+      <td>R</td>
+      <td><a href="ITI-104.html">ITI TF-2: 3.104</a></td>
+    </tr>
+  </tbody>
+</table>
 
 The Mobile Patient Identifier Cross-reference Feed [ITI-104] and the Mobile Patient Identifier Cross-reference Query [ITI-83] transactions defined in this profile correspond to the transactions used in the PIX and PIXV3 Profiles (ITI TF-1: 5 and 23) and provide similar functionality.
 
 ##### 1:41.1.1.1 Patient Identifier Cross-reference Source
 The Patient Identifier Cross-reference Source is the producer and publisher of patient identity data.
 
+The following CapabilityStatements define the Actor capabilities
+* [Patient Identifier Cross-reference Source](CapabilityStatement-IHE_PIXm_Source.html) 
+
+For a given Patient Identifier Domain there SHALL be one and only one Patient Identity Source Actor, but a given Patient Identity Source may serve more than one Patient Identifier Domain.
+
 ##### 1:41.1.1.2 Patient Identifier Cross-reference Consumer
 The Patient Identifier Cross-reference Consumer queries the patient ID lists from the Patient Identifier Cross-reference
 Manager.
 
+The following CapabilityStatements define the Actor capabilities
+* [Patient Identifier Cross-reference Consumer](CapabilityStatement-IHE_PIXm_Consumer.html) 
+
 ##### 1:41.1.1.3 Patient Identifier Cross-reference Manager
-The Patient Identifier Cross-reference Manager manages patient identity data from different domains and links patient
+The Patient Identifier Cross-reference Manager manages patient identity data from different domains and cross-references patient
 identity data from different domains assigned to the same patient person.  
+
+The following CapabilityStatements define the Actor capabilities
+* [Patient Identifier Cross-reference Manager](CapabilityStatement-IHE_PIXm_Manager.html) 
 
 ### 1:41.2 PIXm Actor Options
 
@@ -61,10 +105,6 @@ Table 1.41.2-1: PIXm Actors and Options
 | Patient Identifier Cross-reference Consumer | No options defined | \--       |
 | Patient Identifier Cross-reference Manager  | No options defined | \--       |
 {: .grid }
-
-#### 1:41.2.1 Option Name
-
-No options are defined for this profile.
 
 ### 1:41.3 PIXm Required Actor Groupings
 

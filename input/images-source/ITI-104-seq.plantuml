@@ -6,8 +6,8 @@ activate "PatientIdentitySource"
 activate "PatientIdentifierCrossReferenceManager"
 "PatientIdentitySource" -> "PatientIdentifierCrossReferenceManager" : Add or revise Patient
 "PatientIdentifierCrossReferenceManager" --> "PatientIdentitySource" : Patient added or revised
-"PatientIdentitySource" -> "PatientIdentifierCrossReferenceManager" : Resolve Patient duplicates
-"PatientIdentifierCrossReferenceManager" --> "PatientIdentitySource" : Patient duplicates resolved
+"PatientIdentitySource" -> "PatientIdentifierCrossReferenceManager" : Resolve Duplicate Patient
+"PatientIdentifierCrossReferenceManager" --> "PatientIdentitySource" : Patient duplicate resolved
 "PatientIdentitySource" -> "PatientIdentifierCrossReferenceManager" : Remove Patient
 "PatientIdentifierCrossReferenceManager" --> "PatientIdentitySource" : Patient removed
 deactivate "PatientIdentitySource"
