@@ -12,7 +12,7 @@
 - Volume 2 ITI-104
    - New Mobile Patient Identifier Cross-reference Feed [ITI-104] Transaction
    - Profile for specifying Patient elements used by Patient Identifier Cross-reference Manager to correlate identifiers
-   - Added the Delete Patient operation, optional to allow grouping or acting as facade with PIX V2, V3
+   - Added the Remove Patient message   
    - Added IHE Connectathon samples ITI-104
    - Added Security Audit Considerations with AuditEvent profile / resource
 
