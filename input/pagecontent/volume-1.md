@@ -14,7 +14,7 @@
 
 Figure below shows the actors directly involved in the PIXm Profile and the relevant transactions between them.
 
-![Figure: 1:41.1-1: PIXm Actor Diagram](ActorsAndTransactions.svg "Figure: 1:41.1-1: PIXm Actor Diagram")
+![Figure: 1:41.1-1: PIXm Actor Diagram](ActorsAndTransactions.svg)
 
 <div style="clear: left"/>
 
@@ -64,7 +64,7 @@ Table 1.41.2-1: PIXm Actors and Options
 
 #### 1:41.2.1 Option Name
 
-Intentionally left blanc.
+No options are defined for this profile.
 
 ### 1:41.3 PIXm Required Actor Groupings
 
@@ -75,7 +75,6 @@ Table 1:41.3-1: PIXm - Required Actor Groupings
 | Patient Identifier Cross-reference Consumer | None                     | \--       | \--                        
 | Patient Identifier Cross-reference Manager  | None                     | \--       | \--                        
 {: .grid }
-
 
 ### 1:41.4 PIXm Overview
 
@@ -94,7 +93,7 @@ This profile uses RESTful transaction and FHIR patient resources for the Mobile 
 
 Patient Identifier Cross-reference Manager may publish the supported attributes, codes and constraints to inform Sources on what is expected and Consumer on what to expect. This profile does not define a new transaction for publishing the supported attributes, codes and constraints. It relies on the FHIR standard instead and recommends to publish the supported attributes, codes and constraints as part of the FHIR capability statement.      
 
-This profile assumes that the Patient Identifier Cross-reference Manager performs linking and unlinking based on the patient identity data provided in the Mobile Patient Identifier Cross-reference Feed [ITI-104] transactions from different patient domains. 
+This profile assumes that the Patient Identifier Cross-reference Manager performs linking and unlinking based on the patient identity data provided in the Mobile Patient Identifier Cross-reference Feed [ITI-104] transactions from different patient domains.
 
 The requirements on Patient Identifier Domain and a Patient Identifier Cross-reference Domain as defined for the [PIX profile](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) apply also for this profile.
 
@@ -110,80 +109,58 @@ patient resources for patient identity cross referencing.
 
 #### 1:41.4.2 Use Cases
 
-##### 1:41.4.2.1 Retrieving documents from other domains
+##### 1:41.4.2.1 Multiple Identifier Domains within a Single Facility/ Enterprise
 
 ###### 1:41.4.2.1.1 Use Case Description
 
-A patient is in an ambulance on his way to the hospital after an accident. The mobile Care system in the ambulance wants to
-get allergy information (e.g., using the MHD Profile) for the patient. The mobile Care system uses the patient’s driver’s
-license number ‘E-123’ as their local patient ID. Before requesting the allergy information from the hospital,
-it must translate the known patient identity (driver’s license) to the patient’s identity known by the hospital (MRN).
+A clinician in the Intensive Care Unit at General Hospital is reviewing a patient chart on the Intensive Care information
+system and wishes to review or monitor the patient’s glucose level, which is included in a laboratory report stored in the
+hospital’s main laboratory system. The Intensive Care system needs to map its own patient ID, which it generates
+internally, to the patient’s medical record number (MRN), which is generated from the hospital’s main ADT system and is
+used as the patient identity by the lab system. In this case the Intensive Care system is essentially in a different
+identifier domain than the rest of the hospital since it has its own notion of patient identity.
 
-To achieve this correlation, the mobile Care system first registers the patient identity data including the local ID
-(driver’s license number ‘E-123’) using the Mobile Patient Identifier Cross-reference Feed [ITI-104] transaction. The
-mobile Care system then issues a Mobile Patient Identifier Cross-reference Query [ITI-83] to the Patient Identifier Cross-
-reference Manager to retrieve the list of patient ID aliases from the Patient Identifier Cross-reference Manager assigned
-to the same patient person.
+In this scenario, the hospital’s main ADT system (acting as a Patient Identity Source) would provide a Patient Identity
+Feed (using the patient’s MRN as the identifier) to the Patient Identifier Cross-reference Manager. Similarly, the
+Intensive Care system would also provide a Patient Identity Feed to the Patient Identifier Cross-reference Manager using
+the internally generated patient ID as the patient identifier and providing its own unique identifier domain identifier.
 
-Having linked this patient with a patient known by medical record number = ‘007’ in the ‘ADT Domain’, the Patient
-Identifier Cross-reference Manager returns this list of patient identifier from different domains which have been assigned
-to the same patient person by the Patient Identifier Cross-reference Manager. The mobile Care system can now request the
-allergy information from the hospital allergy system using the allergy system’s own patient ID (MRN-007) including the
-domain identifier/assigning authority of the ‘ADT Domain’.
+Once the Patient Identifier Cross-reference Manager receives the Patient Identity Feed transactions, it performs its
+internal logic to determine which, if any, patient identifiers can be “linked together” as being the same patient based on
+the corroborating information included in the Feed transactions it has received. The cross-referencing process (algorithm,
+human decisions, etc.) is performed within the Patient Identifier Cross-reference Manager and is outside the scope of IHE.
 
-In this scenario, the hospital’s main ADT system (acting as a Patient Identity Source) would perform a Mobile Patient Identifier Cross-reference Feed [ITI-104] transaction (using the patient’s MRN as the identifier) to the Patient Identifier Cross-reference
-Manager.
+The Intensive Care system wants to get lab information associated with a patient that the Intensive Care system knows as
+patient ID = ‘MC-123’. It requests the lab report from the lab system using its own patient ID (MC-123) including the
+domain identifier/ assigning authority. Upon receipt of the request, the lab system determines that the request is for a
+patient outside of its own identifier domain ( ADT Domain ). It requests a list of patient ID aliases corresponding to
+patient ID = ‘MC-123’ (within the “ Intensive Care domain ”) from the Patient Identifier Cross-reference Manager. Having
+linked this patient with a patient known by medical record number = ‘007’ in the ‘ ADT Domain ’, the Patient Identifier
+Cross-reference Manager returns this list to the lab system so that it may retrieve the lab report for the desired patient
+and return it to the Intensive Care system. Figure 1:41.4.2.1.2-1 illustrates this process flow.
+
 
 ###### 1:41.4.2.1.2 Process Flow
-Intentionally left blanc.
 
-##### 1:41.4.2.2 Providing documents for other domains
+![Figure: 1:41.4.2.1.2-1 : Multiple ID Domains in a Single Facility Process Flow](uc_1.svg)
 
-###### 1:41.4.2.2.1 Use Case Description
+<div style="clear: left"/>
 
-After finishing the medical treatment the healthcare professional of the ambulance want's to provide reports for other
-domains (e.g., the allergy system). Having registered the patient identity data including the local patient ID (‘E-123’)
-the mobile Care systems can provide documents and register them with the mobile Care system local ID (‘E-123’).
+**Figure 1:41.4.2.1.2-1 : Multiple ID Domains in a Single Facility Process Flow**
 
-Healthcare systems of other domains may retrieve the documents by using a Mobile Patient Identifier Cross-reference Feed
-[ITI-104] of their local patient identity data and retrieving the list of patient ID's from the other domains as explained
-in section above.
-
-###### 1:41.4.2.2.2 Process Flow
-Intentionally left blanc.
-
-##### 1:41.4.2.3 Updating Patient identity data
-
-###### 1:41.4.2.3.1 Use Case Description
-
-The patient administration of the hospital detects that identity data of the patient person have changed (e.g., name change
-after marriage, address change). To inform the Patient Identifier Cross-reference Manager the same patient person the
-patient administration systems performs a Mobile Patient Identifier Cross-reference Feed [ITI-104] transaction conveying
-the local ID and the updated identity data. This enables the Patient Identifier Cross-reference Manager to match future
-patient identity records from other domains which also use the updated identity data of the patient person.    
-
-###### 1:41.4.2.3.2 Process Flow
-Intentionally left blanc.
-
-##### 1:41.4.2.4 Resolve duplicates
-
-###### 1:41.4.2.4.1 Use Case Description
-The patient administration of the hospital detects that the patient person has been registered twice with slightly
-different identity data (e.g., typo in name). To inform the Patient Identifier Cross-reference Manager that both records
-represent the same patient person the patient administration systems performs a Mobile Patient Identifier Cross-reference
-Feed[ITI-104] transaction conveying the local ID's and identity data of the two records.  
-
-###### 1:41.4.2.4.2 Process Flow
-Intentionally left blanc.
+*Note: Request and Response portions of the MHD transaction are not part of this profile and included for illustration
+purposes only.*
 
 ### 1:41.5 PIXm Security Considerations
 
 See [ITI TF-2: Appendix Z.8 “Mobile Security Considerations”](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-
 security-considerations)
 
-The PIXm profile provides query for identity cross-references, and feed of identity with demographics. Thus the transactions carry the risk that an inappropriate client or user queries information that should not be disclosed, or changes information that should not be changed by that client or user.
+The PIXm profile provides query for identity cross-references, and feed of identity with demographics. Thus the
+transactions carry the risk that an inappropriate client or user queries information that should not be disclosed, or
+changes information that should not be changed by that client or user.
 
-Actors in PIXm may be grouped with an [Audit Trail and Node Authentication (ATNA) Profile](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) - Secure Node or ATNA Secure Application Actor. 
+Actors in PIXm may be grouped with an [Audit Trail and Node Authentication (ATNA) Profile](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) - Secure Node or ATNA Secure Application Actor.
 This grouping enables the Patient Identifier Cross-reference Manager to have policies that only highly trusted systems can communicate and that all changes are recorded in the audit log.
 
 Actors in PIXm may be grouped with an [Internet User Authorization (IUA)](https://profiles.ihe.net/ITI/TF/Volume1/ch-34.html) Authorization Client or Resource Server as appropriate; with the [ATNA - STX: HTTPS IUA Option](https://profiles.ihe.net/ITI/IUA/index.html#9-atna-profile).
@@ -192,6 +169,6 @@ This grouping will enable more fine grain service side access control and more d
 ### 1:41.6 PIXm Cross Profile Considerations
 
 The Patient Identifier Cross-reference Manager from PIXm can be grouped with either PIX or PIXV3 Patient Identifier Cross-
-reference Consumer an Source to proxy the Mobile Patient Identifier Cross-reference Query [ITI-83] and Mobile Patient
+reference Consumer and Source to proxy the Mobile Patient Identifier Cross-reference Query [ITI-83] and Mobile Patient
 Identifier Cross-reference Feed [ITI-104] transactions to the more traditional PIX and PIXV3 Query and Feed transactions,
 thus acting as a proxy to the Patient Identifier Cross-reference Manager that wants to enable RESTful transactions.

@@ -1,0 +1,50 @@
+@startuml
+hide footbox
+
+participant "PIXm Source \n (Intensive Care domain)" as Source1
+participant "Display \n (Intensive Care domain)" as Display
+participant "Patient Identifier \n Cross-reference Manager" as Manager
+participant "PIXm Source \n (ADT domain)" as Source2
+participant "PIXm Consumer \n (ADT domain Lab System)" as Lab
+
+autonumber 1 1 "<b>[00]"
+
+
+activate Source1
+
+Source1 -> Manager: PIXm Feed [ITI-104]
+activate Manager
+
+Source1 -> Display: ADT Feed
+activate Display
+deactivate Display
+deactivate Source1
+
+Manager -> Manager: Apply Xref logic
+
+Source2 -> Manager: PIXm Feed [ITI-104]
+activate Source2
+Source2 -> Lab: ADT Feed
+activate Lab
+deactivate Source2
+deactivate Lab
+
+Manager -> Manager: Apply Xref logic
+
+activate Display
+
+Display -> Lab: MHD request
+activate Lab
+
+Lab -> Manager: PIXm Query [ITI-83]
+deactivate Manager
+
+Lab -> Display: MHD response
+
+deactivate Display
+deactivate Lab
+
+deactivate Manager
+
+autonumber stop
+@enduml
