@@ -62,10 +62,6 @@ Table 1.41.2-1: PIXm Actors and Options
 | Patient Identifier Cross-reference Manager  | No options defined | \--       |
 {: .grid }
 
-#### 1:41.2.1 Option Name
-
-No options are defined for this profile.
-
 ### 1:41.3 PIXm Required Actor Groupings
 
 Table 1:41.3-1: PIXm - Required Actor Groupings
