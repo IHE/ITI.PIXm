@@ -73,7 +73,7 @@ The Mobile Patient Identifier Cross-reference Feed [ITI-104] and the Mobile Pati
 The Patient Identifier Cross-reference Source is the producer and publisher of patient identity data.
 
 The following CapabilityStatements define the Actor capabilities
-* [Patient Identifier Cross-reference Source](CapabilityStatement-Source.html) 
+* [Patient Identifier Cross-reference Source](CapabilityStatement-IHE_PIXm_Source.html) 
 
 For a given Patient Identifier Domain there SHALL be one and only one Patient Identity Source Actor, but a given Patient Identity Source may serve more than one Patient Identifier Domain.
 
