@@ -78,9 +78,9 @@ resources:
     name: Patient Maiden Alice (Red)
     description: Patient Maiden Alice in IHE Red Domain
     exampleBoolean: true
-  Patient/Patient-MohrAliceSubsumeMaiden-Red:
-    name: Patient Mohr Alice Subsume Maiden (Red)
-    description: Patient Mohr Alice subsume maiden in IHE Red Domain
+  Patient/Patient-MohrMaidenResolvedByMohrMalice-Red:
+    name: Patient Mohr Maiden Resolved by Mohr Alice (Red)
+    description: Patient Mohr Maiden (Duplicate) Resolved by Mohr Alice IHE Red Domain
     exampleBoolean: true
   Parameters/pixm-request-mohralice-red-all:
     name: PIXm Query with source identifier
