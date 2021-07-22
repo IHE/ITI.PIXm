@@ -198,12 +198,16 @@ query shall not be included in the returned Response.
         </valueIdentifier>
     </parameter>
     <parameter>
-        <name value="targetId"/>
-        <valueReference value="Patient/Patient-MohrAlice-Blue"></valueReference>
+      <name value="targetId"/>
+        <valueReference>
+          <reference value="Patient/Patient-MohrAlice-Blue"/>
+        </valueReference>
     </parameter>
     <parameter>
-        <name value="targetId"/>
-        <valueReference value="Patient/Patient-MohrAlice-Green"></valueReference>
+      <name value="targetId"/>
+        <valueReference>
+          <reference value="Patient/Patient-MohrAlice-Green"/>
+        </valueReference>
     </parameter>
 </Parameters>
 ```
@@ -225,6 +229,24 @@ identifier is not recognized in an issue having:
 | code        | [not-found](http://hl7.org/fhir/R4/codesystem-issue-type.html#not-found)                                       |
 | diagnostics | “sourceIdentifier Patient Identifier not found” |
 {: .grid }
+
+[example](Parameters-pixm-response-error-not-found.html):
+```xml
+<Parameters xmlns="http://hl7.org/fhir">
+  <parameter>
+    <name value="error"/>
+    <resource>
+      <OperationOutcome>
+        <issue>
+          <severity value="error"/>
+          <code value="not-found"/>
+          <diagnostics value="sourceIdentifier Patient Identifier not found"/>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </parameter>
+</Parameters>
+```
 
 ###### 2:3.83.4.2.2.3 Source Domain not recognized
 
