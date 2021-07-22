@@ -1,7 +1,7 @@
 <div markdown="1" class="stu-note">
 
-### Significant changes from [PIXm, December 5, 2019](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf):
-- FHIR Implementation Guide instead of [pdf](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf), [work item](https://github.com/IHE/IT-Infrastructure/issues/149)
+### Significant changes from PIXm, Rev 2.1:
+- FHIR Implementation Guide instead of [pdf - Rev. 2.1](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf)
 - Integrated CP-ITI-1222, CP-ITI-1214, CP-ITI-1215 
 - Volume 1 Update Use Cases and introduced new Mobile Patient Identifier Cross-reference Feed according to [work item](https://github.com/IHE/IT-Infrastructure/issues/147)
   - Added Security Considerations 

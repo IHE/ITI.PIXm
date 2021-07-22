@@ -11,7 +11,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: IHE.ITI.PIXm
 canonical: http://profiles.ihe.net/ITI/PIXm
-version: 0.1.0
+version: 2.2.0
 fhirVersion: 4.0.1
 name: IHE_PIXm
 title: Patient Identity Cross-Reference for mobile (PIXm)
@@ -105,13 +105,13 @@ resources:
 
 pages:
   index.md:
-    title: "PIXm Home"
+    title: "1:41. PIXm Home"
   volume-1.md:
-    title: "Volume 1"
+    title: "Volume 1:41"
   ITI-83.md:
-    title: "Patient Identity Cross-reference Query [ITI-83]"
+    title: "2:3.83 Patient Identity Cross-reference Query [ITI-83]"
   ITI-104.md:
-    title: "Mobile Patient Identifier Cross-reference Feed [ITI-104]"
+    title: "2:3.83 Mobile Patient Identifier Cross-reference Feed [ITI-104]"
   5_testplan.md:
     title: "Test Plan"
   a_issues.md:
