@@ -5,10 +5,10 @@ Infrastructure Technical Framework.
 
 This transaction is used by the Patient Identifier Cross-reference
 Consumer to solicit information about patients whose Patient Identifiers
-cross-match with Patient Identifiers provided in the query parameters of
-the request message. The request is received by the Patient Identifier
+cross-match with a Patient Identifier it provides in the request message.
+The request is received by the Patient Identifier
 Cross-reference Manager. The Patient Identifier Cross-reference Manager
-processes the request and returns a response in the form of zero or more
+processes the request and returns a response that includes zero or more
 Patient Identifiers for the matching patient.
 
 ### 2:3.83.2 Actor Roles
@@ -79,8 +79,8 @@ GET [base]/Patient/$ihe-pix?sourceIdentifier=[token]{&targetSystem=[uri]}{&_form
 
 | Query parameter Name | Cardinality | Search Type | Description                                                                                                                                                                                                      |
 | -------------------- | ----------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| sourceIdentifier     | \[1..1\]    | token       | The Patient identifier search parameter that will be used by the Patient Identifier Cross-reference Manager to find cross matching identifiers associated with the Patient Resource. See Section 2:3.83.4.1.2.1. |
-| targetSystem         | \[0..\*\]   | uri         | The Assigning Authorities for the Patient Identity Domains from which the returned identifiers shall be selected. See Section 2:3.83.4.1.2.2.                                                                    |
+| sourceIdentifier     | \[1..1\]    | token       | The Patient Identifier that will be used by the Patient Identifier Cross-reference Manager to find cross matching identifiers associated with the Patient. See Section 2:3.83.4.1.2.1. |
+| targetSystem         | \[0..\*\]   | uri         | The Assigning Authorities for the Patient Identifier Domains from which the returned identifiers shall be selected. See Section 2:3.83.4.1.2.2.                                                                    |
 | \_format             | \[0..1\]    | token       | The requested format of the response from the mime-type value set. See [ITI TF-2x: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format)                  |
 {: .grid }
 
@@ -88,25 +88,31 @@ GET [base]/Patient/$ihe-pix?sourceIdentifier=[token]{&targetSystem=[uri]}{&_form
 
 The required HTTP query parameter `sourceIdentifier` is a token that
 specifies an identifier associated with the patient whose information is
-being queried (e.g., a local identifier, account identifier, etc.). Its
-value shall include both the Patient Identity Domain (i.e., Assigning
+being queried (i.e., a business identifier such as a local identifier or account identifier, or the Logical id of a FHIR Patient Resource). Its
+value shall include both the Patient Identifier Domain (i.e., Assigning
 Authority) and the identifier value, separated by a "|".
 
 See [ITI TF-2x: Appendix Z.2.2](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.2-query-parameters) for use of the `token` search parameter type for patient identifiers.
 
 The Patient Identifier Cross-reference Consumer shall provide exactly one (1) instance of this parameter in the query.
 
-For example, a query searching for all patient Identifiers, for a patient with identifier IHERED-994 assigned by authority
+For example, a query searching for all Patient Identifiers, for a patient with identifier IHERED-994 assigned by authority
 “1.3.6.1.4.1.21367.13.20.1000” would be represented as:
 
 ```
 sourceIdentifier=urn:oid:1.3.6.1.4.1.21367.13.20.1000|IHERED-994
 ```
 
-###### 2:3.83.4.1.2.2 Requesting Patient Identity Domains to be Returned
+For example, a query searching all Patient Identifiers, for a patient’s FHIR Patient Resource with a Logical id of "123" on the FHIR Server `http://fhir.mydomain.com` would be represented as:
+
+```
+sourceIdentifier=http://fhir.mydomain.com|Patient/123
+```
+
+###### 2:3.83.4.1.2.2 Requesting Patient Identifier Domains to be Returned
 
 If the Patient Identifier Cross-reference Consumer wishes to select the
-Patient Identity Domain(s) from to receive Patient Identifiers, it does
+Patient Identifier Domain(s) from which to receive Patient Identifiers, it does
 so by populating the `targetSystem` parameter with as many domains for
 which it wants to receive Patient Identifiers. The Patient Identifier
 Cross-reference Manager shall return the Patient Identifiers for each
@@ -127,7 +133,7 @@ targetSystem=http://fhir.mydomain.com
 
 ##### 2:3.83.4.1.3 Expected Actions
 
-The Patient Identifier Cross-reference Manager shall use the `sourceIdentifier` and the `targetSystem` to determine the Patient Identities that match, where Patient Identities include business Identifier(s) and FHIR Patient Resource(s).
+The Patient Identifier Cross-reference Manager shall use the `sourceIdentifier` and the `targetSystem` to determine the Patient Identities that match, where Patient Identities include business identifier(s) and the Logical id(s) of FHIR Patient Resource(s).
 
 Response returned encoding and semantics is defined in Section 2:3.83.4.2:
 
@@ -154,11 +160,13 @@ through 2:3.83.4.2.2.4.
 ###### 2:3.83.4.2.2.1 Success
 
 On Success, the response message is an HTTP status code of 200 with a
-single Parameters Resource as shown in Table 2:3.83.4.2.2-1. For each
-matching business Identifier, the Parameters Resource shall include one
-parameter element with `name="targetIdentifier"`. For each matching
-Patient Resource, the Parameters Resource shall include one parameter
-element with name="targetId". The values may be returned in any order.
+single Parameters Resource as shown in Table 2:3.83.4.2.2-1.
+
+The Parameters Resource shall include:
+- for each business identifier for the patient, one `parameter` element with `name="targetIdentifier"` and the `valueIdentifier` of the identifier. 
+- for each matching Patient Resource, one `parameter` element with `name="targetId"` and the `valueReference` of the Patient Resource.  
+ 
+The values may be returned in any order.
 The identifier value given in the `sourceIdentifier` parameter in the
 query shall not be included in the returned Response.
 
@@ -166,7 +174,7 @@ query shall not be included in the returned Response.
 
 | Parameter        | Card.     | Data Type          | Description                                                                                         |
 | ---------------- | --------- | ------------------ | --------------------------------------------------------------------------------------------------- |
-| targetIdentifier | \[0..\*\] | Identifier         | The identifier found. Shall include the assigning authority as specified in [ITI TF-2x: Appendix E.3](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16) |
+| targetIdentifier | \[0..\*\] | Identifier         | The business identifier found. Shall include the assigning authority as specified in [ITI TF-2x: Appendix E.3](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16) |
 | targetId         | \[0..\*\] | Reference(Patient) | The URL of the Patient Resource                                                                     |
 {: .grid }
 
@@ -190,12 +198,16 @@ query shall not be included in the returned Response.
         </valueIdentifier>
     </parameter>
     <parameter>
-        <name value="targetId"/>
-        <valueReference value="Patient/Patient-MohrAlice-Blue"></valueReference>
+      <name value="targetId"/>
+        <valueReference>
+          <reference value="Patient/Patient-MohrAlice-Blue"/>
+        </valueReference>
     </parameter>
     <parameter>
-        <name value="targetId"/>
-        <valueReference value="Patient/Patient-MohrAlice-Green"></valueReference>
+      <name value="targetId"/>
+        <valueReference>
+          <reference value="Patient/Patient-MohrAlice-Green"/>
+        </valueReference>
     </parameter>
 </Parameters>
 ```
@@ -203,7 +215,7 @@ query shall not be included in the returned Response.
 ###### 2:3.83.4.2.2.2 Source Identifier not found
 
 When the Patient Identifier Cross-reference Manager recognizes the
-Patient Identity Domain in the `sourceIdentifier` but the `identifier` is
+Patient Identifier Domain in the `sourceIdentifier` but the identifier is
 not found, then the following failure shall be returned:
 
 **HTTP 404** (Not Found) is returned as the HTTP status code.
@@ -218,10 +230,28 @@ identifier is not recognized in an issue having:
 | diagnostics | “sourceIdentifier Patient Identifier not found” |
 {: .grid }
 
+[example](Parameters-pixm-response-error-not-found.html):
+```xml
+<Parameters xmlns="http://hl7.org/fhir">
+  <parameter>
+    <name value="error"/>
+    <resource>
+      <OperationOutcome>
+        <issue>
+          <severity value="error"/>
+          <code value="not-found"/>
+          <diagnostics value="sourceIdentifier Patient Identifier not found"/>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </parameter>
+</Parameters>
+```
+
 ###### 2:3.83.4.2.2.3 Source Domain not recognized
 
 When the Patient Identifier Cross-reference Manager does not recognize
-the Patient Identity Domain in the `sourceIdentifier`, then the following
+the Patient Identifier Domain in the `sourceIdentifier`, then the following
 failure shall be returned:
 
 **HTTP 400** (Bad Request) is returned as the HTTP status code.
@@ -240,13 +270,13 @@ Assigning Authority domain is not recognized in an `issue` having:
 ###### 2:3.83.4.2.2.4 Target Domain not recognized
 
 When the Patient Identifier Cross-reference Manager does not recognize
-the Patient Identity Domain in the `targetSystem`, then the following
+the Patient Identifier Domain in the `targetSystem`, then the following
 failure shall be returned:
 
 **HTTP 403** (Forbidden) is returned as the HTTP status code.
 
 An OperationOutcome Resource is returned indicating that the Patient
-Identity Domain is not recognized in an `issue` having:
+Identifier Domain is not recognized in an `issue` having:
 
 | Attribute   | Value                    |
 | ----------- | ------------------------ |
