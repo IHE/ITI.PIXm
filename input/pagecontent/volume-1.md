@@ -72,13 +72,22 @@ The Mobile Patient Identifier Cross-reference Feed [ITI-104] and the Mobile Pati
 ##### 1:41.1.1.1 Patient Identifier Cross-reference Source
 The Patient Identifier Cross-reference Source is the producer and publisher of patient identity data.
 
+The following CapabilityStatements define the Actor capabilities
+* [Patient Identifier Cross-reference Source](CapabilityStatement-Source.html) 
+
 ##### 1:41.1.1.2 Patient Identifier Cross-reference Consumer
 The Patient Identifier Cross-reference Consumer queries the patient ID lists from the Patient Identifier Cross-reference
 Manager.
 
+The following CapabilityStatements define the Actor capabilities
+* [Patient Identifier Cross-reference Consumer](CapabilityStatement-IHE_PIXm_Consumer.html) 
+
 ##### 1:41.1.1.3 Patient Identifier Cross-reference Manager
 The Patient Identifier Cross-reference Manager manages patient identity data from different domains and links patient
 identity data from different domains assigned to the same patient person.  
+
+The following CapabilityStatements define the Actor capabilities
+* [Patient Identifier Cross-reference Manager](CapabilityStatement-IHE_PIXm_Manager.html) 
 
 ### 1:41.2 PIXm Actor Options
 
