@@ -5,7 +5,7 @@ This Test Plan page is a prototype.   We expect the maturity of the content will
 
 ## Introduction
 
-PIXm specifies a query transaction between two actors.  The transaction between actors specify semantics of the data exchanged.  The PDQm test plan focuses on these semantics and on the expected actions on the server-side actor.
+PIXm specifies two transactions:  A patient identity feed transaction between PIX Source and PIX Manager, and a query transaction between a PIX Consumer and the PIX Managers.  Each transaction specifies semantics of the request and response messages exchanged between actors.  The PIXm test plan focuses on these semantics and on the expected actions on the server-side actor.
 
 ## High-level Test Scope
 
