@@ -144,10 +144,6 @@ to expect. This profile does not define a new transaction for publishing the sup
 attributes, codes and constraints. It relies on the FHIR standard instead and recommends 
 to publish the supported attributes, codes and constraints as part of the FHIR capability statement.      
 
-This profile assumes that the Patient Identifier Cross-reference Manager performs 
-linking and unlinking based on the patient identity data provided in the 
-Mobile Patient Identifier Cross-reference Feed [ITI-104] transactions from different patient domains.
-
 The requirements on Patient Identifier Domain and a Patient Identifier Cross-reference Domain as 
 defined for the [PIX profile](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) 
 apply also for this profile.
