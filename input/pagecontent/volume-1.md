@@ -105,7 +105,7 @@ patient resources for patient identity cross referencing.
 
 #### 1:41.4.2 Use Cases
 
-##### 1:41.4.2.1 Multiple Identifier Domains within a Single Facility/ Enterprise
+##### 1:41.4.2.1 Multiple Identifier Domains within a Single Enterprise
 
 ###### 1:41.4.2.1.1 Use Case Description
 
@@ -121,31 +121,123 @@ Feed (using the patient’s MRN as the identifier) to the Patient Identifier Cro
 Intensive Care system would also provide a Patient Identity Feed to the Patient Identifier Cross-reference Manager using
 the internally generated patient ID as the patient identifier and providing its own unique identifier domain identifier.
 
-Once the Patient Identifier Cross-reference Manager receives the Patient Identity Feed transactions, it performs its
-internal logic to determine which, if any, patient identifiers can be “linked together” as being the same patient based on
-the corroborating information included in the Feed transactions it has received. The cross-referencing process (algorithm,
+When the Patient Identifier Cross-reference Manager receives the Patient Identity Feed transactions, it performs its
+internal logic to determine which patient identifiers can be “linked” as representing the same patient person based on
+the information included in the Feed transactions it has received. The cross-referencing process (algorithm,
 human decisions, etc.) is performed within the Patient Identifier Cross-reference Manager and is outside the scope of IHE.
 
 The Intensive Care system wants to get lab information associated with a patient that the Intensive Care system knows as
 patient ID = ‘MC-123’. It requests the lab report from the lab system using its own patient ID (MC-123) including the
 domain identifier/ assigning authority. Upon receipt of the request, the lab system determines that the request is for a
-patient outside of its own identifier domain ( ADT Domain ). It requests a list of patient ID aliases corresponding to
-patient ID = ‘MC-123’ (within the “ Intensive Care domain ”) from the Patient Identifier Cross-reference Manager. Having
-linked this patient with a patient known by medical record number = ‘007’ in the ‘ ADT Domain ’, the Patient Identifier
-Cross-reference Manager returns this list to the lab system so that it may retrieve the lab report for the desired patient
-and return it to the Intensive Care system. Figure 1:41.4.2.1.2-1 illustrates this process flow.
+patient outside of its own identifier domain ( ADT Domain ).
 
+The Lab system requests a list of patient ID aliases corresponding to patient ID = ‘MC-123’ (within the “ Intensive Care
+domain ”) from the Patient Identifier Cross-reference Manager. Having linked this patient with a patient known by medical
+record number (e.g., '007') in the ‘ ADT Domain ’, the Patient Identifier Cross-reference Manager returns this list to the
+lab system so that it may retrieve the lab report for the desired patient and return it to the Intensive Care system.
 
 ###### 1:41.4.2.1.2 Process Flow
 
-![Figure: 1:41.4.2.1.2-1 : Multiple ID Domains in a Single Facility Process Flow](uc_1.svg)
+![Figure: 1:41.4.2.1.2-1 : Multiple ID Domains Process Flow](uc_1.svg)
 
 <div style="clear: left"/>
 
-**Figure 1:41.4.2.1.2-1 : Multiple ID Domains in a Single Facility Process Flow**
+**Figure 1:41.4.2.1.2-1 : Multiple ID Domains Process Flow**
 
-*Note: Request and Response portions of the MHD transaction are not part of this profile and included for illustration
+*Note: The transactions shown with dotted lines are not part of this profile and included for illustration
 purposes only.*
+
+
+##### 1:41.4.2.2 Update patient identity data in Multiple Identifier Domains
+
+###### 1:41.4.2.2.1 Use Case Description
+
+The hospital main ADT system initially feeded the patient identity data to the Patient Identity Cross-reference Manager
+when the patient person first entered the hospital for treatment.
+
+During a subsequent visit the hospital main ADT system detects that the patient demographic data included in the patient
+identity should be updated to adapt to changes in contact data. To update the patient identity data the hospital main ADT
+system sends a update message to the Patient Identifier Cross-reference Manager  using the Mobile Patient Identity Feed
+[ITI-104] transaction.
+
+At first visit in the Intensive Care Unit at General Hospital the Intensive Care system provides a Patient
+Identity Feed [ITI-104] to the Patient Identifier Cross-reference Manager using the internally generated patient ID as the
+patient identifier and the patient contact data as known at the date of first visit at the the Intensive Care Unit.
+
+When the Patient Identifier Cross-reference Manager receives the Patient Identity Feed transaction, it performs
+its internal logic to determine which patient identifiers of other identifier domains can be “linked”
+as representing the same patient person based on the information included in the Feed transactions
+it has received (e.g., patient name, gender, birthdate, contact data).
+
+Since the hospital main ADT system updated the contact data of the patient person, the Patient Identifier Cross-reference
+Manager is now able to link the patient identity data of the Intensive Care domain to the same patient person in the
+hospital ADT domain.
+
+The Intensive Care system wants to get lab information associated with the patient person. It requests the lab report from
+the lab system using the Intensive Care system patient ID (MC-123) including the domain identifier/assigning authority.
+Upon receipt of the request, the lab system determines that the request is for a patient outside of its own identifier
+domain (ADT Domain).
+
+The lab system requests a list of patient ID aliases corresponding to patient ID = ‘MC-123’ (within the “ Intensive Care
+domain ”) from the Patient Identifier Cross-reference Manager.Having linked this patient with a patient known by medical
+record number (e.g., '007') in the ‘ ADT Domain ’, the Patient Identifier Cross-reference Manager returns this list to the
+lab system so that it may retrieve the lab report for the desired patient and return it to the Intensive Care system.
+
+###### 1:41.4.2.2.2 Process Flow
+
+![Figure: 1:41.4.2.2.2-1 : Update patient identity data in Multiple ID Domains Process Flow](uc_2.svg)
+
+<div style="clear: left"/>
+
+**Figure 1:41.4.2.2.2-1 : Update patient identity data in Multiple ID Domains Process Flow**
+
+*Note: The transactions shown with dotted lines are not part of this profile and included for illustration
+purposes only.*
+
+
+##### 1:41.4.2.3 Resolve duplicate patient identity data in Multiple Identifier Domains
+
+###### 1:41.4.2.3.1 Use Case Description
+
+The hospital main ADT system feeds the patient identity data of a patient person to the Patient Identity Cross-reference
+Manager when the patient person entered the hospital for treatment. After treatment the main ADT system detects that the
+same patient person was already registered with different patient identity data (e.g., typo in name, different contact
+data) before. The hospital main ADT system marks the patient identity data as duplicate and notifies the systems in the
+main ADT identifier domain (i.e., the lab system).
+
+At first visit in the Intensive Care Unit at General Hospital the Intensive Care system provides a Patient
+Identity Feed [ITI-104] to the Patient Identifier Cross-reference Manager using the internally generated patient ID as the
+patient identifier and the patient contact data as known at the date of first visit.
+
+When the Patient Identifier Cross-reference Manager receives the Patient Identity Feed transaction from the Intensive Care
+Unit, it performs its internal logic to determine to which patient identifiers of other identifier domains can be “linked”
+as representing the same patient person based on the corroborating information included in the Feed transactions
+it has received (e.g., patient name, gender, birthdate, contact data). Since the hospital main ADT system updated the
+contact data of the patient person, the Patient Identifier Cross-reference Manager is now able to correctly link the
+patient identity data of the Intensive Care domain to the same patient person in the hospital ADT domain.
+
+The Intensive Care system wants to get lab information associated with the patient person. It requests the lab report from
+the lab system using the Intensive Care system patient ID (MC-123) including the domain identifier/assigning authority.
+Upon receipt of the request, the lab system determines that the request is for a patient outside of its own identifier
+domain (ADT Domain).
+
+It requests a list of patient ID aliases corresponding to patient ID = ‘MC-123’ (within the “ Intensive Care domain ”) from
+the Patient Identifier Cross-reference Manager. The Patient Identifier Cross-reference Manager returns the list of all
+linked patient identifiers in the hospital ADT domain including the updated (e.g., '009') and the subsumed (e.g., '007')
+identifier. This enables the lab system to collect all lab information for the patient person and respond it to the
+Intensive Care system.  
+
+###### 1:41.4.2.3.2 Process Flow
+
+![Figure: 1:41.4.2.3.2-1 : Resolve duplicate patient identity data in Multiple ID Domains Process Flow](uc_3.svg)
+
+<div style="clear: left"/>
+
+**Figure 1:41.4.2.3.2-1 : Resolve duplicate patient identity data in Multiple ID Domains Process Flow**
+
+*Note: The transactions shown with dotted lines are not part of this profile and included for illustration
+purposes only.*
+
 
 ### 1:41.5 PIXm Security Considerations
 
