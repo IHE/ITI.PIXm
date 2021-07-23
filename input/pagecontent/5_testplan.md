@@ -55,7 +55,7 @@ Unit testing this context entails testing a SUT with a simulator or validator to
 * Tool location: https://gazelle.ihe.net/EVSClient/home.seam
 * Documentation: https://gazelle.ihe.net/content/evsfhirvalidation
 * Scope of testing: validation using StructureDefinitions for PIXm
-* Other notes: StructureDefinitions available in EVSClient validation are published by IHE here: https://github.com/IHE/fhir/tree/master/StructureDefinition
+* Other notes: StructureDefinitions and other conformance resources are provided within this Implementation Guide as an [npm package](package.tgz).
 
 ## Integration Test Procedure (Interoperability Testing)
 
