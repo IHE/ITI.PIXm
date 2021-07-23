@@ -133,8 +133,6 @@ This profile uses RESTful transaction and FHIR patient resources for the Mobile 
 
 Patient Identifier Cross-reference Manager may publish the supported attributes, codes and constraints to inform Sources on what is expected and Consumer on what to expect. This profile does not define a new transaction for publishing the supported attributes, codes and constraints. It relies on the FHIR standard instead and recommends to publish the supported attributes, codes and constraints as part of the FHIR capability statement.      
 
-This profile assumes that the Patient Identifier Cross-reference Manager performs linking and unlinking based on the patient identity data provided in the Mobile Patient Identifier Cross-reference Feed [ITI-104] transactions from different patient domains.
-
 The requirements on Patient Identifier Domain and a Patient Identifier Cross-reference Domain as defined for the [PIX profile](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) apply also for this profile.
 
 This profile does neither specify the rules and algorithm applied by the Patient Identifier Cross-reference Manager actor to link or unlink the patient identity data from different domains, nor the point in time the Patient Identifier Cross-reference Manager actually links the data. Patient Identifier Cross-reference Manager may link the patient identity data from the different domains on time of the Mobile Patient Identifier Cross-reference Feed [ITI-104] transactions, but also may provide other triggers (e.g., manual linking or unlinking in case when the rules and algorithms go wrong).
