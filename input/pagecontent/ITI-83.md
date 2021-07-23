@@ -33,7 +33,7 @@ be played by the actors shown here:
 <div>
 {%include ITI-83-seq.svg%}
 </div>
-
+<div style="clear: left" />
 **Figure 2:3.83.4-1: Interaction Diagram**
 
 #### 2:3.83.4.1 Get Corresponding Identifiers message

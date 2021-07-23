@@ -45,5 +45,5 @@ deactivate Lab
 
 deactivate Manager
 
-autonumber stop
+
 @enduml
