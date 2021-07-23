@@ -11,7 +11,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: IHE.ITI.PIXm
 canonical: http://profiles.ihe.net/ITI/PIXm
-version: 0.1.0
+version: 2.2.0
 fhirVersion: 4.0.1
 name: IHE_PIXm
 title: Patient Identity Cross-Reference for mobile (PIXm)
@@ -78,9 +78,9 @@ resources:
     name: Patient Maiden Alice (Red)
     description: Patient Maiden Alice in IHE Red Domain
     exampleBoolean: true
-  Patient/Patient-MohrAliceSubsumeMaiden-Red:
-    name: Patient Mohr Alice Subsume Maiden (Red)
-    description: Patient Mohr Alice subsume maiden in IHE Red Domain
+  Patient/Patient-MohrMaidenResolvedByMohrMalice-Red:
+    name: Patient Mohr Maiden Resolved by Mohr Alice (Red)
+    description: Patient Mohr Maiden (Duplicate) Resolved by Mohr Alice IHE Red Domain
     exampleBoolean: true
   Parameters/pixm-request-mohralice-red-all:
     name: PIXm Query with source identifier
@@ -105,13 +105,13 @@ resources:
 
 pages:
   index.md:
-    title: "PIXm Home"
+    title: "1:41. PIXm Home"
   volume-1.md:
-    title: "Volume 1"
+    title: "Volume 1:41"
   ITI-83.md:
-    title: "Patient Identity Cross-reference Query [ITI-83]"
+    title: "2:3.83 Patient Identity Cross-reference Query [ITI-83]"
   ITI-104.md:
-    title: "Mobile Patient Identifier Cross-reference Feed [ITI-104]"
+    title: "2:3.83 Mobile Patient Identifier Cross-reference Feed [ITI-104]"
   5_testplan.md:
     title: "Test Plan"
   a_issues.md:

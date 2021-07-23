@@ -1,7 +1,7 @@
 <div markdown="1" class="stu-note">
 
-### Significant changes from [PIXm, December 5, 2019](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf):
-- FHIR Implementation Guide instead of [pdf](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf), [work item](https://github.com/IHE/IT-Infrastructure/issues/149)
+### Significant changes from PIXm, Rev 2.1:
+- FHIR Implementation Guide instead of [pdf - Rev. 2.1](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf)
 - Integrated CP-ITI-1222, CP-ITI-1214, CP-ITI-1215 
 - Volume 1 Update Use Cases and introduced new Mobile Patient Identifier Cross-reference Feed according to [work item](https://github.com/IHE/IT-Infrastructure/issues/147)
   - Added Security Considerations 
@@ -12,7 +12,7 @@
 - Volume 2 ITI-104
    - New Mobile Patient Identifier Cross-reference Feed [ITI-104] Transaction
    - Profile for specifying Patient elements used by Patient Identifier Cross-reference Manager to correlate identifiers
-   - Added the Delete Patient operation, optional to allow grouping or acting as facade with PIX V2, V3
+   - Added the Remove Patient message   
    - Added IHE Connectathon samples ITI-104
    - Added Security Audit Considerations with AuditEvent profile / resource
 
@@ -22,7 +22,7 @@
    1. Requiring the client to use id instead of identifiers for update/delete in a RESTFul transaction. Client could use $pixm operation to get the id based on the domain identifier. 
    2. Use a transaction Bundle for allowing multiple updates
    3. Use a Message as PMIR is doing it with a MessageHeader in the [ITI-93](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf#page=26) transaction
-- Feedback to the open issue ***PIXm 020*** which targetId's to return from a Patient Identifier Cross-reference Manager
+- Feedback to the open issue ***PIXm 020*** which targetId's to return from a Patient Identifier Cross-reference Manager and ***PIXm 021*** about transaction naming and implications.
 
 #### Open Issues and Questions
 
@@ -71,6 +71,11 @@ where the Patient Identifier Cross-reference Manager created three id's for the 
 is consolidated by the Patient Identifier Cross-reference Manager rules and return also this targetId [example](http://build.fhir.org/ig/IHE/ITI.PIXm/branches/master/Patient-Patient-MohrAlice.html). Could this id also be added in a $pixm Query as a targetId ('Patient/Patient-MohrAlice')? Note: A golden patient is not the scope of PIXm, see the [IHE ITI PMIR](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf) profile.* 
 
 *There is continuing discussion in iti-tech if a "shadow copy" can be returned as a targetId, and if yes, if it should be marked by the Patient Identifier Cross-reference Manager in meta.source for these shadow copies or not.*
+
+***PIXm 021***
+*The naming for the Mobile Patient Identifier Cross-reference Feed [ITI-104] transaction is in discussion. It might change
+depending is applicability to to other profiles, like the [IHE PMIR](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf)) profile. 
+See [profile considerations/testing](https://gazelle.ihe.net/content/pmirconnectathontestpatients) of PIXm Patient Identifier Cross-Reference Manager and PMIR Patient Identity Registry.*
 
 #### Closed Issues
 
