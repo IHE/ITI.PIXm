@@ -1,49 +1,42 @@
 @startuml
 hide footbox
 
-participant "PIXm Source \n (Intensive Care domain)" as Source1
-participant "Display \n (Intensive Care domain)" as Display
-participant "Patient Identifier \n Cross-reference Manager" as Manager
-participant "PIXm Source \n (ADT domain)" as Source2
-participant "PIXm Consumer \n (ADT domain Lab System)" as Lab
+box Intensive Care domain
+ participant "IC Registion \n PIXm Source" as Source1
+ participant "intensive care system" as Display
+endbox
+participant "PIXm Manager" as Manager
+box Main Hospital domain
+ participant "Hospital Registration \n PIXm Source" as Source2
+ participant "MHD Responder \n with lab results" as Lab
+endbox
 
+activate Source2
+Source2 --> Source2: some new patient is registered
 Source2 -> Manager: [01] PIXm Feed (Add) [ITI-104]
 activate Manager
-activate Source2
-Source2 --> Lab: notify
-activate Lab
 deactivate Source2
-deactivate Lab
 
-Manager -> Manager: [02] Apply Xref logic
+Manager --> Manager: [02] Apply Xref logic
 
 activate Source1
-
+Source1 --> Source1: patient is registered in IC
 Source1 -> Manager: [03] PIXm Feed (Add) [ITI-104]
-
-Source1 --> Display: notify
-
-activate Display
-deactivate Display
-
 deactivate Source1
 
 Manager -> Manager: [04] Apply Xref logic
 
 activate Display
-
-Display --> Lab: MHD request
+Display --> Display: clinician needs lab results
+Display -> Manager: [05] PIXm Query [ITI-83]
+Display <- Manager: PIXm Query results
+Display --> Lab: [06] MHD request for lab result document
 activate Lab
 
-Lab -> Manager: [05] PIXm Query [ITI-83]
-deactivate Manager
-
-Lab --> Display: MHD response
+Lab --> Lab: find lab documents
+Lab --> Display: return lab documents found
 
 deactivate Display
 deactivate Lab
-
-deactivate Manager
-
 
 @enduml

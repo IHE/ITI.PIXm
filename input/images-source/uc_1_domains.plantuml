@@ -1,0 +1,14 @@
+@startuml
+map "Intensive Care domain" as MC {
+ MC-123 => Alice
+ MC-234 => Bob
+ MC-345 => Charlie
+}
+
+map "Main Hospital domain" as MH {
+ 007 => Alice
+ 098 => Bob
+ 111 => Charlie
+ 112 => Charles
+}
+@enduml

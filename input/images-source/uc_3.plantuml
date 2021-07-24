@@ -1,63 +1,24 @@
 @startuml
 hide footbox
 
-participant "PIXm Source \n (Intensive Care domain)" as Source1
-participant "Display \n (Intensive Care domain)" as Display
-participant "Patient Identifier \n Cross-reference Manager" as Manager
-participant "PIXm Source \n (ADT domain)" as Source2
-participant "PIXm Consumer \n (ADT domain Lab System)" as Lab
+participant "PIXm Manager" as Manager
+box Main Hospital domain
+ participant "Hospital Registration \n PIXm Source" as Source2
+endbox
 
-Source2 -> Manager: [01] PIXm Feed (Add) [ITI-104]
+activate Source2
+
+Note right of Source2
+The registration system determined 
+that two patient identifiers 
+are the same patient person.
+The local system (data) are 
+merged/linked. 
+endnote
+
+Source2 -> Manager: [09] PIXm Feed (Resolve Duplicate) [ITI-104]
 activate Manager
-activate Source2
-Source2 -> Lab: notify
-activate Lab
 deactivate Source2
-deactivate Lab
-Manager -> Manager: [02] Apply Xref logic
 
-Source2 -> Manager: [03] PIXm Feed (Add) [ITI-104]
-activate Source2
-Source2 --> Lab: notify
-activate Lab
-deactivate Source2
-deactivate Lab
-Manager -> Manager: Apply Xref logic
-
-Source2 -> Manager: [04] PIXm Feed (Resolve duplicate) [ITI-104]
-activate Source2
-Source2 --> Lab: notify
-activate Lab
-deactivate Source2
-deactivate Lab
-Manager -> Manager: [05] Apply Xref logic
-
-activate Source1
-
-Source1 -> Manager: [06] PIXm Feed (Add) [ITI-104]
-
-Source1 -> Display: notify
-activate Display
-deactivate Display
-
-deactivate Source1
-
-Manager -> Manager: [07] Apply Xref logic
-
-activate Display
-
-Display --> Lab: MHD request
-activate Lab
-
-Lab -> Manager: [08] PIXm Query [ITI-83]
-deactivate Manager
-
-Lab --> Display: MHD response
-
-deactivate Display
-deactivate Lab
-
-deactivate Manager
-
-
+Manager --> Manager: [10] Apply Xref logic
 @enduml

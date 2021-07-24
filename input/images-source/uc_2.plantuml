@@ -1,55 +1,17 @@
 @startuml
 hide footbox
 
-participant "PIXm Source \n (Intensive Care domain)" as Source1
-participant "Display \n (Intensive Care domain)" as Display
-participant "Patient Identifier \n Cross-reference Manager" as Manager
-participant "PIXm Source \n (ADT domain)" as Source2
-participant "PIXm Consumer \n (ADT domain Lab System)" as Lab
+participant "PIXm Manager" as Manager
+box Main Hospital domain
+ participant "Hospital Registration \n PIXm Source" as Source2
+endbox
 
-Source2 -> Manager: [01] PIXm Feed (Add) [ITI-104]
+activate Source2
+Source2 --> Source2: some existing patient has new demographics
+Source2 -> Manager: [07] PIXm Feed (Update) [ITI-104]
 activate Manager
-activate Source2
-Source2 --> Lab: notify
-activate Lab
 deactivate Source2
-deactivate Lab
-Manager -> Manager: [02] Apply Xref logic
 
-Source2 -> Manager: [03] PIXm Feed (Revise) [ITI-104]
-activate Source2
-Source2 --> Lab: notify
-activate Lab
-deactivate Source2
-deactivate Lab
-Manager -> Manager: [04] Apply Xref logic
-
-activate Source1
-
-Source1 -> Manager: [05] PIXm Feed (Add) [ITI-104]
-
-Source1 --> Display: notify
-activate Display
-deactivate Display
-
-deactivate Source1
-
-Manager -> Manager: [06] Apply Xref logic
-
-activate Display
-
-Display --> Lab: MHD request
-activate Lab
-
-Lab -> Manager: [07] PIXm Query [ITI-83]
-deactivate Manager
-
-Lab --> Display: MHD response
-
-deactivate Display
-deactivate Lab
-
-deactivate Manager
-
+Manager --> Manager: [08] Apply Xref logic
 
 @enduml
