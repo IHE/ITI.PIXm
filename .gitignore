@@ -6,3 +6,4 @@ input-cache/
 fsh-generated
 *.jar
 .DS_Store
+www/

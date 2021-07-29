@@ -10,6 +10,27 @@
       "path": "http://build.fhir.org/ig/IHE/ITI.PIXm",
       "status": "ci-build",
       "current": true
-    }
-  ]
+  },
+ {
+  "version":"2.2.0",  
+  "date":"2021-07-29", 
+  "desc":"Public Comment release for first IG authored version",   
+  "path":"http://profiles.ihe.net/ITI/PIXm/2.2.0",   
+  "status":"ballot",
+  "fhirversion":"4.0.1",
+  "sequence":"Public Comment",
+  "current":true
+ },
+ {
+   "version":"2.1.0",  
+  "date":"2019-12-05", 
+  "desc":"Rev. 2.1 - Trial Implementation (PDF)",   
+  "path":"https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf",   
+  "status":"trial-use",
+  "fhirversion":"4.0.1",
+  "sequence":"Trial Implementation",
+  "current":false
+ }
+
+ ]
 }
