@@ -45,10 +45,6 @@ Description:    "Defines constraints on the AuditEvent Resource to record when a
 * entity[patient].what 1..1
 * entity[patient].what.identifier 1..1
 
-Invariant: val-audit-source
-Description: "The Audit Source is this agent too."
-Expression: "$this.who = %resource.source.observer"
-Severity: #error
 
 Profile:        AuditPixmFeedManager
 Parent:         AuditEvent
