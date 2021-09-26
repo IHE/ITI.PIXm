@@ -90,7 +90,7 @@ The following CapabilityStatements define the Actor capabilities
 
 #### 1:41.1.1.3 Patient Identifier Cross-reference Manager
 The Patient Identifier Cross-reference Manager manages patient identity data from different domains and cross-references patient
-identity data from different domains assigned to the same patient person.  
+identity data from different domains for the same patient.
 
 The following CapabilityStatements define the Actor capabilities
 * [Patient Identifier Cross-reference Manager](CapabilityStatement-IHE.PIXm.Manager.html) 
