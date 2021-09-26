@@ -147,7 +147,7 @@ to publish the supported attributes, codes and constraints as part of the FHIR c
 
 The requirements on Patient Identifier Domain and a Patient Identifier Cross-reference Domain as 
 defined for the [PIX profile](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) 
-apply also for this profile.
+apply also for this profile. See [ITI TF-1 Figure 5-1](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) and accompanying text.
 
 This profile does neither specify the rules and algorithm applied by the Patient Identifier 
 Cross-reference Manager actor to link or unlink the patient identity data from different 
