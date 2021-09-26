@@ -164,11 +164,6 @@ support "golden records" or verified patient identity
 data and register them with the Patient Identifier Cross-reference Manager 
 patient domain / assigning authority.
 
-The actors of this profile may be grouped with corresponding actors of 
-the **PIX** or **PIXV3** profiles and may act as a
-facade for a **PIX** or **PIXV3** Patient Identifier Cross-reference 
-Manager to provide RESTful interfaces with FHIR
-patient resources for patient identity cross referencing.     
 
 ### 1:41.4.2 Use Cases
 
