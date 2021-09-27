@@ -79,7 +79,7 @@ The Patient Identifier Cross-reference Source is the producer and publisher of p
 The following CapabilityStatements define the Actor capabilities
 * [Patient Identifier Cross-reference Source](CapabilityStatement-IHE.PIXm.Source.html) 
 
-For a given Patient Identifier Domain there SHALL be one and only one Patient Identity Source Actor, but a given Patient Identity Source may serve more than one Patient Identifier Domain.
+For a given Patient Identifier Domain there shall be one and only one Patient Identity Source Actor, but a given Patient Identity Source may serve more than one Patient Identifier Domain.
 
 #### 1:41.1.1.2 Patient Identifier Cross-reference Consumer
 The Patient Identifier Cross-reference Consumer queries the patient ID lists from the Patient Identifier Cross-reference
