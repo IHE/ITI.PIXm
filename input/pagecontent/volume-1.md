@@ -236,7 +236,7 @@ The Intensive Care system is now able to request laboratory results via [MHD](ht
 
 #### 1:41.4.2.2 Update patient identity data in Multiple Identifier Domains
 
-This use-case shows the PIXm process when a retuning patient has different Identifying characteristics (identifiers, demographics, contacts, etc). 
+This use-case shows the PIXm process when an existing patient has updates to her identifying attributes (identifiers, demographics, contacts, etc).
 
 ##### 1:41.4.2.2.1 Use Case Description
 
