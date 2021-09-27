@@ -85,10 +85,10 @@ codes were reviewed in PIXm, and found to be appropriate for PIXm as
 originally documented.
 
 ***PIXm\_010*** 
-The $pixm operation is considered the right approach for this profile.
+The $ihe-pix operation is considered the right approach for this profile.
 
 ***PIXm\_014*** 
-The $pixm operation cannot be replaced with the $match operation, the $match operation is however considered as a proposal for a new version in PDQm.
+The $ihe-pix operation cannot be replaced with the $match operation, the $match operation is however considered as a proposal for a new version in PDQm.
 
 ***CP-ITI-1222, CP-ITI-1214, CP-ITI-1215*** - The sourceIdentifier parameter in the PIXm Query [ITI-83] can include both business identifier and FHIR Resource ids, and the parameter should be matched by the PIXm Manager against FHIR Resource ids (ie Patient.id) and the patient’s business identifiers (ie value(s) in Patient.identifier). Examples and error codes updated. 
 

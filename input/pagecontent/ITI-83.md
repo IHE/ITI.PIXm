@@ -51,8 +51,10 @@ determine the existence of, alternate patient identifiers.
 ##### 2:3.83.4.1.2 Message Semantics
 
 The Get Corresponding Identifiers message is a FHIR operation request as
-defined in FHIR (<http://hl7.org/fhir/operations.html>) with the input
-parameters shown in Table 2:3.83.4.1.2-1. Given that the parameters are
+defined in FHIR (<http://hl7.org/fhir/operations.html>) with the [$ihe-pix operation definition](OperationDefinition-IHE.PIXm.pix.html)
+and the input parameters shown in Table 2:3.83.4.1.2-1.
+
+Given that the parameters are
 not complex types, the HTTP GET operation shall be used as defined in
 FHIR (<http://hl7.org/fhir/operations.html#request>).
 
