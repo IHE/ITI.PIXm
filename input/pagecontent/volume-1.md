@@ -145,7 +145,7 @@ to expect. This profile does not define a new transaction for publishing the sup
 attributes, codes and constraints. It relies on the FHIR standard instead and recommends 
 to publish the supported attributes, codes and constraints as part of the FHIR capability statement.      
 
-The requirements on Patient Identifier Domain and a Patient Identifier Cross-reference Domain as 
+The requirements on Patient Identifier Domain as 
 defined for the [PIX profile](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) 
 apply also for this profile. See [ITI TF-1 Figure 5-1](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) and accompanying text.
 
@@ -173,7 +173,7 @@ This section contains informative use-cases, and is not exhaustive.
 
 #### 1:41.4.2.1 Multiple Identifier Domains within a Single Enterprise
 
-This use-case has two Patient Identity Domains
+This use-case has two Patient Identifier Domains
 1. Intensive Care domain 
 2. Main Hospital domain
 
