@@ -81,7 +81,7 @@ GET [base]/Patient/$ihe-pix?sourceIdentifier=[token]{&targetSystem=[uri]}{&_form
 | -------------------- | ----------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | sourceIdentifier     | \[1..1\]    | token       | The Patient Identifier that will be used by the Patient Identifier Cross-reference Manager to find cross matching identifiers associated with the Patient. See Section 2:3.83.4.1.2.1. |
 | targetSystem         | \[0..\*\]   | uri         | The Assigning Authorities for the Patient Identifier Domains from which the returned identifiers shall be selected. See Section 2:3.83.4.1.2.2.                                                                    |
-| \_format             | \[0..1\]    | token       | The requested format of the response from the mime-type value set. See [ITI TF-2x: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format)                  |
+| \_format             | \[0..1\]    | token       | The requested format of the response from the mime-type value set. See [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format)                  |
 {: .grid }
 
 ###### 2:3.83.4.1.2.1 Source Patient Identifier Parameter
@@ -92,7 +92,7 @@ being queried (i.e., a business identifier such as a local identifier or account
 value shall include both the Patient Identifier Domain (i.e., Assigning
 Authority) and the identifier value, separated by a "|".
 
-See [ITI TF-2x: Appendix Z.2.2](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.2-query-parameters) for use of the `token` search parameter type for patient identifiers.
+See [ITI TF-2: Appendix Z.2.2](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.2-query-parameters) for use of the `token` search parameter type for patient identifiers.
 
 The Patient Identifier Cross-reference Consumer shall provide exactly one (1) instance of this parameter in the query.
 
@@ -137,7 +137,7 @@ The Patient Identifier Cross-reference Manager shall use the `sourceIdentifier` 
 
 Response returned encoding and semantics is defined in Section 2:3.83.4.2:
 
-The Patient Identities returned may be a subset based on policies that might restrict access to some Patient Identities. For guidance on handling Access Denied, see [ITI TF-2x: Appendix Z.7](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.7-guidance-on-access-denied-results).
+The Patient Identities returned may be a subset based on policies that might restrict access to some Patient Identities. For guidance on handling Access Denied, see [ITI TF-2: Appendix Z.7](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.7-guidance-on-access-denied-results).
 
 #### 2:3.83.4.2 Response message
 
@@ -147,7 +147,7 @@ The Patient Identifier Cross-reference Manager needs to return failure, or succe
 
 ##### 2:3.83.4.2.2 Message Semantics
 
-See [ITI TF-2x: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) for more details on response format handling.
+See [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) for more details on response format handling.
 
 The response message is a FHIR operation response
 (<http://hl7.org/fhir/operations.html#response>)
@@ -174,7 +174,7 @@ query shall not be included in the returned Response.
 
 | Parameter        | Card.     | Data Type          | Description                                                                                         |
 | ---------------- | --------- | ------------------ | --------------------------------------------------------------------------------------------------- |
-| targetIdentifier | \[0..\*\] | Identifier         | The business identifier found. Shall include the assigning authority as specified in [ITI TF-2x: Appendix E.3](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16) |
+| targetIdentifier | \[0..\*\] | Identifier         | The business identifier found. Shall include the assigning authority as specified in [ITI TF-2: Appendix E.3](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16) |
 | targetId         | \[0..\*\] | Reference(Patient) | The URL of the Patient Resource                                                                     |
 {: .grid }
 

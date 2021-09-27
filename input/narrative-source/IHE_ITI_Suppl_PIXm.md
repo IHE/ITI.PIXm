@@ -664,7 +664,7 @@ Table 3.83.4.1.2-1: $ihe-pix Message HTTP query Parameters
 | Input Parameters     |             |             |                                                                                                                                                                                                                |
 | sourceIdentifier     | \[1..1\]    | token       | The Patient identifier search parameter that will be used by the Patient Identifier Cross-reference Manager to find cross matching identifiers associated with the Patient Resource. See Section 3.83.4.1.2.1. |
 | targetSystem         | \[0..\*\]   | uri         | The Assigning Authorities for the Patient Identifier Domains from which the returned identifiers shall be selected. See Section 3.83.4.1.2.2.                                                                    |
-| \_format             | \[0..1\]    | token       | The requested format of the response from the mime-type value set. See ITI TF-2x: Appendix Z.6                                                                                                                 |
+| \_format             | \[0..1\]    | token       | The requested format of the response from the mime-type value set. See ITI TF-2: Appendix Z.6                                                                                                                 |
 
 ###### 3.83.4.1.2.1 Source Patient Identifier Parameter
 
@@ -674,7 +674,7 @@ being queried (e.g., a local identifier, account identifier, etc.). Its
 value shall include both the Patient Identifier Domain (i.e., Assigning
 Authority) and the identifier value, separated by a "|".
 
-See ITI TF-2x: Appendix Z.2.2 for use of the token search parameter type
+See ITI TF-2: Appendix Z.2.2 for use of the token search parameter type
 for patient identifiers.
 
 The Patient Identifier Cross-reference Consumer shall provide exactly
@@ -716,7 +716,7 @@ Response returned encoding and semantics is defined in Section 3.83.4.2:
 
 The Patient Identities returned may be a subset based on policies that
 might restrict access to some Patient Identities. For guidance on
-handling Access Denied, see ITI TF-2x: Appendix Z.7.
+handling Access Denied, see ITI TF-2: Appendix Z.7.
 
 #### 3.83.4.2 Response message
 
@@ -728,7 +728,7 @@ Cross-reference Consumer.
 
 ##### 3.83.4.2.2 Message Semantics
 
-See ITI TF-2x: Appendix Z.6 for more details on response format
+See ITI TF-2: Appendix Z.6 for more details on response format
 handling.
 
 The response message is a FHIR operation response
@@ -755,7 +755,7 @@ Table 3.83.4.2.2.1-1: $ihe-pix Message Response
 | Parameter                | Card.     | Data Type          | Description                                                                                         |
 | ------------------------ | --------- | ------------------ | --------------------------------------------------------------------------------------------------- |
 | FHIR Parameters Resource |           |                    |                                                                                                     |
-| targetIdentifier         | \[0..\*\] | Identifier         | The identifier found. Shall include the assigning authority as specified in ITI TF-2x: Appendix E.3 |
+| targetIdentifier         | \[0..\*\] | Identifier         | The identifier found. Shall include the assigning authority as specified in ITI TF-2: Appendix E.3 |
 | targetId                 | \[0..\*\] | Reference(Patient) | The URL of the Patient Resource                                                                     |
 
 \<Parameters xmlns="http://hl7.org/fhir"\>

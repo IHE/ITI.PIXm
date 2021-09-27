@@ -67,4 +67,4 @@ Description: "StructureDefinition for Ouput Parameters for $pixm operation"
 * parameter[targetIdentifier].value[x].system ^comment = "Both the value and system shall be populated. (IHE ITI 2x - Z.9.1 Identifier Type)"
 * parameter[targetIdentifier].value[x].value 1..
 * parameter[targetIdentifier].value[x].assigner.display 1..
-* parameter[targetIdentifier].value[x].assigner.display ^comment = "When the assigning authority name is provided, the actor shall also populate the display attribute. (IHE ITI TF-2x E3 FHIR Identifier Type)"
+* parameter[targetIdentifier].value[x].assigner.display ^comment = "When the assigning authority name is provided, the actor shall also populate the display attribute. (IHE ITI TF-2 E3 FHIR Identifier Type)"
