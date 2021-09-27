@@ -272,25 +272,15 @@ it has received (e.g., patient name, gender, birthdate, contact data).
 
 #### 1:41.4.2.3 Resolve duplicate patient identity data in Multiple Identifier Domains
 
-When a duplicate patient identity is determined, and after the identity (and data) are merged/linked; the PIXm Manager is notified.
+When a Source determines that two patient identities exist for the same person, the Source merges/links the identities (and data), and then notifies the PIXm Manager.
 
 ##### 1:41.4.2.3.1 Use Case Description
 
-The hospital main patient registration system had initially feeded the patient identity data
-to the Patient Identity Cross-reference Manager
-as patient persons entered the hospital for treatment **[01]**.
+The Main Hospital patient registration system had initially added patient identity data to the PIXm Manager for both *Charlie* **111** **[01]** and *Charles* **112** **[01]** to the Patient Identity Cross-reference Manager.
 
-After treatment the main patient registry system detects that the
-*Charles* **112** patient person was already registered with different patient 
-identity data of *Charlie* **111**. For example the *Charles* patient identity created on this 
-episode may have had a typo in name, or different contact data). 
-The hospital patient registration system marks the *Charles* patient identity 
-data as duplicate, with preference for *Charlie* within the Main Hospital domain.
+After treatment, the registration system detects that *Charles* **112** was previously registered as *Charlie* **111**. For example the *Charles* patient identity created on this episode may have had a typo in name, or different contact data). The registration system marks the *Charles* patient identity data as duplicate, with preference for *Charlie* within the Main Hospital domain.
 
-The hospital patient registration system updates the patient identity data 
-by sending an Resolve Duplicate message to the Patient Identifier Cross-reference Manager  
-using the Mobile Patient Identity Feed [ITI-104] transaction **[09]**. 
-This transaction tells the PIXm Manager that the *Charles* should be deprecated in preference for *Charlie* **111** patient.
+The registration system sends a Resolve Duplicate message to the Patient Identifier Cross-reference Manager using the Mobile Patient Identity Feed [ITI-104] transaction **[09]**. This transaction tells the PIXm Manager that the *Charles* **112** should be subsumed with preference for *Charlie* **111**.
 
 The PIXm Manager can now do further cross-referencing using internal logic **[10]**.
 
