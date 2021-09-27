@@ -111,7 +111,7 @@ pages:
   ITI-83.md:
     title: "2:3.83 Patient Identity Cross-reference Query [ITI-83]"
   ITI-104.md:
-    title: "2:3.83 Mobile Patient Identifier Cross-reference Feed [ITI-104]"
+    title: "2:3:104 Mobile Patient Identifier Cross-reference Feed [ITI-104]"
   5_testplan.md:
     title: "Test Plan"
   a_issues.md:
