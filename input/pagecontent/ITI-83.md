@@ -133,11 +133,11 @@ targetSystem=http://fhir.mydomain.com
 
 ##### 2:3.83.4.1.3 Expected Actions
 
-The Patient Identifier Cross-reference Manager shall use the `sourceIdentifier` and the `targetSystem` to determine the Patient Identities that match, where Patient Identities include business identifier(s) and the Logical id(s) of FHIR Patient Resource(s).
+The Patient Identifier Cross-reference Manager shall use the `sourceIdentifier` and the `targetSystem` to determine the Patient Identifiers that match, where Patient Identifiers include business identifier(s) and the Logical id(s) of FHIR Patient Resource(s).
 
 Response returned encoding and semantics is defined in Section 2:3.83.4.2:
 
-The Patient Identities returned may be a subset based on policies that might restrict access to some Patient Identities. For guidance on handling Access Denied, see [ITI TF-2: Appendix Z.7](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.7-guidance-on-access-denied-results).
+The Patient Identifiers returned may be a subset based on policies that might restrict access to some Patient Identifiers. For guidance on handling Access Denied, see [ITI TF-2: Appendix Z.7](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.7-guidance-on-access-denied-results).
 
 #### 2:3.83.4.2 Response message
 
