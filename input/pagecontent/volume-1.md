@@ -210,7 +210,7 @@ and providing its own unique identifier domain identifier.
 
 When the Patient Identifier Cross-reference Manager receives 
 the Patient Identity Feed transactions, it performs its
-internal logic **[02]** and **[04]**to determine which patient identifiers can 
+internal logic **[02]** and **[04]** to determine which patient identifiers can 
 be "linked" as representing the same patient person based on
 the information included in the Feed transactions it has 
 received. The cross-referencing process (algorithm,
@@ -218,19 +218,10 @@ human decisions, etc.) is performed within the
 Patient Identifier Cross-reference Manager and is outside 
 the scope of IHE.
 
-The Intensive Care system wants to get lab information 
-associated with a patient that the Intensive Care system knows as
-patient ID = MC-123. It requests requests cross-references **[05]**
-using its own patient ID = MC-123 including the
-domain identifier from 
-the Patient Identifier Cross-reference Manager. 
-Having linked this patient with a patient known by medical
-record number (e.g., 007) in the Main Hospital Domain, the 
-Patient Identifier Cross-reference Manager returns the cross-references known.
-The Intensive Care system, for example using [MHD](https://profiles.ihe.net/ITI/TF/Volume1/ch-33.html), requests laboratory
-results from the lab system using the Patient Identifier in the Main Hospital Domain.
-Upon receipt of the request, 
-lab system finds lab documents and returns them to the Intensive Care system.
+The Intensive Care system wants to get lab information associated with a patient that the Intensive Care system knows as patient ID = MC-123.
+Using its own patient ID = MC-123, requests that PIXm Manager return the patient's ID in the Main Hospital domain **[05]**.
+Having previously cross-referenced this patient with a patient known by medical record number (e.g., 007) in the Main Hospital Domain **[04]**, the PIXm Manager returns that identifier for the patient.
+The Intensive Care system is now able to request laboratory results via [MHD](https://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) **[06]**, using the Patient Identifier in the Main Hospital Domain. The lab system finds lab documents and returns them to the Intensive Care system.
 
 ##### 1:41.4.2.1.2 Process Flow
 
