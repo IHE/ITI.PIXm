@@ -79,7 +79,7 @@ The Patient Identifier Cross-reference Source is the producer and publisher of p
 The following CapabilityStatements define the Actor capabilities
 * [Patient Identifier Cross-reference Source](CapabilityStatement-IHE.PIXm.Source.html) 
 
-For a given Patient Identifier Domain there SHALL be one and only one Patient Identity Source Actor, but a given Patient Identity Source may serve more than one Patient Identifier Domain.
+For a given Patient Identifier Domain there shall be one and only one Patient Identity Source Actor, but a given Patient Identity Source may serve more than one Patient Identifier Domain.
 
 #### 1:41.1.1.2 Patient Identifier Cross-reference Consumer
 The Patient Identifier Cross-reference Consumer queries the patient ID lists from the Patient Identifier Cross-reference
@@ -90,7 +90,7 @@ The following CapabilityStatements define the Actor capabilities
 
 #### 1:41.1.1.3 Patient Identifier Cross-reference Manager
 The Patient Identifier Cross-reference Manager manages patient identity data from different domains and cross-references patient
-identity data from different domains assigned to the same patient person.  
+identity data from different domains for the same patient.
 
 The following CapabilityStatements define the Actor capabilities
 * [Patient Identifier Cross-reference Manager](CapabilityStatement-IHE.PIXm.Manager.html) 
@@ -116,6 +116,7 @@ Table 41.3-1: PIXm - Required Actor Groupings
 
 | PIXm Actor                                  | Actor to be grouped with | Reference | Content Bindings Reference |
 | ------------------------------------------- | ------------------------ | --------- | -------------------------- |
+| Patient Identifier Cross-reference Source   | None                     | \--       | \--                        |
 | Patient Identifier Cross-reference Consumer | None                     | \--       | \--                        |
 | Patient Identifier Cross-reference Manager  | None                     | \--       | \--                        |
 {: .grid }
@@ -144,9 +145,9 @@ to expect. This profile does not define a new transaction for publishing the sup
 attributes, codes and constraints. It relies on the FHIR standard instead and recommends 
 to publish the supported attributes, codes and constraints as part of the FHIR capability statement.      
 
-The requirements on Patient Identifier Domain and a Patient Identifier Cross-reference Domain as 
+The requirements on Patient Identifier Domain as 
 defined for the [PIX profile](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) 
-apply also for this profile.
+apply also for this profile. See [ITI TF-1 Figure 5-1](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) and accompanying text.
 
 This profile does neither specify the rules and algorithm applied by the Patient Identifier 
 Cross-reference Manager actor to link or unlink the patient identity data from different 
@@ -163,11 +164,6 @@ support "golden records" or verified patient identity
 data and register them with the Patient Identifier Cross-reference Manager 
 patient domain / assigning authority.
 
-The actors of this profile may be grouped with corresponding actors of 
-the **PIX** or **PIXV3** profiles and may act as a
-facade for a **PIX** or **PIXV3** Patient Identifier Cross-reference 
-Manager to provide RESTful interfaces with FHIR
-patient resources for patient identity cross referencing.     
 
 ### 1:41.4.2 Use Cases
 
@@ -177,7 +173,7 @@ This section contains informative use-cases, and is not exhaustive.
 
 #### 1:41.4.2.1 Multiple Identifier Domains within a Single Enterprise
 
-This use-case has two Patient Identity Domains
+This use-case has two Patient Identifier Domains
 1. Intensive Care domain 
 2. Main Hospital domain
 
@@ -214,7 +210,7 @@ and providing its own unique identifier domain identifier.
 
 When the Patient Identifier Cross-reference Manager receives 
 the Patient Identity Feed transactions, it performs its
-internal logic **[02]** and **[04]**to determine which patient identifiers can 
+internal logic **[02]** and **[04]** to determine which patient identifiers can 
 be "linked" as representing the same patient person based on
 the information included in the Feed transactions it has 
 received. The cross-referencing process (algorithm,
@@ -222,19 +218,10 @@ human decisions, etc.) is performed within the
 Patient Identifier Cross-reference Manager and is outside 
 the scope of IHE.
 
-The Intensive Care system wants to get lab information 
-associated with a patient that the Intensive Care system knows as
-patient ID = MC-123. It requests requests cross-references **[05]**
-using its own patient ID = MC-123 including the
-domain identifier from 
-the Patient Identifier Cross-reference Manager. 
-Having linked this patient with a patient known by medical
-record number (e.g., 007) in the Main Hospital Domain, the 
-Patient Identifier Cross-reference Manager returns the cross-references known.
-The Intensive Care system, for example using [MHD](https://profiles.ihe.net/ITI/TF/Volume1/ch-33.html), requests laboratory
-results from the lab system using the Patient Identifier in the Main Hospital Domain.
-Upon receipt of the request, 
-lab system finds lab documents and returns them to the Intensive Care system.
+The Intensive Care system wants to get lab information associated with a patient that the Intensive Care system knows as patient ID = MC-123.
+Using its own patient ID = MC-123, requests that PIXm Manager return the patient's ID in the Main Hospital domain **[05]**.
+Having previously cross-referenced this patient with a patient known by medical record number (e.g., 007) in the Main Hospital Domain **[04]**, the PIXm Manager returns that identifier for the patient.
+The Intensive Care system is now able to request laboratory results via [MHD](https://profiles.ihe.net/ITI/TF/Volume1/ch-33.html) **[06]**, using the Patient Identifier in the Main Hospital Domain. The lab system finds lab documents and returns them to the Intensive Care system.
 
 ##### 1:41.4.2.1.2 Process Flow
 
@@ -249,7 +236,7 @@ lab system finds lab documents and returns them to the Intensive Care system.
 
 #### 1:41.4.2.2 Update patient identity data in Multiple Identifier Domains
 
-This use-case shows the PIXm process when a retuning patient has different Identifying characteristics (identifiers, demographics, contacts, etc). 
+This use-case shows the PIXm process when an existing patient has updates to her identifying attributes (identifiers, demographics, contacts, etc).
 
 ##### 1:41.4.2.2.1 Use Case Description
 
@@ -285,25 +272,15 @@ it has received (e.g., patient name, gender, birthdate, contact data).
 
 #### 1:41.4.2.3 Resolve duplicate patient identity data in Multiple Identifier Domains
 
-When a duplicate patient identity is determined, and after the identity (and data) are merged/linked; the PIXm Manager is notified.
+When a Source determines that two patient identities exist for the same person, the Source merges/links the identities (and data), and then notifies the PIXm Manager.
 
 ##### 1:41.4.2.3.1 Use Case Description
 
-The hospital main patient registration system had initially feeded the patient identity data
-to the Patient Identity Cross-reference Manager
-as patient persons entered the hospital for treatment **[01]**.
+The Main Hospital patient registration system had initially added patient identity data to the PIXm Manager for both *Charlie* **111** **[01]** and *Charles* **112** **[01]** to the Patient Identity Cross-reference Manager.
 
-After treatment the main patient registry system detects that the
-*Charles* **112** patient person was already registered with different patient 
-identity data of *Charlie* **111**. For example the *Charles* patient identity created on this 
-episode may have had a typo in name, or different contact data). 
-The hospital patient registration system marks the *Charles* patient identity 
-data as duplicate, with preference for *Charlie* within the Main Hospital domain.
+After treatment, the registration system detects that *Charles* **112** was previously registered as *Charlie* **111**. For example the *Charles* patient identity created on this episode may have had a typo in name, or different contact data). The registration system marks the *Charles* patient identity data as duplicate, with preference for *Charlie* within the Main Hospital domain.
 
-The hospital patient registration system updates the patient identity data 
-by sending an Resolve Duplicate message to the Patient Identifier Cross-reference Manager  
-using the Mobile Patient Identity Feed [ITI-104] transaction **[09]**. 
-This transaction tells the PIXm Manager that the *Charles* should be deprecated in preference for *Charlie* **111** patient.
+The registration system sends a Resolve Duplicate message to the Patient Identifier Cross-reference Manager using the Mobile Patient Identity Feed [ITI-104] transaction **[09]**. This transaction tells the PIXm Manager that the *Charles* **112** should be subsumed with preference for *Charlie* **111**.
 
 The PIXm Manager can now do further cross-referencing using internal logic **[10]**.
 

@@ -23,7 +23,7 @@ Profile: PIXmQueryParametersIn
 Parent: Parameters
 Id: IHE.PIXm.Query.Parameters.In
 Title: "IHE PIXm Query Parameters In"
-Description: "StructureDefinition for Input Parameters for $pixm operation"
+Description: "StructureDefinition for Input Parameters for $ihe-pix operation"
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.description = "allowed parameters are sourceIdentifier, targetSystem and _format"
@@ -46,7 +46,7 @@ Profile: PIXmQueryParametersOut
 Parent: Parameters
 Id: IHE.PIXm.Query.Parameters.Out
 Title: "IHE PIXm Query Parameters Out"
-Description: "StructureDefinition for Ouput Parameters for $pixm operation"
+Description: "StructureDefinition for Ouput Parameters for $ihe-pix operation"
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.description = "allowed parameters are targetId and targetIdentifier"
@@ -64,7 +64,10 @@ Description: "StructureDefinition for Ouput Parameters for $pixm operation"
 * parameter[targetIdentifier].value[x] 1..
 * parameter[targetIdentifier].value[x] only Identifier
 * parameter[targetIdentifier].value[x].system 1..
-* parameter[targetIdentifier].value[x].system ^comment = "Both the value and system shall be populated. (IHE ITI 2x - Z.9.1 Identifier Type)"
+* parameter[targetIdentifier].value[x].system ^comment = "Both the value and system shall be populated. (IHE ITI TF-2 Z.9.1 Identifier Type)"
 * parameter[targetIdentifier].value[x].value 1..
+* parameter[targetIdentifier].value[x].assigner ^short = "When the assigning authority name is provided, the actor shall also populate the assigner."
+* parameter[targetIdentifier].value[x].assigner 0..1
 * parameter[targetIdentifier].value[x].assigner.display 1..
-* parameter[targetIdentifier].value[x].assigner.display ^comment = "When the assigning authority name is provided, the actor shall also populate the display attribute. (IHE ITI TF-2x E3 FHIR Identifier Type)"
+* parameter[targetIdentifier].value[x].assigner.display ^short = "When the assigning authority name is provided, the actor shall also populate the display attribute."
+* parameter[targetIdentifier].value[x].assigner.display ^comment = "When the assigning authority name is provided, the actor shall also populate the display attribute. (IHE ITI TF-2 E3 FHIR Identifier Type)"
