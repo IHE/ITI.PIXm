@@ -32,7 +32,7 @@ This guide is organized into four main sections:
 
 2. Volume 2: Transaction Detail
    1. [3.83 Patient Identifier Cross-reference Query [ITI-83]](ITI-83.html)
-   2. [3.104 Mobile Patient Identifier Cross-reference Feed [ITI-104]](ITI-104.html)
+   2. [3.104 Patient Identity Feed FHIR [ITI-104]](ITI-104.html)
 
 
 Click on any of the links above, head on over the [table of contents](toc.html), or

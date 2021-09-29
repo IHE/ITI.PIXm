@@ -3,21 +3,21 @@
 ### Significant changes from PIXm, Rev 2.1:
 - FHIR Implementation Guide instead of [pdf - Rev. 2.1](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf)
 - Integrated CP-ITI-1222, CP-ITI-1214, CP-ITI-1215 
-- Volume 1 Update Use Cases and introduced new Mobile Patient Identifier Cross-reference Feed according to [work item](https://github.com/IHE/IT-Infrastructure/issues/147)
+- Volume 1 Update Use Cases and introduced new Patient Identity Feed FHIRaccording to [work item](https://github.com/IHE/IT-Infrastructure/issues/147)
   - Added Security Considerations 
 - Volume 2 ITI-83  
   - Added Parameter StructureDefinitions and OperationDefinition for $ihe-pix operation
   - Added Security Audit Considerations with AuditEvent profile / resource
   - Added IHE Connectathon Samples for ITI-83
 - Volume 2 ITI-104
-   - New Mobile Patient Identifier Cross-reference Feed [ITI-104] Transaction
+   - New Patient Identity Feed FHIR [ITI-104] Transaction
    - Profile for specifying Patient elements used by Patient Identifier Cross-reference Manager to correlate identifiers
    - Added the Remove Patient message   
    - Added IHE Connectathon samples ITI-104
    - Added Security Audit Considerations with AuditEvent profile / resource
 
 #### List of questions to ask for the public review
-- For the [ITI-104] Mobile Patient Identifier Cross-reference Feed it is proposed to use a RESTFul approach, e.g. to use Conditional Create / Update / Delete with the patient domain identifier. Please provide feedback during Public Comment if this approach is fine or indicate an alternative:
+- For the [ITI-104] Patient Identity Feed FHIR it is proposed to use a RESTFul approach, e.g. to use Conditional Create / Update / Delete with the patient domain identifier. Please provide feedback during Public Comment if this approach is fine or indicate an alternative:
   Alternative approaches discussed were:
    1. Requiring the client to use id instead of identifiers for update/delete in a RESTFul transaction. Client could use $ihe-pix operation to get the id based on the domain identifier. 
    2. Use a transaction Bundle for allowing multiple updates
@@ -73,7 +73,7 @@ is consolidated by the Patient Identifier Cross-reference Manager rules and retu
 *There is continuing discussion in iti-tech if a "shadow copy" can be returned as a targetId, and if yes, if it should be marked by the Patient Identifier Cross-reference Manager in meta.source for these shadow copies or not.*
 
 ***PIXm 021***
-*The naming for the Mobile Patient Identifier Cross-reference Feed [ITI-104] transaction is in discussion. It might change
+*The naming for the Patient Identity Feed FHIR [ITI-104] transaction is in discussion. It might change
 depending is applicability to to other profiles, like the [IHE PMIR](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf)) profile. 
 See [profile considerations/testing](https://gazelle.ihe.net/content/pmirconnectathontestpatients) of PIXm Patient Identifier Cross-Reference Manager and PMIR Patient Identity Registry.*
 

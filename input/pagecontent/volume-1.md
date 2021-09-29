@@ -5,13 +5,13 @@
 ### 1:41.1.1 Actor Descriptions and Actor Profile Requirements
 
 - Actors
-  - [Patient Identifier Cross-reference Source](volume-1.html#141111-patient-identifier-cross-reference-source)
+  - [Patient Identity Source](volume-1.html#141111-patient-identity-source)
   - [Patient Identifier Cross-reference Consumer](volume-1.html#141112-patient-identifier-cross-reference-consumer)
   - [Patient Identifier Cross-reference Manager](volume-1.html#141113-patient-identifier-cross-reference-manager)
 
 - Transactions
   - [Patient Identity Cross-reference Query [ITI-83]](ITI-83.html)
-  - [Mobile Patient Identifier Cross-reference Feed [ITI-104]](ITI-104.html)
+  - [Patient Identity Feed FHIR [ITI-104]](ITI-104.html)
 
 Figure below shows the actors directly involved in the PIXm Profile and the relevant transactions between them.
 
@@ -41,8 +41,8 @@ may support the optional transactions (labeled "O").
   </thead>
   <tbody>
     <tr>
-      <td>Patient Identifier Cross-reference Source</td>
-      <td>Mobile Patient Identifier Cross-reference Feed [ITI-104]</td>
+      <td>Patient Identity Source</td>
+      <td>Patient Identity Feed FHIR [ITI-104]</td>
       <td>Initiator</td>
       <td>R</td>
       <td><a href="ITI-104.html">ITI TF-2: 3.104</a></td>
@@ -62,7 +62,7 @@ may support the optional transactions (labeled "O").
       <td><a href="ITI-83.html">ITI TF-2: 3.83</a></td>
     </tr>
     <tr>
-      <td>Mobile Patient Identifier Cross-reference Feed [ITI-104]</td>
+      <td>Patient Identity Feed FHIR [ITI-104]</td>
       <td>Responder</td>
       <td>R</td>
       <td><a href="ITI-104.html">ITI TF-2: 3.104</a></td>
@@ -71,13 +71,17 @@ may support the optional transactions (labeled "O").
 </table>
 
 
-The Mobile Patient Identifier Cross-reference Feed [ITI-104] and the Mobile Patient Identifier Cross-reference Query [ITI-83] transactions defined in this profile correspond to the transactions used in the PIX and PIXV3 Profiles (ITI TF-1: 5 and 23) and provide similar functionality.
+The Patient Identity Feed FHIR [ITI-104] and the Mobile Patient Identifier Cross-reference Query [ITI-83] transactions defined in this profile correspond to the transactions used in the PIX and PIXV3 Profiles (ITI TF-1: 5 and 23) and provide similar functionality.
 
-#### 1:41.1.1.1 Patient Identifier Cross-reference Source
-The Patient Identifier Cross-reference Source is the producer and publisher of patient identity data.
+#### 1:41.1.1.1 Patient Identity Source
+The Patient Identity Source is the producer and publisher of patient identity data.
 
 The following CapabilityStatements define the Actor capabilities
+<<<<<<< HEAD
 * [Patient Identifier Cross-reference Source](CapabilityStatement-IHE.PIXm.Source.html)
+=======
+* [Patient Identity Source](CapabilityStatement-IHE.PIXm.Source.html) 
+>>>>>>> consistency of names #52
 
 For a given Patient Identifier Domain there shall be one and only one Patient Identity Source Actor, but a given Patient Identity Source may serve more than one Patient Identifier Domain.
 
@@ -105,7 +109,7 @@ Table 41.2-1: PIXm Actors and Options
 
 | Actor                                       | Option Name        | Reference |
 | ------------------------------------------- | ------------------ | --------- |
-| Patient Identifier Cross-reference Source   | No options defined | \--       |
+| Patient Identity Source   | No options defined | \--       |
 | Patient Identifier Cross-reference Consumer | No options defined | \--       |
 | Patient Identifier Cross-reference Manager  | No options defined | \--       |
 {: .grid }
@@ -116,7 +120,7 @@ Table 41.3-1: PIXm - Required Actor Groupings
 
 | PIXm Actor                                  | Actor to be grouped with | Reference | Content Bindings Reference |
 | ------------------------------------------- | ------------------------ | --------- | -------------------------- |
-| Patient Identifier Cross-reference Source   | None                     | \--       | \--                        |
+| Patient Identity Source   | None                     | \--       | \--                        |
 | Patient Identifier Cross-reference Consumer | None                     | \--       | \--                        |
 | Patient Identifier Cross-reference Manager  | None                     | \--       | \--                        |
 {: .grid }
@@ -127,19 +131,19 @@ The ***Patient Identifier Cross-reference for Mobile Profile (PIXm)*** is intend
 and mobile devices present in a broad range of healthcare enterprises (hospital, a clinic,
 a physician office, etc.).
 
-It provides RESTful interfaces for Patient Identifier Cross-reference Source actors to feed, update and delete patient
+It provides RESTful interfaces for Patient Identity Source actors to feed, update and delete patient
 identity data as FHIR patient resources managed by the Patient Identifier Cross-reference Manager actor, a cross-reference
 query of patient identifiers from multiple Patient Identifier Domains assigned to the same patient person by the Patient
 Identifier Cross-reference Manager.
 
 ### 1:41.4.1 Concepts
 
-This profile uses RESTful transaction and FHIR patient resources for the Mobile Patient Identifier Cross-reference Feed
+This profile uses RESTful transaction and FHIR patient resources for the Patient Identity Feed FHIR
 [ITI-104] and Mobile Patient Identifier Cross-reference Query [ITI-83] transactions performed by the Patient Identifier
 Cross-reference Source and Manager actors.
 
 The Patient Identifier Cross-reference Manager will cross-reference the patient identity data from the different domains
-when it receives Mobile Patient Identifier Cross-reference Feed [ITI-104] transactions, but it may also provide other
+when it receives Patient Identity Feed FHIR [ITI-104] transactions, but it may also provide other
 triggers (e.g., manual linking or unlinking in case when the rules and algorithms go wrong).
 
 This profile does not specify the rules and algorithm applied by the Patient Identifier Cross-reference Manager actor
@@ -300,10 +304,10 @@ more detailed audit logging.
 
 ## 1:41.6 PIXm Cross Profile Considerations
 
-The Patient Identifier Cross-reference Manager from PIXm can be grouped with
-either PIX or PIXV3 Patient Identifier Cross-reference Consumer and Source to
-proxy the Mobile Patient Identifier Cross-reference Query [ITI-83] and
-Mobile Patient Identifier Cross-reference Feed [ITI-104] transactions to the
+The Patient Identifier Cross-reference Manager from PIXm can be grouped with 
+either PIX or PIXV3 Patient Identifier Cross-reference Consumer and Source to 
+proxy the Mobile Patient Identifier Cross-reference Query [ITI-83] and 
+Patient Identity Feed FHIR [ITI-104] transactions to the 
 more traditional PIX and PIXV3 Query and Feed transactions,
 thus acting as a proxy to the Patient Identifier Cross-reference Manager that
 wants to enable RESTful transactions.

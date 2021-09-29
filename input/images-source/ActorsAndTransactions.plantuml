@@ -1,7 +1,7 @@
 @startuml
 agent "Patient Identifier Cross-reference Consumer" as Consumer
-agent "Patient Identifier Cross-reference Source" as Source
+agent "Patient Identity Source" as Source
 agent "Patient Identifier Cross-reference Manager" as Manager
-Source -down-> Manager: "Mobile Patient Identifier Cross-reference Feed [ITI-104]"
+Source -down-> Manager: "Patient Identity Feed FHIR [ITI-104]"
 Consumer -down-> Manager : "Mobile Patient Identifier Cross-reference Query [ITI-83]"
 @enduml

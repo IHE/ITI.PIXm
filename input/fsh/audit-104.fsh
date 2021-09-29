@@ -1,8 +1,8 @@
 Profile:        AuditPixmFeedSource
 Parent:         AuditEvent
 Id:             IHE.PIXm.Feed.Audit.Source
-Title:          "Audit Event for PIXm Feed by the Source"
-Description:    "Defines constraints on the AuditEvent Resource to record when a PIXm Feed Transaction happens, as recorded by the Patient Identifier Cross-reference Source.
+Title:          "Audit Event for Patient Identity Feed by the Source"
+Description:    "Defines constraints on the AuditEvent Resource to record when a Patient Identity Feed Transaction happens, as recorded by the Patient Identity Source.
 - Feed event
 - shall have the source as itself
 - shall have a destination
@@ -11,7 +11,7 @@ Description:    "Defines constraints on the AuditEvent Resource to record when a
 * modifierExtension 0..0
 * type = DCM#110110 "Patient Record"
 * action ^short = "C (create) , U (update), or D (delete) as appropriate"
-* subtype = urn:ihe:event-type-code#ITI-104 "Mobile Patient Identifier Cross-reference Feed"
+* subtype = urn:ihe:event-type-code#ITI-104 "Patient Identity Feed FHIR"
 // * severity in R5
 * recorded 1..1 // already required
 * outcome 1..1
@@ -49,8 +49,8 @@ Description:    "Defines constraints on the AuditEvent Resource to record when a
 Profile:        AuditPixmFeedManager
 Parent:         AuditEvent
 Id:             IHE.PIXm.Feed.Audit.Manager
-Title:          "Audit Event for PIXm Feed by the Manager"
-Description:    "Defines constraints on the AuditEvent Resource to record when a PIXm Feed Transaction happens, as recorded by the Patient Identifier Cross-reference Manager.
+Title:          "Audit Event for Patient Identity Feed FHIR by the Manager"
+Description:    "Defines constraints on the AuditEvent Resource to record when a Patient Identity Feed FHIR Transaction happens, as recorded by the Patient Identifier Cross-reference Manager.
 - Feed event
 - shall have the source as itself
 - shall have a destination
@@ -59,7 +59,7 @@ Description:    "Defines constraints on the AuditEvent Resource to record when a
 * modifierExtension 0..0
 * type = DCM#110110 "Patient Record"
 * action ^short = "C (create) , U (update), or D (delete) as appropriate"
-* subtype = urn:ihe:event-type-code#ITI-104 "Mobile Patient Identifier Cross-reference Feed"
+* subtype = urn:ihe:event-type-code#ITI-104 "Patient Identity Feed FHIR"
 // * severity in R5
 * recorded 1..1 // already required
 * outcome 1..1

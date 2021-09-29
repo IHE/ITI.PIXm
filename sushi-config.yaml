@@ -14,7 +14,7 @@ canonical: http://profiles.ihe.net/ITI/PIXm
 version: 2.2.1
 fhirVersion: 4.0.1
 name: IHE_PIXm
-title: Patient Identity Cross-Reference for mobile (PIXm)
+title: Patient Identifier Cross-referencing for mobile (PIXm)
 status: active
 publisher:
   - name: IHE IT Infrastructure Technical Committee
@@ -25,7 +25,7 @@ contact:
     telecom:
       - system: email
         value: iti@ihe.net
-description: ImplementationGuide for IHE IT Infrastructure Technical Framework Supplement Patient Identity Cross-Reference for mobile (PIXm) Rev. 2.2.0 public-comment
+description: ImplementationGuide for IHE IT Infrastructure Technical Framework Supplement Patient Identifier Cross-referencing for mobile (PIXm) Rev. 2.2.0 public-comment
 license: CC-BY-SA-4.0
 jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
 copyright: IHE http://www.ihe.net/Governance/#Intellectual_Property
@@ -111,7 +111,7 @@ pages:
   ITI-83.md:
     title: "2:3.83 Patient Identity Cross-reference Query [ITI-83]"
   ITI-104.md:
-    title: "2:3:104 Mobile Patient Identifier Cross-reference Feed [ITI-104]"
+    title: "2:3:104 Patient Identity Feed FHIR [ITI-104]"
   5_testplan.md:
     title: "Test Plan"
   a_issues.md:
@@ -129,6 +129,6 @@ menu:
     "Cross Profile Considerations": volume-1.html#1416-pixm-cross-profile-considerations
   Volume 2:
     "Patient Identity Cross-reference Query [ITI-83]": ITI-83.html
-    "Mobile Patient Identifier Cross-reference Feed [ITI-104]": ITI-104.html
+    "Patient Identity Feed FHIR [ITI-104]": ITI-104.html
   Test Plan: 5_testplan.html
   Artifact Index: artifacts.html
