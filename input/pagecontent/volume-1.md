@@ -21,9 +21,9 @@ Figure below shows the actors directly involved in the PIXm Profile and the rele
 <div style="clear: left" />
 **Figure: 41.1-1: PIXm Actor Diagram**
 
-Table 41.1-1 lists the transactions for each actor directly involved in the PIXm Profile. 
+Table 41.1-1 lists the transactions for each actor directly involved in the PIXm Profile.
 To claim compliance with this
-profile, an actor shall support all required transactions (labeled "R") and 
+profile, an actor shall support all required transactions (labeled "R") and
 may support the optional transactions (labeled "O").
 
 **Table 41.1-1: PIXm Profile - Actors and Transactions**
@@ -77,7 +77,7 @@ The Mobile Patient Identifier Cross-reference Feed [ITI-104] and the Mobile Pati
 The Patient Identifier Cross-reference Source is the producer and publisher of patient identity data.
 
 The following CapabilityStatements define the Actor capabilities
-* [Patient Identifier Cross-reference Source](CapabilityStatement-IHE.PIXm.Source.html) 
+* [Patient Identifier Cross-reference Source](CapabilityStatement-IHE.PIXm.Source.html)
 
 For a given Patient Identifier Domain there shall be one and only one Patient Identity Source Actor, but a given Patient Identity Source may serve more than one Patient Identifier Domain.
 
@@ -86,14 +86,14 @@ The Patient Identifier Cross-reference Consumer queries the patient ID lists fro
 Manager.
 
 The following CapabilityStatements define the Actor capabilities
-* [Patient Identifier Cross-reference Consumer](CapabilityStatement-IHE.PIXm.Consumer.html) 
+* [Patient Identifier Cross-reference Consumer](CapabilityStatement-IHE.PIXm.Consumer.html)
 
 #### 1:41.1.1.3 Patient Identifier Cross-reference Manager
 The Patient Identifier Cross-reference Manager manages patient identity data from different domains and cross-references patient
 identity data from different domains for the same patient.
 
 The following CapabilityStatements define the Actor capabilities
-* [Patient Identifier Cross-reference Manager](CapabilityStatement-IHE.PIXm.Manager.html) 
+* [Patient Identifier Cross-reference Manager](CapabilityStatement-IHE.PIXm.Manager.html)
 
 ## 1:41.2 PIXm Actor Options
 
@@ -134,47 +134,47 @@ Identifier Cross-reference Manager.
 
 ### 1:41.4.1 Concepts
 
-This profile uses RESTful transaction and FHIR patient resources for the 
-Mobile Patient Identifier Cross-reference Feed [ITI-104] and 
-Mobile Patient Identifier Cross-reference Query [ITI-83] transactions 
+This profile uses RESTful transaction and FHIR patient resources for the
+Mobile Patient Identifier Cross-reference Feed [ITI-104] and
+Mobile Patient Identifier Cross-reference Query [ITI-83] transactions
 performed by the Patient Identifier Cross-reference Source and Manager actors.
 
-Patient Identifier Cross-reference Manager may publish the supported attributes, 
-codes and constraints to inform Sources on what is expected and Consumer on what 
-to expect. This profile does not define a new transaction for publishing the supported 
-attributes, codes and constraints. It relies on the FHIR standard instead and recommends 
+Patient Identifier Cross-reference Manager may publish the supported attributes,
+codes and constraints to inform Sources on what is expected and Consumer on what
+to expect. This profile does not define a new transaction for publishing the supported
+attributes, codes and constraints. It relies on the FHIR standard instead and recommends
 to publish the supported attributes, codes and constraints as part of the FHIR capability statement.      
 
-The requirements on Patient Identifier Domain as 
-defined for the [PIX profile](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) 
+The requirements on Patient Identifier Domain as
+defined for the [PIX profile](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html)
 apply also for this profile. See [ITI TF-1 Figure 5-1](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) and accompanying text.
 
-This profile does neither specify the rules and algorithm applied by the Patient Identifier 
-Cross-reference Manager actor to link or unlink the patient identity data from different 
-domains, nor the point in time the Patient Identifier Cross-reference Manager actually 
-links the data. Patient Identifier Cross-reference Manager may link the patient identity 
-data from the different domains on time of the Mobile Patient Identifier Cross-reference 
-Feed [ITI-104] transactions, but also may provide other triggers (e.g., manual linking 
-or unlinking in case when the rules and algorithms go wrong).
+This profile does neither specify the rules and algorithm applied by the Patient Identifier
+Cross-reference Manager actor to cross reference the patient identity data from different
+domains, nor the point in time the Patient Identifier Cross-reference Manager actually
+cross references the data. Patient Identifier Cross-reference Manager may cross reference the patient identity
+data from the different domains on time of the Mobile Patient Identifier Cross-reference
+Feed [ITI-104] transactions, but also may provide other triggers (e.g., manual cross referecing
+in case when the rules and algorithms go wrong).
 
-This profile does not address issues related to building "golden records" or 
+This profile does not address issues related to building "golden records" or
 verified patient identity data. Patient
-Identifier Cross-reference Managers may add business functionality to 
+Identifier Cross-reference Managers may add business functionality to
 support "golden records" or verified patient identity
-data and register them with the Patient Identifier Cross-reference Manager 
+data and register them with the Patient Identifier Cross-reference Manager
 patient domain / assigning authority.
 
 
 ### 1:41.4.2 Use Cases
 
-This section contains informative use-cases, and is not exhaustive. 
+This section contains informative use-cases, and is not exhaustive.
 
 
 
 #### 1:41.4.2.1 Multiple Identifier Domains within a Single Enterprise
 
 This use-case has two Patient Identifier Domains
-1. Intensive Care domain 
+1. Intensive Care domain
 2. Main Hospital domain
 
 <div>
@@ -186,36 +186,36 @@ This use-case has two Patient Identifier Domains
 
 ##### 1:41.4.2.1.1 Use Case Description
 
-A clinician in the Intensive Care Unit at General Hospital is 
+A clinician in the Intensive Care Unit at General Hospital is
 reviewing a patient chart on the Intensive Care information
-system and wishes to review or monitor the patient's glucose 
+system and wishes to review or monitor the patient's glucose
 level, which is included in a laboratory report stored in the
-hospital's main laboratory system. The Intensive Care system 
+hospital's main laboratory system. The Intensive Care system
 needs to map its own patient ID, which it generates
-internally, to the patient's medical record number (MRN), 
+internally, to the patient's medical record number (MRN),
 which is generated from the hospital's main patient registration system and is
-used as the patient identity by the laboratory system. In this 
+used as the patient identity by the laboratory system. In this
 case the Intensive Care system is essentially in a different
-identifier domain than the rest of the hospital since it has 
+identifier domain than the rest of the hospital since it has
 its own notion of patient identity.
 
-In this scenario, the hospital's main patient registration system (acting 
+In this scenario, the hospital's main patient registration system (acting
 as a Patient Identity Source) would provide a Patient Identity
-Feed **[01]** (using the patient's MRN as the identifier) to the 
+Feed **[01]** (using the patient's MRN as the identifier) to the
 Patient Identifier Cross-reference Manager. Similarly, the
 Intensive Care system would also provide a Patient Identity Feed **[03]**
 to the Patient Identifier Cross-reference Manager using
-the internally generated patient ID as the patient identifier 
+the internally generated patient ID as the patient identifier
 and providing its own unique identifier domain identifier.
 
-When the Patient Identifier Cross-reference Manager receives 
+When the Patient Identifier Cross-reference Manager receives
 the Patient Identity Feed transactions, it performs its
-internal logic **[02]** and **[04]** to determine which patient identifiers can 
-be "linked" as representing the same patient person based on
-the information included in the Feed transactions it has 
+internal logic **[02]** and **[04]** to determine which patient identifiers can
+be cross referenced as representing the same patient person based on
+the information included in the Feed transactions it has
 received. The cross-referencing process (algorithm,
-human decisions, etc.) is performed within the 
-Patient Identifier Cross-reference Manager and is outside 
+human decisions, etc.) is performed within the
+Patient Identifier Cross-reference Manager and is outside
 the scope of IHE.
 
 The Intensive Care system wants to get lab information associated with a patient that the Intensive Care system knows as patient ID = MC-123.
@@ -240,24 +240,11 @@ This use-case shows the PIXm process when an existing patient has updates to her
 
 ##### 1:41.4.2.2.1 Use Case Description
 
-The hospital main patient registration system had initially feeded the patient identity data
-to the Patient Identity Cross-reference Manager
-when the patient person first entered the hospital for treatment **[01]**.
+The Main Hospital patient registration system initially added a patient’s identity data to the Patient Identity Cross-reference Manager when the patient first entered the hospital for treatment **[01]**.
 
-During a subsequent visit the hospital main patient registration system detects that 
-the patient demographic data included in the patient
-identity should be updated to adapt to changes in contact data. To 
-update the patient identity data the hospital main patient registration 
-system sends a update message to the Patient Identifier Cross-reference Manager  
-using the Mobile Patient Identity Feed [ITI-104] transaction **[07]**.
+During a subsequent visit, the registration system detects that the patient’s demographic data should be updated to reflect changes in contact data. The Main Hospital registration system sends na update message to the Patient Identifier Cross-reference Manager using the Mobile Patient Identity Feed [ITI-104] transaction **[07]**.
 
-When the Patient Identifier Cross-reference Manager receives the 
-Patient Identity Feed transaction, it performs
-its internal logic **[08]** to determine which patient identifiers of 
-other identifier domains can be "linked"
-as representing the same patient person based on the information 
-included in the Feed transactions
-it has received (e.g., patient name, gender, birthdate, contact data).
+When the Patient Identifier Cross-reference Manager receives the Patient Identity Feed transaction, it updates the identity information for the patient. Depending on whether its internal logic uses contact data **[08]**, the update may trigger the PIXm Manager to cross-reference in order to determine which patient identifiers of other identifier domains represent the same person person.
 
 ##### 1:41.4.2.2.2 Process Flow
 
@@ -304,25 +291,25 @@ The PIXm profile provides query for identity cross-references, and feed of ident
 transactions carry the risk that an inappropriate client or user queries information that should not be disclosed, or
 changes information that should not be changed by that client or user.
 
-Actors in PIXm may be grouped with 
-an [Audit Trail and Node Authentication (ATNA)](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) 
+Actors in PIXm may be grouped with
+an [Audit Trail and Node Authentication (ATNA)](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html)
 Secure Node or ATNA Secure Application Actor.
-This grouping enables the Patient Identifier Cross-reference Manager to 
-have policies that only highly trusted systems can communicate and that 
+This grouping enables the Patient Identifier Cross-reference Manager to
+have policies that only highly trusted systems can communicate and that
 all changes are recorded in the audit log.
 
-Actors in PIXm may be grouped with 
-an [Internet User Authorization (IUA)](https://profiles.ihe.net/ITI/TF/Volume1/ch-34.html) Authorization Client or Resource Server as appropriate; with 
+Actors in PIXm may be grouped with
+an [Internet User Authorization (IUA)](https://profiles.ihe.net/ITI/TF/Volume1/ch-34.html) Authorization Client or Resource Server as appropriate; with
 the [ATNA - STX: HTTPS IUA Option](https://profiles.ihe.net/ITI/IUA/index.html#9-atna-profile).
-This grouping will enable more fine grain service side access control and 
+This grouping will enable more fine grain service side access control and
 more detailed audit logging.
 
 ## 1:41.6 PIXm Cross Profile Considerations
 
-The Patient Identifier Cross-reference Manager from PIXm can be grouped with 
-either PIX or PIXV3 Patient Identifier Cross-reference Consumer and Source to 
-proxy the Mobile Patient Identifier Cross-reference Query [ITI-83] and 
-Mobile Patient Identifier Cross-reference Feed [ITI-104] transactions to the 
+The Patient Identifier Cross-reference Manager from PIXm can be grouped with
+either PIX or PIXV3 Patient Identifier Cross-reference Consumer and Source to
+proxy the Mobile Patient Identifier Cross-reference Query [ITI-83] and
+Mobile Patient Identifier Cross-reference Feed [ITI-104] transactions to the
 more traditional PIX and PIXV3 Query and Feed transactions,
-thus acting as a proxy to the Patient Identifier Cross-reference Manager that 
+thus acting as a proxy to the Patient Identifier Cross-reference Manager that
 wants to enable RESTful transactions.
