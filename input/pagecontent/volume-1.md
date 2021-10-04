@@ -77,11 +77,7 @@ The Patient Identity Feed FHIR [ITI-104] and the Mobile Patient Identifier Cross
 The Patient Identity Source is the producer and publisher of patient identity data.
 
 The following CapabilityStatements define the Actor capabilities
-<<<<<<< HEAD
-* [Patient Identifier Cross-reference Source](CapabilityStatement-IHE.PIXm.Source.html)
-=======
 * [Patient Identity Source](CapabilityStatement-IHE.PIXm.Source.html) 
->>>>>>> consistency of names #52
 
 For a given Patient Identifier Domain there shall be one and only one Patient Identity Source Actor, but a given Patient Identity Source may serve more than one Patient Identifier Domain.
 
@@ -299,11 +295,13 @@ all changes are recorded in the audit log.
 Actors in PIXm may be grouped with
 an [Internet User Authorization (IUA)](https://profiles.ihe.net/ITI/TF/Volume1/ch-34.html) Authorization Client or Resource Server as appropriate; with
 the [ATNA - STX: HTTPS IUA Option](https://profiles.ihe.net/ITI/IUA/index.html#9-atna-profile).
-This grouping will enable more fine grain service side access control and
-more detailed audit logging.
+This grouping will enable more fine grain service side access control and 
+more detailed audit logging. There are additional requirements and functionality enabled through scope definitions that are transaction specific. 
+See the Security Considerations sections of the PIXm-defined transactions for guidance on scope definition when grouped with IUA actors.
 
 ## 1:41.6 PIXm Cross Profile Considerations
 
+### 1:41.6.1 Use with PIX and PIXV3 Profile  
 The Patient Identifier Cross-reference Manager from PIXm can be grouped with 
 either PIX or PIXV3 Patient Identifier Cross-reference Consumer and Source to 
 proxy the Mobile Patient Identifier Cross-reference Query [ITI-83] and 
@@ -311,3 +309,6 @@ Patient Identity Feed FHIR [ITI-104] transactions to the
 more traditional PIX and PIXV3 Query and Feed transactions,
 thus acting as a proxy to the Patient Identifier Cross-reference Manager that
 wants to enable RESTful transactions.
+
+### 1:41.6.2 Use with the Internet User Authorization (IUA) Profile  
+The IUA Profile provides support for user authentication, app authentication, and authorization decisions. When PIXm actors are grouped with IUA actors there are additional security and privacy functionality enabled by this grouping. There are additional requirements and functionality enabled through scope definitions that are transaction-specific. See the Security Considerations sections of the PIXm-defined transactions for guidance on scope definition when grouped with IUA actors.

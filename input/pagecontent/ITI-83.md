@@ -305,3 +305,17 @@ The Patient Identifier Cross-reference Consumer when grouped with ATNA Secure No
 ##### 2:3.83.5.1.2 Patient Identifier Cross-reference Manager Audit
 
 The Patient Identifier Cross-reference Manager when grouped with ATNA Secure Node or Secure Application actor shall be able to record a [PIXm Query Manager Audit Event Log](/StructureDefinition-IHE.PIXm.Query.Audit.Manager.html). [Audit Example for a PIXm Query transaction from manager perspective](AuditEvent-ex-auditPixmQuery-manager.html).
+
+
+#### 2:3.83.5.2 Use with the Internet User Authorization (IUA) Profile  
+The IUA Profile provides support for user authentication, app authentication, and authorization decisions. When PIXm actors are grouped with IUA actors there are additional security and privacy functionality enabled by this grouping. There are additional requirements and functionality enabled through scope definitions that are transaction-specific.
+
+A Patient Identifier Cross-reference Consumer, when grouped with an IUA Authorization Client, shall use Get Access Token [ITI-71] to request the following scope from the IUA Authorization Server. This enables the Patient Identifier Cross-reference Consumer to get corresponding identifiers with the Mobile Patient Identifier Cross-reference Query [ITI-83] transaction with the authorizing token in the combined transaction Incorporate Access Token [ITI-72].
+
+The Patient Identifier Cross-reference Manager, when grouped with an IUA Resource Server, shall require Incorporate Access Token [ITI-72] in all Mobile Patient Identifier Cross-reference Query [ITI-83] transactions, shall enforce the authorization decision in the token, and may further enforce policies beyond those made by the Authorization Server such as consent or business rules.
+
+```
+scope: ITI-83
+```
+
+This scope request authorizes the full [ITI-83] transaction. This scope implicitly requests patient-specific queries for getting corresponding identifiers. Further scope refinement is allowed in realm or project-specific situations; these scopes would be in addition to the scope defined here.
