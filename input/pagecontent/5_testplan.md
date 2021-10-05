@@ -39,21 +39,21 @@ Unit testing this context entails testing a SUT with a simulator or validator to
 
 #### Gazelle PatientManager - Simulator 
 
-* Provider: INRIA (Rennes, France), KEREVAL (https://www.kereval.com/)
-* Gazelle Patient Manager online: https://gazelle.ihe.net/PatientManager/home.seam
-* User Manual:  https://gazelle.ihe.net/gazelle-documentation/Patient-Manager/user.html
-* Tool support: https://gazelle.ihe.net/jira/projects/PAM
+* Provider: INRIA (Rennes, France), [KEREVAL](https://www.kereval.com/)
+* Gazelle Patient Manager [online](https://gazelle.ihe.net/PatientManager/home.seam)
+* [User Manual](https://gazelle.ihe.net/gazelle-documentation/Patient-Manager/user.html)
+* [Tool support](https://gazelle.ihe.net/jira/projects/PAM)
 * Actors (options) tested:  
   * PIX Consumer, PIX Manager for ITI-83:
-    * PIX Consumer test definition: PM_PIX_Query-Patient_Identity_Consumer https://gazelle.ihe.net/content/pmpixquery-patientidentityconsumer
-    * PIX Manager test definition: PM_PIX_Query-PIX_Manager https://gazelle.ihe.net/content/pmpixquery-pixmanager
+    * PIX Consumer test definition: [PM_PIX_Query-Patient_Identity_Consumer](https://gazelle.ihe.net/content/pmpixquery-patientidentityconsumer) 
+    * PIX Manager test definition: [PM_PIX_Query-PIX_Manager](https://gazelle.ihe.net/content/pmpixquery-pixmanager}
   * (future) PIX Source, PIX Manager for ITI-104
 
 #### Gazelle External Validation Service (aka "EVS Client") - Validator
 
-* Provider:  INRIA (Rennes, France), KEREVAL (https://www.kereval.com/), and Mallinckrodt Institute of Radiology (Saint Louis, USA) 
-* Tool location: https://gazelle.ihe.net/EVSClient/home.seam
-* Documentation: https://gazelle.ihe.net/content/evsfhirvalidation
+* Provider:  INRIA (Rennes, France), [KEREVAL](https://www.kereval.com/), and Mallinckrodt Institute of Radiology (Saint Louis, USA) 
+* [Tool location](https://gazelle.ihe.net/EVSClient/home.seam)
+* [Documentation](https://gazelle.ihe.net/content/evsfhirvalidation)
 * Scope of testing: validation using StructureDefinitions for PIXm
 * Other notes: StructureDefinitions and other conformance resources are provided within this Implementation Guide as an [npm package](package.tgz).
 
@@ -61,7 +61,7 @@ Unit testing this context entails testing a SUT with a simulator or validator to
 
 Integration Testing in this context is where two SUT of paired actors test against each other.  Integration testing is often limited by the capability of client-side actors, which may support only a subset of the semantics required to be supported by a server.  Full message semantics and failure-modes are generally more thoroughly exercised with unit (conformance) tests.
 
-The tests listed below are defined in Gazelle Master Model (https://gazelle.ihe.net/GMM) and are performed by systems testing PIXm at IHE Connectathons.
+The tests listed below are defined in [Gazelle Master Model](https://gazelle.ihe.net/GMM) and are performed by systems testing PIXm at IHE Connectathons.
 
 Interoperability Tests:
 
