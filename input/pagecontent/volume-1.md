@@ -134,35 +134,29 @@ Identifier Cross-reference Manager.
 
 ### 1:41.4.1 Concepts
 
-This profile uses RESTful transaction and FHIR patient resources for the
-Mobile Patient Identifier Cross-reference Feed [ITI-104] and
-Mobile Patient Identifier Cross-reference Query [ITI-83] transactions
-performed by the Patient Identifier Cross-reference Source and Manager actors.
+This profile uses RESTful transaction and FHIR patient resources for the Mobile Patient Identifier Cross-reference Feed
+[ITI-104] and Mobile Patient Identifier Cross-reference Query [ITI-83] transactions performed by the Patient Identifier
+Cross-reference Source and Manager actors.
 
-Patient Identifier Cross-reference Manager may publish the supported attributes,
-codes and constraints to inform Sources on what is expected and Consumer on what
-to expect. This profile does not define a new transaction for publishing the supported
-attributes, codes and constraints. It relies on the FHIR standard instead and recommends
-to publish the supported attributes, codes and constraints as part of the FHIR capability statement.      
+The Patient Identifier Cross-reference Manager will cross-reference the patient identity data from the different domains
+when it receives Mobile Patient Identifier Cross-reference Feed [ITI-104] transactions, but it may also provide other
+triggers (e.g., manual linking or unlinking in case when the rules and algorithms go wrong).
+
+This profile does not specify the rules and algorithm applied by the Patient Identifier Cross-reference Manager actor
+to cross-reference the patient identity data from different domains.
 
 The requirements on Patient Identifier Domain as
 defined for the [PIX profile](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html)
-apply also for this profile. See [ITI TF-1 Figure 5-1](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) and accompanying text.
+apply also for this profile. See [ITI TF-1 Figure 5-1](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) and accompanying
+text.
 
-This profile does neither specify the rules and algorithm applied by the Patient Identifier
-Cross-reference Manager actor to cross reference the patient identity data from different
-domains, nor the point in time the Patient Identifier Cross-reference Manager actually
-cross references the data. Patient Identifier Cross-reference Manager may cross reference the patient identity
-data from the different domains on time of the Mobile Patient Identifier Cross-reference
-Feed [ITI-104] transactions, but also may provide other triggers (e.g., manual cross referecing
-in case when the rules and algorithms go wrong).
+This profile does not address issues related to building "golden records" or verified patient identity data. Patient
+Identifier Cross-reference Managers may add business functionality to support "golden records" or verified patient identity
+data and register them with the Patient Identifier Cross-reference Manager patient domain / assigning authority.
 
-This profile does not address issues related to building "golden records" or
-verified patient identity data. Patient
-Identifier Cross-reference Managers may add business functionality to
-support "golden records" or verified patient identity
-data and register them with the Patient Identifier Cross-reference Manager
-patient domain / assigning authority.
+This profile does not define a new transaction for publishing the supported attributes, codes and constraints. This profile
+recommends the Patient Identifier Cross-reference Manager to publish the supported attributes, codes and constraints it has
+implemented to support its cross-referencing as part of a FHIR CapabilityStatement.
 
 
 ### 1:41.4.2 Use Cases
