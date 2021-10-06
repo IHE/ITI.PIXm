@@ -7,11 +7,12 @@ box Main Hospital domain
 endbox
 
 activate Source2
-Source2 --> Source2: some existing patient has new demographics
+Source2 --> Source2: update patient demographics
 Source2 -> Manager: [07] PIXm Feed (Update) [ITI-104]
 activate Manager
 deactivate Source2
 
+Manager --> Manager: update identity information
 Manager --> Manager: [08] Apply Xref logic
 
 @enduml

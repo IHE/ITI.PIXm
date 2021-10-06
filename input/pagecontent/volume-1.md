@@ -205,7 +205,7 @@ and providing its own unique identifier domain identifier.
 When the Patient Identifier Cross-reference Manager receives
 the Patient Identity Feed transactions, it performs its
 internal logic **[02]** and **[04]** to determine which patient identifiers can
-be "linked" as representing the same patient person based on
+be cross referenced as representing the same patient person based on
 the information included in the Feed transactions it has
 received. The cross-referencing process (algorithm,
 human decisions, etc.) is performed within the
@@ -234,24 +234,11 @@ This use-case shows the PIXm process when an existing patient has updates to her
 
 ##### 1:41.4.2.2.1 Use Case Description
 
-The hospital main patient registration system had initially feeded the patient identity data
-to the Patient Identity Cross-reference Manager
-when the patient person first entered the hospital for treatment **[01]**.
+The Main Hospital patient registration system initially added a patient’s identity data to the Patient Identity Cross-reference Manager when the patient first entered the hospital for treatment **[01]**.
 
-During a subsequent visit the hospital main patient registration system detects that
-the patient demographic data included in the patient
-identity should be updated to adapt to changes in contact data. To
-update the patient identity data the hospital main patient registration
-system sends a update message to the Patient Identifier Cross-reference Manager  
-using the Mobile Patient Identity Feed [ITI-104] transaction **[07]**.
+During a subsequent visit, the registration system detects that the patient’s demographic data should be updated to reflect changes in contact data. The Main Hospital registration system sends na update message to the Patient Identifier Cross-reference Manager using the Mobile Patient Identity Feed [ITI-104] transaction **[07]**.
 
-When the Patient Identifier Cross-reference Manager receives the
-Patient Identity Feed transaction, it performs
-its internal logic **[08]** to determine which patient identifiers of
-other identifier domains can be "linked"
-as representing the same patient person based on the information
-included in the Feed transactions
-it has received (e.g., patient name, gender, birthdate, contact data).
+When the Patient Identifier Cross-reference Manager receives the Patient Identity Feed transaction, it updates the identity information for the patient. Depending on whether its internal logic uses contact data **[08]**, the update may trigger the PIXm Manager to cross-reference in order to determine which patient identifiers of other identifier domains represent the same person person.
 
 ##### 1:41.4.2.2.2 Process Flow
 
