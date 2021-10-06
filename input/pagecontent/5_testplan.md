@@ -14,7 +14,7 @@ PIXm specifies two transactions:  A patient identity feed transaction between PI
 * PIX Consumer initiates ITI-83 queries for cross-referenced patients
 * PIX Manager responds to queries, as appropriate
 
-### ITI-104 Mobile Patient Identifier Cross-reference Feed
+### ITI-104 Patient Identity Feed FHIR
 
 * PIX Source initiates ITI-104 feed for:
   * Add patient

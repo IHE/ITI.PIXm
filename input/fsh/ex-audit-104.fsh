@@ -1,12 +1,12 @@
 Instance: ex-auditPixmFeed-source
 InstanceOf: IHE.PIXm.Feed.Audit.Source
 Title: "Audit Example of ITI-104 at Source"
-Description: "Audit Event for PIXm Feed Transaction by the Patient Identifier Cross-reference Source"
+Description: "Audit Event for Patient Identity Feed FHIR Transaction by the Patient Identity Source"
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * type = http://dicom.nema.org/resources/ontology/DCM#110110 "Patient Record"
 * action = #C
-* subtype = urn:ihe:event-type-code#ITI-104 "Mobile Patient Identifier Cross-reference Feed"
+* subtype = urn:ihe:event-type-code#ITI-104 "Patient Identity Feed FHIR"
 //* severity = #Informational
 * recorded = 2021-07-11T19:17:32Z
 * outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
@@ -32,12 +32,12 @@ Usage: #example
 Instance: ex-auditPixmFeed-manager
 InstanceOf: IHE.PIXm.Feed.Audit.Manager
 Title: "Audit Example of ITI-104 at Manager"
-Description: "Audit Event for PIXm Feed Transaction by the Patient Identifier Cross-reference Manager"
+Description: "Audit Event for Patient Identity Feed Transaction FHIR by the Patient Identifier Cross-reference Manager"
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * type = http://dicom.nema.org/resources/ontology/DCM#110110 "Patient Record"
 * action = #C
-* subtype = urn:ihe:event-type-code#ITI-104 "Mobile Patient Identifier Cross-reference Feed"
+* subtype = urn:ihe:event-type-code#ITI-104 "Patient Identity Feed FHIR"
 //* severity = #Informational
 * recorded = 2021-07-11T19:17:32Z
 * outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
