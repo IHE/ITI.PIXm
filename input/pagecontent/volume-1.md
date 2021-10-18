@@ -77,7 +77,7 @@ The Patient Identity Feed FHIR [ITI-104] and the Mobile Patient Identifier Cross
 The Patient Identity Source is the producer and publisher of patient identity data.
 
 The following CapabilityStatements define the Actor capabilities
-* [Patient Identity Source](CapabilityStatement-IHE.PIXm.Source.html) 
+* [Patient Identity Source](CapabilityStatement-IHE.PIXm.Source.html)
 
 For a given Patient Identifier Domain there shall be one and only one Patient Identity Source Actor, but a given Patient Identity Source may serve more than one Patient Identifier Domain.
 
@@ -93,7 +93,7 @@ The Patient Identifier Cross-reference Manager manages patient identity data fro
 identity data from different domains for the same patient.
 
 The following CapabilityStatements define the Actor capabilities
-* [Patient Identifier Cross-reference Manager](CapabilityStatement-IHE.PIXm.Manager.html)
+* [Patient Identifier Cross-reference Manager](CapabilityStatement-IHE.PIXm.Manager.html) to the specific requirements of [ITI-83](ITI-83.html) and expected actions and Patient Resource constraints of [ITI-104](ITI-104.html).
 
 ## 1:41.2 PIXm Actor Options
 
