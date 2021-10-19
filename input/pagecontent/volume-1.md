@@ -154,8 +154,8 @@ This profile does not address issues related to building "golden records" or ver
 Identifier Cross-reference Managers may add business functionality to support "golden records" or verified patient identity
 data and register them with the Patient Identifier Cross-reference Manager patient domain / assigning authority.
 
-This profile does not define a new transaction for publishing the supported attributes, codes and constraints. This profile
-requires the Patient Identifier Cross-reference Manager to publish the supported attributes, codes and constraints it has
+This profile does not define a new transaction for publishing the supported elements, codes and constraints. This profile
+requires the Patient Identifier Cross-reference Manager to publish the supported elements, codes and constraints it has
 implemented to support its cross-referencing as part of a FHIR CapabilityStatement.
 
 
