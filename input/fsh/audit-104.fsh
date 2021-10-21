@@ -3,7 +3,7 @@ Parent:         AuditEvent
 Id:             IHE.PIXm.Feed.Audit.Source
 Title:          "Audit Event for Patient Identity Feed by the Source"
 Description:    "Defines constraints on the AuditEvent Resource to record when a Patient Identity Feed Transaction happens, as recorded by the Patient Identity Source.
-- Feed event
+- Feed event for ITI-104
 - shall have the source as itself
 - shall have a destination
 - may have user, app, organization agent(s)
@@ -51,7 +51,7 @@ Parent:         AuditEvent
 Id:             IHE.PIXm.Feed.Audit.Manager
 Title:          "Audit Event for Patient Identity Feed FHIR by the Manager"
 Description:    "Defines constraints on the AuditEvent Resource to record when a Patient Identity Feed FHIR Transaction happens, as recorded by the Patient Identifier Cross-reference Manager.
-- Feed event
+- Feed event for ITI-104
 - shall have the source as itself
 - shall have a destination
 - may have user, app, organization agent(s)

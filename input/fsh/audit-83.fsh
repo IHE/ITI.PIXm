@@ -3,7 +3,7 @@ Parent:         AuditEvent
 Id:             IHE.PIXm.Query.Audit.Consumer
 Title:          "Audit Event for PIXm Query by the Consumer"
 Description:    "Defines constraints on the AuditEvent Resource to record when a PIXm Query Transaction happens, as recorded by the Patient Identifier Cross-reference Consumer.
-- Query event
+- Query event for ITI-83
 - shall have the source as itself
 - shall have a destination
 - may have user, app, organization agent(s)
@@ -60,7 +60,7 @@ Parent:         AuditEvent
 Id:             IHE.PIXm.Query.Audit.Manager
 Title:          "Audit Event for PIXm Query by the Manager"
 Description:    "Defines constraints on the AuditEvent Resource to record when a PIXm Query Transaction happens, as recorded by the Patient Identifier Cross-reference Manager.
-- Query event
+- Query event for ITI-83
 - shall have the source as itself
 - shall have a destination
 - may have user, app, organization agent(s)
