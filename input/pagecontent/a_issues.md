@@ -73,6 +73,9 @@ is consolidated by the Patient Identifier Cross-reference Manager rules and retu
 depending is applicability to to other profiles, like the [IHE PMIR](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf)) profile. 
 See [profile considerations/testing](https://gazelle.ihe.net/content/pmirconnectathontestpatients) of PIXm Patient Identifier Cross-Reference Manager and PMIR Patient Identity Registry.*
 
+***PIXm 022***
+*Should the Patient Identifier Cross-reference Manager have a requirement of filling in the assigningAuthority Name if the name is not provided in the Patient Identity Feed FHIR [ITI-104] as it is specified for PIX and PIX V3 Cross-reference Manager? [Issue](https://github.com/IHE/ITI.PIXm/issues/71) *
+
 #### Closed Issues
 
 ***CP-ITI-1118*** - asks if the return behavior is well aligned with PDQm.
