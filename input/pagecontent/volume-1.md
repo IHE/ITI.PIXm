@@ -326,7 +326,7 @@ Patient Identity Feed FHIR [ITI-104] transactions to the
 more traditional PIX and PIXV3 Query and Feed transactions,
 thus acting as a proxy to the Patient Identifier Cross-reference Manager that
 wants to enable RESTful transactions. Note that PIX and PIX V3 Source Actors do not have
-a corresponding [Remove Patient Option](#14121-delete-support-on-server).
+a corresponding [Remove Patient Option](#14121-remove-patient).
 
 ### 1:41.6.2 Use with the Internet User Authorization (IUA) Profile  
 The IUA Profile provides support for user authentication, app authentication, and authorization decisions. When PIXm actors are grouped with IUA actors there are additional security and privacy functionality enabled by this grouping. There are additional requirements and functionality enabled through scope definitions that are transaction-specific. See the Security Considerations sections of the PIXm-defined transactions for guidance on scope definition when grouped with IUA actors.
