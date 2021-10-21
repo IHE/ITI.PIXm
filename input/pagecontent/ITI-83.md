@@ -20,8 +20,8 @@ be played by the actors shown here:
 
 | Actor | Role |
 |-------------------+--------------------------|
-| Patient Identifier Cross-reference Consumer   | Requests, from the Patient Identifier Cross-reference Manager, a list of patient identifiers matching the supplied Patient Identifier. |
-| Patient Identifier Cross-reference Manager  | Returns Cross-referenced Patient Identifiers for the patient that cross-matches the Patient Identifier criteria provided by the Patient Identifier Cross-reference Consumer.  |
+| Patient Identifier Cross-reference Consumer   | Queries the Patient Identifier Cross-reference Manager for a list of corresponding patient identifiers, if any |
+| Patient Identifier Cross-reference Manager  | Manages the cross-referencing of patient identifiers across Patient Identification Domains. Upon request it returns a list of corresponding patient identifiers, if any. |
 {: .grid}
 
 ### 2:3.83.3 Referenced Standards
