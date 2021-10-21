@@ -103,12 +103,27 @@ are specified in notes.
 
 Table 41.2-1: PIXm Actors and Options
 
-| Actor                                       | Option Name        | Reference |
-| ------------------------------------------- | ------------------ | --------- |
-| Patient Identity Source   | No options defined | \--       |
-| Patient Identifier Cross-reference Consumer | No options defined | \--       |
-| Patient Identifier Cross-reference Manager  | No options defined | \--       |
+| Actor                                       | Option Name               | Reference |
+| ------------------------------------------- | --------------------------| --------- |
+| Patient Identity Source                     | Remove Patient  | \--       |
+| Patient Identifier Cross-reference Consumer | No options defined        | \--       |
+| Patient Identifier Cross-reference Manager  | Remove Patient  | \--       |
 {: .grid }
+
+
+### 1:41.2.1 Remove Patient
+
+This option enables environments to implement a Patient Identifier Cross-referencing including the removal of patient
+identity data in an interoperable manner.
+
+A Patient Identity Source that supports this option shall implement the Patient Identity Feed FHIR [ITI-
+104] Remove Patient transaction defined in [ITI TF-2: 3.104.4.3](ITI-104.html#2310443-remove-patient).
+
+A Patient Identifier Cross-reference Manager that supports this option shall implement the Patient Identity Feed FHIR [ITI-
+104] Remove Patient transaction defined in [ITI TF-2: 3.104.4.3](ITI-104.html#2310443-remove-patient).
+
+A Patient Identifier Cross-reference Manager that supports this option shall claim the support of the Patient Identity Feed
+FHIR [ITI-104] Remove Patient transaction in the actors [Capability Statement](CapabilityStatement-IHE.PIXm.Manager.html).
 
 ## 1:41.3 PIXm Required Actor Groupings
 
@@ -116,7 +131,7 @@ Table 41.3-1: PIXm - Required Actor Groupings
 
 | PIXm Actor                                  | Actor to be grouped with | Reference | Content Bindings Reference |
 | ------------------------------------------- | ------------------------ | --------- | -------------------------- |
-| Patient Identity Source   | None                     | \--       | \--                        |
+| Patient Identity Source   | None                                       | \--       | \--                        |
 | Patient Identifier Cross-reference Consumer | None                     | \--       | \--                        |
 | Patient Identifier Cross-reference Manager  | None                     | \--       | \--                        |
 {: .grid }
@@ -293,8 +308,8 @@ all changes are recorded in the audit log.
 Actors in PIXm may be grouped with
 an [Internet User Authorization (IUA)](https://profiles.ihe.net/ITI/TF/Volume1/ch-34.html) Authorization Client or Resource Server as appropriate; with
 the [ATNA - STX: HTTPS IUA Option](https://profiles.ihe.net/ITI/IUA/index.html#9-atna-profile).
-This grouping will enable more fine grain service side access control and 
-more detailed audit logging. There are additional requirements and functionality enabled through scope definitions that are transaction specific. 
+This grouping will enable more fine grain service side access control and
+more detailed audit logging. There are additional requirements and functionality enabled through scope definitions that are transaction specific.
 See the Security Considerations sections of the PIXm-defined transactions for guidance on scope definition when grouped with IUA actors.
 
 Actors are expected to follow the recommendations and requirements found in [ITI TF-2:Appendix Z.8 “Mobile Security Considerations”](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations). 
@@ -304,13 +319,14 @@ Actors have requirements in the [ITI-83 Security Considerations Section](ITI-83.
 ## 1:41.6 PIXm Cross Profile Considerations
 
 ### 1:41.6.1 Use with PIX and PIXV3 Profile  
-The Patient Identifier Cross-reference Manager from PIXm can be grouped with 
-either PIX or PIXV3 Patient Identifier Cross-reference Consumer and Source to 
-proxy the Mobile Patient Identifier Cross-reference Query [ITI-83] and 
-Patient Identity Feed FHIR [ITI-104] transactions to the 
+The Patient Identifier Cross-reference Manager from PIXm can be grouped with
+either PIX or PIXV3 Patient Identifier Cross-reference Consumer and Source to
+proxy the Mobile Patient Identifier Cross-reference Query [ITI-83] and
+Patient Identity Feed FHIR [ITI-104] transactions to the
 more traditional PIX and PIXV3 Query and Feed transactions,
 thus acting as a proxy to the Patient Identifier Cross-reference Manager that
-wants to enable RESTful transactions.
+wants to enable RESTful transactions. Note that PIX and PIX V3 Source Actors do not have
+a corresponding [Remove Patient Option](#14121-remove-patient).
 
 ### 1:41.6.2 Use with the Internet User Authorization (IUA) Profile  
 The IUA Profile provides support for user authentication, app authentication, and authorization decisions. When PIXm actors are grouped with IUA actors there are additional security and privacy functionality enabled by this grouping. There are additional requirements and functionality enabled through scope definitions that are transaction-specific. See the Security Considerations sections of the PIXm-defined transactions for guidance on scope definition when grouped with IUA actors.
