@@ -279,8 +279,6 @@ The PIXm Manager can now do further cross-referencing using internal logic **[10
 
 ## 1:41.5 PIXm Security Considerations
 
-See [ITI TF-2: Appendix Z.8 “Mobile Security Considerations”](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations)
-
 The PIXm profile provides query for identity cross-references, and feed of identity with demographics. Thus the
 transactions carry the risk that an inappropriate client or user queries information that should not be disclosed, or
 changes information that should not be changed by that client or user.
@@ -298,6 +296,10 @@ the [ATNA - STX: HTTPS IUA Option](https://profiles.ihe.net/ITI/IUA/index.html#9
 This grouping will enable more fine grain service side access control and 
 more detailed audit logging. There are additional requirements and functionality enabled through scope definitions that are transaction specific. 
 See the Security Considerations sections of the PIXm-defined transactions for guidance on scope definition when grouped with IUA actors.
+
+Actors are expected to follow the recommendations and requirements found in [ITI TF-2:Appendix Z.8 “Mobile Security Considerations”](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations). 
+
+Actors have requirements in the [ITI-83 Security Considerations Section](ITI-83.html#23835-security-considerations) and [ITI-104 Security Considerations Section](ITI-104.html#231045-security-considerations).
 
 ## 1:41.6 PIXm Cross Profile Considerations
 
