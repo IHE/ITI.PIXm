@@ -4,7 +4,7 @@ Id:               IHE.PIXm.Patient
 Title:            "PIXm Patient constraints"
 Description:      "StructureDefinition for Patient resource constraints in the IHE PIXm Profile."
 * modifierExtension 0..0
-* identifier 1..* MS
+* identifier 0..* MS
 * name 1..* MS
 * telecom 0..* MS
 * gender 0..1 MS
