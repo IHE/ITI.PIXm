@@ -51,10 +51,6 @@ of the Patient. Concern is that PIXm security model covers identifiers
 proposed this would be returning part of the Patient resource content.*
 
 
-***PIXm 017***  
-*ITI-83 references E.3 which is in [pdf](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16), see also [github issue](https://github.com/IHE/publications/issues/110).*
-
-
 ***PIXm 018***  
 *PIXm does not yet define a FHIR equivalent for the transactions  PIX Update Notification [ITI-10] and PIXV3 Update Notification [ITI-46], 
 we anticipate that it will be added in a future revision.*
@@ -89,6 +85,9 @@ The $ihe-pix operation is considered the right approach for this profile.
 
 ***PIXm\_014*** 
 The $ihe-pix operation cannot be replaced with the $match operation, the $match operation is however considered as a proposal for a new version in PDQm.
+
+***PIXm 017***  
+*ITI-83 references E.3 which is in [pdf](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16), see also [github issue](https://github.com/IHE/publications/issues/110).*
 
 ***CP-ITI-1222, CP-ITI-1214, CP-ITI-1215*** - The sourceIdentifier parameter in the PIXm Query [ITI-83] can include both business identifier and FHIR Resource ids, and the parameter should be matched by the PIXm Manager against FHIR Resource ids (ie Patient.id) and the patient’s business identifiers (ie value(s) in Patient.identifier). Examples and error codes updated. 
 
