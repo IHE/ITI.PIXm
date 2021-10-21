@@ -105,7 +105,7 @@ Table 41.2-1: PIXm Actors and Options
 
 | Actor                                       | Option Name               | Reference |
 | ------------------------------------------- | --------------------------| --------- |
-| Patient Identity Source                     | No options defined        | \--       |
+| Patient Identity Source                     | Delete Support on Server  | \--       |
 | Patient Identifier Cross-reference Consumer | No options defined        | \--       |
 | Patient Identifier Cross-reference Manager  | Delete Support on Server  | \--       |
 {: .grid }
@@ -113,8 +113,11 @@ Table 41.2-1: PIXm Actors and Options
 
 ### 1:41.2.1 Delete Support on Server
 
-This option enables evironments to implement a Patient Identifier Cross-referencing including the removal of patient
+This option enables environments to implement a Patient Identifier Cross-referencing including the removal of patient
 identity data in an interoperable manner.
+
+A Patient Identity Source that supports this option shall implement the Patient Identity Feed FHIR [ITI-
+104] Remove Patient transaction defined in [ITI TF-2: 3.104.4.3](ITI-104.html#2310443-remove-patient).
 
 A Patient Identifier Cross-reference Manager that supports this option shall implement the Patient Identity Feed FHIR [ITI-
 104] Remove Patient transaction defined in [ITI TF-2: 3.104.4.3](ITI-104.html#2310443-remove-patient).
@@ -322,7 +325,8 @@ proxy the Mobile Patient Identifier Cross-reference Query [ITI-83] and
 Patient Identity Feed FHIR [ITI-104] transactions to the
 more traditional PIX and PIXV3 Query and Feed transactions,
 thus acting as a proxy to the Patient Identifier Cross-reference Manager that
-wants to enable RESTful transactions.
+wants to enable RESTful transactions. Note that PIX and PIX V3 Source Actors do not have
+a corresponding [Delete Support on Server Option](#14121-delete-support-on-server).
 
 ### 1:41.6.2 Use with the Internet User Authorization (IUA) Profile  
 The IUA Profile provides support for user authentication, app authentication, and authorization decisions. When PIXm actors are grouped with IUA actors there are additional security and privacy functionality enabled by this grouping. There are additional requirements and functionality enabled through scope definitions that are transaction-specific. See the Security Considerations sections of the PIXm-defined transactions for guidance on scope definition when grouped with IUA actors.
