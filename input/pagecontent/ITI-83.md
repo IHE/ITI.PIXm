@@ -272,7 +272,7 @@ Assigning Authority domain is not recognized in an `issue` having:
 ###### 2:3.83.4.2.2.4 Target Domain not recognized
 
 When the Patient Identifier Cross-reference Manager does not recognize
-the Patient Identifier Domain in the `targetSystem`, then the following
+one or more of the Patient Identifier Domains in the `targetSystem`, then the following
 failure shall be returned:
 
 **HTTP 403** (Forbidden) is returned as the HTTP status code.
