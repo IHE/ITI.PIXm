@@ -2,7 +2,7 @@
 
 ### Significant changes from PIXm, Rev 2.1:
 - FHIR Implementation Guide instead of [pdf - Rev. 2.1](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf)
-- Integrated CP-ITI-1222, CP-ITI-1214, CP-ITI-1215 
+- Integrated CP-ITI-1222, CP-ITI-1214, CP-ITI-1215, CP-ITI-1246 
 - Volume 1 Update Use Cases and introduced new Patient Identity Feed FHIRaccording to [work item](https://github.com/IHE/IT-Infrastructure/issues/147)
   - Added Security Considerations 
 - Volume 2 ITI-83  
