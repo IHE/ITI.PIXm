@@ -60,7 +60,7 @@ resources:
     exampleBoolean: true
   Patient/Patient-MohrAlice:
     name: Patient Alice Mohr
-    description: 'Patient Mohr Alice with all IHE Domain identifiers, note: this is just a consolidated identifier example will all identifiers from all the IHE domains equivalent to a golden patient, however a golden patient is not the scope of PIXm, see the IHE PMIR profile' 
+    description: 'Patient Mohr Alice with all domain identifiers, note: this is just a consolidated identifier example will all identifiers from all the domains equivalent to a golden patient, however a golden patient is not the scope of PIXm, see the IHE PMIR profile' 
     exampleBoolean: true
   Patient/Patient-MohrAlice-Red:
     name: Patient Alice Mohr (Red)
@@ -116,6 +116,8 @@ pages:
     title: "Test Plan"
   a_issues.md:
     title: "Issues"
+  other.md:
+    title: "Other"
 
 menu:
   PIXm Home: index.html
@@ -132,3 +134,4 @@ menu:
     "Patient Identity Feed FHIR [ITI-104]": ITI-104.html
   Test Plan: 5_testplan.html
   Artifact Index: artifacts.html
+  Other: other.html
