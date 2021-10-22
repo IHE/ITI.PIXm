@@ -16,6 +16,14 @@
    - Added IHE Connectathon samples ITI-104
    - Added Security Audit Considerations with AuditEvent profile / resource
 
+## Issues
+
+IHE welcomes [New Issues](https://github.com/IHE/ITI.PDQm/issues/new/choose) from the GitHub community. 
+For those without GitHub access, issues may be submitted to the [Public Comment form](https://www.ihe.net/resources/public_comment/).
+
+As issues are submitted they will be managed on the [PDQm GitHub Issues](https://github.com/IHE/ITI.PDQm/issues), where discussion and workarounds may be found. These issues, when critical, will be processed using the normal [IHE Change Proposal](https://wiki.ihe.net/index.php/Category:CPs) management and balloting. 
+It is important to note that as soon as a Change Proposal is approved, it carries the same weight as a published Implementation Guide (i.e., it is testable at an [IHE Connectathon](https://www.ihe.net/participate/connectathon/) from the time it is approved, even if it will not be integrated until several months later).
+
 #### List of questions to ask for the public review
 - For the [ITI-104] Patient Identity Feed FHIR it is proposed to use a RESTFul approach, e.g. to use Conditional Create / Update / Delete with the patient domain identifier. Please provide feedback during Public Comment if this approach is fine or indicate an alternative:
   Alternative approaches discussed were:
@@ -25,6 +33,7 @@
 - Feedback to the open issue ***PIXm 020*** which targetId's to return from a Patient Identifier Cross-reference Manager and ***PIXm 021*** about transaction naming and implications.
 
 #### Open Issues and Questions
+These issues were known as part of the publication, and IHE invites comments.
 
 ***PIXm\_007***
 
@@ -77,6 +86,7 @@ See [profile considerations/testing](https://gazelle.ihe.net/content/pmirconnect
 *Should the Patient Identifier Cross-reference Manager have a requirement of filling in the assigningAuthority Name if the name is not provided in the Patient Identity Feed FHIR [ITI-104] as it is specified for PIX and PIX V3 Cross-reference Manager? [Issue](https://github.com/IHE/ITI.PIXm/issues/71)*
 
 #### Closed Issues
+These issues have been decided and documented in the publication.
 
 ***CP-ITI-1118*** - asks if the return behavior is well aligned with PDQm.
 Seems they both should handle similar conditions similarly. The return
