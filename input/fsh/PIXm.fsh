@@ -1,8 +1,10 @@
 Profile:          PIXmPatient
 Parent:           Patient
 Id:               IHE.PIXm.Patient
-Title:            "PIXm Patient constraints"
-Description:      "StructureDefinition for Patient resource constraints in the IHE PIXm Profile."
+Title:            "PIXm Patient constraints for Feed"
+Description:      "Profile for describing elements which have to be accepted by the Patient Identifier Cross-reference Manager for performing its cross-referencing function.
+- requiring name
+- mustSupport for identifier, name, telecom, gender birthDate, address and managingOrganization"
 * modifierExtension 0..0
 * identifier 0..* MS
 * name 1..* MS
@@ -16,14 +18,17 @@ Profile:          PIXmPatientBirthDateRequired
 Parent:           PIXmPatient
 Id:               IHE.PIXm.Patient.BirthDateRequired
 Title:            "PIXm Patient Profile example for additional Manager constraints"
-Description:      "Example StructureDefinition for additional Patient resource constraints (requiring birthDate) by the Patient Identifier Cross-reference Manager."
+Description:      "Example Profile StructureDefinition for describing additional Patient resource constraints (requiring birthDate) by the Patient Identifier Cross-reference Manager for performing its cross-referencing function.
+- requiring name and birthDate
+- mustSupport for identifier, birthDate, name, telecom, gender birthDate, address and managingOrganization"
 * birthDate 1..1 MS
 
 Profile: PIXmQueryParametersIn
 Parent: Parameters
 Id: IHE.PIXm.Query.Parameters.In
 Title: "IHE PIXm Query Parameters In"
-Description: "StructureDefinition for Input Parameters for $ihe-pix operation"
+Description: "The StructureDefinition defines the Input Parameters for the $ihe-pix operation
+- Input: sourceIdentifier, targetSystem"
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.description = "allowed parameters are sourceIdentifier, targetSystem and _format"
@@ -46,7 +51,8 @@ Profile: PIXmQueryParametersOut
 Parent: Parameters
 Id: IHE.PIXm.Query.Parameters.Out
 Title: "IHE PIXm Query Parameters Out"
-Description: "StructureDefinition for Ouput Parameters for $ihe-pix operation"
+Description: "The StructureDefinition defines the Output Parameters for the $ihe-pix operation
+- Output: targetId, targetIdentifier"
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.description = "allowed parameters are targetId and targetIdentifier"

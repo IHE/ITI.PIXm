@@ -1,7 +1,7 @@
 Instance: ex-auditPixmQuery-consumer
 InstanceOf: IHE.PIXm.Query.Audit.Consumer
 Title: "Audit Example of ITI-83 at Consumer"
-Description: "Audit Event for PIXm Query Transaction by the Patient Identifier Cross-reference Consumer"
+Description: "Audit Event for PIXm Query Transaction ITI-83 by the Patient Identifier Cross-reference Consumer"
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * type = http://dicom.nema.org/resources/ontology/DCM#110112 "Query"
@@ -36,7 +36,7 @@ Usage: #example
 Instance: ex-auditPixmQuery-manager
 InstanceOf: IHE.PIXm.Query.Audit.Manager
 Title: "Audit Example of ITI-83 at Manager"
-Description: "Audit Event for PIXm Query Transaction by the Patient Identifier Cross-reference Manager"
+Description: "Audit Event for PIXm Query Transaction ITI-83 by the Patient Identifier Cross-reference Manager"
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * type = http://dicom.nema.org/resources/ontology/DCM#110112 "Query"

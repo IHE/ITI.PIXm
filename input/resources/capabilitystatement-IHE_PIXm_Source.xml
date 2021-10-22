@@ -20,7 +20,12 @@
 			<value value="http://ihe.net"/> 
 		</telecom> 
 	</contact> 
-	<description value="CapabilityStatement for Source Actor in the IHE IT Infrastructure Technical Framework Supplement IHE PIXm." />  
+	<description value="The Patient Identity Source Actor CapabililtyStatement expresses the requirements that can be utilized while being compliant.
+- using FHIR R4
+- using json or xml encoding
+- using conditional update for [ITI-104]
+- using conditional delete for [ITI-104] if Remove Patient Option is supported
+- provide supported Patient profile for crosss-referencing for [ITI-104]" />
 	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" /> 
 	<kind value="requirements" />
 	<fhirVersion value="4.0.1" />
@@ -38,18 +43,13 @@
 			<type value="Patient" />
 			<supportedProfile value="http://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Patient" />
 			<interaction>
-				<code value ="create" />
-				<documentation value="conditional create for [ITI-104]" />
-			</interaction>
-			<interaction>
 				<code value ="update" />
 				<documentation value="conditional update for [ITI-104]" />
 			</interaction>
 			<interaction>
 				<code value ="delete" />
-				<documentation value="conditional delete for [ITI-104]" />
+				<documentation value="conditional delete for [ITI-104] for Remove Patient Option" />
 			</interaction>
-			<conditionalCreate value="true" />
 			<conditionalUpdate value="true" />
 			<conditionalDelete value="single" />
 		</resource>  

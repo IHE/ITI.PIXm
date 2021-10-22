@@ -1,7 +1,7 @@
 Instance: ex-auditPixmFeed-source
 InstanceOf: IHE.PIXm.Feed.Audit.Source
 Title: "Audit Example of ITI-104 at Source"
-Description: "Audit Event for Patient Identity Feed FHIR Transaction by the Patient Identity Source"
+Description: "Audit Event for Patient Identity Feed FHIR Transaction ITI-104 by the Patient Identity Source"
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * type = http://dicom.nema.org/resources/ontology/DCM#110110 "Patient Record"
@@ -32,7 +32,7 @@ Usage: #example
 Instance: ex-auditPixmFeed-manager
 InstanceOf: IHE.PIXm.Feed.Audit.Manager
 Title: "Audit Example of ITI-104 at Manager"
-Description: "Audit Event for Patient Identity Feed Transaction FHIR by the Patient Identifier Cross-reference Manager"
+Description: "Audit Event for Patient Identity Feed FHIR Transaction ITI-104 by the Patient Identifier Cross-reference Manager"
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * type = http://dicom.nema.org/resources/ontology/DCM#110110 "Patient Record"

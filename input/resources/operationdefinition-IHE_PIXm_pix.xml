@@ -26,7 +26,9 @@
       <value value="secretary@ihe.net"/>
     </telecom>
   </contact>
-  <description value="Get Corresponding Identifiers Operation (IHE PIXm)"/>
+	<description value="The OperationDefinition defines the In and Output Parameters for the $ihe-pix operation
+- Input: sourceIdentifier, targetSystem and _format
+- Opuut: targetIdentifier, targetId" />
   <code value="ihe-pix"/>
   <resource value="Patient"/>
   <system value="false"/>

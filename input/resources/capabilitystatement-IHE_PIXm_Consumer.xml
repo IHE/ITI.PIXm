@@ -20,7 +20,10 @@
 			<value value="http://ihe.net"/> 
 		</telecom> 
 	</contact> 
-	<description value="CapabilityStatement for Consumer Actor in the IHE IT Infrastructure Technical Framework Supplement IHE PIXm." />  
+	<description value="The Patient Identifier Cross-reference Consumer Actor CapabililtyStatement expresses the requirements that can be utilized while being compliant.
+- using FHIR R4
+- using json or xml encoding
+- query the $ihe-pix operation" />
 	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" /> 
 	<kind value="requirements" />
 	<fhirVersion value="4.0.1" />

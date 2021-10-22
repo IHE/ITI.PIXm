@@ -20,7 +20,13 @@
 			<value value="http://ihe.net"/> 
 		</telecom> 
 	</contact> 
-	<description value="CapabilityStatement for Manager Actor in the IHE IT Infrastructure Technical Framework Supplement IHE PIXm." />  
+	<description value="The Patient Identifier Cross-reference Manager CapabililtyStatement expresses the requirements that shall be provided.
+- using FHIR R4
+- using json and xml encoding
+- support the $ihe-pix operation
+- support conditional update for [ITI-104]
+- support conditional delete for [ITI-104] if Remove Patient Option is supported
+- should use a security framework. Recommend IHE-IUA or SMART-on-FHIR" />  
 	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" /> 
 	<kind value="requirements" />
 	<fhirVersion value="4.0.1" />
@@ -38,16 +44,12 @@
 			<type value="Patient" />
 			<supportedProfile value="http://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Patient" />
 			<interaction>
-				<code value ="create" />
-				<documentation value="conditional create for [ITI-104]" />
-			</interaction>
-			<interaction>
 				<code value ="update" />
 				<documentation value="conditional update for [ITI-104]" />
 			</interaction>
 			<interaction>
 				<code value ="delete" />
-				<documentation value="conditional delete for [ITI-104]" />
+				<documentation value="conditional delete for [ITI-104] for Remove Patient Option" />
 			</interaction>
 			<conditionalCreate value="true" />
 			<conditionalUpdate value="true" />
