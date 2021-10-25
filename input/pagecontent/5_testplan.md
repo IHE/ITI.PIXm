@@ -9,12 +9,12 @@ PIXm specifies two transactions:  A patient identity feed transaction between PI
 
 ## High-level Test Scope
 
-### ITI-83 Patient Identifiers Cross-reference Query for Mobile 
+### Patient Identifiers Cross-reference Query for Mobile  [ITI-78]
 
 * PIX Consumer initiates ITI-83 queries for cross-referenced patients
 * PIX Manager responds to queries, as appropriate
 
-### ITI-104 Patient Identity Feed FHIR
+### Patient Identity Feed FHIR [ITI-104]
 
 * PIX Source initiates ITI-104 feed for the four messages in the transaction:
   * Add patient
@@ -46,15 +46,17 @@ Unit testing this context entails testing a SUT with a simulator or validator to
 * Actors tested:  
   * PIX Consumer, PIX Manager for ITI-83:
     * PIX Consumer test definition: [PM_PIX_Query-Patient_Identity_Consumer](https://gazelle.ihe.net/content/pmpixquery-patientidentityconsumer) 
-    * PIX Manager test definition: [PM_PIX_Query-PIX_Manager](https://gazelle.ihe.net/content/pmpixquery-pixmanager}
+    * PIX Manager test definition: [PM_PIX_Query-PIX_Manager](https://gazelle.ihe.net/content/pmpixquery-pixmanager)
   * (future) PIX Source, PIX Manager for ITI-104
 
 #### Gazelle External Validation Service (aka "EVS Client") - Validator
 
 * Provider:  INRIA (Rennes, France), [KEREVAL](https://www.kereval.com/), and Mallinckrodt Institute of Radiology (Saint Louis, USA) 
-* [Tool location](https://gazelle.ihe.net/EVSClient/home.seam)
-* [Documentation](https://gazelle.ihe.net/content/evsfhirvalidation)
+* Gazelle EVSClient online: https://gazelle.ihe.net/EVSClient/home.seam
+* [User Manual](https://gazelle.ihe.net/gazelle-documentation/EVS-Client/user.html)
+* [Tool support](https://gazelle.ihe.net/jira/browse/EVSCLT)
 * Scope of testing: validation using StructureDefinitions for PIXm
+* Test documentation: (https://gazelle.ihe.net/content/evsfhirvalidation
 * Other notes: StructureDefinitions and other conformance resources are provided within this Implementation Guide as an [npm package](package.tgz).
 
 ## Integration Test Procedure (Interoperability Testing)
