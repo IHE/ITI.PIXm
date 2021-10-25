@@ -9,12 +9,12 @@ PIXm specifies two transactions:  A patient identity feed transaction between PI
 
 ## High-level Test Scope
 
-### Patient Identifiers Cross-reference Query for Mobile  [ITI-78]
+### Patient Identifiers Cross-reference Query for Mobile  [ITI-83](https://github.com/IHE/ITI.PIXm/blob/master/input/pagecontent/ITI-83.html)
 
 * PIX Consumer initiates ITI-83 queries for cross-referenced patients
 * PIX Manager responds to queries, as appropriate
 
-### Patient Identity Feed FHIR [ITI-104]
+### Patient Identity Feed FHIR [ITI-104](https://github.com/IHE/ITI.PIXm/blob/master/input/pagecontent/ITI-104.html)
 
 * PIX Source initiates ITI-104 feed for the four messages in the transaction:
   * Add patient
