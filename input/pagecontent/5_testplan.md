@@ -5,7 +5,7 @@ This Test Plan page is a prototype.   We expect the maturity of the content will
 
 ## Introduction
 
-PIXm specifies two transactions:  A patient identity feed transaction between PIX Source and PIX Manager, and a query transaction between a PIX Consumer and the PIX Managers.  Each transaction specifies semantics of the request and response messages exchanged between actors.  The PIXm test plan focuses on these semantics and on the expected actions on the server-side actor.
+PIXm specifies two transactions:  A patient identity feed transaction between PIX Source and PIX Manager, and a query transaction between a PIX Consumer and a PIX Manager.  Each transaction specifies semantics of the request and response messages exchanged between actors.  The PIXm test plan focuses on these semantics and on the expected actions on the server-side actor.
 
 ## High-level Test Scope
 
@@ -16,20 +16,20 @@ PIXm specifies two transactions:  A patient identity feed transaction between PI
 
 ### ITI-104 Patient Identity Feed FHIR
 
-* PIX Source initiates ITI-104 feed for:
+* PIX Source initiates ITI-104 feed for the four messages in the transaction:
   * Add patient
   * Revise patient
   * Resolve patient duplicates
-  * Remove patient 
-* PIX Manager responds according to expected actions in ITI-104 for
+  * Remove patient (if the Source supports the Remove Patient Option)
+* PIX Manager responds according to expected actions in ITI-104 for:
   * Add patient
   * Revise patient
   * Resolve patient duplicates
-  * Remove patient (if supported)
+  * Remove patient (if the Manager supports the Remove Patient Option)
 
 ### Options
 
-* none
+* Remove Patient
 
 ## Unit Test Procedure (Conformance Testing)
 
@@ -43,7 +43,7 @@ Unit testing this context entails testing a SUT with a simulator or validator to
 * Gazelle Patient Manager [online](https://gazelle.ihe.net/PatientManager/home.seam)
 * [User Manual](https://gazelle.ihe.net/gazelle-documentation/Patient-Manager/user.html)
 * [Tool support](https://gazelle.ihe.net/jira/projects/PAM)
-* Actors (options) tested:  
+* Actors tested:  
   * PIX Consumer, PIX Manager for ITI-83:
     * PIX Consumer test definition: [PM_PIX_Query-Patient_Identity_Consumer](https://gazelle.ihe.net/content/pmpixquery-patientidentityconsumer) 
     * PIX Manager test definition: [PM_PIX_Query-PIX_Manager](https://gazelle.ihe.net/content/pmpixquery-pixmanager}
@@ -65,7 +65,12 @@ The tests listed below are defined in [Gazelle Master Model](https://gazelle.ihe
 
 Interoperability Tests:
 
-* ITI-83_(PIXm)_Search_Read
-  * Assumes a pre-defined set of patients (with demographics expected to be cross-referenced PIX Manager actor
-* (future) PIXm_PatientMgmt_and_Discovery
+* ITI-83_PIXm_Search_Read
+  * Assumes a pre-defined set of patients (with demographics expected to be cross-referenced PIX Manager actor)
+
+* (future) PIXm_Remove_Patient
+  * Applies to Source and Manager actors that support the Remove Patient Option
+  * Covers the remove patient message in ITI-83
+* (future) PIXm_PatientMgmt_and_Discovery   
+  * Covers the add, revise, and resolve duplicates messages in ITI-104, with follow-up ITI-83 queries
   * Intent is to model this on a similar, existing test for PMIR, to exercise a workflow with ITI-104 and ITI-83
