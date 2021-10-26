@@ -1,13 +1,7 @@
 
-<!-- ## Patient Identifier Cross-reference for Mobile Profile (PIXm) -->
+<!-- ## Patient Identifier Cross-referencing for mobile Profile (PIXm)  -->
 
 The ***Patient Identifier Cross-reference for Mobile (PIXm) Profile*** provides RESTful transactions for mobile and lightweight browser-based applications to create, update and delete patient records in a Patient Identifier Cross-reference Manager and to query the Patient Identifier Cross-reference Manager for a patient’s cross-domain identifiers.
-
-The PIXm Profile requires the Patient Identifier Cross-reference Manager to implement rules and algorithms to cross-reference patient records from different domains. These rules/algorithms are not specified by this profile.
-
-The HTTP RESTful transactions in PIXm are an alternative to the transactions defined in the [PIX](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) and [PIXV3](https://profiles.ihe.net/ITI/TF/Volume1/ch-23.html)profiles.
-
-This profile does not assume the Patient Identifier Cross-reference Manager to have the ability to act as a full-fledged HL7<sup>®</sup> FHIR<sup>®</sup> server. PIXm transactions can be used to provide a RESTful interface to a PIX or PIXV3 Patient Identifier Cross-reference Manager without providing other FHIR services.
 
 <div markdown="1" class="stu-note">
 
@@ -28,21 +22,21 @@ This guide is organized into four main sections:
    4. [41.4 PIXm Overview](volume-1.html#1414-pixm-overview)
    5. [41.5 PIXm Security Considerations](volume-1.html#1415-pixm-security-considerations)
    6. [41.6 PIXm Cross Profile Considerations](volume-1.html#1416-pixm-cross-profile-considerations)
-   7. [Test Plan](5_testplan.html)
 
 2. Volume 2: Transaction Detail
    1. [3.83 Patient Identifier Cross-reference Query [ITI-83]](ITI-83.html)
    2. [3.104 Patient Identity Feed FHIR [ITI-104]](ITI-104.html)
 
+3. [Test Plan](5_testplan.html)
+4. [Changes to other Profiles](other.html)
 
-Click on any of the links above, head on over the [table of contents](toc.html), or
-if you are looking for a specific artifact, check out the [index](artifacts.html).
+See also the [table of contents](toc.html) and the index of [artifacts](artifacts.html) defined as part of this implementation guide.
 
 ### Conformance Expectations
 
 IHE uses the normative words: Shall, Should, and May according to [standards conventions](https://profiles.ihe.net/GeneralIntro/ch-E.html).
 
-PIXm uses `Must Support` in StructureDefinitions with the definition found in [Appendix Z](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.10-profiling-conventions-for-constraints-on-fhir). This is equivalent to IHE use of **R2**.
+PIXm uses `Must Support` in StructureDefinitions with the definition found in [Appendix Z](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.10-profiling-conventions-for-constraints-on-fhir). This is equivalent to the IHE use of **R2** as defined in [Appendix Z](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.10-profiling-conventions-for-constraints-on-fhir).
 
 #### Download
 

@@ -1,5 +1,13 @@
 <div />
 
+The ***Patient Identifier Cross-reference for Mobile (PIXm) Profile*** provides RESTful transactions for mobile and lightweight browser-based applications to create, update and delete patient records in a Patient Identifier Cross-reference Manager and to query the Patient Identifier Cross-reference Manager for a patient’s cross-domain identifiers.
+
+The PIXm Profile requires the Patient Identifier Cross-reference Manager to implement rules and algorithms to cross-reference patient records from different domains. These rules/algorithms are not specified by this profile.
+
+The HTTP RESTful transactions in PIXm are an alternative to the transactions defined in the [PIX](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) and [PIXV3](https://profiles.ihe.net/ITI/TF/Volume1/ch-23.html) profiles.
+
+This profile does not assume the Patient Identifier Cross-reference Manager to have the ability to act as a full-fledged HL7<sup>®</sup> FHIR<sup>®</sup> server. PIXm transactions can be used to provide a RESTful interface to a PIX or PIXV3 Patient Identifier Cross-reference Manager without providing other FHIR services.
+
 ## 1:41.1 PIXm Actors, Transactions, and Content Modules
 
 ### 1:41.1.1 Actor Descriptions and Actor Profile Requirements
@@ -71,7 +79,7 @@ may support the optional transactions (labeled "O").
 </table>
 
 
-The Patient Identity Feed FHIR [ITI-104] and the Mobile Patient Identifier Cross-reference Query [ITI-83] transactions defined in this profile correspond to the transactions used in the PIX and PIXV3 Profiles (ITI TF-1: 5 and 23) and provide similar functionality.
+Note: The Patient Identity Feed FHIR [[ITI-104]](ITI-104.html) and the Mobile Patient Identifier Cross-reference Query [[ITI-83]](ITI-83.html) transactions defined in this profile correspond to the transactions used in the [PIX](https://profiles.ihe.net/ITI/TF/Volume1/ch-5.html) and [PIXV3](https://profiles.ihe.net/ITI/TF/Volume1/ch-23.html) Profiles (ITI TF-1: 5 and 23) and provide similar functionality.
 
 #### 1:41.1.1.1 Patient Identity Source
 The Patient Identity Source is the producer and publisher of patient identity data.
@@ -105,9 +113,9 @@ Table 41.2-1: PIXm Actors and Options
 
 | Actor                                       | Option Name               | Reference |
 | ------------------------------------------- | --------------------------| --------- |
-| Patient Identity Source                     | Remove Patient  | \--       |
+| Patient Identity Source                     | Remove Patient  | [1:41.2.1](#14121-remove-patient)  |
 | Patient Identifier Cross-reference Consumer | No options defined        | \--       |
-| Patient Identifier Cross-reference Manager  | Remove Patient  | \--       |
+| Patient Identifier Cross-reference Manager  | Remove Patient  | [1:41.2.1](#14121-remove-patient)  |
 {: .grid }
 
 
@@ -117,13 +125,13 @@ This option enables environments to implement a Patient Identifier Cross-referen
 identity data in an interoperable manner.
 
 A Patient Identity Source that supports this option shall implement the Patient Identity Feed FHIR [ITI-
-104] Remove Patient transaction defined in [ITI TF-2: 3.104.4.3](ITI-104.html#2310443-remove-patient).
+104] Remove Patient message defined in [ITI TF-2: 3.104.4.3](ITI-104.html#2310443-remove-patient).
 
 A Patient Identifier Cross-reference Manager that supports this option shall implement the Patient Identity Feed FHIR [ITI-
-104] Remove Patient transaction defined in [ITI TF-2: 3.104.4.3](ITI-104.html#2310443-remove-patient).
+104] Remove Patient message defined in [ITI TF-2: 3.104.4.3](ITI-104.html#2310443-remove-patient).
 
 A Patient Identifier Cross-reference Manager that supports this option shall claim the support of the Patient Identity Feed
-FHIR [ITI-104] Remove Patient transaction in the actors [Capability Statement](CapabilityStatement-IHE.PIXm.Manager.html).
+FHIR [ITI-104] Remove Patient message in the actors [Capability Statement](CapabilityStatement-IHE.PIXm.Manager.html).
 
 ## 1:41.3 PIXm Required Actor Groupings
 
@@ -138,7 +146,7 @@ Table 41.3-1: PIXm - Required Actor Groupings
 
 ## 1:41.4 PIXm Overview
 
-The ***Patient Identifier Cross-reference for Mobile Profile (PIXm)*** is intended to be used by lightweight applications
+The ***Patient Identifier Cross-referencing for mobile Profile (PIXm)*** is intended to be used by lightweight applications
 and mobile devices present in a broad range of healthcare enterprises (hospital, a clinic,
 a physician office, etc.).
 
