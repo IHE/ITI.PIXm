@@ -21,16 +21,8 @@
 IHE welcomes [New Issues](https://github.com/IHE/ITI.PIXm/issues/new/choose) from the GitHub community. 
 For those without GitHub access, issues may be submitted to the [Public Comment form](https://www.ihe.net/resources/public_comment/).
 
-As issues are submitted they will be managed on the [PDQm GitHub Issues](https://github.com/IHE/ITI.PIXm/issues), where discussion and workarounds may be found. These issues, when critical, will be processed using the normal [IHE Change Proposal](https://wiki.ihe.net/index.php/Category:CPs) management and balloting. 
+As issues are submitted they will be managed on the [PIXm GitHub Issues](https://github.com/IHE/ITI.PIXm/issues), where discussion and workarounds may be found. These issues, when critical, will be processed using the normal [IHE Change Proposal](https://wiki.ihe.net/index.php/Category:CPs) management and balloting. 
 It is important to note that as soon as a Change Proposal is approved, it carries the same weight as a published Implementation Guide (i.e., it is testable at an [IHE Connectathon](https://www.ihe.net/participate/connectathon/) from the time it is approved, even if it will not be integrated until several months later).
-
-#### List of questions to ask for the public review
-- For the [ITI-104] Patient Identity Feed FHIR it is proposed to use a RESTFul approach, e.g. to use Conditional Create / Update / Delete with the patient domain identifier. Please provide feedback during Public Comment if this approach is fine or indicate an alternative:
-  Alternative approaches discussed were:
-   1. Requiring the client to use id instead of identifiers for update/delete in a RESTFul transaction. Client could use $ihe-pix operation to get the id based on the domain identifier. 
-   2. Use a transaction Bundle for allowing multiple updates
-   3. Use a Message as PMIR is doing it with a MessageHeader in the [ITI-93](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf#page=26) transaction
-- Feedback to the open issue ***PIXm 020*** which targetId's to return from a Patient Identifier Cross-reference Manager and ***PIXm 021*** about transaction naming and implications.
 
 #### Open Issues and Questions
 These issues were known as part of the publication, and IHE invites comments.

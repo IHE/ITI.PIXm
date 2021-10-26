@@ -9,12 +9,12 @@ PIXm specifies two transactions:  A patient identity feed transaction between PI
 
 ## High-level Test Scope
 
-### Patient Identifiers Cross-reference Query for Mobile  [ITI-83](http://build.fhir.org/ig/IHE/ITI.PIXm/branches/master/ITI-83.html)
+### Patient Identifiers Cross-reference Query for Mobile  [ITI-83](ITI-83.html)
 
 * PIX Consumer initiates ITI-83 queries for cross-referenced patients
 * PIX Manager responds to queries, as appropriate
 
-### Patient Identity Feed FHIR [ITI-104](http://build.fhir.org/ig/IHE/ITI.PIXm/branches/master/ITI-104.html)
+### Patient Identity Feed FHIR [ITI-104](ITI-104.html)
 
 * PIX Source initiates ITI-104 feed for the four messages in the transaction:
   * Add patient
@@ -57,7 +57,7 @@ Unit testing this context entails testing a SUT with a simulator or validator to
 * [Tool support](https://gazelle.ihe.net/jira/browse/EVSCLT)
 * Scope of testing: validation using StructureDefinitions for PIXm
 * Test documentation: (https://gazelle.ihe.net/content/evsfhirvalidation
-* Other notes: StructureDefinitions and other conformance resources are provided in this Implementation Guide on the [Artifacts](http://build.fhir.org/ig/IHE/ITI.PIXm/branches/master/artifacts.html) page.
+* Other notes: StructureDefinitions and other conformance resources are provided in this Implementation Guide on the [Artifacts](artifacts.html) page.
 
 ## Integration Test Procedure (Interoperability Testing)
 
