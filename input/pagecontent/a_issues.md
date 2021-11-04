@@ -5,15 +5,15 @@
 - Integrated CP-ITI-1222, CP-ITI-1214, CP-ITI-1215, CP-ITI-1246 
 - Volume 1 Update Use Cases and introduced new Patient Identity Feed FHIRaccording to [work item](https://github.com/IHE/IT-Infrastructure/issues/147)
   - Added Security Considerations 
-- Volume 2 ITI-83  
+- Volume 2 [ITI-83]  
   - Added Parameter StructureDefinitions and OperationDefinition for $ihe-pix operation
   - Added Security Audit Considerations with AuditEvent profile / resource
-  - Added IHE Connectathon Samples for ITI-83
-- Volume 2 ITI-104
+  - Added IHE Connectathon Samples for [ITI-83]
+- Volume 2 [ITI-104]
    - New Patient Identity Feed FHIR [ITI-104] Transaction
    - Profile for specifying Patient elements used by Patient Identifier Cross-reference Manager to correlate identifiers
    - Added the Remove Patient message   
-   - Added IHE Connectathon samples ITI-104
+   - Added IHE Connectathon samples [ITI-104]
    - Added Security Audit Considerations with AuditEvent profile / resource
 
 ## Issues
@@ -29,7 +29,7 @@ These issues were known as part of the publication, and IHE invites comments.
 
 ***PIXm\_007***
 
-*Mobile Patient Identifier Cross-reference Query response &lt;assigner&gt; resource will be required, for cases where the Assigning authority is not an OID or UUID or URI*
+*Mobile Patient Identifier Cross-reference Query response &lt;assigner&gt; resource will be required, for cases where the Assigning authority is not an OID or UUID or URI.*
 
 *Do we want to use Assigner as an alternative field?*
 
@@ -57,11 +57,11 @@ proposed this would be returning part of the Patient resource content.*
 we anticipate that it will be added in a future revision.*
 
 ***PIXm 019***  
-*PIXm allows for the parameters in the operation to be a string URL. The IG builder, when creating the narrative, presumes that these are clickable links. yet in one example we have put in a URN OID. This is recorded as an [issue against the IG builder](https://github.com/HL7/fhir-ig-publisher/issues/296)*
+*PIXm allows for the parameters in the operation to be a string URL. The IG builder, when creating the narrative, presumes that these are clickable links. yet in one example we have put in a URN OID. This is recorded as an [issue against the IG builder](https://github.com/HL7/fhir-ig-publisher/issues/296).*
 
 ***PIXm 020***  
 *If a Patient Identifier Cross-reference Manager creates a "shadow copy" of the feeded patients it may return the created
-id's on the Patient Identifier Cross-reference Manager, e.g see [example](http://build.fhir.org/ig/IHE/ITI.PIXm/branches/master/Parameters-pixm-response-mohralice-red-all.json.html) 
+id's on the Patient Identifier Cross-reference Manager, e.g., see [example](http://build.fhir.org/ig/IHE/ITI.PIXm/branches/master/Parameters-pixm-response-mohralice-red-all.json.html) 
 where the Patient Identifier Cross-reference Manager created three id's for the three patients out ouf the three different Patient Identifier Domains ('Patient/Patient-MohrAlice-Red',Patient/Patient-MohrAlice-Green',Patient/Patient-MohrAlice-Blue') and returns now two targetId's in addition to the two identifiers (red id/identifier is excluded because the sourceIdentifier in Identity Domain Red is already provided in the query).* 
 
 *In addition a Patient Identifier Cross-reference Manager could create a 'golden patient' where all information
@@ -71,7 +71,7 @@ is consolidated by the Patient Identifier Cross-reference Manager rules and retu
 
 ***PIXm 021***
 *The naming for the Patient Identity Feed FHIR [ITI-104] transaction is in discussion. It might change
-depending is applicability to to other profiles, like the [IHE PMIR](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf)) profile. 
+depending is applicability to other profiles, like the [IHE PMIR](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf)) profile. 
 See [profile considerations/testing](https://gazelle.ihe.net/content/pmirconnectathontestpatients) of PIXm Patient Identifier Cross-Reference Manager and PMIR Patient Identity Registry.*
 
 ***PIXm 022***  
@@ -92,8 +92,8 @@ The $ihe-pix operation is considered the right approach for this profile.
 The $ihe-pix operation cannot be replaced with the $match operation, the $match operation is however considered as a proposal for a new version in PDQm.
 
 ***PIXm 017***  
-*ITI-83 references E.3 which is in [pdf](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16), see also [github issue](https://github.com/IHE/publications/issues/110).*
+*[ITI-83] references E.3 which is in [pdf](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16), see also [github issue](https://github.com/IHE/publications/issues/110).*
 
-***CP-ITI-1222, CP-ITI-1214, CP-ITI-1215*** - The sourceIdentifier parameter in the PIXm Query [ITI-83] can include both business identifier and FHIR Resource ids, and the parameter should be matched by the PIXm Manager against FHIR Resource ids (ie Patient.id) and the patient’s business identifiers (ie value(s) in Patient.identifier). Examples and error codes updated. 
+***CP-ITI-1222, CP-ITI-1214, CP-ITI-1215*** - The sourceIdentifier parameter in the PIXm Query [ITI-83] can include both business identifier and FHIR Resource ids, and the parameter should be matched by the PIXm Manager against FHIR Resource ids (i.e., Patient.id) and the patient’s business identifiers (i.e., value(s) in Patient.identifier). Examples and error codes updated. 
 
 </div>
