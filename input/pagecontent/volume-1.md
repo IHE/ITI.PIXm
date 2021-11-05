@@ -21,20 +21,20 @@ This profile does not assume the Patient Identifier Cross-reference Manager to h
   - [Patient Identity Cross-reference Query [ITI-83]](ITI-83.html)
   - [Patient Identity Feed FHIR [ITI-104]](ITI-104.html)
 
-Figure below shows the actors directly involved in the PIXm Profile and the relevant transactions between them.
+The figure below shows the actors directly involved in the PIXm Profile and the relevant transactions between them.
 
 <div>
 {%include ActorsAndTransactions.svg%}
 </div>
 <div style="clear: left" />
-**Figure: 41.1-1: PIXm Actor Diagram**
+**Figure: 1:41.1.1-1: PIXm Actor Diagram**
 
-Table 41.1-1 lists the transactions for each actor directly involved in the PIXm Profile.
+Table 1:41.1.1-1 lists the transactions for each actor directly involved in the PIXm Profile.
 To claim compliance with this
 profile, an actor shall support all required transactions (labeled "R") and
 may support the optional transactions (labeled "O").
 
-**Table 41.1-1: PIXm Profile - Actors and Transactions**
+**Table 1:41.1.1-1: PIXm Profile - Actors and Transactions**
 
 
 <table class="grid">
@@ -106,10 +106,10 @@ The following CapabilityStatements define the Actor capabilities
 ## 1:41.2 PIXm Actor Options
 
 Options that may be selected for each actor in this profile, if any, are
-listed in the Table 41.2-1. Dependencies between options when applicable
+listed in the Table 1:41.2-1. Dependencies between options when applicable
 are specified in notes.
 
-Table 41.2-1: PIXm Actors and Options
+**Table 1:41.2-1: PIXm Actors and Options**
 
 | Actor                                       | Option Name               | Reference |
 | ------------------------------------------- | --------------------------| --------- |
@@ -135,7 +135,7 @@ FHIR [ITI-104] Remove Patient message in the actors [Capability Statement](Capab
 
 ## 1:41.3 PIXm Required Actor Groupings
 
-Table 41.3-1: PIXm - Required Actor Groupings
+**Table 1:41.3-1: PIXm - Required Actor Groupings**
 
 | PIXm Actor                                  | Actor to be grouped with | Reference | Content Bindings Reference |
 | ------------------------------------------- | ------------------------ | --------- | -------------------------- |
@@ -199,7 +199,7 @@ This use-case has two Patient Identifier Domains
 </div>
 <div style="clear: left" />
 
-**Figure 1:41.4.2.1.2-1 : Use-case 1 example Patient Identiy Domains**
+**Figure 1:41.4.2.1-1 : Use-case 1 example Patient Identity Domains**
 
 ##### 1:41.4.2.1.1 Use Case Description
 
