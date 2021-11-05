@@ -1,7 +1,7 @@
 <div markdown="1" class="stu-note">
 
 ### Significant changes from PIXm, Rev 2.1:
-- FHIR Implementation Guide instead of [pdf - Rev. 2.1](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf)
+- FHIR Implementation Guide instead of [PDF - Rev. 2.1](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf)
 - Integrated CP-ITI-1222, CP-ITI-1214, CP-ITI-1215, CP-ITI-1246 
 - Volume 1 Update Use Cases and introduced new Patient Identity Feed FHIRaccording to [work item](https://github.com/IHE/IT-Infrastructure/issues/147)
   - Added Security Considerations 
@@ -92,7 +92,7 @@ The $ihe-pix operation is considered the right approach for this profile.
 The $ihe-pix operation cannot be replaced with the $match operation, the $match operation is however considered as a proposal for a new version in PDQm.
 
 ***PIXm 017***  
-*[ITI-83] references E.3 which is in [pdf](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16), see also [github issue](https://github.com/IHE/publications/issues/110).*
+*[ITI-83] references E.3 which is in [PDF](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16), see also [github issue](https://github.com/IHE/publications/issues/110).*
 
 ***CP-ITI-1222, CP-ITI-1214, CP-ITI-1215*** - The sourceIdentifier parameter in the PIXm Query [ITI-83] can include both business identifier and FHIR Resource ids, and the parameter should be matched by the PIXm Manager against FHIR Resource ids (i.e., Patient.id) and the patient’s business identifiers (i.e., value(s) in Patient.identifier). Examples and error codes updated. 
 
