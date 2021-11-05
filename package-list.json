@@ -12,10 +12,10 @@
       "current" : true
   },
  {
-  "version" : "2.3.0",  
+  "version" : "3.0.0",  
   "date" : "2021-11-05", 
   "desc" : "Trial Implementation",   
-  "path" : "http://profiles.ihe.net/ITI/PIXm/2.2.1",   
+  "path" : "http://profiles.ihe.net/ITI/PIXm/3.0.0",   
   "status" : "trial-use",
   "fhirversion" : "4.0.1",
   "sequence" : "Trial Implementation",
