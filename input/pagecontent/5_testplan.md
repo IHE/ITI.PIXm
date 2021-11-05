@@ -9,7 +9,7 @@ PIXm specifies two transactions: A patient identity feed transaction between PIX
 
 ## High-level Test Scope
 
-### Patient Identifiers Cross-reference Query for Mobile  [ITI-83](ITI-83.html)
+### Mobile Patient Identifier Cross-reference Query [[ITI-83]](ITI-83.html)
 
 * PIX Consumer initiates ITI-83 queries for cross-referenced patients
 * PIX Manager responds to queries, as appropriate
