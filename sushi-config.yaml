@@ -109,7 +109,7 @@ pages:
   volume-1.md:
     title: "Volume 1:41"
   ITI-83.md:
-    title: "2:3.83 Patient Identity Cross-reference Query [ITI-83]"
+    title: "2:3.83 Mobile Patient Identifier Cross-reference Query [ITI-83]"
   ITI-104.md:
     title: "2:3:104 Patient Identity Feed FHIR [ITI-104]"
   5_testplan.md:
