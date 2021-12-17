@@ -7,3 +7,8 @@ fsh-generated
 *.jar
 .DS_Store
 www/
+/_genonce.bat
+/_genonce.sh
+/_updatePublisher.sh
+/_gencontinuous.bat
+/_gencontinuous.sh
