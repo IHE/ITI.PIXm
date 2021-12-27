@@ -1,4 +1,5 @@
 @startuml
+skinparam svgDimensionStyle false
 hide footbox
 
 box Intensive Care domain
