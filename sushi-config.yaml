@@ -9,7 +9,7 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: IHE.ITI.PIXm
+id: ihe.iti.pixm
 canonical: http://profiles.ihe.net/ITI/PIXm
 version: 3.0.1
 fhirVersion: 4.0.1
