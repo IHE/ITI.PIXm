@@ -14,7 +14,7 @@
  {
   "version" : "3.0.2",
   "date" : "2022-03-01",
-  "desc" : "Trial Implementation",
+  "desc" : "Normative release for Trial Implementation - Technical Corrections and google analytics",
   "path" : "http://profiles.ihe.net/ITI/PIXm/3.0.2",
   "status" : "trial-use",
   "fhirversion" : "4.0.1",
