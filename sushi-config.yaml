@@ -10,7 +10,7 @@
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: ihe.iti.pixm
-canonical: http://profiles.ihe.net/ITI/PIXm
+canonical: https://profiles.ihe.net/ITI/PIXm
 version: 3.0.2
 #releaseLabel: ci-build
 releaseLabel: Trial-Implementation
