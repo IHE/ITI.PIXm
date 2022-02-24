@@ -2,11 +2,10 @@
 
 	<text><status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"> 
 		CapabilityStatement for Source Actor in the IHE IT Infrastructure Technical Framework Supplement 
-		<a href="http://wiki.ihe.net/index.php/PIXm">Patient Identifier Cross-referencing for mobile (PIXm)</a>. 
-		The IHE Profile text is normative, this conformance resource is informative. 
+		Patient Identifier Cross-referencing for mobile (PIXm).
 	</div></text> 
 	<id value="IHE.PIXm.Source" />
- 	<url value="http://profiles.ihe.net/ITI/PIXm/CapabilityStatement/IHE.PIXm.Source" />  
+ 	<url value="https://profiles.ihe.net/ITI/PIXm/CapabilityStatement/IHE.PIXm.Source" />  
  	<name value="IHE_PIXm_Source" />  
  	<title value="IHE ITI Patient Identifier Cross-referencing for mobile (PIXm) - Source (client)" />  
 	<status value="draft" />
@@ -41,7 +40,7 @@
 		</security>
 		<resource>
 			<type value="Patient" />
-			<supportedProfile value="http://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Patient" />
+			<supportedProfile value="https://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Patient" />
 			<interaction>
 				<code value ="update" />
 				<documentation value="conditional update for [ITI-104]" />

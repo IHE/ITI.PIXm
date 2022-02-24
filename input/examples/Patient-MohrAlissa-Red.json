@@ -3,7 +3,7 @@
   "id": "Patient-MohrAlissa-Red",
   "meta": {
     "profile": [
-      "http://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Patient"
+      "https://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Patient"
     ]
   },
   "identifier": [
