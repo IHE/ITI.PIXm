@@ -10,8 +10,11 @@
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: ihe.iti.pixm
-canonical: http://profiles.ihe.net/ITI/PIXm
-version: 3.0.1
+canonical: https://profiles.ihe.net/ITI/PIXm
+version: 3.0.2
+#releaseLabel: ci-build
+releaseLabel: Trial-Implementation
+date: 2022-03-01
 fhirVersion: 4.0.1
 name: IHE_PIXm
 title: Patient Identifier Cross-referencing for mobile (PIXm)
@@ -30,7 +33,8 @@ license: CC-BY-SA-4.0
 jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
 copyright: IHE http://www.ihe.net/Governance/#Intellectual_Property
 copyrightYear: 2020+
-releaseLabel: ci-build
+
+
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:

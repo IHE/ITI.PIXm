@@ -8,7 +8,7 @@
     <valueCode value="trial-use"/>
   </extension>
   <id value="IHE.PIXm.pix"/>
-  <url value="http://profiles.ihe.net/ITI/PIXm/OperationDefinition/IHE.PIXm.pix"/>
+  <url value="https://profiles.ihe.net/ITI/PIXm/OperationDefinition/IHE.PIXm.pix"/>
   <version value="2.0.0"/>
   <name value="IHE_PIXm_pix" />
   <title value="Get Corresponding Identifiers Operation"/>
@@ -35,9 +35,9 @@
   <type value="true"/>
   <instance value="false"/>
   <inputProfile
-                value="http://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Query.Parameters.In"/>
+                value="https://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Query.Parameters.In"/>
   <outputProfile
-                 value="http://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Query.Parameters.Out"/>
+                 value="https://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Query.Parameters.Out"/>
   <parameter>
     <name value="sourceIdentifier"/>
     <use value="in"/>

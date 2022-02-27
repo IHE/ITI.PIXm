@@ -2,11 +2,10 @@
 
 	<text><status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"> 
 		CapabilityStatement for Consumer Actor in the IHE IT Infrastructure Technical Framework Supplement 
-		<a href="http://wiki.ihe.net/index.php/PIXm">Patient Identifier Cross-referencing for mobile (PIXm)</a>. 
-		The IHE Profile text is normative, this conformance resource is informative. 
+		Patient Identifier Cross-referencing for mobile (PIXm). 
 	</div></text> 
 	<id value="IHE.PIXm.Consumer" />
- 	<url value="http://profiles.ihe.net/ITI/PIXm/CapabilityStatement/IHE.PIXm.Consumer" />  
+ 	<url value="https://profiles.ihe.net/ITI/PIXm/CapabilityStatement/IHE.PIXm.Consumer" />  
  	<name value="IHE_PIXm_Consumer" />  
  	<title value="IHE ITI Patient Identifier Cross-referencing for mobile (PIXm) - Consumer (client)" />  
 	<status value="draft" />
@@ -41,7 +40,7 @@
 			<type value="Patient" />
 			<operation>
 		  	  <name value="$ihe-pix"/>
-			  <definition value="http://profiles.ihe.net/ITI/PIXm/OperationDefinition/IHE_PIXm_pix"/>
+			  <definition value="https://profiles.ihe.net/ITI/PIXm/OperationDefinition/IHE_PIXm_pix"/>
 			</operation>
 		</resource>  
 	</rest>

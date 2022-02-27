@@ -1,7 +1,7 @@
 <Parameters xmlns="http://hl7.org/fhir">
     <id value="pixm-request-mohralice-red-all" />
     <meta>
-        <profile value="http://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Query.Parameters.In" />
+        <profile value="https://profiles.ihe.net/ITI/PIXm/StructureDefinition/IHE.PIXm.Query.Parameters.In" />
     </meta>
     <parameter>
         <name value="sourceIdentifier" />
