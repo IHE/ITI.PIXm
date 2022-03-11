@@ -1,6 +1,6 @@
 {
  "package-id" : "ihe.iti.pixm",
- "title" : "IHE Patient Identifier Cross-referencing for Mobile",
+ "title" : "IHE Patient Identifier Cross-referencing for Mobile (PIXm)",
  "canonical" : "https://profiles.ihe.net/ITI/PIXm",
  "introduction" : "## The IHE Patient Identifier Cross-referencing for Mobile (PIXm)\r\nThis IHE Implementation Guide provides RESTful transactions for mobile and lightweight browser-based applications to create, update and delete Patient Resources in a Patient Identifier Cross-reference Manager and to query the Patient Identifier Cross-reference Manager for a list of patient identifiers assigned to the same patient person by the Patient Identifier Cross-reference Manager.",
  "category": "Administration",
