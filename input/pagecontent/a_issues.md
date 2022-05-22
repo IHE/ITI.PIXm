@@ -1,5 +1,11 @@
 <div markdown="1" class="stu-note">
 
+### Significant changes since MHD Version 3.0
+- changed to AuditEvent profiling leveraging [Basic Audit Log Patterns (BALP) Release 1.1.0](https://profiles.ihe.net/ITI/BALP/index.html)
+  - changes to RESTful type, and query subtype
+  - ITI-83 starts with RESTful Query, overriding the type from REST to QUERY
+  - ITI-104 expands out to the specific REST operations from BasicAudit
+  
 ### Significant changes from PIXm, Rev 2.1:
 - FHIR Implementation Guide instead of [PDF - Rev. 2.1](https://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf)
 - Integrated CP-ITI-1222, CP-ITI-1214, CP-ITI-1215, CP-ITI-1246 
