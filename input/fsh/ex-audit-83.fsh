@@ -6,7 +6,7 @@ Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * type = http://dicom.nema.org/resources/ontology/DCM#110112 "Query"
 * action = #E
-* subtype = urn:ihe:event-type-code#ITI-83 "Mobile Patient Identifier Cross-reference Query"
+* subtype[iti83] = urn:ihe:event-type-code#ITI-83 "Mobile Patient Identifier Cross-reference Query"
 //* severity = #Informational
 * recorded = 2021-07-13T19:17:32Z
 * outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
@@ -41,7 +41,7 @@ Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * type = http://dicom.nema.org/resources/ontology/DCM#110112 "Query"
 * action = #E
-* subtype = urn:ihe:event-type-code#ITI-83 "Mobile Patient Identifier Cross-reference Query"
+* subtype[iti83] = urn:ihe:event-type-code#ITI-83 "Mobile Patient Identifier Cross-reference Query"
 //* severity = #Informational
 * recorded = 2021-07-13T19:17:32Z
 * outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
