@@ -294,9 +294,7 @@ See [ITI TF-2: Appendix Z.8 “Mobile Security Considerations”](https://profil
 
 #### 2:3.83.5.1 Security Audit Considerations
 
-The Security audit criteria are similar to those for the [PIX Query
-[ITI-9]](https://profiles.ihe.net/ITI/TF/Volume2/ITI-9.html) as this transaction discloses the same type of patient
-information. 
+The Security audit logging will conform to the RESTful interactions following [IHE-BALP Basic Audit Logging Patterns](https://profiles.ihe.net/ITI/BALP/index.html). 
 
 ##### 2:3.83.5.1.1 Patient Identifier Cross-reference Consumer Audit
 
@@ -319,3 +317,8 @@ scope: ITI-83
 ```
 
 This scope request authorizes the full [ITI-83] transaction. This scope implicitly requests patient-specific queries for getting corresponding identifiers. Further scope refinement is allowed in realm or project-specific situations; these scopes would be in addition to the scope defined here.
+
+##### 2:3.83.5.2.1 AuditEvent augmentation
+
+The Security audit logging interactions should be augmented following [IHE-BALP Basic Audit Logging Patterns](https://profiles.ihe.net/ITI/BALP/index.html), to include agent details [from the OAuth Security token](https://profiles.ihe.net/ITI/BALP/content.html#3575-oauth-security-token).
+

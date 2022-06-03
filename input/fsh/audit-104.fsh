@@ -46,6 +46,7 @@ Defines constraints on the AuditEvent Resource to record when a Patient Identity
   - [Resolve Duplicate Patient](ITI-104.html#2310442-resolve-duplicate-patient)
 - Patient Identity Cross-reference Manager knows the requested conditional create is a create, so records this as an create.
 - Build off of the IHE BasicAudit PatientCreate event
+  - A generic FHIR server might not distinguish an ITI-104 
 - add the ITI-104 as a subtype
 - server is Patient Identifier Source
 - server is Patient Identifier Cross-reference Manager
@@ -83,6 +84,7 @@ Defines constraints on the AuditEvent Resource to record when a Patient Identity
   - [Resolve Duplicate Patient](ITI-104.html#2310442-resolve-duplicate-patient)
 - Patient Identity Cross-reference Manager knows the requested conditional create is an update, so records this as an update.
 - Build off of the IHE BasicAudit PatientUpdate event
+  - A generic FHIR server might not distinguish an ITI-104 
 - add the ITI-104 as a subtype
 - server is Patient Identifier Source
 - server is Patient Identifier Cross-reference Manager
