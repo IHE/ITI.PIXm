@@ -8,9 +8,9 @@
  	<url value="https://profiles.ihe.net/ITI/PIXm/CapabilityStatement/IHE.PIXm.Manager" />  
  	<name value="IHE_PIXm_Manager" />  
  	<title value="IHE ITI Patient Identifier Cross-referencing for mobile (PIXm) - Manager (server)" />  
-	<status value="draft" />
+	<status value="active" />
 	<experimental value="false" />
- 	<date value="2019-07-05" />  
+ 	<date value="2022-05-25" />  
 	<publisher value="Integrating the Healthcare Enterprise (IHE)" />
 	<contact> 
 		<name value="IHE"/> 

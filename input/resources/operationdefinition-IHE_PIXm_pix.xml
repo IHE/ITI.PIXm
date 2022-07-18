@@ -12,9 +12,9 @@
   <version value="2.0.0"/>
   <name value="IHE_PIXm_pix" />
   <title value="Get Corresponding Identifiers Operation"/>
-  <status value="draft"/>
+  <status value="active"/>
   <kind value="operation"/>
-  <date value="2019-07-05"/>
+ 	<date value="2022-05-25" />  
   <publisher value="Integrating the Healthcare Enterprise (IHE)"/>
   <contact>
     <telecom>
@@ -28,7 +28,7 @@
   </contact>
 	<description value="The OperationDefinition defines the In and Output Parameters for the $ihe-pix operation
 - Input: sourceIdentifier, targetSystem and _format
-- Opuut: targetIdentifier, targetId" />
+- Output: targetIdentifier, targetId" />
   <code value="ihe-pix"/>
   <resource value="Patient"/>
   <system value="false"/>
