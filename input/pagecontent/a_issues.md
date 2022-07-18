@@ -51,11 +51,6 @@ of the Patient. Concern is that PIXm security model covers identifiers
 (reference to Patient is an identifier in FHIR), but by expanding as
 proposed this would be returning part of the Patient resource content.*
 
-
-***PIXm 018***  
-*PIXm does not yet define a FHIR equivalent for the transactions  PIX Update Notification [ITI-10] and PIXV3 Update Notification [ITI-46], 
-we anticipate that it will be added in a future revision.*
-
 ***PIXm 019***  
 *PIXm allows for the parameters in the operation to be a string URL. The IG builder, when creating the narrative, presumes that these are clickable links. yet in one example we have put in a URN OID. This is recorded as an [issue against the IG builder](https://github.com/HL7/fhir-ig-publisher/issues/296).*
 
