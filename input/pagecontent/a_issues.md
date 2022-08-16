@@ -62,11 +62,11 @@ proposed this would be returning part of the Patient resource content.*
 
 ***PIXm 020***  
 *If a Patient Identifier Cross-reference Manager creates a "shadow copy" of the feeded patients it may return the created
-id's on the Patient Identifier Cross-reference Manager, e.g., see [example](http://build.fhir.org/ig/IHE/ITI.PIXm/branches/master/Parameters-pixm-response-mohralice-red-all.json.html) 
+id's on the Patient Identifier Cross-reference Manager, e.g., see [example](Parameters-pixm-response-mohralice-red-all.json.html) 
 where the Patient Identifier Cross-reference Manager created three id's for the three patients out ouf the three different Patient Identifier Domains ('Patient/Patient-MohrAlice-Red',Patient/Patient-MohrAlice-Green',Patient/Patient-MohrAlice-Blue') and returns now two targetId's in addition to the two identifiers (red id/identifier is excluded because the sourceIdentifier in Identity Domain Red is already provided in the query).* 
 
 *In addition a Patient Identifier Cross-reference Manager could create a 'golden patient' where all information
-is consolidated by the Patient Identifier Cross-reference Manager rules and return also this targetId [example](http://build.fhir.org/ig/IHE/ITI.PIXm/branches/master/Patient-Patient-MohrAlice.html). Could this id also be added in a $ihe-pix Query as a targetId ('Patient/Patient-MohrAlice')? Note: A golden patient is not the scope of PIXm, see the [IHE ITI PMIR](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf) profile.* 
+is consolidated by the Patient Identifier Cross-reference Manager rules and return also this targetId [example](Patient-Patient-MohrAlice.html). Could this id also be added in a $ihe-pix Query as a targetId ('Patient/Patient-MohrAlice')? Note: A golden patient is not the scope of PIXm, see the [IHE ITI PMIR](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf) profile.* 
 
 *There is continuing discussion in iti-tech if a "shadow copy" can be returned as a targetId, and if yes, if it should be marked by the Patient Identifier Cross-reference Manager in meta.source for these shadow copies or not.*
 

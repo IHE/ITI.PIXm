@@ -65,51 +65,51 @@ resources:
   Patient/Patient-MohrAlissa-Red:
     name: Patient Alissa Mohr (Red)
     description: Patient Mohr Alisa in Red Domain
-    exampleBoolean: true
+#    exampleBoolean: true
   Patient/Patient-MohrAlice:
     name: Patient Alice Mohr
     description: 'Patient Mohr Alice with all domain identifiers, note: this is just a consolidated identifier example will all identifiers from all the domains equivalent to a golden patient, however a golden patient is not the scope of PIXm, see the IHE PMIR profile' 
-    exampleBoolean: true
+#    exampleBoolean: true
   Patient/Patient-MohrAlice-Red:
     name: Patient Alice Mohr (Red)
     description: Patient Mohr Alice in Red Domain
-    exampleBoolean: true
+#    exampleBoolean: true
   Patient/Patient-MohrAlice-Green:
     name: Patient Alice Mohr (Green)
     description: Patient Mohr Alice in Green Domain
-    exampleBoolean: true
+#    exampleBoolean: true
   Patient/Patient-MohrAlice-Blue:
     name: Patient Alice Mohr (Blue)
     description: Patient Mohr Alice in Blue Domain
-    exampleBoolean: true
+#    exampleBoolean: true
   Patient/Patient-MaidenAlice-Red:
     name: Patient Maiden Alice (Red)
     description: Patient Maiden Alice in Red Domain
-    exampleBoolean: true
+#    exampleBoolean: true
   Patient/Patient-MohrMaidenResolvedByMohrMalice-Red:
     name: Patient Mohr Maiden Resolved by Mohr Alice (Red)
     description: Patient Mohr Maiden (Duplicate) Resolved by Mohr Alice Red Domain
-    exampleBoolean: true
+#    exampleBoolean: true
   Parameters/pixm-request-mohralice-red-all:
     name: PIXm Query with source identifier
     description: PIXm Query for Patient with source identifier in RED domain for Mohr Alice
-    exampleBoolean: true
+#    exampleBoolean: true
   Parameters/pixm-response-mohralice-red-all:
     name: PIXm Query Response for source identifier
     description: PIXm Query Response for Patient with source identifier in RED domain for Mohr Alice
-    exampleBoolean: true
+#    exampleBoolean: true
   Parameters/pixm-request-mohralice-red-to-blue:
     name: PIXm Query with source identifier and target system
     description: PIXm Query for Patient with source identifier in RED domain and query for BLUE domain for Mohr Alice
-    exampleBoolean: true
+#    exampleBoolean: true
   Parameters/pixm-response-mohralice-red-to-blue:
     name: PIXm Query Response for source identifier and target system specified
     description: PIXm Query Response for Patient with source identifier in RED domain and query for BLUE domain for Mohr Alice
-    exampleBoolean: true
+#    exampleBoolean: true
   Parameters/pixm-response-error-not-found:
     name: PIXm Query Response error message
     description: Error source identifier not found
-    exampleBoolean: true
+#    exampleBoolean: true
 
 pages:
   index.md:
