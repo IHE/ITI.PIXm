@@ -23,7 +23,7 @@ Defines constraints on the AuditEvent Resource to record when a Patient Identity
 * modifierExtension 0..0
 * subtype 2..
 * subtype contains iti104 1..1
-* subtype[iti104] = urn:ihe:event-type-code#ITI-104 "Patient Identity Feed FHIR" (exactly)
+* subtype[iti104] = urn:ihe:event-type-code#ITI-104 "Patient Identity Feed FHIR"
 * agent[client] obeys val-audit-source
 * agent[client] ^short = "Patient Identifier Source"
 * agent[server] ^short = "Patient Identifier Cross-reference Manager"
@@ -61,7 +61,7 @@ Defines constraints on the AuditEvent Resource to record when a Patient Identity
 * modifierExtension 0..0
 * subtype 2..
 * subtype contains iti104 1..1
-* subtype[iti104] = urn:ihe:event-type-code#ITI-104 "Patient Identity Feed FHIR" (exactly)
+* subtype[iti104] = urn:ihe:event-type-code#ITI-104 "Patient Identity Feed FHIR"
 * agent[server] obeys val-audit-source
 * agent[client] ^short = "Patient Identifier Source"
 * agent[server] ^short = "Patient Identifier Cross-reference Manager"
@@ -99,7 +99,7 @@ Defines constraints on the AuditEvent Resource to record when a Patient Identity
 * modifierExtension 0..0
 * subtype 2..
 * subtype contains iti104 1..1
-* subtype[iti104] = urn:ihe:event-type-code#ITI-104 "Patient Identity Feed FHIR" (exactly)
+* subtype[iti104] = urn:ihe:event-type-code#ITI-104 "Patient Identity Feed FHIR"
 * agent[server] obeys val-audit-source
 * agent[client] ^short = "Patient Identifier Source"
 * agent[server] ^short = "Patient Identifier Cross-reference Manager"
@@ -135,7 +135,7 @@ Defines constraints on the AuditEvent Resource to record when a Patient Identity
 * modifierExtension 0..0
 * subtype 2..
 * subtype contains iti104 1..1
-* subtype[iti104] = urn:ihe:event-type-code#ITI-104 "Patient Identity Feed FHIR" (exactly)
+* subtype[iti104] = urn:ihe:event-type-code#ITI-104 "Patient Identity Feed FHIR"
 * agent[client] obeys val-audit-source
 * agent[client] ^short = "Patient Identifier Source"
 * agent[server] ^short = "Patient Identifier Cross-reference Manager"
@@ -172,7 +172,7 @@ Defines constraints on the AuditEvent Resource to record when a Patient Identity
 * modifierExtension 0..0
 * subtype 2..
 * subtype contains iti104 1..1
-* subtype[iti104] = urn:ihe:event-type-code#ITI-104 "Patient Identity Feed FHIR" (exactly)
+* subtype[iti104] = urn:ihe:event-type-code#ITI-104 "Patient Identity Feed FHIR"
 * agent[server] obeys val-audit-source
 * agent[client] ^short = "Patient Identifier Source"
 * agent[server] ^short = "Patient Identifier Cross-reference Manager"

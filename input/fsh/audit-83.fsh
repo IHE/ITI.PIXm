@@ -16,7 +16,7 @@ Defines constraints on the AuditEvent (AuditMessage) Resource to record when a P
 * modifierExtension 0..0
 * subtype 2..
 * subtype contains iti83 1..1
-* subtype[iti83] = urn:ihe:event-type-code#ITI-83 "Mobile Patient Identifier Cross-reference Query" (exactly)
+* subtype[iti83] = urn:ihe:event-type-code#ITI-83 "Mobile Patient Identifier Cross-reference Query"
 * agent[client] obeys val-audit-source
 * agent[client] ^short = "Patient Identifier Cross-reference Consumer"
 * agent[server] ^short = "Patient Identifier Cross-reference Manager"
@@ -51,7 +51,7 @@ Defines constraints on the AuditEvent (AuditMessage) Resource to record when a P
 * modifierExtension 0..0
 * subtype 2..
 * subtype contains iti83 1..1
-* subtype[iti83] = urn:ihe:event-type-code#ITI-83 "Mobile Patient Identifier Cross-reference Query" (exactly)
+* subtype[iti83] = urn:ihe:event-type-code#ITI-83 "Mobile Patient Identifier Cross-reference Query"
 * agent[server] obeys val-audit-source
 * agent[client] ^short = "Patient Identifier Cross-reference Consumer"
 * agent[server] ^short = "Patient Identifier Cross-reference Manager"
