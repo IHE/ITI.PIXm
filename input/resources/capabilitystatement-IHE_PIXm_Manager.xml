@@ -1,25 +1,10 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir">
-<!--
-	<text><status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"> 
-		CapabilityStatement for Manager Actor in the IHE IT Infrastructure Technical Framework Supplement 
-		Patient Identifier Cross-referencing for mobile (PIXm). 
-	</div></text> 
--->
 	<id value="IHE.PIXm.Manager" />
  	<url value="https://profiles.ihe.net/ITI/PIXm/CapabilityStatement/IHE.PIXm.Manager" />  
  	<name value="IHE_PIXm_Manager" />  
  	<title value="IHE ITI Patient Identifier Cross-referencing for mobile (PIXm) - Manager (server)" />  
 	<status value="active" />
 	<experimental value="false" />
- 	<date value="2022-05-25" />  
-	<publisher value="Integrating the Healthcare Enterprise (IHE)" />
-	<contact> 
-		<name value="IHE"/> 
-		<telecom> 
-			<system value="url"/> 
-			<value value="http://ihe.net"/> 
-		</telecom> 
-	</contact> 
 	<description value="The Patient Identifier Cross-reference Manager CapabililtyStatement expresses the requirements that shall be provided.
 - using FHIR R4
 - using json and xml encoding
@@ -27,7 +12,6 @@
 - support conditional update for [ITI-104]
 - support conditional delete for [ITI-104] if Remove Patient Option is supported
 - should use a security framework. Recommend IHE-IUA or SMART-on-FHIR" />  
-	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" /> 
 	<kind value="requirements" />
 	<fhirVersion value="4.0.1" />
 	<format value="application/fhir+xml" />

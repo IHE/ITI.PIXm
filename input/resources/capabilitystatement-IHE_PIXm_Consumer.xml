@@ -1,31 +1,14 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir">
-
-<!--
-		<text><status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"> 
-		CapabilityStatement for Consumer Actor in the IHE IT Infrastructure Technical Framework Supplement 
-		Patient Identifier Cross-referencing for mobile (PIXm). 
-	</div></text> 
--->
 	<id value="IHE.PIXm.Consumer" />
  	<url value="https://profiles.ihe.net/ITI/PIXm/CapabilityStatement/IHE.PIXm.Consumer" />  
  	<name value="IHE_PIXm_Consumer" />  
  	<title value="IHE ITI Patient Identifier Cross-referencing for mobile (PIXm) - Consumer (client)" />  
 	<status value="active" />
 	<experimental value="false" />
- 	<date value="2022-05-25" />  
-	<publisher value="Integrating the Healthcare Enterprise (IHE)" />
-	<contact> 
-		<name value="IHE"/> 
-		<telecom> 
-			<system value="url"/> 
-			<value value="http://ihe.net"/> 
-		</telecom> 
-	</contact> 
 	<description value="The Patient Identifier Cross-reference Consumer Actor CapabililtyStatement expresses the requirements that can be utilized while being compliant.
 - using FHIR R4
 - using json or xml encoding
 - query the $ihe-pix operation" />
-	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" /> 
 	<kind value="requirements" />
 	<fhirVersion value="4.0.1" />
 	<format value="application/fhir+xml" />
