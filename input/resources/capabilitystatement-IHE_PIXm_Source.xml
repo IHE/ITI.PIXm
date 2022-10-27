@@ -1,9 +1,10 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir">
-
+<!--
 	<text><status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"> 
 		CapabilityStatement for Source Actor in the IHE IT Infrastructure Technical Framework Supplement 
 		Patient Identifier Cross-referencing for mobile (PIXm).
 	</div></text> 
+-->
 	<id value="IHE.PIXm.Source" />
  	<url value="https://profiles.ihe.net/ITI/PIXm/CapabilityStatement/IHE.PIXm.Source" />  
  	<name value="IHE_PIXm_Source" />  

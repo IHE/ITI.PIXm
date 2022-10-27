@@ -1,9 +1,11 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir">
 
-	<text><status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"> 
+<!--
+		<text><status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"> 
 		CapabilityStatement for Consumer Actor in the IHE IT Infrastructure Technical Framework Supplement 
 		Patient Identifier Cross-referencing for mobile (PIXm). 
 	</div></text> 
+-->
 	<id value="IHE.PIXm.Consumer" />
  	<url value="https://profiles.ihe.net/ITI/PIXm/CapabilityStatement/IHE.PIXm.Consumer" />  
  	<name value="IHE_PIXm_Consumer" />  
