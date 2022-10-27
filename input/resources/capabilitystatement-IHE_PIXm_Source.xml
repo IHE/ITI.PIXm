@@ -1,32 +1,16 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir">
-<!--
-	<text><status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"> 
-		CapabilityStatement for Source Actor in the IHE IT Infrastructure Technical Framework Supplement 
-		Patient Identifier Cross-referencing for mobile (PIXm).
-	</div></text> 
--->
 	<id value="IHE.PIXm.Source" />
  	<url value="https://profiles.ihe.net/ITI/PIXm/CapabilityStatement/IHE.PIXm.Source" />  
  	<name value="IHE_PIXm_Source" />  
  	<title value="IHE ITI Patient Identifier Cross-referencing for mobile (PIXm) - Source (client)" />  
 	<status value="active" />
 	<experimental value="false" />
- 	<date value="2022-05-25" />  
-	<publisher value="Integrating the Healthcare Enterprise (IHE)" />
-	<contact> 
-		<name value="IHE"/> 
-		<telecom> 
-			<system value="url"/> 
-			<value value="http://ihe.net"/> 
-		</telecom> 
-	</contact> 
 	<description value="The Patient Identity Source Actor CapabililtyStatement expresses the requirements that can be utilized while being compliant.
 - using FHIR R4
 - using json or xml encoding
 - using conditional update for [ITI-104]
 - using conditional delete for [ITI-104] if Remove Patient Option is supported
 - provide supported Patient profile for crosss-referencing for [ITI-104]" />
-	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" /> 
 	<kind value="requirements" />
 	<fhirVersion value="4.0.1" />
 	<format value="application/fhir+xml" />
