@@ -5,13 +5,13 @@
  	<title value="IHE ITI Patient Identifier Cross-referencing for mobile (PIXm) - Manager (server)" />  
 	<status value="active" />
 	<experimental value="false" />
-	<description value="The Patient Identifier Cross-reference Manager CapabililtyStatement expresses the requirements that shall be provided.
-- using FHIR R4
-- using json and xml encoding
-- support the $ihe-pix operation
-- support conditional update for [ITI-104]
-- support conditional delete for [ITI-104] if Remove Patient Option is supported
-- should use a security framework. Recommend IHE-IUA or SMART-on-FHIR" />  
+	<description value="The [Patient Identifier Cross-reference Manager Actor](volume-1.html#141113-patient-identifier-cross-reference-manager) CapabililtyStatement expresses the requirements that shall be provided.&#xA;
+- using FHIR R4&#xA;
+- using json and xml encoding&#xA;
+- support for [ITI-83](ITI-83.html) the $ihe-pix operation&#xA;
+- support conditional update for [ITI-104]&#xA;
+- support conditional delete for [ITI-104] if Remove Patient Option is supported&#xA;
+- should use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)" />  
 	<kind value="requirements" />
 	<fhirVersion value="4.0.1" />
 	<format value="application/fhir+xml" />
@@ -21,8 +21,7 @@
 		<mode value="server" />
 		<documentation value="PIXm server provides capability to query for Patient Identity Cross-reference matching a query parameters" />
 		<security>
-			<cors value="false" />
-			<description value="Recommend IUA or SMART" />
+			<description value="Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)" />
 		</security>
 		<resource>
 			<type value="Patient" />

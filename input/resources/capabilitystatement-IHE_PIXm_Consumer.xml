@@ -5,10 +5,11 @@
  	<title value="IHE ITI Patient Identifier Cross-referencing for mobile (PIXm) - Consumer (client)" />  
 	<status value="active" />
 	<experimental value="false" />
-	<description value="The Patient Identifier Cross-reference Consumer Actor CapabililtyStatement expresses the requirements that can be utilized while being compliant.
-- using FHIR R4
-- using json or xml encoding
-- query the $ihe-pix operation" />
+	<description value="The [Patient Identifier Cross-reference Consumer Actor](volume-1.html#141112-patient-identifier-cross-reference-consumer) CapabililtyStatement expresses the requirements that can be utilized while being compliant.&#xA;
+- using FHIR R4&#xA;
+- using json or xml encoding&#xA;
+- [ITI-83](ITI-83.html) the $ihe-pix operation&#xA;
+- should use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)" />
 	<kind value="requirements" />
 	<fhirVersion value="4.0.1" />
 	<format value="application/fhir+xml" />
@@ -18,8 +19,7 @@
 		<mode value="client" />
 		<documentation value="PIXm client queries for Patient Identity Cross-reference matching a query parameters" />
 		<security>
-			<cors value="false" />
-			<description value="Recommend IUA or SMART" />
+			<description value="Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)" />
 		</security>
 		<resource>
 			<type value="Patient" />
