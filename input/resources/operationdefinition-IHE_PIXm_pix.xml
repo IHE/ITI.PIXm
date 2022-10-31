@@ -26,8 +26,8 @@
       <value value="secretary@ihe.net"/>
     </telecom>
   </contact>
-	<description value="The OperationDefinition defines the In and Output Parameters for the $ihe-pix operation
-- Input: sourceIdentifier, targetSystem and _format
+	<description value="The OperationDefinition defines the In and Output Parameters for the $ihe-pix operation&#xA;
+- Input: sourceIdentifier, targetSystem and _format&#xA;
 - Output: targetIdentifier, targetId" />
   <code value="ihe-pix"/>
   <resource value="Patient"/>
