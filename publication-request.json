@@ -1,0 +1,13 @@
+{
+"package-id" : "ihe.iti.pixm",
+"version" : "3.0.3",
+"path" : "https://profiles.ihe.net/ITI/PIXm/3.0.3",
+"mode" : "milestone",
+"status" : "trial-use",
+"sequence": "Publication",
+"desc" : "Trial Implementation - quality, capabilityStatement improvements.",
+"descmd" : "Version 3.0.3
+- quality improvements
+- capabilityStatement improvements.",
+"changes" : "issues.html"
+}

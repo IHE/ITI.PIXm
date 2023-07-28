@@ -1,6 +1,16 @@
 <div markdown="1" class="stu-note">
 
-### Significant changes since MHD Version 3.0
+### Significant changes since PIXm Version 3.0.2
+
+Version 3.0.3
+
+- quality improvements
+- capabilityStatement improvements.
+
+### Significant changes since PIXm Version 3.0.0
+
+Version 3.0.2
+
 - changed to AuditEvent profiling leveraging [Basic Audit Log Patterns (BALP) Release 1.1.0](https://profiles.ihe.net/ITI/BALP/index.html)
   - changes to RESTful type, and query subtype
   - ITI-83 starts with RESTful Query, overriding the type from REST to QUERY
