@@ -126,6 +126,9 @@ pages:
     title: "Issues"
   other.md:
     title: "Other"
+  download.md:
+    title: "Download and Analysis"
+    generation: markdown
 
 menu:
   PIXm Home: index.html
@@ -140,6 +143,7 @@ menu:
   Volume 2:
     "Patient Identity Cross-reference Query [ITI-83]": ITI-83.html
     "Patient Identity Feed FHIR [ITI-104]": ITI-104.html
-  Test Plan: 5_testplan.html
   Artifact Index: artifacts.html
+  Test Plan: 5_testplan.html
   Other: other.html
+  Download: download.html
