@@ -287,6 +287,12 @@ Identifier Domain is not recognized in an `issue` having:
 | diagnostics | “targetSystem not found” |
 {: .grid }
 
+###### 2:3.83.4.2.2.5 Post Merge/Delete
+
+Based upon policy, when the Patient is deprecated or deleted, the response message shall return:
+
+- 200 OK, and return a Bundle with no patient resource, or
+- 404 Not Found
 
 ### 2:3.83.5 Security Considerations
 
