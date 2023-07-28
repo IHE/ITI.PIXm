@@ -7,6 +7,7 @@
 "sequence": "Publication",
 "desc" : "Trial Implementation - quality, capabilityStatement improvements.",
 "descmd" : "Version 3.0.3
+- add response recommendation for deleted or merged patient
 - quality improvements
 - capabilityStatement improvements.",
 "changes" : "issues.html"

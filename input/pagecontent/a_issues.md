@@ -4,6 +4,7 @@
 
 Version 3.0.3
 
+- add response recommendation for deleted or merged patient
 - quality improvements
 - capabilityStatement improvements.
 
