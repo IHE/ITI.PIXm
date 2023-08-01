@@ -27,10 +27,10 @@ This guide is organized into following sections:
   - [3.104 Patient Identity Feed FHIR [ITI-104]](ITI-104.html)
 - Other
   - [Test Plan](5_testplan.html)
-  - [Changes to other Profiles](other.html)
+  - [Changes to Other Documents](other.html)
   - [Download and Analysis](download.html)
 
-See also the [table of contents](toc.html) and the index of [artifacts](artifacts.html) defined as part of this implementation guide.
+Click on any of the links above, navigate the contents using the [Table of Contents](toc.html) or, if you are looking for a specific artifact, see the index of [Artifacts](artifacts.html).
 
 ### Conformance Expectations
 
