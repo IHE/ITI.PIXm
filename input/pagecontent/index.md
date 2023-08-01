@@ -5,7 +5,7 @@ The ***Patient Identifier Cross-reference for Mobile (PIXm) Profile*** provides 
 
 <div markdown="1" class="stu-note">
 
-| [Significant Changes, Open, and Closed Issues](a_issues.html) |
+| [Significant Changes, Open and Closed Issues](a_issues.html) |
 {: .grid}
 
 **[Search this IG](https://www.google.com/search?q=site%3Ahttps%3A%2F%2Fprofiles.ihe.net%2FITI%2FPIXm)**
