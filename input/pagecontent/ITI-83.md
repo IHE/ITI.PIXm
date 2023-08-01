@@ -152,7 +152,7 @@ The Patient Identifier Cross-reference Manager needs to return failure, or succe
 See [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) for more details on response format handling.
 
 The response message is a FHIR operation response
-(<http://hl7.org/fhir/operations.html#response>)
+(<http://hl7.org/fhir/operations.html#response>).
 
 On Failure, the response message is an HTTP status code of 4xx or 5xx
 indicates an error, and an OperationOutcome Resource shall be returned
@@ -165,8 +165,8 @@ On Success, the response message is an HTTP status code of 200 with a
 single Parameters Resource as shown in Table 2:3.83.4.2.2-1.
 
 The Parameters Resource shall include:
-- for each business identifier for the patient, one `parameter` element with `name="targetIdentifier"` and the `valueIdentifier` of the identifier. 
-- for each matching Patient Resource, one `parameter` element with `name="targetId"` and the `valueReference` of the Patient Resource.  
+- for each business identifier for the patient, one `parameter` element with `name="targetIdentifier"` and the `valueIdentifier` of the identifier 
+- for each matching Patient Resource, one `parameter` element with `name="targetId"` and the `valueReference` of the Patient Resource  
  
 The values may be returned in any order.
 The identifier value given in the `sourceIdentifier` parameter in the
