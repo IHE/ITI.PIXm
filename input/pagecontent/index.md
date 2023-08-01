@@ -13,9 +13,9 @@ The ***Patient Identifier Cross-reference for Mobile (PIXm) Profile*** provides 
 </div>
 
 ### Organization of This Guide
-This guide is organized into four main sections:
+This guide is organized into following sections:
 
-- Volume 1: Use-Case analysis
+- Volume 1: Use-Case Analysis
   - [41.1 PIXm Actors, Transactions, and Content Modules](volume-1.html#1411-pixm-actors-transactions-and-content-modules)
   - [41.2 PIXm Actor Options](volume-1.html#1412-pixm-actor-options)
   - [41.3 PIXm Required Actor Groupings](volume-1.html#1413-pixm-required-actor-groupings)
