@@ -5,7 +5,7 @@ The ***Patient Identifier Cross-reference for Mobile (PIXm) Profile*** provides 
 
 <div markdown="1" class="stu-note">
 
-| [Significant Changes, Open, and Closed Issues](a_issues.html) |
+| [Significant Changes, Open and Closed Issues](a_issues.html) |
 {: .grid}
 
 **[Search this IG](https://www.google.com/search?q=site%3Ahttps%3A%2F%2Fprofiles.ihe.net%2FITI%2FPIXm)**
@@ -13,9 +13,9 @@ The ***Patient Identifier Cross-reference for Mobile (PIXm) Profile*** provides 
 </div>
 
 ### Organization of This Guide
-This guide is organized into four main sections:
+This guide is organized into following sections:
 
-- Volume 1: Use-Case analysis
+- Volume 1: Use-Case Analysis
   - [41.1 PIXm Actors, Transactions, and Content Modules](volume-1.html#1411-pixm-actors-transactions-and-content-modules)
   - [41.2 PIXm Actor Options](volume-1.html#1412-pixm-actor-options)
   - [41.3 PIXm Required Actor Groupings](volume-1.html#1413-pixm-required-actor-groupings)
@@ -27,10 +27,10 @@ This guide is organized into four main sections:
   - [3.104 Patient Identity Feed FHIR [ITI-104]](ITI-104.html)
 - Other
   - [Test Plan](5_testplan.html)
-  - [Changes to other Profiles](other.html)
+  - [Changes to Other Documents](other.html)
   - [Download and Analysis](download.html)
 
-See also the [table of contents](toc.html) and the index of [artifacts](artifacts.html) defined as part of this implementation guide.
+Click on any of the links above, navigate the contents using the [Table of Contents](toc.html) or, if you are looking for a specific artifact, see the index of [Artifacts](artifacts.html).
 
 ### Conformance Expectations
 

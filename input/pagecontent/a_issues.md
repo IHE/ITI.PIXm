@@ -1,5 +1,7 @@
 <div markdown="1" class="stu-note">
 
+##Significant Changes
+
 ### Significant changes since PIXm Version 3.0.2
 
 Version 3.0.3
@@ -35,13 +37,15 @@ Version 3.0.2
 
 ## Issues
 
+### Submit an Issue
+
 IHE welcomes [New Issues](https://github.com/IHE/ITI.PIXm/issues/new/choose) from the GitHub community. 
 For those without GitHub access, issues may be submitted to the [Public Comment form](https://www.ihe.net/resources/public_comment/).
 
 As issues are submitted they will be managed on the [PIXm GitHub Issues](https://github.com/IHE/ITI.PIXm/issues), where discussion and workarounds may be found. These issues, when critical, will be processed using the normal [IHE Change Proposal](https://wiki.ihe.net/index.php/Category:CPs) management and balloting. 
 It is important to note that as soon as a Change Proposal is approved, it carries the same weight as a published Implementation Guide (i.e., it is testable at an [IHE Connectathon](https://www.ihe.net/participate/connectathon/) from the time it is approved, even if it will not be integrated until several months later).
 
-#### Open Issues and Questions
+### Open Issues and Questions
 These issues were known as part of the publication, and IHE invites comments.
 
 ***PIXm\_007***
@@ -89,7 +93,7 @@ See [profile considerations/testing](https://gazelle.ihe.net/content/pmirconnect
 ***PIXm 022***  
 *Should the Patient Identifier Cross-reference Manager have a requirement of filling in the assigningAuthority Name if the name is not provided in the Patient Identity Feed FHIR [ITI-104] as it is specified for PIX and PIX V3 Cross-reference Manager? [Issue](https://github.com/IHE/ITI.PIXm/issues/71)*
 
-#### Closed Issues
+### Closed Issues
 These issues have been decided and documented in the publication.
 
 ***CP-ITI-1118*** - asks if the return behavior is well aligned with PDQm.
