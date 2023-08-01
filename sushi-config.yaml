@@ -123,7 +123,7 @@ pages:
   5_testplan.md:
     title: "Test Plan"
   a_issues.md:
-    title: "Issues"
+    title: "Significant Changes & Issues"
   other.md:
     title: "Other"
   download.md:
