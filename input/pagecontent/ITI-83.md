@@ -232,7 +232,7 @@ identifier is not recognized in an issue having:
 | diagnostics | “sourceIdentifier Patient Identifier not found” |
 {: .grid }
 
-[example](Parameters-pixm-response-error-not-found.html):
+[example](OperationOutcome-pixm-response-error-not-found.html):
 ```xml
 <OperationOutcome>
   <text>
