@@ -1,14 +1,12 @@
 {
-"package-id" : "ihe.iti.pixm",
-"version" : "3.0.3",
-"path" : "https://profiles.ihe.net/ITI/PIXm/3.0.3",
-"mode" : "milestone",
-"status" : "trial-use",
-"sequence": "Publication",
-"desc" : "Trial Implementation - quality, capabilityStatement improvements.",
-"descmd" : "Version 3.0.3
-- add response recommendation for deleted or merged patient
-- quality improvements
-- capabilityStatement improvements.",
-"changes" : "issues.html"
-}
+    "package-id" : "ihe.iti.pixm",
+    "version" : "3.0.4",
+    "path" : "https://profiles.ihe.net/ITI/PIXm/3.0.4",
+    "mode" : "milestone",
+    "status" : "trial-use",
+    "sequence" : "Publication",
+    "desc" : "PIXm updated to use OperationOutcome for errors.",
+    "descmd" : "Clarified to use OperationOutcome directly for the error response example instead of within a Parameters resource.",
+    "changes" : "a_issues.html",
+    "first" : false
+  }

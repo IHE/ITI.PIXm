@@ -1,6 +1,11 @@
 <div markdown="1" class="stu-note">
 
 ##Significant Changes
+### Significant changes since PIXm Version 3.0.3
+
+Version 3.0.4
+
+- Removed Parameters from surrounding the error response example as it should only be the the OperationOutcome resource.
 
 ### Significant changes since PIXm Version 3.0.2
 
