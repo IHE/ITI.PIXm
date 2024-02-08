@@ -106,10 +106,7 @@ resources:
     name: PIXm Query Response for source identifier and target system specified
     description: PIXm Query Response for Patient with source identifier in RED domain and query for BLUE domain for Mohr Alice
 #    exampleBoolean: true
-  Parameters/pixm-response-error-not-found:
-    name: PIXm Query Response error message
-    description: Error source identifier not found
-#    exampleBoolean: true
+
 
 pages:
   index.md:

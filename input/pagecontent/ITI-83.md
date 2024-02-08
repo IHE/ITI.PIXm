@@ -232,22 +232,19 @@ identifier is not recognized in an issue having:
 | diagnostics | “sourceIdentifier Patient Identifier not found” |
 {: .grid }
 
-[example](Parameters-pixm-response-error-not-found.html):
+[example](OperationOutcome-pixm-response-error-not-found.html):
 ```xml
-<Parameters xmlns="http://hl7.org/fhir">
-  <parameter>
-    <name value="error"/>
-    <resource>
-      <OperationOutcome>
-        <issue>
-          <severity value="error"/>
-          <code value="not-found"/>
-          <diagnostics value="sourceIdentifier Patient Identifier not found"/>
-        </issue>
-      </OperationOutcome>
-    </resource>
-  </parameter>
-</Parameters>
+<OperationOutcome>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml"><p>sourceIdentifier Patient Identifier not found</p></div>
+  </text>
+  <issue>
+  <severity value="error" />
+    <code value="not-found" />
+    <diagnostics value="sourceIdentifier Patient Identifier not found" />
+  </issue>
+</OperationOutcome>
 ```
 
 ###### 2:3.83.4.2.2.3 Source Domain not recognized

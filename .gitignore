@@ -9,6 +9,5 @@ fsh-generated
 www/
 /_genonce.bat
 /_genonce.sh
-/_updatePublisher.sh
 /_gencontinuous.bat
 /_gencontinuous.sh
