@@ -1,6 +1,7 @@
 <div markdown="1" class="stu-note">
 
-##Significant Changes
+## Significant Changes
+
 ### Significant changes since PIXm Version 3.0.3
 
 Version 3.0.4
