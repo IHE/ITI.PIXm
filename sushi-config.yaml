@@ -14,7 +14,7 @@ canonical: https://profiles.ihe.net/ITI/PIXm
 version: 3.0.4
 #releaseLabel: ci-build
 releaseLabel: Trial-Implementation
-date: 2024-02-29
+date: 2024-02-23
 fhirVersion: 4.0.1
 name: IHE_PIXm
 title: Patient Identifier Cross-referencing for mobile (PIXm)
