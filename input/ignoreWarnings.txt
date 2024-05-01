@@ -3,7 +3,4 @@
 A definition for CodeSystem 'urn:ihe:event-type-code' could not be found, so the code cannot be validated
 
 # Understood these are draft
-Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/object-role|0.5.0
-
-Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/audit-entity-type|0.5.0
-Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/provenance-participant-type|0.1.0
+MSG_DRAFT
