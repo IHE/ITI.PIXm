@@ -1,12 +1,12 @@
 Profile:          PIXmPatient
-Parent:           Patient
+Parent:           IHE.PDQm.Patient
 Id:               IHE.PIXm.Patient
 Title:            "PIXm Patient constraints for Feed"
 Description:      "Profile for describing elements which have to be accepted by the Patient Identifier Cross-reference Manager for performing its cross-referencing function.
 - requiring name
 - mustSupport for identifier, name, telecom, gender birthDate, address and managingOrganization"
 * modifierExtension 0..0
-* identifier 0..* MS
+* identifier 1..* MS
 * name 1..* MS
 * telecom 0..* MS
 * gender 0..1 MS
