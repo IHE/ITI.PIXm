@@ -27,6 +27,7 @@ be played by the actors shown here:
 ### 2:3.83.3 Referenced Standards
 
 **FHIR-R4** [HL7 FHIR Release 4.0](http://www.hl7.org/FHIR/R4)
+[HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/)
 
 ### 2:3.83.4 Messages
 
