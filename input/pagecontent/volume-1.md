@@ -338,3 +338,6 @@ a corresponding [Remove Patient Option](#14121-remove-patient).
 
 ### 1:41.6.2 Use with the Internet User Authorization (IUA) Profile  
 The IUA Profile provides support for user authentication, app authentication, and authorization decisions. When PIXm actors are grouped with IUA actors there are additional security and privacy functionality enabled by this grouping. There are additional requirements and functionality enabled through scope definitions that are transaction-specific. See the Security Considerations sections of the PIXm-defined transactions for guidance on scope definition when grouped with IUA actors.
+
+### 1:41.6.3 Use with the HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation
+When a person’s gender identity, pronouns or recorded sex or gender are to be represented within the Patient resource, actors implementing this capability SHALL encode them using the R4-compatible versions of the extensions defined in the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/).

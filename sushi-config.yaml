@@ -39,6 +39,10 @@ dependencies:
     id: iheitibasicaudit
     uri: https://profiles.ihe.net/ITI/BALP/ImplementationGuide/ihe.iti.balp
     version: 1.1.x
+  ihe.iti.pdqm:  # CP-ITI-1297
+    id: iheitipdqm
+    uri: https://profiles.ihe.net/ITI/PDQm/ImplementationGuide/ihe.iti.pdqm
+    version: current 
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:
