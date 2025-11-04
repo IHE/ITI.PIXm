@@ -2,6 +2,13 @@
 
 ## Significant Changes
 
+### Significant changes since PIXm Version 3.0.4
+
+Version 3.1.0
+
+- QA fixes
+- CP-ITI-1297 - Sex and Gender Representation
+
 ### Significant changes since PIXm Version 3.0.3
 
 Version 3.0.4

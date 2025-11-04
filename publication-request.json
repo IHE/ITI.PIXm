@@ -1,12 +1,14 @@
 {
     "package-id" : "ihe.iti.pixm",
-    "version" : "3.0.4",
-    "path" : "https://profiles.ihe.net/ITI/PIXm/3.0.4",
+    "version" : "3.1.0",
+    "path" : "https://profiles.ihe.net/ITI/PIXm/3.1.0",
     "mode" : "milestone",
     "status" : "trial-use",
     "sequence" : "Publication",
-    "desc" : "PIXm updated to use OperationOutcome for errors.",
-    "descmd" : "Clarified to use OperationOutcome directly for the error response example instead of within a Parameters resource.",
+    "desc" : "PIXm Version 3.1.0 updated include Gender Harmony.",
+    "descmd" : "PIXm Version 3.1.0
+- QA fixes
+- CP-ITI-1297 - Sex and Gender Representation",
     "changes" : "a_issues.html",
     "first" : false
   }

@@ -11,9 +11,9 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: ihe.iti.pixm
 canonical: https://profiles.ihe.net/ITI/PIXm
-version: 3.0.5-current
-releaseLabel: ci-build
-#releaseLabel: Trial-Implementation
+version: 3.1.0
+#releaseLabel: ci-build
+releaseLabel: Trial-Implementation
 #date: 2024-02-23
 fhirVersion: 4.0.1
 name: IHE_PIXm
@@ -38,11 +38,11 @@ dependencies:
   ihe.iti.balp:
     id: iheitibasicaudit
     uri: https://profiles.ihe.net/ITI/BALP/ImplementationGuide/ihe.iti.balp
-    version: 1.1.x
-  ihe.iti.pdqm:  # CP-ITI-1297
+    version: 1.1.4
+  ihe.iti.pdqm:
     id: iheitipdqm
     uri: https://profiles.ihe.net/ITI/PDQm/ImplementationGuide/ihe.iti.pdqm
-    version: current 
+    version: 3.2.0
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:
