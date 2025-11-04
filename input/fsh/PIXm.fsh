@@ -2,8 +2,17 @@ Profile:          PIXmPatient
 Parent:           IHE.PDQm.Patient
 Id:               IHE.PIXm.Patient
 Title:            "PIXm Patient constraints for Feed"
-Description:      "Profile using PDQM Patient"
-
+Description:      "Profile for describing elements which have to be accepted by the Patient Identifier Cross-reference Manager for performing its cross-referencing function.
+- requiring name
+- mustSupport for identifier, name, telecom, gender birthDate, address and managingOrganization"
+* modifierExtension 0..0
+* identifier 1..* MS
+* name 1..* MS
+* telecom 0..* MS
+* gender 0..1 MS
+* birthDate 0..1 MS
+* address 0..* MS
+* managingOrganization 0..1 MS
 
 Profile:          PIXmPatientBirthDateRequired
 Parent:           IHE.PDQm.Patient
