@@ -83,10 +83,12 @@ GET [base]/Patient/$ihe-pix?sourceIdentifier=[token]{&targetSystem=[uri]}{&_form
 
 | Query parameter Name | Cardinality | Search Type | Description                                                                                                                                                                                                      |
 | -------------------- | ----------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| sourceIdentifier     | \[1..1\]    | token       | The Patient Identifier that will be used by the Patient Identifier Cross-reference Manager to find cross matching identifiers associated with the Patient. See Section 2:3.83.4.1.2.1. |
-| targetSystem         | \[0..\*\]   | uri         | The Assigning Authorities for the Patient Identifier Domains from which the returned identifiers shall be selected. See Section 2:3.83.4.1.2.2.                                                                    |
+| sourceIdentifier     | \[1..1\]    | token       | The Patient Identifier that will be used by the Patient Identifier Cross-reference Manager to find cross matching identifiers associated with the Patient. See [Section 3.83.4.1.2.1](ITI-83.html#23834121-source-patient-identifier-parameter). |
+| targetSystem         | \[0..\*\]   | uri         | The Assigning Authorities for the Patient Identifier Domains from which the returned identifiers shall be selected. See [Section 3.83.4.1.2.2](ITI-83.html#23834122-requesting-patient-identifier-domains-to-be-returned).2.                                                                    |
 | \_format             | \[0..1\]    | token       | The requested format of the response from the mime-type value set. See [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format)                  |
 {: .grid }
+
+Informative Profile for the [In Parameters resource for a request](StructureDefinition-IHE.PIXm.Query.Parameters.In.html), with [Examples](StructureDefinition-IHE.PIXm.Query.Parameters.In-examples.html).
 
 ###### 2:3.83.4.1.2.1 Source Patient Identifier Parameter
 
@@ -94,7 +96,7 @@ The required HTTP query parameter `sourceIdentifier` is a token that
 specifies an identifier associated with the patient whose information is
 being queried (i.e., a business identifier such as a local identifier or account identifier, or the Logical id of a FHIR Patient Resource). Its
 value shall include both the Patient Identifier Domain (i.e., Assigning
-Authority) and the identifier value, separated by a "|".
+Authority) and the identifier value, separated by a `|`.
 
 See [ITI TF-2: Appendix Z.2.2](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.2-query-parameters) for use of the `token` search parameter type for patient identifiers.
 
@@ -153,8 +155,7 @@ The Patient Identifier Cross-reference Manager needs to return failure, or succe
 
 See [ITI TF-2: Appendix Z.6](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.6-populating-the-expected-response-format) for more details on response format handling.
 
-The response message is a FHIR operation response
-(<http://hl7.org/fhir/operations.html#response>).
+The response message is a [FHIR operation response](http://hl7.org/fhir/operations.html#response).
 
 On Failure, the response message is an HTTP status code of 4xx or 5xx
 indicates an error, and an OperationOutcome Resource shall be returned
@@ -167,9 +168,10 @@ On Success, the response message is an HTTP status code of 200 with a
 single Parameters Resource as shown in Table 2:3.83.4.2.2-1.
 
 The Parameters Resource shall include:
-- for each business identifier for the patient, one `parameter` element with `name="targetIdentifier"` and the `valueIdentifier` of the identifier 
+
+- for each business identifier for the patient, one `parameter` element with `name="targetIdentifier"` and the `valueIdentifier` of the identifier
 - for each matching Patient Resource, one `parameter` element with `name="targetId"` and the `valueReference` of the Patient Resource  
- 
+
 The values may be returned in any order.
 The identifier value given in the `sourceIdentifier` parameter in the
 query shall not be included in the returned Response.
@@ -178,43 +180,13 @@ query shall not be included in the returned Response.
 
 | Parameter        | Card.     | Data Type          | Description                                                                                         |
 | ---------------- | --------- | ------------------ | --------------------------------------------------------------------------------------------------- |
-| targetIdentifier | \[0..\*\] | Identifier         | The business identifier found. Shall include the assigning authority as specified in [ITI TF-2: Appendix E.3](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_Appx-Z.pdf#page=16) |
+| targetIdentifier | \[0..\*\] | Identifier         | The business identifier found. Shall include the assigning authority as specified in [ITI TF-2: Appendix E.3](https://profiles.ihe.net/ITI/TF/Volume2/ch-E.html#E.3) |
 | targetId         | \[0..\*\] | Reference(Patient) | The URL of the Patient Resource                                                                     |
 {: .grid }
 
-[example response](Parameters-pixm-response-mohralice-red-all.html) for [query](Parameters-pixm-request-mohralice-red-all.html):
-```xml
-<Parameters xmlns="http://hl7.org/fhir">
-    <parameter>
-        <name value="targetIdentifier"/>
-        <valueIdentifier>
-            <use value="official" />
-            <system value="urn:oid:1.3.6.1.4.1.21367.13.20.3000" />
-            <value value="IHEBLUE-994" />
-        </valueIdentifier>
-    </parameter>
-    <parameter>
-        <name value="targetIdentifier"/>
-        <valueIdentifier>
-            <use value="official" />
-            <system value="urn:oid:1.3.6.1.4.1.21367.13.20.2000" />
-            <value value="IHEGREEN-994" />
-        </valueIdentifier>
-    </parameter>
-    <parameter>
-      <name value="targetId"/>
-        <valueReference>
-          <reference value="Patient/Patient-MohrAlice-Blue"/>
-        </valueReference>
-    </parameter>
-    <parameter>
-      <name value="targetId"/>
-        <valueReference>
-          <reference value="Patient/Patient-MohrAlice-Green"/>
-        </valueReference>
-    </parameter>
-</Parameters>
-```
+Informative profile of [Out Parameters](StructureDefinition-IHE.PIXm.Query.Parameters.Out.html), with [Examples](StructureDefinition-IHE.PIXm.Query.Parameters.Out-examples.html).
+
+- [example response](Parameters-pixm-response-mohralice-red-all.html) for [query](Parameters-pixm-request-mohralice-red-all.html):
 
 ###### 2:3.83.4.2.2.2 Source Identifier not found
 
@@ -267,7 +239,6 @@ Assigning Authority domain is not recognized in an `issue` having:
 | diagnostics | “sourceIdentifier Assigning Authority not found” |
 {: .grid }
 
-
 ###### 2:3.83.4.2.2.4 Target Domain not recognized
 
 When the Patient Identifier Cross-reference Manager does not recognize
@@ -309,8 +280,8 @@ The Patient Identifier Cross-reference Consumer when grouped with ATNA Secure No
 
 The Patient Identifier Cross-reference Manager when grouped with ATNA Secure Node or Secure Application actor shall be able to record a [PIXm Query Manager Audit Event Log](StructureDefinition-IHE.PIXm.Query.Audit.Manager.html). [Audit Example for a PIXm Query transaction from manager perspective](AuditEvent-ex-auditPixmQuery-manager.html).
 
-
 #### 2:3.83.5.2 Use with the Internet User Authorization (IUA) Profile  
+
 The [Internet User Authorization (IUA)](https://profiles.ihe.net/ITI/IUA/index.html) Profile provides support for user authentication, app authentication, and authorization decisions. When PIXm actors are grouped with IUA actors there are additional security and privacy functionality enabled by this grouping. There are additional requirements and functionality enabled through scope definitions that are transaction-specific.
 
 A Patient Identifier Cross-reference Consumer, when grouped with an [IUA](https://profiles.ihe.net/ITI/IUA/index.html) Authorization Client, shall use [Get Access Token [ITI-71]](https://profiles.ihe.net/ITI/IUA/index.html#volume-2----transactions) to request the following scope from the IUA Authorization Server. This enables the Patient Identifier Cross-reference Consumer to get corresponding identifiers with the Mobile Patient Identifier Cross-reference Query [ITI-83] transaction with the authorizing token in the combined transaction [Incorporate Access Token [ITI-72]](https://profiles.ihe.net/ITI/IUA/index.html#372-incorporate-access-token-iti-72).
@@ -326,4 +297,3 @@ This scope request authorizes the full [ITI-83] transaction. This scope implicit
 ##### 2:3.83.5.2.1 AuditEvent augmentation
 
 The Security audit logging interactions should be augmented following [IHE-BALP Basic Audit Logging Patterns](https://profiles.ihe.net/ITI/BALP/index.html), to include agent details [from the OAuth Security token](https://profiles.ihe.net/ITI/BALP/content.html#3575-oauth-security-token).
-

@@ -1,6 +1,28 @@
 == Suppressed Messages ==
 # urn:ihe:event-type-code is not defined as a FHIR CodeSystem / ValueSet
 A definition for CodeSystem 'urn:ihe:event-type-code' could not be found, so the code cannot be validated
+No definition could be found for URL value 'urn:ihe:event-type-code'
 
-# Understood these are draft
-MSG_DRAFT
+# used in examples
+No definition could be found for URL value 'urn:oid:1.3.6.1.4.1.21367.13.20.1000'
+No definition could be found for URL value 'urn:oid:1.3.6.1.4.1.21367.13.20.2000'
+No definition could be found for URL value 'urn:oid:1.3.6.1.4.1.21367.13.20.3000'
+
+# inherited from FHIR core, nothing we can do about inherited
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+
+# any version will do
+There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-PurposeOfUse'.%
+There are multiple different potential matches for the url 'http://hl7.org/fhir/ValueSet/object-lifecycle-events'.%
+There are multiple different potential matches for the url 'https://profiles.ihe.net/ITI/BALP/StructureDefinition/IHE.BasicAudit.PatientCreate'.%
+There are multiple different potential matches for the url 'https://profiles.ihe.net/ITI/BALP/ValueSet/DataSources'.%
+There are multiple different potential matches for the url 'https://profiles.ihe.net/ITI/BALP/ValueSet/RestObjectRoles'.%
+There are multiple different potential matches for the url 'https://profiles.ihe.net/ITI/BALP/StructureDefinition/IHE.BasicAudit.PatientQuery'.%
+There are multiple different potential matches for the url 'https://profiles.ihe.net/ITI/BALP/ValueSet/AllSearchVS'.%
+There are multiple different potential matches for the url 'https://profiles.ihe.net/ITI/BALP/ValueSet/AllUpdateVS'.%
+There are multiple different potential matches for the url 'https://profiles.ihe.net/ITI/BALP/StructureDefinition/IHE.BasicAudit.PatientUpdate'.%
+There are multiple different potential matches for the url 'https://profiles.ihe.net/ITI/BALP/StructureDefinition/IHE.BasicAudit.PatientDelete'.%
+TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS
+
+# need to keep until BALP is fully released
+SD_PATH_SLICING_DEPRECATED
